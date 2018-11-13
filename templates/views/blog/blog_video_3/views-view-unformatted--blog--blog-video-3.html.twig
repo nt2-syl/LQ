@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if title %}
+  	<h3>{{ title }}</h3>
+{% endif %}	
+<div class="text-center mb-8">
+	<ul class="grid-filter">
+		<li><a href="#" data-filter="" class="active">{% trans %} All {% endtrans %}</a></li>
+		{% for term in terms %}
+			{% set string = term|lower %}
+			{% set string = string|replace({ (" "): "" }) %}
+			{% set string = string|replace({ ("&amp;"): "-" }) %}
+			{% set string = string|replace({ ("/"): "-" }) %}
+			<li><a href="#" data-filter=".{{ string }}">{{ term }}</a></li>
+		{% endfor %}
+	</ul>
+</div>
+<div class="masonry-grid-post">
+	{% for row in rows %}
+		{{ row.content }}
+	{% endfor %}
+</div>

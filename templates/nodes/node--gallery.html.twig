@@ -1,0 +1,64 @@
+<div class="section">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12" style="padding: 0;">
+				<div class="gallery-slider-wrapper">
+					<div class="master-slider ms-skin-default" id="gallery-slider">
+						{% for item in node.field_gallery_images %}
+							<div class="ms-slide">
+								<img src="{{ file_url(item.entity.getFileUri()) }}" alt="{{ item.alt }}" />
+								<p>
+									{{ item.alt }}
+								</p>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section" style="margin-bottom: 150px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="register">
+					{% if prev_node_title %}
+						<nav class="g-detail-previous">
+							<div class="img">
+								<div class="title-px textnp">
+									<p class="icon-long-right">
+										<i class="fa fa-long-arrow-left"></i>
+									</p>
+									<a href="{{ path('entity.node.canonical', {'node': prev_node_nid}) }}">{% trans %} Previous post {% endtrans %}</a>
+								</div>
+								<div class="img-black">
+									<a href="{{ path('entity.node.canonical', {'node': prev_node_nid}) }}">
+										<img src="{{ prev_node_image_url }}" alt="{{prev_node_title}}">
+									</a>
+								</div>
+								<p class="title-desc">{{prev_node_title}}</p>
+							</div>
+						</nav>
+					{% endif %}
+					{% if next_node_title %}
+					<nav class="g-detail-next">
+						<div class="img">
+							<div class="title-px textnp">
+								<p class="icon-long-right"><i class="fa fa-long-arrow-right"></i></p>
+								<a href="{{ path('entity.node.canonical', {'node': next_node_nid}) }}">{% trans %} Next post {% endtrans %}</a>
+							</div>
+							<div class="img-black">
+								<a href="{{ path('entity.node.canonical', {'node': next_node_nid}) }}">
+									<img src="{{ next_node_image_url }}" alt="{{next_node_title}}">
+								</a>
+							</div>
+							<p class="title-desc">{{next_node_title}}</p>
+						</div>
+					</nav>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

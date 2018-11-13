@@ -1,0 +1,188 @@
+<div class="section director_img_cover">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 nopadding">
+				<div class="director_detail_name">{{ node.title.entity.getTitle() }}</div>
+				<img src="{{ file_url(node.field_directory_image.entity.getFileUri()) }}" alt="{{ node.title.entity.getTitle() }}" />
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section director-detail">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="fl-title">
+					<span class="fl-title-small" style="margin-bottom: 50px;">{% trans %} MY LIFE STORY {% endtrans %}</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{% for item in node.field_directory_story %}
+				{% set width = item.getFieldCollectionItem().field_directory_story_width.value %}
+				{% if width == "half" %}
+					<div class="col-md-6 col-sm-6 col-xs-12">
+				{% else %}
+					<div class="col-md-12 col-sm-12 col-xs-12">
+				{% endif %}
+					{{ item.getFieldCollectionItem().field_directory_story_text.value | raw }}
+					{% if loop.last %}
+						<div class="director-social">
+							<span class="social">
+								<a onclick="window.open('https://www.facebook.com/sharer.php?s=100&amp;p[url]={{ path('entity.node.canonical', {'node': node.id}) }}','sharer', 'toolbar=0,status=0,width=620,height=280');" href="javascript:;"><i class="fa fa-facebook"></i></a>
+							</span>
+							<span class="social">
+								<a onclick="popUp=window.open('http://twitter.com/home?status={{ node.title.entity.getTitle() }} {{ path('entity.node.canonical', {'node': node.id}) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-twitter"></i></a>
+							</span>
+							<span class="social">
+								<a href="javascript:;" onclick="popUp=window.open('https://plus.google.com/share?url={{ path('entity.node.canonical', {'node': node.id}) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;"><i class="fa fa-google"></i></a>
+							</span>
+						</div>
+					{% endif %}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<div class="section" style="margin-top: 150px; margin-bottom: 100px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="fl-title">
+					<span class="fl-title-small" style="margin-bottom: 30px;">{% trans %} TIMELINE {% endtrans %}</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="timline-history timline-director">
+					<ul class="timeline-box timeline-page-box">
+						{% for item in node.field_directory_timeline %}
+							<li class="nopadding">
+								<div class="d-even"> </div>
+								<div class="d-content cd-timeline-content nomargin-top">
+									<div class="cd-date">{{ item.getFieldCollectionItem().field_directory_year.value }}</div>
+									<div class="cd-title">{{ item.getFieldCollectionItem().field_directory_title.value }}</div>
+									<div class="gray-desc">
+										{{ item.getFieldCollectionItem().field_directory_time_desc.value }}
+									</div>
+								</div>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% set film_name, film_id, film_image  = '', '', '' %}
+{% set film_cate = '' %}
+{% for item in content.field_directory_featured %}
+	{% if item['#title'] %}
+		{% set film_name = item['#title'] %}
+		{% set film_id = item['#options'].entity.id %}
+		{% set film_image = item['#options'].entity.field_film_thumbnail.entity.getFileUri() %}
+		{% set film_cate =  item['#options'].entity.field_film_categories.entity.label() %}
+	{% endif %}
+{% endfor %}
+<div class="section fl-feature">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="fl-title feature-title">
+					<div class="fl-title-small">{% trans %} FEATURED PROJECTS {% endtrans %}</div>
+					<div class="fl-title-big">
+						<a href="{{ path('entity.node.canonical', {'node': film_id}) }}">{{ film_name }}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+				<div class="feature-video">
+					<a href="{{ path('entity.node.canonical', {'node': film_id}) }}">
+						<img src="{{ file_url(film_image) }}" alt="{{ film_name }}" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="feature-social">
+					<ul>
+						<li class="uppercase">{{ film_cate }}</li>
+						<li>
+							<ul class="list-social">
+								<li>{% trans %} Share {% endtrans %} :</li>
+								<li>
+									<a onclick="window.open('https://www.facebook.com/sharer.php?s=100&amp;p[url]={{ path('entity.node.canonical', {'node': film_id}) }}','sharer', 'toolbar=0,status=0,width=620,height=280');" href="javascript:;"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a onclick="popUp=window.open('http://twitter.com/home?status={{ node.title.entity.getTitle() }} {{ path('entity.node.canonical', {'node': film_id}) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="javascript:;" onclick="popUp=window.open('https://plus.google.com/share?url={{ path('entity.node.canonical', {'node': film_id}) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;"><i class="fa fa-google"></i></a>
+								</li>
+								<li>
+									<a onclick="popUp=window.open('http://pinterest.com/pin/create/button/?url={{ path('entity.node.canonical', {'node': film_id}) }}&amp;description={{ film_name }}&amp;media={{ film_image }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-pinterest"></i></a>
+								</li>
+								<li>
+									<a onclick="popUp=window.open('http://linkedin.com/shareArticle?mini=true&amp;url={{ path('entity.node.canonical', {'node': film_id}) }}>&amp;title={{ film_name }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-linkedin"></i></a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% set film_name, film_cate, film_image, film_id = {}, {}, {}, {} %}
+{% for item in content.field_directory_project %}
+	{% if item['#title'] %}
+		{% set film_name = film_name|merge({ (loop.index0): item['#title']}) %}
+		{% set film_id = film_id|merge({ (loop.index0): item['#options'].entity.id()}) %}
+		{% set film_cate = film_cate|merge({ (loop.index0): item['#options'].entity.field_film_categories.entity.label()}) %}
+		{% set film_image = film_image|merge({ (loop.index0): item['#options'].entity.field_film_thumbnail.entity.fid.value}) %}
+	{% endif %}
+{% endfor %}
+<div class="section relation-project">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="fl-title">
+					<span class="fl-title-small" style="margin-bottom: 50px;">{% trans %} PROJECTS {% endtrans %}</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{% set index = 0 %}
+			{% for item in content.field_directory_project %}
+				{% if item['#title'] %}
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="relation-film">
+							<a href="{{ path('entity.node.canonical', {'node': film_id[index]}) }}">
+								{% set image = image_style(film_image[index], ['film_3']) %}
+								<img src="{{ image.film_3 }}" alt="" />
+							</a>
+						</div>
+						<div class="relation-film-content">
+							<div class="category uppercase">{{ film_cate[index] }}</div>
+							<div class="name">
+								<a href="{{ path('entity.node.canonical', {'node': film_id[index]}) }}">{{ film_name[index] }}</a>
+							</div>
+						</div>
+					</div>
+					{% set index = index + 1  %}
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<div class="section" style="margin-top: 100px; margin-bottom: 50px;">
+	<div class="container-fluid">
+		<div class="row">
+			{{ more_director }}
+		</div>
+	</div>
+</div>

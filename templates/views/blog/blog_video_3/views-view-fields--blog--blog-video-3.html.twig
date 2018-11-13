@@ -1,0 +1,26 @@
+{% set string = fields.field_news_categories_1.content|lower|render|striptags|trim %}
+{% set string = string|replace({ (" "): "" }) %}
+{% set string = string|replace({ ("//"): " " }) %}
+{% set string = string|replace({ ("&amp;"): "-" }) %}
+{% set string = string|replace({ ("/"): "-" }) %}
+<div class="post-item masonry-item col-lg-4 col-md-4 col-sm-6 col-xs-12 {{ string }}">
+	<div class="post-thumb">
+		<a href="{{ fields.path.content|render|striptags|trim }}">
+			<div class="img-post">
+				<img src="{{ fields.field_news_image.content|render|striptags|trim }}" alt="{{ fields.title.content|render|striptags|trim }}" />
+			</div>
+		</a>
+	</div>
+	<div class="post-content">
+		<div class="category">
+			{{ fields.field_news_categories.content }}
+		</div>
+		<div class="name">
+			<a href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content }}</a>
+		</div>
+		<div class="description">
+			<span class="comment"><a href="#">{% if node.comment.comment_count %} {{ node.comment.comment_count }} {% else %} 0 {% endif %} {% trans %} Comments {% endtrans %} </a></span>
+			<span class="view"> {{ fields.totalcount.content }} {% trans %} VIEWS {% endtrans %}</span>
+		</div>
+	</div>
+</div>

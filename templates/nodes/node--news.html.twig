@@ -1,0 +1,310 @@
+{% if (node.field_news_style.value is empty) or (node.field_news_style.value == "style-1") %}
+	<div class="section-blog-detail">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="fl-title" style="padding-bottom: 20px;">
+						<span class="fl-title-small uppercase">
+							{% set total = (node.field_news_categories.getvalue | length) %}
+							{% set count = 0 %}
+							{% for item in content.field_news_categories %}
+								{% if item['#title'] %}
+									{% set count = count + 1  %}
+									{% if (count < total) %}
+										<a href="{{ item['#url']}}">{{ item['#title']  }}</a>, 
+									{% else %}
+										<a href="{{ item['#url']}}">{{ item['#title']  }}</a>
+									{% endif %}	
+								{% endif %}
+							{% endfor %}
+						</span>
+						<span class="fl-title-medium">{{ node.title.entity.getTitle() }}</span>
+					</div>
+					<div class="detail-video">
+						<div class="img-fl-detail">
+							<img src="{{ file_url(node.field_news_image.entity.getFileUri()) }}" alt="{{ node.title.entity.getTitle() }}" />
+						</div>
+						<div class="click_play">
+							<a href="{{ node.field_news_link.value }}" class="mfp-iframe gallery-item">
+								<img src="{{ base_path ~ directory }}/images/play.png" alt="play" />
+							</a>
+						</div>
+					</div>
+					<div class="d-share d-bottom3">
+						<ul class="more-info ds2 dark">
+							<li>
+								<ul class="list-social">
+									<li>{% trans %} Share {% endtrans %} : </li>
+									<li><a onclick="window.open('https://www.facebook.com/sharer.php?s=100&amp;p[url]={{ path('entity.node.canonical', {'node': node.id}) }}','sharer', 'toolbar=0,status=0,width=620,height=280');" href="javascript:;"><i class="fa fa-facebook"></i></a></li>
+									<li><a onclick="popUp=window.open('http://twitter.com/home?status={{ node.title.entity.getTitle() }} {{ path('entity.node.canonical', {'node': node.id}) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="javascript:;" onclick="popUp=window.open('https://plus.google.com/share?url={{ path('entity.node.canonical', {'node': node.id}) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;"><i class="fa fa-google-plus"></i></a></li>
+									<li><a onclick="popUp=window.open('http://pinterest.com/pin/create/button/?url={{ path('entity.node.canonical', {'node': node.id}) }}&amp;description={{ node.title.entity.getTitle() }}&amp;media={{ file_url(node.field_news_image.entity.getFileUri()) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-pinterest"></i></a></li>
+									<li><a onclick="popUp=window.open('http://linkedin.com/shareArticle?mini=true&amp;url={{ path('entity.node.canonical', {'node': node.id}) }}>&amp;title={{ node.title.entity.getTitle() }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-linkedin"></i></a></li>
+								</ul>
+							</li>
+							<li>|</li>
+							<li class="uppercase">{{ node.get('uid').entity.getAccountName() }}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section detail-item detail-video-post">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 right-content">
+					<div class="detail-view">
+						<div class="detail-title">{% trans %} DESCRIPTION {% endtrans %}</div>
+						<div class="detail-content">
+							{{ node.body.value | raw }}
+						</div>
+					</div>
+					<div class="filmmaker-about-author">
+						<div class="author-avatar col-md-2 col-sm-2 col-xs-3">
+							<img alt="" src="{{ file_url(node.Owner.user_picture.entity.getFileUri()) }}" />
+						</div>
+						<div class="about-post-author col-md-10 col-sm-10 col-xs-9">
+							<span class="author-name"><a href="{{ base_path }}user/{{ node.get('uid').entity.id() }}">{{ node.get('uid').entity.getAccountName() }}</a></span>
+							<p class="gray-desc">
+								{{ node.Owner.field_acc_desc.value }}
+							</p>
+						</div>
+					</div>
+					<div class="comment">
+						<h3 class="title-comment">{% trans %} Comments {% endtrans %} ({% if node.comment.comment_count %} {{ node.comment.comment_count }} {% else %} 0 {% endif %})</h3>
+						<div class="form-comment">
+							<div class="comment-respond">
+								{{ content.comment }}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 hidden-sm hidden-xs left-sidebar">
+					<div class="detail-title">{% trans %} MORE VIDEO {% endtrans %}</div>
+					{{ more_video }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% elseif node.field_news_style.value == "style-2" %}
+	<div class="section view-detail-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="detail-video">
+						<div class="img-fl-detail">
+							<img src="{{ file_url(node.field_news_image.entity.getFileUri()) }}" alt="">
+						</div>
+						<div class="click_play">
+							<a href="{{ node.field_news_link.value }}" class="mfp-iframe gallery-item">
+								<img src="{{ base_path ~ directory }}/images/play.png" alt="play" />
+							</a>
+						</div>
+					</div>
+					<div class="fl-title" style="margin-top: 30px; margin-bottom: 20px;">
+						<span class="fl-title-small">
+							{% set total = (node.field_news_categories.getvalue | length) %}
+							{% set count = 0 %}
+							{% for item in content.field_news_categories %}
+								{% if item['#title'] %}
+									{% set count = count + 1  %}
+									{% if (count < total) %}
+										<a href="{{ item['#url']}}">{{ item['#title']  }}</a>, 
+									{% else %}
+										<a href="{{ item['#url']}}">{{ item['#title']  }}</a>
+									{% endif %}	
+								{% endif %}
+							{% endfor %}
+						</span>
+						<span class="fl-title-medium">{{ node.title.entity.getTitle() }}</span>
+					</div>
+					<div class="d-share">
+						<ul class="more-info ds2">
+							<li>
+								<ul class="list-social">
+									<li>{% trans %} Share {% endtrans %} : </li>
+									<li><a onclick="window.open('https://www.facebook.com/sharer.php?s=100&amp;p[url]={{ path('entity.node.canonical', {'node': node.id}) }}','sharer', 'toolbar=0,status=0,width=620,height=280');" href="javascript:;"><i class="fa fa-facebook"></i></a></li>
+									<li><a onclick="popUp=window.open('http://twitter.com/home?status={{ node.title.entity.getTitle() }} {{ path('entity.node.canonical', {'node': node.id}) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="javascript:;" onclick="popUp=window.open('https://plus.google.com/share?url={{ path('entity.node.canonical', {'node': node.id}) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;"><i class="fa fa-google-plus"></i></a></li>
+									<li><a onclick="popUp=window.open('http://pinterest.com/pin/create/button/?url={{ path('entity.node.canonical', {'node': node.id}) }}&amp;description={{ node.title.entity.getTitle() }}&amp;media={{ file_url(node.field_news_image.entity.getFileUri()) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-pinterest"></i></a></li>
+									<li><a onclick="popUp=window.open('http://linkedin.com/shareArticle?mini=true&amp;url={{ path('entity.node.canonical', {'node': node.id}) }}>&amp;title={{ node.title.entity.getTitle() }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-linkedin"></i></a></li>
+								</ul>
+							</li>
+							<li>|</li>
+							<li class="uppercase">{{ node.get('uid').entity.getAccountName() }}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section detail-item detail-video-post">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 right-content">
+					<div class="detail-view">
+						<div class="detail-title">{% trans %} DESCRIPTION {% endtrans %}</div>
+						<div class="detail-content">
+							{{ node.body.value | raw }}
+						</div>
+					</div>
+					<div class="filmmaker-about-author">
+						<div class="author-avatar col-md-2 col-sm-2 col-xs-3">
+							<img alt="" src="{{ file_url(node.Owner.user_picture.entity.getFileUri()) }}" />
+						</div>
+						<div class="about-post-author col-md-10 col-sm-10 col-xs-9">
+							<span class="author-name"><a href="{{ base_path }}user/{{ node.get('uid').entity.id() }}">{{ node.get('uid').entity.getAccountName() }}</a></span>
+							<p class="gray-desc">
+								{{ node.Owner.field_acc_desc.value }}
+							</p>
+						</div>
+					</div>
+					<div class="comment">
+						<h3 class="title-comment">
+							{% trans %} Comments {% endtrans %} ({% if node.comment.comment_count %} {% if node.comment.comment_count %} {{ node.comment.comment_count }} {% else %} 0 {% endif %} {% else %} 0 {% endif %})
+						</h3>
+						<div class="form-comment">
+							<div class="comment-respond">
+								{{ content.comment }}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 hidden-sm hidden-xs left-sidebar">
+					<div class="detail-title">{% trans %} MORE VIDEO {% endtrans %}</div>
+					{{ more_video }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% elseif node.field_news_style.value == "style-3" %}
+	<div class="section post-detail" style="margin-top: 200px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="fl-title">
+						<span class="fl-title-medium">{{ node.title.entity.getTitle() }}</span>
+					</div>
+					<div class="blog-detail-social gray-desc">
+						<div class="info">
+							<ul class="author-name">
+								<li class="name1">{% trans %}by {% endtrans %}: {{ node.get('uid').entity.getAccountName() }}</li>
+								<li><i class="fa fa-comment-o"></i>{% if node.comment.comment_count %} {{ node.comment.comment_count }} {% else %} 0 {% endif %}</li>
+							</ul>
+							<ul class="list-social">
+								<li>{% trans %} Share {% endtrans %} : </li>
+								<li><a onclick="window.open('https://www.facebook.com/sharer.php?s=100&amp;p[url]={{ path('entity.node.canonical', {'node': node.id}) }}','sharer', 'toolbar=0,status=0,width=620,height=280');" href="javascript:;"><i class="fa fa-facebook"></i></a></li>
+								<li><a onclick="popUp=window.open('http://twitter.com/home?status={{ node.title.entity.getTitle() }} {{ path('entity.node.canonical', {'node': node.id}) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="javascript:;" onclick="popUp=window.open('https://plus.google.com/share?url={{ path('entity.node.canonical', {'node': node.id}) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;"><i class="fa fa-google-plus"></i></a></li>
+								<li><a onclick="popUp=window.open('http://pinterest.com/pin/create/button/?url={{ path('entity.node.canonical', {'node': node.id}) }}&amp;description={{ node.title.entity.getTitle() }}&amp;media={{ file_url(node.field_news_image.entity.getFileUri()) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-pinterest"></i></a></li>
+								<li><a onclick="popUp=window.open('http://linkedin.com/shareArticle?mini=true&amp;url={{ path('entity.node.canonical', {'node': node.id}) }}>&amp;title={{ node.title.entity.getTitle() }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="detail-video">
+						<div class="date-post">
+							<ul>
+								<li>{{ node.getCreatedTime|date(format='d') }}</li>
+								<li>{{ node.getCreatedTime|date(format='m') }}</li>
+							</ul>
+						</div>
+						<div class="img-fl-detail">
+							<img src="{{ file_url(node.field_news_image.entity.getFileUri()) }}" alt="">
+						</div>
+						<div class="click_play">
+							<a href="{{ node.field_news_link.value }}" class="mfp-iframe gallery-item">
+								<img src="{{ base_path ~ directory }}/images/play.png" alt="play" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% if prev_node_title %}
+			<div class="prev-detail control hidden-sm hidden-xs">
+				<a href="{{ path('entity.node.canonical', {'node': prev_node_nid}) }}">
+					<div class="title-control title-gray">{% trans %} prev post {% endtrans %}</div>
+					<div class="img-control">
+						<img src="{{ prev_node_image_url }}" alt="{{prev_node_title}}" />
+					</div>
+					<p class="title-desc title-control-post">
+						{{prev_node_title}}
+					</p>
+				</a>
+			</div>
+		{% endif %}
+		{% if next_node_title %}
+			<div class="next-detail control hidden-sm hidden-xs">
+				<a href="{{ path('entity.node.canonical', {'node': next_node_nid}) }}">
+					<div class="title-control title-gray">{% trans %} next post {% endtrans %}</div>
+					<div class="img-control">
+						<img src="{{ next_node_image_url }}" alt="{{next_node_title}}" />
+					</div>
+					<p class="title-desc title-control-post">
+						{{next_node_title}}
+					</p>
+				</a>
+			</div>
+		{% endif %}
+	</div>
+	<div class="section detail-item detail-video-post post-detail">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 right-content">
+					<div class="detail-view">
+						<div class="detail-title">{% trans %} DESCRIPTION {% endtrans %}</div>
+						<div class="detail-content">
+							{{ node.body.value | raw }}
+						</div>
+					</div>
+					<div class="filmmaker-about-author">
+						<div class="author-avatar col-md-2 col-sm-2 col-xs-3">
+							<img alt="" src="{{ file_url(node.Owner.user_picture.entity.getFileUri()) }}" />
+						</div>
+						<div class="about-post-author col-md-10 col-sm-10 col-xs-9">
+							<span class="author-name"><a href="{{ base_path }}user/{{ node.get('uid').entity.id() }}">{{ node.get('uid').entity.getAccountName() }}</a></span>
+							<p class="gray-desc">
+								{{ node.Owner.field_acc_desc.value }}
+							</p>
+						</div>
+					</div>
+					<div class="comment">
+						<h3 class="title-comment">{% trans %} Comments {% endtrans %} ({% if node.comment.comment_count %} {{ node.comment.comment_count }} {% else %} 0 {% endif %})</h3>
+						<div class="form-comment">
+							<div class="comment-respond">
+								{{ content.comment }}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="archive-sidebar side-bar col-lg-4 col-md-3 hidden-sm hidden-xs">
+					<div class="widget">
+						<h2 class="widget-title">{% trans %} MOST POPULAR {% endtrans %}</h2>
+						{{ most_popular }}
+					</div>
+					<div class="widget">
+						<h2 class="widget-title">{% trans %} RECENT COMMENTS {% endtrans %}</h2>
+						{{ recent_comment }}
+					</div>
+					<div class="widget archives">
+						<h2 class="widget-title">{% trans %} ARCHIVES {% endtrans %}</h2>
+						{{ archive }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section" style="margin-top: 130px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="fl-title">
+						<span class="fl-title-small" style="margin-bottom: 50px;">{% trans %} MORE NEWS {% endtrans %}</span>
+					</div>
+				</div>
+			</div>
+			{{ more_video_2 }}
+		</div>
+	</div>
+{% endif %}

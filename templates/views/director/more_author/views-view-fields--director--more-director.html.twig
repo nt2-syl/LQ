@@ -1,0 +1,17 @@
+<div class="col-sm-6" style="padding: 0">
+	<div class="more-film">
+		<div class="bg-more-fl"></div>
+		<a href="{{ fields.path.content|render|striptags|trim }}">
+			<img src="{{ fields.field_directory_image.content|render|striptags|trim }}" alt="" />
+		</a>
+		<div class="center centertxt">
+			<div class="title-white">{{ fields.field_directory_position.content }}</div>
+			<div class="title-bold-white">
+				<a href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content }}</a>
+			</div>
+			<div class="white-desc">
+				{{ fields.field_directory_desc.content }}
+			</div>
+		</div>
+	</div>
+</div>

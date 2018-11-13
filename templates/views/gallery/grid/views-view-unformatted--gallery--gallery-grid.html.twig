@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if title %}
+  	<h3>{{ title }}</h3>
+{% endif %}	
+<ul class="gallery-film" >
+	{% set i = 1 %}
+	{% for row in rows %}
+		{% if i == 1 %}
+			<li class="gallery-container gallery-big g-left">
+				{{ row.content }}
+			</li>
+		{% elseif (i == 2) or (i == 3) %}
+			<li class="gallery-container gallery-small g-right">
+				{{ row.content }}
+			</li>
+		{% elseif (i == 4) or (i == 6) %}
+			<li class="gallery-container gallery-small g-left">
+				{{ row.content }}
+			</li>
+			{% if i == 6 %} {% set i = 0 %} {% endif %}
+		{% elseif i == 5 %}
+			<li class="gallery-container gallery-big g-right">
+				{{ row.content }}
+			</li>
+		{% endif %}
+		{% set i = i + 1 %}
+	{% endfor %}
+</ul>

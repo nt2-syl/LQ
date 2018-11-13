@@ -1,0 +1,18 @@
+<div class="ms-slide">
+	<div class="team-film-container">
+		<a href="{{ fields.path.content|render|striptags|trim }}">
+			<img src="{{ fields.field_team_thumbnail.content|render|striptags|trim }}" alt="{{ fields.title.content|render|striptags|trim }}" />
+		</a>
+		<div class="team-content">
+			<div class="team-name">
+				<a style="color:#ffffff" href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content }}</a>
+			</div>
+			<div class="team-job" style="color:#ffffff">
+				{{ fields.field_team_position.content }}
+			</div>
+			<div class="team-social">
+				{{ fields.field_team_social.content }}
+			</div>
+		</div>
+	</div>
+</div>

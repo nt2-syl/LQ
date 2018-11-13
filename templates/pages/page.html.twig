@@ -1,0 +1,38 @@
+<div class="site">
+	{% if page.header %}
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					{{ page.header }}
+				</div>
+			</div>
+		</div>
+	{% endif %}
+	<div id="main">
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					{% if page.sidebar %}
+						<div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+							{{ page.content }}
+						</div>
+						<div class="archive-sidebar side-bar col-lg-4 col-md-3 hidden-sm hidden-xs">
+							{{ page.sidebar}}
+						</div>		
+					{% else %}
+						<div class="col-sm-12">
+							{{ page.content }}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% if page.footer %}
+	    <footer>
+			<div class="footer-landing f-home1">
+				{{ page.footer }}
+			</div>
+		</footer>
+	{% endif %}
+</div>

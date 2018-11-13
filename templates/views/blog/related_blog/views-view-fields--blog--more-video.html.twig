@@ -1,0 +1,10 @@
+<div class="img-post col-lg-6 col-md-6 col-sm-12">
+	<a  href="{{ fields.path.content|render|striptags|trim }}">
+		<img src="{{ fields.field_news_image.content|render|striptags|trim }}" alt="{{ fields.title.content|render|striptags|trim }}" />
+	</a>
+</div>
+<div class="titlemore col-lg-6 col-md-6 col-sm-12">
+	<p class="relate-title">{{ fields.field_news_categories.content }}</p>
+	<h3><a href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content }}</a></h3>
+	<p class="status"><span>{% if node.comment.comment_count %} {{ node.comment.comment_count }} {% else %} 0 {% endif %} {% trans %} Comment {% endtrans %} </span></p>
+</div>

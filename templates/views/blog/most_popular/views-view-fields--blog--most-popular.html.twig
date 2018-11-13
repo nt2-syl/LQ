@@ -1,0 +1,15 @@
+<div class="nopadding col-lg-6">
+	<div class="img-post">
+		<a href="{{ fields.path.content|render|striptags|trim }}">
+			<img src="{{ fields.field_news_image.content|render|striptags|trim }}" alt="{{ fields.title.content|render|striptags|trim }}" />
+		</a>
+	</div>
+</div>
+<div class="nopadding col-lg-6">
+	<div class="title-side-bar">
+		<div class="info">{{ fields.created.content }}</div>
+		<div class="title-post">
+			<a href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content }}</a>
+		</div>
+	</div>
+</div>

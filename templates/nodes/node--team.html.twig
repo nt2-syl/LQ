@@ -1,0 +1,24 @@
+<div class="single-crew">
+	<div class="row">
+		<div class="col-md-6 col-sm-6 col-xs-12 team-avatar">
+			<div class="thumb-team">
+				<img src="{{ file_url(node.field_team_thumbnail.entity.getFileUri()) }}" alt="{{ node.title.entity.getTitle() }}" />
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-6 col-xs-12 info-team">
+			<div class="title-member">
+				<h3>{{ node.title.entity.getTitle() }}</h3>
+				<span class="jobs">{{ node.field_team_position.entity.getName() }}</span>
+			</div>
+			<div class="content-team">
+				{{ node.body.value | raw }}
+				<div class="clearfix"></div>
+				<ul class="list-social">
+					{% for item in node.field_team_social %}
+						<li><a href="{{ item.getFieldCollectionItem().field_team_social_link.value }}"><i class="fa {{ item.getFieldCollectionItem().field_team_social_icon.value }}"></i></a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

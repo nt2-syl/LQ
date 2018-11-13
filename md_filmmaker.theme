@@ -1,0 +1,308 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the theme.
+ */
+
+function md_filmmaker_preprocess_html(&$vars) {
+	$css = "";
+	
+	//Get & Set background-color
+	if (theme_get_setting('background_color')) {
+		$bg_color = hsvToRgb(theme_get_setting('background_color'));
+		$bg_color_rgb = fGetRGB($bg_color['0'], $bg_color['1'], $bg_color['2']);
+
+		if(isset($bg_color[3])) {
+			$bg_color = "rgba(" . $bg_color_rgb . "," . $bg_color[3] . ")";	
+		} else {
+			$bg_color = "rgb(" . $bg_color_rgb . ")";
+		}
+		$css .= 'body { background: '.$bg_color.'; }'."\n";
+	}
+	if(theme_get_setting('background_image') == "custom-bg") {
+		//Get & Set background image
+		if(isset(theme_get_setting('custom_background')[0])) {
+			$file = file_load(theme_get_setting('custom_background')[0]);
+			if(isset($file))
+				$bg_image = file_create_url($file->getFileUri());
+
+			$css .= 'body { background-image: url('.$bg_image.'); }'."\n";
+		}
+
+		//Get & Set background postion, background mode
+		$bg_position = theme_get_setting('custom_background_position');
+		$css .= 'body { background-position: '.$bg_position.'; }'."\n";
+
+		$bg_mode = theme_get_setting('custom_background_mode');
+		if($bg_mode == "fixed") {
+			$css .= 'body { background-attachment: '.$bg_mode.'; background-repeat: no-repeat; background-size: cover; }'."\n";
+		} else if($bg_mode == "cover") {
+			$css .= 'body { background-size: '.$bg_mode.'; background-repeat: no-repeat; }'."\n";
+		} else {
+			$css .= 'body { background-repeat: '.$bg_mode.'; }'."\n";
+		}
+	}
+
+	//Get & Set font family
+	$font_family = str_replace('|', '%7C', theme_get_setting('googlewebfonts'));
+
+	//Get & Set font-style
+	$headings = array(1,2,3,4,5,6);
+	foreach($headings as $item) {
+		if(theme_get_setting('h'.$item.'-font-type') == "google-font") {
+			$color = hsvToRgb(theme_get_setting('h'.$item.'-color'));
+			$family = str_replace("'", "", theme_get_setting('h'.$item.'-webfont'));
+			$family = str_replace('"', '', $family);
+			
+			$css .= 'h'.$item.' { font-family: '.$family.'; }'."\n";
+			$css .= 'h'.$item.' { font-size: '.theme_get_setting('h'.$item.'-fontsize').'px; }'."\n";
+			$css .= 'h'.$item.' { color: rgb(' . fGetRGB($color[0], $color[1], $color[2]) . '); }'."\n";
+			$css .= 'h'.$item.' { font-weight: '.theme_get_setting('h'.$item.'-fontweight').'; }'."\n";
+			$css .= 'h'.$item.' { font-style: '.theme_get_setting('h'.$item.'-font-style').'; }'."\n";
+		}
+	}
+
+	//Get & Set hyperlinks
+	$links = array('normal', 'hover', 'visited', 'active');
+	foreach($links as $item) {
+		$color = hsvToRgb(theme_get_setting('link-'.$item.'-color'));
+		if($color[0] != "") {
+			$color = fGetRGB($color[0], $color[1], $color[2]);
+			if($item == "normal") {
+				$css .= 'a { color: '.$color.'; text-decoration: ' . theme_get_setting('link-'.$item.'-decoration') .'; font-weight: '. theme_get_setting('link-'.$item.'-fontweight') .'; font-style: '. theme_get_setting('link-'.$item.'-font-style') .'; }'."\n";
+			} else if($item == "hover") {
+				$css .= 'a:hover { color: '.$color.'; text-decoration: ' . theme_get_setting('link-'.$item.'-decoration') .'; font-weight: '. theme_get_setting('link-'.$item.'-fontweight') .'; font-style: '. theme_get_setting('link-'.$item.'-font-style') .'; }'."\n";
+			} else if($item == "visited") {
+				$css .= 'a:visited { color: '.$color.'; text-decoration: ' . theme_get_setting('link-'.$item.'-decoration') .'; font-weight: '. theme_get_setting('link-'.$item.'-fontweight') .'; font-style: '. theme_get_setting('link-'.$item.'-font-style') .'; }'."\n";
+			} else {
+				$css .= 'a:active { color: '.$color.'; text-decoration: ' . theme_get_setting('link-'.$item.'-decoration') .'; font-weight: '. theme_get_setting('link-'.$item.'-fontweight') .'; font-style: '. theme_get_setting('link-'.$item.'-font-style') .'; }'."\n";
+			}
+		}
+	}
+
+	//Get & Set body font
+	if(theme_get_setting('h'.$item.'-font-type') == "google-font") {
+		$color = hsvToRgb(theme_get_setting('base_color'));
+		$family = str_replace("'", "", theme_get_setting('base_webfont'));
+		$family = str_replace('"', '', $family);
+		
+		$css .= 'body { font-family: '.$family.'; }'."\n";
+		$css .= 'body { font-size: '.theme_get_setting('base_fontsize').'px; }'."\n";
+		$css .= 'body { color: rgb(' . fGetRGB($color[0], $color[1], $color[2]) . '); }'."\n";
+		$css .= 'body { font-weight: '.theme_get_setting('base_fontweight').'; }'."\n";
+		$css .= 'body { font-style: '.theme_get_setting('base_font_style').'; }'."\n";
+	}
+
+
+	$vars['theme_setting_css'] = $css;
+	$vars['google_font'] = $font_family;
+	$vars['header_code'] = theme_get_setting('code_header');
+	$vars['footer_code'] = theme_get_setting('code_footer');
+	if (theme_get_setting('code_css')) {
+		$vars['custom_css'] = theme_get_setting('code_css');
+	}
+}
+function md_filmmaker_preprocess_node(&$vars) {
+	$vars['base_path'] = base_path();
+
+	$node = $vars['elements']['#node'];
+	$node_type = $node->getType();
+	$nid = $node->id();
+
+	if($node_type == "news") {
+		$vars['more_video'] = views_embed_view('blog', 'more_video');
+		$vars['more_video_2'] = views_embed_view('blog', 'more_video_2');
+		$vars['most_popular'] = views_embed_view('blog', 'most_popular');
+		$vars['recent_comment'] = views_embed_view('comments_recent', 'recent_comment');
+		$vars['archive'] = views_embed_view('archive', 'block_archive');
+
+		$query = db_select('node_field_data', 'n');
+		$query->fields('n', array('nid'))
+			  ->condition('type', $node_type)
+			  ->condition('status', NODE_PUBLISHED)
+			  ->orderBy('nid');
+		$result = $query->execute();
+		$nids = array();
+		while ($record = $result->fetchAssoc()) {
+			$nids[] .= $record['nid'];
+		}
+		$current_node_key =  array_search($nid, $nids);
+
+		if(($current_node_key - 1) >= 0) {
+			$node_prev = node_load($nids[$current_node_key - 1]);
+			$vars['prev_node_image_url'] = entity_load('image_style', 'blog_2')->buildUrl($node_prev->field_news_image->entity->getFileUri());
+			$vars['prev_node_nid'] = $node_prev->id();
+			$vars['prev_node_title'] = $node_prev->getTitle();
+		}
+		if(($current_node_key + 1) != sizeof($nids)) {
+			$node_next = node_load($nids[$current_node_key + 1]);
+			$vars['next_node_image_url'] = entity_load('image_style', 'blog_2')->buildUrl($node_next->field_news_image->entity->getFileUri());
+			$vars['next_node_nid'] = $node_next->id();
+			$vars['next_node_title'] = $node_next->getTitle();
+		}
+	}
+
+	if($node_type == "gallery") {
+		$query = db_select('node_field_data', 'n');
+		$query->fields('n', array('nid'))
+			  ->condition('type', $node_type)
+			  ->condition('status', NODE_PUBLISHED)
+			  ->orderBy('nid');
+		$result = $query->execute();
+		$nids = array();
+		while ($record = $result->fetchAssoc()) {
+			$nids[] .= $record['nid'];
+		}
+		$current_node_key =  array_search($nid, $nids);
+
+		if(($current_node_key - 1) >= 0) {
+			$node_prev = node_load($nids[$current_node_key - 1]);
+			$vars['prev_node_image_url'] = entity_load('image_style', 'blog_2')->buildUrl($node_prev->field_gallery_image->entity->getFileUri());
+			$vars['prev_node_nid'] = $node_prev->id();
+			$vars['prev_node_title'] = $node_prev->getTitle();
+		}
+		if(($current_node_key + 1) != sizeof($nids)) {
+			$node_next = node_load($nids[$current_node_key + 1]);
+			$vars['next_node_image_url'] = entity_load('image_style', 'blog_2')->buildUrl($node_next->field_gallery_image->entity->getFileUri());
+			$vars['next_node_nid'] = $node_next->id();
+			$vars['next_node_title'] = $node_next->getTitle();
+		}
+	}
+
+	if($node_type == "director") {
+		/*$ref_id = $vars['elements']['#node']->get('field_directory_featured')->getValue()[0]['target_id'];
+		$node = node_load($ref_id);
+		$field_tid = $node->get('field_film_categories')->getValue()[0]['target_id'];
+		$tearm = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($field_tid);
+		$team_name = $tearm->label();
+
+		print $tearm->toUrl()->getInternalPath();*/
+
+		$vars['more_director'] = views_embed_view('director', 'more_director');
+	}
+}
+function md_filmmaker_preprocess_comment(&$vars) {
+	$vars['base_path'] = base_path();
+}
+function md_filmmaker_preprocess_page(&$vars) {
+	/*\Drupal::routeMatch()->getRouteObject()->getOptions();*/
+}
+function md_filmmaker_preprocess_block(&$vars) {
+	$vars['base_path'] = base_path();
+	$vars['default_logo'] = theme_get_setting('logo.use_default');
+	$vars['logo_path'] = theme_get_setting('logo.path');
+}
+function md_filmmaker_preprocess_views_view_fields(&$vars) {
+	if($vars['view']->element['#display_id'] == "more_video" || $vars['view']->element['#display_id'] == "home_blog" || $vars['view']->element['#display_id'] == "blog_video_1" || $vars['view']->element['#display_id'] == "blog_video_2" || $vars['view']->element['#display_id'] == "blog_full" || $vars['view']->element['#display_id'] == "blog_sidebar") {
+		$node = node_load($vars['row']->nid);
+		$vars['node'] = $node;
+	}
+}
+function md_filmmaker_preprocess_views_view_unformatted(&$vars) {
+	if($vars['view']->element['#display_id'] == "blog_video_2" || $vars['view']->element['#display_id'] == "blog_video_3") {
+		$terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree("blog_categories");
+
+		$term_list = array();
+		for ($i = 0; $i < count($terms); $i++) {
+			array_push($term_list, $terms[$i]->name);
+		}
+
+		$vars['terms'] = $term_list;
+	}
+}
+function md_filmmaker_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+	$node = \Drupal::routeMatch()->getParameter('node');
+	if (is_numeric($node)) {
+		$node = node_load($node);
+	}
+	if ($node) {
+		$type = $node->getType();
+		if ($type == 'news') {
+			$suggestions[] = 'page__news';
+		} elseif($type == 'film') {
+			$suggestions[] = 'page__film';
+		} elseif($type == 'gallery') {
+			$suggestions[] = 'page__gallery';
+		} elseif($type == 'director') {
+			$suggestions[] = 'page__director';
+		}
+	}
+}
+function md_filmmaker_form_comment_form_alter(&$form, &$form_state) {
+	unset($form['actions']['preview']);
+	unset($form['subject']);
+
+	$form['field_comment_email']['widget']['0']['value']['#title_display'] = 'invisible';
+	$form['field_comment_email']['widget']['0']['value']['#attributes'] = array('placeholder' => t('Email *'));
+	$form['field_comment_email']['#prefix'] = '<div class="row"><div class="col-md-6 col-sm-6 col-xs-12">';
+
+	$form['field_comment_name']['widget']['0']['value']['#title_display'] = 'invisible';
+	$form['field_comment_name']['widget']['0']['value']['#attributes'] = array('placeholder' => t('Name *'));
+	$form['field_comment_name']['#suffix'] = '</div>';
+
+	$form['field_comment_body']['widget']['0']['value']['#title_display'] = 'invisible';
+	$form['field_comment_body']['widget']['0']['value']['#attributes'] = array('placeholder' => t('Message'));
+	$form['field_comment_body']['#prefix'] = '<div class="col-md-6 col-sm-6 col-xs-12">';
+	$form['field_comment_body']['#suffix'] = '</div></div>';
+
+	$form['actions']['submit']['#value'] = 'Submit comment';
+}
+function md_filmmaker_form_alter(&$form, &$form_state) {
+	if($form['#form_id'] == "webform_submission_contact_form_form") {
+		$form['elements']['name']['#attributes'] = array('placeholder' => t('Your name'));
+		$form['elements']['email']['#attributes'] = array('placeholder' => t('Your email'));
+		$form['elements']['subject']['#attributes'] = array('placeholder' => t('Your subject'));
+		$form['elements']['message']['#attributes'] = array('placeholder' => t('Your message'));
+
+		$form['actions']['submit']['#prefix'] = '<div class="col-md-12">';
+		$form['actions']['submit']['#suffix'] = '</div>';
+		$form['actions']['submit']['#value'] = 'Send my message';
+	}
+}
+function hsvToRgb($color) {
+	$color = str_replace("(", "", $color);
+	$color = str_replace(")", "", $color);
+	$color = str_replace("hsva", "", $color);
+	$color = str_replace("hsv", "", $color);
+	$color = str_replace("%", "", $color);
+	$color = str_replace(" ", "", $color);
+	$color = explode(",", $color);
+
+	return $color;
+}
+function fGetRGB($iH, $iS, $iV) {
+	if($iH < 0)   $iH = 0;   // Hue:
+	if($iH > 360) $iH = 360; //   0-360
+	if($iS < 0)   $iS = 0;   // Saturation:
+	if($iS > 100) $iS = 100; //   0-100
+	if($iV < 0)   $iV = 0;   // Lightness:
+	if($iV > 100) $iV = 100; //   0-100
+	$dS = $iS/100.0; // Saturation: 0.0-1.0
+	$dV = $iV/100.0; // Lightness:  0.0-1.0
+	$dC = $dV*$dS;   // Chroma:     0.0-1.0
+	$dH = $iH/60.0;  // H-Prime:    0.0-6.0
+	$dT = $dH;       // Temp variable
+	while($dT >= 2.0) $dT -= 2.0; // php modulus does not work with float
+	$dX = $dC*(1-abs($dT-1));     // as used in the Wikipedia link
+	switch(floor($dH)) {
+		case 0:
+			$dR = $dC; $dG = $dX; $dB = 0.0; break;
+		case 1:
+			$dR = $dX; $dG = $dC; $dB = 0.0; break;
+		case 2:
+			$dR = 0.0; $dG = $dC; $dB = $dX; break;
+		case 3:
+			$dR = 0.0; $dG = $dX; $dB = $dC; break;
+		case 4:
+			$dR = $dX; $dG = 0.0; $dB = $dC; break;
+		case 5:
+			$dR = $dC; $dG = 0.0; $dB = $dX; break;
+		default:
+			$dR = 0.0; $dG = 0.0; $dB = 0.0; break;
+	}
+	$dM  = $dV - $dC;
+	$dR += $dM; $dG += $dM; $dB += $dM;
+	$dR *= 255; $dG *= 255; $dB *= 255;
+	return round($dR).",".round($dG).",".round($dB);
+}

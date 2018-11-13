@@ -1,0 +1,22 @@
+<div class="film-item cus-item-5">
+	<img src="{{ fields.field_film_thumbnail.content|render|striptags|trim }}" alt="{{ fields.title.content|render|striptags|trim }}" />
+	<div class="center centertxt">
+		<div class="title-white">
+			{{ fields.field_film_categories.content }}
+		</div>
+		<div class="title-bold-white">
+			<a href="{{ fields.path.content|render|striptags|trim }}"> {{ fields.title.content }} </a>
+		</div>
+		<div class="white-desc">
+			{{ fields.field_film_description.content }}
+		</div>
+		<div class="fl-viewmore">
+			<a href="{{ fields.path.content|render|striptags|trim }}">
+				<span class="more-white">
+					{% trans %} View more {% endtrans %} 
+					<i class="fa fa-long-arrow-right"></i>
+				</span>
+			</a>
+		</div>
+	</div>
+</div>

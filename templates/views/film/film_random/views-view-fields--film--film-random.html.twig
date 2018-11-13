@@ -1,0 +1,17 @@
+<div class="col-sm-4" style="padding: 0">
+	<div class="more-film">
+		<div class="bg-more-fl"></div>
+		<a href="{{ fields.path.content|render|striptags|trim }}">
+			<img src="{{ fields.field_film_thumbnail.content|render|striptags|trim }}" alt="{{ fields.title.content|render|striptags|trim }}" />
+		</a>
+		<div class="center centertxt">
+			<div class="title-white">{{ fields.field_film_categories.content }}</div>
+			<div class="title-bold-white">
+				<a href="{{ fields.path.content|render|striptags|trim }}"> {{ fields.title.content }}</a>
+			</div>
+			<div class="white-desc">
+				{{ fields.field_film_description.content }}
+			</div>
+		</div>
+	</div>
+</div>

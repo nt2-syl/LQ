@@ -1,0 +1,35 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/front/bootstrap.min.css: {}
+      css/front/font-awesome.min.css: {}
+      css/front/magnific-popup.css: {}
+      css/front/masterslider.min.css: {}
+      css/front/swiper.min.css: {}
+      css/front/style.css: {}
+  js:
+    js/front/bootstrap.min.js: {}
+    js/front/imagesloaded.pkgd.min.js: {}
+    js/front/isotope.pkgd.min.js: {}
+    js/front/jquery.countTo.js: {}
+    js/front/jquery.isotope.init.js: {}
+    js/front/jquery.magnific-popup.min.js: {}
+    js/front/jquery.timelinr.js: {}
+    js/front/jquery-migrate.min.js: {}
+    js/front/masterslider.min.js: {}
+    js/front/modernizr-2.7.1.min.js: {}
+    js/front/swiper.min.js: {}
+    js/front/waypoints.min.js: {}
+    js/front/wow.min.js: {}
+    js/front/script.js: {}
+
+theme-settings:
+  version: 1.0
+  css:
+    theme:
+      css/admin/spectrum.css: {}
+      css/admin/style.css: {}
+  js:
+    js/admin/spectrum.js: {}
+    js/admin/script.js: {}

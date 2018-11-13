@@ -1,0 +1,21 @@
+name: MD Film Maker
+type: theme
+base theme: classy
+Description: "FilmMaker Drupal Theme: Film Studio - Movie Production - Video Blogger - Creative Agency"
+package: custom
+core: 8.x
+
+libraries: 
+  - md_filmmaker/global-styling
+
+regions:
+  header: Header
+  content: Content
+  sidebar: Sidebar
+  footer: Footer
+  disabled: Disabled
+
+version: '8.x-1.0'
+project: 'md_filmmaker'
+project status url: 'http://megadrupal.com/fserver'
+datestamp: 1507738375

@@ -1,0 +1,19 @@
+<div class="blog-related col-lg-4 col-md-4 col-sm-4 col-xs-12">
+	<a href="{{ fields.path.content|render|striptags|trim }}">
+		<img src="{{ fields.field_news_image.content|render|striptags|trim }}" alt="{{ fields.title.content|render|striptags|trim }}" />
+	</a>
+	<div class="blog-content text-center">
+		<div class="gray-desc">
+			<ul class="time-more-new-blog">
+				<li>{{ fields.created.content }}</li>
+				<li><i class=" icon fa fa-comment-o"><b>{% if node.comment.comment_count %} {{ node.comment.comment_count }} {% else %} 0 {% endif %}</b></i></li>
+			</ul>
+		</div>
+		<div class="title-desc">
+			<a href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content }}</a>
+		</div>
+		<div class="gray-desc">
+			{{ fields.body.content }}
+		</div>
+	</div>
+</div>

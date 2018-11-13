@@ -1,0 +1,48 @@
+<div class="section-blog-detail">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="fl-title" style="padding-bottom: 20px;">
+					<span class="fl-title-small uppercase">
+						{% set total = (node.field_film_categories.getvalue | length) %}
+						{% set count = 0 %}
+						{% for item in content.field_film_categories %}
+							{% if item['#title'] %}
+								{% set count = count + 1  %}
+								{% if (count < total) %}
+									<a href="{{ item['#url']}}">{{ item['#title']  }}</a>, 
+								{% else %}
+									<a href="{{ item['#url']}}">{{ item['#title']  }}</a>
+								{% endif %}	
+							{% endif %}
+						{% endfor %}
+					</span>
+					<a href="{{ path('entity.node.canonical', {'node': node.id}) }}">
+						<span class="fl-title-medium">{{ node.title.entity.getTitle() }}</span>
+					</a>
+				</div>
+				<div class="detail-video">
+					<div class="img-fl-detail">
+						<img src="{{ file_url(node.field_film_thumbnail.entity.getFileUri()) }}" alt="{{ node.title.entity.getTitle() }}" />
+					</div>
+				</div>
+				<div class="d-share d-bottom3">
+					<ul class="more-info ds2 dark">
+						<li>
+							<ul class="list-social">
+								<li>{% trans %} Share {% endtrans %} : </li>
+								<li><a onclick="window.open('https://www.facebook.com/sharer.php?s=100&amp;p[url]={{ path('entity.node.canonical', {'node': node.id}) }}','sharer', 'toolbar=0,status=0,width=620,height=280');" href="javascript:;"><i class="fa fa-facebook"></i></a></li>
+								<li><a onclick="popUp=window.open('http://twitter.com/home?status={{ node.title.entity.getTitle() }} {{ path('entity.node.canonical', {'node': node.id}) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="javascript:;" onclick="popUp=window.open('https://plus.google.com/share?url={{ path('entity.node.canonical', {'node': node.id}) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;"><i class="fa fa-google-plus"></i></a></li>
+								<li><a onclick="popUp=window.open('http://pinterest.com/pin/create/button/?url={{ path('entity.node.canonical', {'node': node.id}) }}&amp;description={{ node.title.entity.getTitle() }}&amp;media={{ file_url(node.field_film_thumbnail.entity.getFileUri()) }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-pinterest"></i></a></li>
+								<li><a onclick="popUp=window.open('http://linkedin.com/shareArticle?mini=true&amp;url={{ path('entity.node.canonical', {'node': node.id}) }}>&amp;title={{ node.title.entity.getTitle() }}','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</li>
+						<li>|</li>
+						<li class="uppercase">{{ node.get('uid').entity.getAccountName() }}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
