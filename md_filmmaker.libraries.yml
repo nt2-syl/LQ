@@ -7,7 +7,8 @@ global-styling:
       css/front/magnific-popup.css: {}
       css/front/masterslider.min.css: {}
       css/front/swiper.min.css: {}
-      css/front/style.css: {}
+      css/admin/style.css: {}
+      css/custom.css: {}
   js:
     js/front/bootstrap.min.js: {}
     js/front/imagesloaded.pkgd.min.js: {}

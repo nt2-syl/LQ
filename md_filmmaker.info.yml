@@ -9,10 +9,16 @@ libraries:
   - md_filmmaker/global-styling
 
 regions:
+
   header: Header
   content: Content
   sidebar: Sidebar
   footer: Footer
+  #custom regions
+  bandeau: Bandeau
+  navigation: Navigation
+  content_top: Content Top
+  content_bottom: Content Bottom
   disabled: Disabled
 
 version: '8.x-1.0'
