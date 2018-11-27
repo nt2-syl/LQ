@@ -46,7 +46,26 @@ a {
     color: rgba(0,0,0,0.8);
     text-decoration: none !important;
 }
+.views-field-title,
+.title-bold-white {
+    color: #fff;
+    font-family: "Playfair Display",serif;
+    font-weight: 700;
+        font-size: 1.875em;
+}
 
+.block h2,
+.fl-title .fl-title-small {
+    color: rgba(0,0,0,0.5);
+    letter-spacing: 9px;
+    display: block;
+    position: relative;
+    text-align: center;
+    z-index: 120;
+    font-family: "pb-bold";
+    font-size: 16px;
+    overflow-x: hidden!important;
+}
 
 
 /*accueil - cacher logos */
