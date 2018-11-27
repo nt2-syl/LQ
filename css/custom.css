@@ -1,4 +1,38 @@
 /* LQ - Styles Custom  */
+
+
+body,
+.gray-desc {
+    color: rgba(0,0,0,0.5);
+    font-weight: 400;
+    line-height: 1.7em;
+    font-family: "pb-regular";
+}
+
+@font-face {
+    font-family: 'pb-bold';
+    src: url("../fonts/brandon/Brandon_bld.eot");
+    src: local("☺"), url("../fonts/Brandon_bld.woff") format("woff"), url("../fonts/Brandon_bld.ttf") format("truetype"), url("../fonts/Brandon_bld.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pb-regular';
+    src: url("../fonts/brandon/Brandon_reg.eot");
+    src: local("☺"), url("../fonts/Brandon_reg.woff") format("woff"), url("../fonts/Brandon_reg.ttf") format("truetype"), url("../fonts/Brandon_reg.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Film-icon';
+    src: url("../fonts/Film-icon.eot?rufg47");
+    src: url("../fonts/Film-icon.eot?rufg47#iefix") format("embedded-opentype"), url("../fonts/Film-icon.ttf?rufg47") format("truetype"), url("../fonts/Film-icon.woff?rufg47") format("woff"), url("../fonts/Film-icon.svg?rufg47#Film-icon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*accueil - cacher logos */
+
 #block-md-filmmaker-footer #logo,
 #block-md-filmmaker-account-menu #logo,
 #block-md-filmmaker-main-menu #logo {
