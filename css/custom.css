@@ -1,1 +1,10 @@
 /* LQ - Styles Custom  */
+#block-md-filmmaker-footer #logo,
+#block-md-filmmaker-account-menu #logo,
+#block-md-filmmaker-main-menu #logo {
+	display: none;
+}
+#primary_nav_wrap li {
+	display: inline-block;
+	padding-right: 2em;
+}
