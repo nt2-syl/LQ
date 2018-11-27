@@ -140,7 +140,7 @@ margin-bottom: 1em;
     padding-right: 1em;
 }
 /* todo inverser couleur */
-/* à venir*/
+/* à venir */
 .views-field-path i,
 .more i {
     padding-left: 10px;
@@ -158,3 +158,32 @@ margin-bottom: 1em;
     content: "\f178";
 }
 
+/* articles web */
+
+/* auteurs*/
+.film-box > li .film-item .list-film-cat,
+.view-liste-article-web .views-field-field-auteur,
+.view-liste-article-web .views-field-created, {
+    margin-top: 20px;
+}
+
+.views-field-field-auteur,
+.views-field-created,
+.list-film-cat {
+    font-family: "pb-bold";
+    font-size: 0.75em;
+    letter-spacing: 5px;
+    color: rgba(0,0,0, 0.5);
+    text-transform: uppercase;
+}
+
+/* titres listes */
+.fl-title .fl-title-big {
+    color: #000;
+    font-family: "Playfair Display",serif;
+    font-weight: 700;
+    font-size: 5.625em;
+    margin-bottom: -50px;
+    margin-top: -15px;
+    display: block;
+}
