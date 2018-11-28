@@ -54,16 +54,27 @@
 
 {% if label_hidden %}
   {% if multiple %}
-    {% for item in items %}
-      {{ item.content }}
-    {% endfor %}
+    <div{{ attributes }}>
+      {% for item in items %}
+        <div{{ item.attributes }}>{{ item.content }}</div>
+      {% endfor %}
+    </div>
   {% else %}
     {% for item in items %}
-      {{ item.content }}
+      <div{{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  {% for item in items %}
-    {{ item.content }}
-  {% endfor %}
+  <div{{ attributes }}>
+    <div{{ title_attributes }}>{{ label }}</div>
+    {% if multiple %}
+      <div>
+    {% endif %}
+    {% for item in items %}
+      <div{{ item.attributes }}>{{ item.content }}</div>
+    {% endfor %}
+    {% if multiple %}
+      </div>
+    {% endif %}
+  </div>
 {% endif %}
