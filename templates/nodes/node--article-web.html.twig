@@ -9,15 +9,15 @@
 						<span class="fl-title-medium">{{ node.title.entity.getTitle() }}</span>
 					</div>
 
-            {% if node.field_image_couverture_paysage %}
+            {% if node.field_image_couverture_paysage.value %}
               <div class="field_square node-field-image-couverture-paysage">
-                {{ node.field_image_couverture_paysage }}
+                {{ node.field_image_couverture_paysage.value }}
               </div>
             {% endif %}
 
-            {% if node.field_auteur %}
+            {% if node.field_auteur.value %}
               <div class="field_square node-field-auteur">
-                {{ node.field_auteur }}
+                {{ node.field_auteur.value }}
               </div>
             {% endif %}
 
