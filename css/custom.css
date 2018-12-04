@@ -288,3 +288,88 @@ bottom: -285px;*/
   line-height: 1.7em;
 	font-family: "pb-bold";
 }
+
+/* CAHIER - VUE EVA */
+.content-blog-item a {
+    color: #000;
+}
+/* min 1170*/
+.content-blog-item .title-blog {
+    padding: 10px 50px 10px 70px;
+    font-size: 30px;
+}
+.content-blog-item .title-blog {
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    color: rgba(0,0,0,0.8);
+}
+.content-blog-item .new-date {
+    line-height: 25px;
+    text-align: center;
+    position: relative;
+    color: rgba(0,0,0,0.4);
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+/*min 1170*/
+.content-blog-item .new-date {
+    -webkit-transform: translateX(-50%) translateY(30%);
+    -ms-transform: translateX(-50%) translateY(30%);
+    transform: translateX(-50%) translateY(30%);
+}
+.content-blog-item {
+    padding: 40px 0;
+}
+.content-blog-item {
+    font-family: "Playfair Display",serif;
+    position: relative;
+}
+.view-blog {
+    margin-top: 0;
+}
+/* cahier: info sous le titre*/
+.content-blog-item .view-point {
+    padding-top: 10px;
+    font-size: 14px;
+}
+.content-blog-item .view-point .fa-eye {
+    opacity: 0.4;
+    padding: 0 10px 0 0;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.content-blog-item .view-point b {
+    color: rgba(0,0,0,0.8);
+    padding: 0 5px;
+    font-family: "pb-bold";
+}
+.content-blog-item .view-point .fa-comment-o {
+    opacity: 0.4;
+    padding: 0 0px 0 20px;
+    border-left: 1px solid rgba(0,0,0,0.3);
+}
+b, strong {
+    font-weight: 700;
+}
+
+/* MOUSEOVER*/
+/*1170*/
+.content-blog-item:hover .title-blog, .content-blog-item:active .title-blog, .content-blog-item:focus .title-blog {
+    padding: 10px 80px 10px 40px;
+    border-left: 5px solid #000;
+}
+.content-blog-item:hover .title-blog, .content-blog-item:active .title-blog, .content-blog-item:focus .title-blog {
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    color: #000;
+}
+.content-blog-item a:hover {
+	text-decoration: none;
+}
