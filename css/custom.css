@@ -193,7 +193,7 @@ margin-bottom: 1em;
   margin-top: -15px;
 }
 
-/* article web - node */
+/* ARTICLE WEB - Node */
 .article_web_content {
   margin-top: 250px;
 }
@@ -268,4 +268,23 @@ bottom: -285px;*/
   -o-background-size: cover;
   -webkit-background-size: cover;
   position: relative;
+}
+
+/* ARTICLES REVUE - Node */
+.fl-title span div {
+  display: inline;
+}
+.node--type-article-revue .fl-title .fl-title-big {
+  margin-bottom: 0;
+  margin-top: 0;
+  display: block;
+  clear: both;
+  line-height: 1.5;
+}
+.left-desc {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  color: #000;
+  line-height: 1.7em;
+	font-family: "pb-bold";
 }
