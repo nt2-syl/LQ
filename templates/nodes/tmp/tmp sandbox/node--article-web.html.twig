@@ -1,0 +1,50 @@
+<div class="fl-detail-item" style="background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),url({{ file_url(node.field_image_couverture_paysage.entity.getFileUri()) }})">
+	<div class="fl-detail-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="fl-title light">
+						<span class="fl-title-small uppercase">surtitre
+						</span>
+						<span class="fl-title-medium">{{ node.title.entity.getTitle() }}</span>
+					</div>
+
+            {% if node.field_image_couverture_paysage %}
+              <div class="field_square node-field-image-couverture-paysage">
+                {{ node.field_image_couverture_paysage }}
+              </div>
+            {% endif %}
+
+            {% if content.field_auteur %}
+              <div class="field_square node-field-auteur">
+                {{ content.field_auteur }}
+              </div>
+            {% endif %}
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section article_web_content">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">ARTICLE WEB*
+				<div class="fl-title">
+					<span class="fl-title-small" style="margin-bottom: 30px;">{% trans %} STORY {% endtrans %}</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+			  {{content}}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
