@@ -373,3 +373,116 @@ b, strong {
 .content-blog-item a:hover {
 	text-decoration: none;
 }
+
+
+/* titre sur image */
+.view-cahier-vs-publication {
+  margin-top: 50px;
+}
+
+/* cahier*/
+.film-style-odd {
+    width: 100%;
+}
+[class^="film-"], [class*=" film-"] {
+    font-family: 'fontfilm';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1em;
+    /* font-size: 120%; */
+}
+.film-style-odd li {
+    display: table;
+    width: 100%;
+}
+.film-style-odd li:nth-child(2n+1) .film-odd-img {
+    float: right;
+}
+.film-style-odd li:nth-child(2n) .film-odd-img {
+    float: left;
+}
+.film-style-odd li .film-odd-content, 
+.film-style-odd li .film-odd-img {
+    width: 50%;
+}
+.film-style-odd li .film-odd-img {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+.film-style-odd li .film-odd-img img {
+    opacity: 0.5;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: auto;
+}
+
+.ac_page-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    vertical-align: middle;
+}
+.film-odd-view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    top: 60%;
+}
+.film-style-odd li:nth-child(2n+1) .film-odd-content {
+    float: left;
+    text-align: right;
+    padding-right: 40px;
+    padding-left: 20%;
+}
+.film-style-odd li:nth-child(2n) .film-odd-content {
+    float: right;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 20%;
+}
+
+.film-style-odd li .film-odd-content, .film-style-odd li .film-odd-img {
+    width: 50%;
+    min-height: 400px; /* image manquante */
+}
+@media only screen and (min-width: 1170px) {
+  .film-odd-content {
+      padding-top: 100px;
+  }
+}
+.film-odd-content .p-category {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-family: "pb-bold";
+}
+.film-odd-content .p-name {
+    padding: 12px 0 10px 0;
+    font-size: 1.875em;
+    line-height: 30px;
+}
+.film-odd-content .p-name a {
+    font-family: "Playfair Display",serif;
+    font-weight: 700;
+    color: #000;
+}
+.film-odd-content .p-desc {
+    font-family: "pb-regular";
+    margin-top: -4px;
+    line-height: 1.5em;
+}
