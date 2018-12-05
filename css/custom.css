@@ -543,3 +543,35 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   min-height: 0;
   margin-bottom: 10px;
 }
+
+/*galerie*/
+
+.node--type-galerie .fl-title {
+  clear: both;
+  min-height: 100px; /*temp*/
+}
+.fl-title-desc {
+  text-align: center;
+  clear: both;
+
+}
+.fl-title-desc {
+        margin-top: 70px;
+    font-family: "Playfair Display", serif;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.field-resume-galerie {
+    text-align: center;
+}
+
+.fl-title .fl-title-big {
+    color: #000;
+    font-family: "Playfair Display",serif;
+    font-weight: 700;
+    font-size: 5.625em;
+    margin-bottom: -50px;
+    margin-top: -15px;
+    display: block;
+}
+
