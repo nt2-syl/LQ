@@ -288,6 +288,7 @@ bottom: -285px;*/
   line-height: 1.7em;
 	font-family: "pb-bold";
 }
+/* ajouter .node-balado .field-chapeau */
 
 /* CAHIER - VUE EVA */
 .content-blog-item a {
@@ -485,4 +486,60 @@ b, strong {
     font-family: "pb-regular";
     margin-top: -4px;
     line-height: 1.5em;
+}
+/* BALADO */
+.node--type-balados .fieldset-wrapper > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/*
+.node--type-balados .field-audio {
+  text-align:center;
+}
+*/
+
+
+/*
+balado DETAILS : GRID 
+insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-6 ac_col-12
+
+<div class="ac-counter">
+<div class="counter-value" data-from="0" data-to="249" data-speed="1000">
+<span>249</span>
+</div>
+<div class="counter-title">COMPLETED PROJECTS</div>
+</div>
+*/
+
+.counter-content, .ac-counter {
+  font-size: 16px;
+  text-align: center;
+}
+.ac-counter {
+  text-align: center;
+}
+/*1170*/
+.counter-content .counter-digit, .counter-value {
+  font-size: 50px;
+}
+.counter-content .counter-digit, .counter-value {
+  color: #000;
+}
+.counter-value {
+  font-size: 40px;
+  line-height: 40px;
+  margin: 10px 0;
+}
+.counter-content .counter-desc, .counter-title {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(0,0,0,0.5);
+  margin-top: 5px;
+  font-weight: 700;
+}
+.counter-title, .counter-description {
+  min-height: 0;
+  margin-bottom: 10px;
 }
