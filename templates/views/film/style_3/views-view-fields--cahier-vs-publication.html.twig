@@ -1,7 +1,6 @@
-{# {{ fields.field_image_couverture_paysage.content|render|striptags|trim }} #}
 <div class="film-odd-img">
 	<a href="{{ fields.path.content|render|striptags|trim }}">
-		<img src="{{ file_url(node.field_image_couverture_paysage.entity.getFileUri()) }}" alt="{{ fields.title.content|render|striptags|trim }}" /> 
+		<img src="{{ fields.field_image_couverture_paysage.content|render|striptags|trim }}" alt="{{ fields.title.content|render|striptags|trim }}" /> 
 	</a>
 	<div class="film-odd-view">
 		<span class="view-more">
@@ -13,9 +12,12 @@
 </div>
 <div class="film-odd-content">
 	<div class="p-category">
-		Categorie à venir
+		Category
 	</div>
 	<div class="p-name">
 		<a href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content }}</a>
+	</div>
+	<div class="p-desc">
+		Description
 	</div>
 </div>
