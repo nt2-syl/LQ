@@ -305,6 +305,10 @@ bottom: -285px;*/
 .node--type-cahier .fl-title {
   line-height: 1.75;
 }
+/*
+.node--type-cahier .field--name-field-type-cahier {
+  text-transform: uppercase;
+}*/
 /* CAHIER - VUE EVA */
 
 
@@ -651,3 +655,6 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .node--type-balados .node__content .field--name-field-sous-titre {
   display: none;
 }
+/*#block-md-filmmaker-page-title .field--name-title {
+  display: none;
+}*/
