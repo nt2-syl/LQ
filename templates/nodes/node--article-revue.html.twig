@@ -69,8 +69,6 @@
  *   rendered twice on a page this is invalid CSS for example: two lists
  *   in different view modes.
  */
-
-AJOUTER NOM DU CHAMP DANS LES CLASSES
 #}
 {%
   set classes = [
@@ -97,11 +95,11 @@ AJOUTER NOM DU CHAMP DANS LES CLASSES
             {{ content.field_sous_titre }}
           </div>
         {% endif %}
-        {% if content.field_auteur_ouvrage_critique %}
-        <div class="field-auteur-ouvrage-critique ac-html">
-          <em>{{ content.field_auteur_ouvrage_critique }}</em>
-        </div>
-      {% endif %}
+        {% if content.field_auteur %}
+          <div class="field-auteur">
+            {{ content.field_auteur }}
+          </div>
+        {% endif %}
 
       <div id="" class="el-text-c80 ac_element left-desc">
         <div class="ac-text">

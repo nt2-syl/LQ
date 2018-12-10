@@ -195,7 +195,8 @@ margin-bottom: 1em;
 
 /* ARTICLE WEB - Node */
 .article_web_content {
-  margin-top: 250px;
+  margin-top: 5em;
+  /* margin-top:250px;*/
 }
 .fl-detail-item .fl-detail-box {
   position: absolute;
@@ -269,6 +270,11 @@ bottom: -285px;*/
   -webkit-background-size: cover;
   position: relative;
 }
+/* Custom */
+.template_article_web .fl-title .fl-title-medium {
+  line-height: 2;
+}
+
 
 /* ARTICLES REVUE - Node */
 .fl-title span div {
@@ -288,9 +294,21 @@ bottom: -285px;*/
   line-height: 1.7em;
 	font-family: "pb-bold";
 }
+/* custom */
+.node--type-article-revue .field--name-field-resume {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
 /* ajouter .node-balado .field-chapeau */
 
+/*CAHIER*/
+.node--type-cahier .fl-title {
+  line-height: 1.75;
+}
 /* CAHIER - VUE EVA */
+
+
 .content-blog-item a {
     color: #000;
 }
@@ -624,6 +642,12 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 /* champs imprimés dans les templates - fermer les originaux */
 .article_web_content .field--name-field-auteur,
 .article_web_content .field--name-field-image-couverture-paysage,
-.article_web_content .field--name-field-sous-titre {
+.article_web_content .field--name-field-sous-titre,
+.article_web_content .field--name-field-type-article,
+.node--type-article-revue .node__content .field--name-field-resume,
+.node--type-article-revue .node__content .field--name-field-auteur,
+.node--type-article-revue .node__content .field--name-field-sous-titre,
+.node--type-article-revue .node__content .field--name-field-type-article,
+.node--type-article-revue .node__content .field--name-field-cahier-referent {
   display: none;
 }

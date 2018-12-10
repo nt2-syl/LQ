@@ -1,11 +1,30 @@
-<div class="fl-detail-item" style="background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3))">
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+<div class="fl-detail-item template_article_web" style="background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3))">
   <div class="fl-detail-box">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        {{ title_prefix }}
           <div class="fl-title light">
-            <span class="fl-title-small uppercase date">Date
+            <span class="fl-title-small uppercase date">Date / 
+          {% if content.field_type_article %}
+            <div class="field-type-article">
+              {{ content.field_type_article }}
+            </div>
+          {% endif %}
             </span>
+
             <span class="fl-title-medium">{{ node.title.entity.getTitle() }}</span>
             <span class="fl-title-small uppercase">
             {% if content.field_sous_titre %}
@@ -14,6 +33,7 @@
             </div>
           {% endif %}
             </span>
+            {{ title_prefix }}
           </div>
 
           {% if content.field_image_couverture_paysage %}
@@ -42,3 +62,4 @@
     </div>
   </div>
 </div>
+</article>
