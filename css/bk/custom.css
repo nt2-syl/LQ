@@ -1,0 +1,272 @@
+/* LQ - Styles Custom  */
+/*fonts*/
+@font-face {
+    font-family: 'pb-bold';
+    src: url("../fonts/brandon/Brandon_bld.eot");
+    src: local("☺"), url("../fonts/Brandon_bld.woff") format("woff"), url("../fonts/Brandon_bld.ttf") format("truetype"), url("../fonts/Brandon_bld.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pb-regular';
+    src: url("../fonts/brandon/Brandon_reg.eot");
+    src: local("☺"), url("../fonts/Brandon_reg.woff") format("woff"), url("../fonts/Brandon_reg.ttf") format("truetype"), url("../fonts/Brandon_reg.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Film-icon';
+    src: url("../fonts/Film-icon.eot?rufg47");
+    src: url("../fonts/Film-icon.eot?rufg47#iefix") format("embedded-opentype"), url("../fonts/Film-icon.ttf?rufg47") format("truetype"), url("../fonts/Film-icon.woff?rufg47") format("woff"), url("../fonts/Film-icon.svg?rufg47#Film-icon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*styles*/
+
+body,
+.gray-desc {
+    color: rgba(0,0,0,0.5);
+    font-weight: 400;
+    line-height: 1.7em;
+    font-family: "pb-regular";
+}
+.view-header {
+	line-height: 1;
+}
+h1
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "pb-bold";
+}
+h1 {
+    font-family: "Playfair Display",serif;
+}
+a {
+    color: rgba(0,0,0,0.8);
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: rgba(0,0,0,0.5);
+        text-decoration: underline;
+}
+.views-field-title,
+.title-bold-white {
+    color: #fff;
+    font-family: "Playfair Display",serif;
+    font-weight: 700;
+        font-size: 1.875em;
+}
+
+.block h2,
+.fl-title .fl-title-small {
+    color: rgba(0,0,0,0.5);
+    letter-spacing: 9px;
+    display: block;
+    position: relative;
+    text-align: center;
+    z-index: 120;
+    font-family: "pb-bold";
+    font-size: 16px;
+    overflow-x: hidden!important;
+}
+
+
+/*accueil - cacher logos */
+
+#block-md-filmmaker-footer #logo,
+#block-md-filmmaker-account-menu #logo,
+#block-md-filmmaker-main-menu #logo {
+	display: none;
+}
+#primary_nav_wrap li {
+	display: inline-block;
+	padding-right: 2em;
+}
+/* style.css */
+/* Menus */
+ul.active-menu-default {
+    float: right;
+    padding-right: 25px;
+}
+ul.active-menu-default > li {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 15px 12px;
+    list-style: none;
+}
+.menu-item a, 
+ul.active-menu-default li a, 
+ul.active-menu-default > li a {
+    color: #a7a7a7;
+}
+ul.active-menu-default > li a {
+    padding: 5px 15px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    font-size: 12px;
+    text-transform: uppercase;
+    -webkit-transition: all 300ms linear 0ms;
+    -khtml-transition: all 300ms linear 0ms;
+    -moz-transition: all 300ms linear 0ms;
+    -ms-transition: all 300ms linear 0ms;
+    -o-transition: all 300ms linear 0ms;
+    transition: all 300ms linear 0ms;
+}
+
+.views-field-path,
+.more {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    font-family: "pb-bold";
+    font-weight: 400;
+    color: rgba(0,0,0,0.6);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid rgba(0,0,0,0.1);
+    font-size: 10px;
+/*extra*/
+display: inline-block;
+margin-bottom: 1em;
+}
+.views-field-path a,
+.more a {
+    height: 40px;
+    line-height: 40px;
+    color: rgba(0,0,0,0.6);
+    /**/
+    padding-left: 1em;
+    padding-right: 1em;
+}
+/* todo inverser couleur */
+/* à venir */
+.views-field-path i,
+.more i {
+    padding-left: 10px;
+    color: rgba(0,0,0,0.4);
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-long-arrow-right:before {
+    content: "\f178";
+}
+
+/* articles web */
+
+/* auteurs*/
+.film-box > li .film-item .list-film-cat,
+.view-liste-article-web .views-field-field-auteur,
+.view-liste-article-web .views-field-created, {
+    margin-top: 20px;
+}
+
+.views-field-field-auteur,
+.views-field-created,
+.list-film-cat {
+    font-family: "pb-bold";
+    font-size: 0.75em;
+    letter-spacing: 5px;
+    color: rgba(0,0,0, 0.5);
+    text-transform: uppercase;
+}
+
+/* titres listes */
+.fl-title-big {
+    color: #000;
+    font-family: "Playfair Display",serif;
+    font-weight: 700;
+    font-size: 5.625em;
+    display: block;
+}
+.fl-title .fl-title-big {
+	  margin-bottom: -50px;
+    margin-top: -15px;
+	}
+
+/* article web - */
+.article_web_content {
+	margin-top: 250px;
+}
+.fl-detail-item .fl-detail-box {
+    position: absolute;
+    /*bottom: -285px;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+}
+.fl-detail-item .fl-detail-box .list-social li {
+ color: rgba(255, 255, 255, 0.3);
+ list-style: none;
+
+font-family: "pb-regular";
+  }
+.fl-detail-item .fl-detail-box .list-social li a {
+   color: rgba(255, 255, 255, 0.3);
+    padding: 0 5px;
+ }
+.fl-detail-item .fl-detail-box .list-social li:hover a {
+   color: rgba(255, 255, 255, 0.7);
+ }
+	.fl-detail-item {
+		min-height: 900px;
+		position: relative;
+	}
+.fl-detail-item .fl-detail-box {
+/*position: absolute;
+bottom: -285px;*/
+color: rgba(0,0,0,0.7);
+}
+.fl-detail-box .fl-title {
+margin-top: 50px;
+}
+.fl-detail-box .tabs {
+min-height: inherit; 
+}
+.fl-title .fl-title-medium {
+    color: #000;
+    font-family: "Playfair Display",serif;
+    font-size: 3.125em;
+    font-weight: 700;
+    display: block;
+}
+.fl-title {
+    position: relative;
+    text-align: center;
+    z-index: 120;
+}
+.fl-title.light .fl-title-small, .fl-title.light .fl-title-small a {
+    color: rgba(255, 255, 255, 0.5);
+}
+.fl-title .fl-title-small {
+    color: rgba(0,0,0,0.5);
+    letter-spacing: 9px;
+    display: block;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.fl-title.light .fl-title-big, .fl-title.light .fl-title-medium {
+    color: #ddd;
+}
+.fl-detail-item {
+	background-color: #f00;
+   /* background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(../../images/image-catoon.jpg);*/
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    position: relative;
+}
