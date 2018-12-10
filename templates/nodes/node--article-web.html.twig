@@ -4,9 +4,16 @@
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="fl-title light">
-            <span class="fl-title-small uppercase">surtitre
+            <span class="fl-title-small uppercase date">Date
             </span>
             <span class="fl-title-medium">{{ node.title.entity.getTitle() }}</span>
+            <span class="fl-title-small uppercase">
+            {% if content.field_sous_titre %}
+            <div class="field-sous-titre">
+              {{ content.field_sous_titre}}
+            </div>
+          {% endif %}
+            </span>
           </div>
 
           {% if content.field_image_couverture_paysage %}
@@ -26,16 +33,8 @@
     </div>
   </div>
 </div>
-
 <div class="section article_web_content">
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="fl-title">
-          <span class="fl-title-small" style="margin-bottom: 30px;">STORY</span>
-        </div>
-      </div>
-    </div>
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         {{content}}
