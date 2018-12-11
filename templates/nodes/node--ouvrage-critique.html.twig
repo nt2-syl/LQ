@@ -93,32 +93,19 @@
 <div class="team-member style-2">
   <div class="team-member-detail-2">
     <div class="col-md-8 col-sm-7 col-xs-12" style="padding-left: 0;">
+      {# inserer image field #}
+
       <img class="fullwidth" src=" http://demo.megadrupal.com/d8/md-filmmaker/sites/default/files/awebuilder/oscar-wilde-363x500.jpg " alt="">
     </div>
     <div class="col-md-4 col-sm-5 col-xs-12" style="padding: 0;">
       <div class="direct-container d-padding">
-        <div class="crew-name"><div class="ac_bg__overlay"></div>                                             Dean Bui</div>
-        <div class="crew-active">CREATIVE DRECTOR</div>
         <div class="crew-desc">
-          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.
+          {{ content }}
         </div>
-        <div class="director-social">
-                      <span class="social">
-              <a href="#"><i class="md-facebook"></i></a>
-            </span>
-                      <span class="social">
-              <a href="#"><i class="md-twitter"></i></a>
-            </span>
-                      <span class="social">
-              <a href="#"><i class="md-gplus"></i></a>
-            </span>
-                  </div>
       </div>
     </div>
   </div>
 </div>
-
-
 
   {% if display_submitted %}
     <footer class="node__meta">
@@ -130,8 +117,6 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
-  </div>
+  <div{{ content_attributes.addClass('node__content') }}></div>
 
 </article>

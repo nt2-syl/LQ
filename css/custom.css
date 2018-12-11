@@ -647,7 +647,10 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .direct-container {
   padding-top: 120px;
 }
-
+.view-article-vs-ouvrage-critique {
+  clear: both;
+  padding-top: 200px; /*temp*/
+}
 /* champs imprimés dans les templates - fermer les originaux */
 .article_web_content .field--name-field-auteur,
 .article_web_content .field--name-field-image-couverture-paysage,
