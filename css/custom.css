@@ -294,10 +294,10 @@ bottom: -285px;*/
 	font-family: "pb-bold";
 }
 /* custom */
-.node--type-article-revue .field--name-field-resume {
+/*.node--type-article-revue .field--name-field-resume {
   padding-top: 4em;
   padding-bottom: 4em;
-}
+}*/
 
 /* ajouter .node-balado .field-chapeau */
 
@@ -659,6 +659,12 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
     padding-bottom:5em;/*temp*/
 }
 
+.node--type-article-revue .section-c125 {
+  margin-top: 4em;
+  margin-bottom: 4em;
+  display: inline-block;
+}
+
 /* champs imprimés dans les templates - fermer les originaux */
 .article_web_content .field--name-field-auteur,
 .article_web_content .field--name-field-image-couverture-paysage,
@@ -669,6 +675,8 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .node--type-article-revue .node__content .field--name-field-sous-titre,
 .node--type-article-revue .node__content .field--name-field-type-article,
 .node--type-article-revue .node__content .field--name-field-cahier-referent,
+.node--type-article-revue .node__content .field--name-field-genre,
+.node--type-article-revue .node__content .field--name-field-thematique,
 .node--type-cahier .node__content .field--name-field-type-cahier,
 .node--type-balados .node__content .field--name-field-sous-titre,
 .node--type-collaborateur .node__content .field--name-field-portrait,
