@@ -664,7 +664,8 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .node--type-collaborateur .node__content .field--name-field-prenom,
 .node--type-collaborateur .node__content .field--name-field-nom,
 .node--type-collaborateur .node__content .field--name-field-statut-collaborateur,
-.node--type-collaborateur .node__content .field--name-body {
+.node--type-collaborateur .node__content .field--name-body,
+.node--type-ouvrage-critique .field--name-field-couverture-ouvrage {
   display: none;
 }
 /*.node--type-collaborateur .node__content .field--name-field-liens-externes*/
