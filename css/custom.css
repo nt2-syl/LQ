@@ -651,6 +651,14 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   clear: both;
   padding-top: 200px; /*temp*/
 }
+
+/* eva editorial sur publication */
+/* custom */
+.editorial_sur_publication {
+  padding-top:5em;/*temp*/
+    padding-bottom:5em;/*temp*/
+}
+
 /* champs imprimés dans les templates - fermer les originaux */
 .article_web_content .field--name-field-auteur,
 .article_web_content .field--name-field-image-couverture-paysage,
