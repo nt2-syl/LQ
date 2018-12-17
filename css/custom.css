@@ -24,7 +24,13 @@
 
 /*styles*/
 
-body,
+body {
+  color: rgba(0,0,0,0.5);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7em;
+  font-family: "pb-regular";
+}
 .gray-desc {
   color: rgba(0,0,0,0.5);
   font-weight: 400;
