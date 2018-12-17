@@ -52,8 +52,8 @@ h1 {
     font-family: "Playfair Display",serif;
 }
 a {
-    color: rgba(0,0,0,0.8);
-    text-decoration: none;
+  color: rgba(0,0,0,0.8);
+  text-decoration: none;
 }
 a:hover, a:focus {
   color: rgba(0,0,0,0.5);
@@ -81,6 +81,10 @@ a:hover, a:focus {
 .fl-title .fl-title-small a,
 .fl-title-desc a {
   color: rgba(0,0,0,0.5);
+}
+
+.field--name-field-couverture {
+  width: 100%;
 }
 
 /*accueil - cacher logos */
@@ -534,6 +538,13 @@ b, strong {
   display: inline-block;
   margin-right: 20px;
 }
+.field--name-field-balado {
+  text-align: center;
+  margin: 1em 0;
+}
+.field--name-field-balado audio {
+  width: 100%;
+}
 
 /*
 .node--type-balados .field-audio {
@@ -698,9 +709,14 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .node--type-collaborateur .node__content .field--name-field-nom,
 .node--type-collaborateur .node__content .field--name-field-statut-collaborateur,
 .node--type-collaborateur .node__content .field--name-body,
-.node--type-ouvrage-critique .field--name-field-couverture-ouvrage {
+.node--type-ouvrage-critique .field--name-field-couverture-ouvrage,
+.node--type-galerie .node__content .field--name-field-sous-titre,
+.node--type-galerie .node__content .field--name-field-auteur,
+.node--type-galerie .node__content .field--name-field-resume,
+.node--type-galerie .node__content .field--name-field-numero-referent {
   display: none;
 }
+
 /*.node--type-collaborateur .node__content .field--name-field-liens-externes*/
 
 /*#block-md-filmmaker-page-title .field--name-title {

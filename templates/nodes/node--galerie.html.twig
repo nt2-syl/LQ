@@ -82,36 +82,27 @@
 %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
-
   {{ title_prefix }}
-  {# numero referent manquant au dessus du titre #}
 <div class="fl-title">
-  <span class="fl-title-small uppercase"><div class="ac_bg__overlay"></div>{% if content.field_numero_referent %}
-            <div class="field-numero-referent">
-              {{ content.field_numero_referent }}
-            </div>
-          {% endif %}</span>
   <span class="fl-title-big"><div class="ac_bg__overlay"></div>{{ node.title.entity.getTitle() }}</span>
 </div>
   {{ title_suffix }}
 
-
+{#galerie header = article revue header#}
 <div id="" class="el-html-c30 ac_element fl-title-desc">
-<div class="ac-html">
-<span>
-          {% if content.field_auteur %}
-            <div class="field-auteur">
-              <strong><em>{{ content.field_auteur }}</em></strong>
-            </div>
-          {% endif %}
-          {% if content.field_sous_titre %}
-            <div class="field-sous-titre">
-              {{ content.field_sous_titre}}
-            </div>
-          {% endif %}
-
-</span>
-</div>
+  <div class="fl-title-desc">
+    {% if content.field_sous_titre %}
+      <div class="field_square field-sous-titre"><strong><em>
+        {{ content.field_sous_titre }}
+        </em></strong>
+      </div>
+    {% endif %}
+      {% if content.field_auteur %}
+        <div class="field-auteur">
+          {{ content.field_auteur }}
+        </div>
+      {% endif %}
+  </div>
 </div>
           {% if content.field_resume %}
 <div id="field-resume-galerie" class="el-text-c80 ac_element left-desc"><div class="ac-text field-resume">{{ content.field_resume }}</div></div>
