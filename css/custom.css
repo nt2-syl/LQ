@@ -96,7 +96,6 @@ a:hover, a:focus {
 }
 #primary_nav_wrap li {
 	display: inline-block;
-	padding-right: 2em;
 }
 /* style.css */
 /* Menus */
@@ -732,4 +731,20 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 /* supprimer si les classes sont ajoutes sur les champs d'ouvrage critique*/
 .crew-desc > div {
   display: block;
+}
+
+/* header */
+.site-name {
+  display: none;
+}
+.site-logo img {
+  max-width: 90px;
+  height: auto;
+}
+#block-md-filmmaker-branding {
+  float: left;
+}
+#block-md-filmmaker-main-menu {
+  float: right;
+  width: 90%;
 }
