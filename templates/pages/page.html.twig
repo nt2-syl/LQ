@@ -1,8 +1,17 @@
 <div class="site">
+	{% if page.bandeau %}
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 bandeau">
+					{{ page.bandeau }}
+				</div>
+			</div>
+		</div>
+	{% endif %}
 	{% if page.header %}
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-sm-12 header">
 					{{ page.header }}
 				</div>
 			</div>
@@ -12,16 +21,27 @@
 		<div class="section">
 			<div class="container">
 				<div class="row">
+					<div class="col-sm-12 content_top">
+						{% if page.content_top %}
+							{{ page.content_top }}
+								{% endif %}
+						</div>
 					{% if page.sidebar %}
-						<div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+						<div class="col-lg-8 col-md-9 col-sm-12 col-xs-12 page_content_with_sidebar">
 							{{ page.content }}
 						</div>
 						<div class="archive-sidebar side-bar col-lg-4 col-md-3 hidden-sm hidden-xs">
 							{{ page.sidebar}}
 						</div>		
 					{% else %}
-						<div class="col-sm-12">
-							{{ page.content }}
+						<div class="col-sm-12 page_content">
+							{{ page.content }} 
+						</div>
+					{% endif %}
+
+					<div class="col-sm-12 content_bottom">
+						{% if page.content_bottom %}
+							{{ page.content_bottom }}
 						</div>
 					{% endif %}
 				</div>

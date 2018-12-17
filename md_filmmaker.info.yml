@@ -16,7 +16,6 @@ regions:
   footer: Footer
   #custom regions
   bandeau: Bandeau
-  navigation: Navigation
   content_top: Content Top
   content_bottom: Content Bottom
   disabled: Disabled
