@@ -726,5 +726,10 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .node--type-article-web .field-sous-titre,
 .node--type-article-web .field-auteur {
   display: block;
-
+}
+/* ouvrage critiqué*/
+/* infos */
+/* supprimer si les classes sont ajoutes sur les champs d'ouvrage critique*/
+.crew-desc > div {
+  display: block;
 }
