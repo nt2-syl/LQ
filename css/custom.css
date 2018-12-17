@@ -78,7 +78,10 @@ a:hover, a:focus {
   font-size: 16px;
   overflow-x: hidden!important;
 }
-
+.fl-title .fl-title-small a,
+.fl-title-desc a {
+  color: rgba(0,0,0,0.5);
+}
 
 /*accueil - cacher logos */
 
@@ -298,7 +301,12 @@ bottom: -285px;*/
   color: #000;
   line-height: 1.7em;
 	font-family: "pb-bold";
+  text-align: left;
 }
+.fl-mg-top {
+  text-align: right;
+}
+
 /* custom */
 /*.node--type-article-revue .field--name-field-resume {
   padding-top: 4em;
@@ -698,3 +706,9 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 /*#block-md-filmmaker-page-title .field--name-title {
   display: none;
 }*/
+
+.node--type-article-web .field-sous-titre,
+.node--type-article-web .field-auteur {
+  display: block;
+
+}
