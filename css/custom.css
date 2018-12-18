@@ -1012,6 +1012,11 @@ div.region.region-footer ul.menu {
   width: 70%;
 }
 
+/* line 797, ../sass/custom.scss */
+#block-copyright {
+  clear: both;
+}
+
 /* Responsive @media */
 /* mobile */
 /* col-xs // 0-768 */
