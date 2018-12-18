@@ -956,12 +956,20 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .block-views-blockaccueil-edito-block-1 {
   width: 50%;
   padding-right: 2em;
+  float: left;
 }
 
-/* line 758, ../sass/custom.scss */
+/* line 759, ../sass/custom.scss */
 .block-views-blockaccueil-publications-block-1 {
   width: 50%;
   padding-left: 2em;
+  float: right;
+}
+
+/* line 764, ../sass/custom.scss */
+div.region.region-footer,
+div.region.region-footer ul.menu {
+  text-align: center;
 }
 
 /* Responsive @media */
