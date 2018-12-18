@@ -212,22 +212,10 @@ function md_filmmaker_preprocess_views_view_unformatted(&$vars) {
 	}
 }
 function md_filmmaker_theme_suggestions_page_alter(array &$suggestions, array $variables) {
-	$node = \Drupal::routeMatch()->getParameter('node');
-	if (is_numeric($node)) {
-		$node = node_load($node);
-	}
-	if ($node) {
-		$type = $node->getType();
-		if ($type == 'news') {
-			$suggestions[] = 'page__news';
-		} elseif($type == 'film') {
-			$suggestions[] = 'page__film';
-		} elseif($type == 'gallery') {
-			$suggestions[] = 'page__gallery';
-		} elseif($type == 'director') {
-			$suggestions[] = 'page__director';
-		}
-	}
+ if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__'.$content_type;
+  }
 }
 function md_filmmaker_form_comment_form_alter(&$form, &$form_state) {
 	unset($form['actions']['preview']);
