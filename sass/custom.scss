@@ -76,6 +76,12 @@ a:hover, a:focus {
   z-index: 120;
   font-family: "pb-bold";
   font-size: 16px;
+  line-height: 1;
+  /*overflow-x: hidden !important*/
+}
+.accueil_articles_web,
+.accueil_balados {
+  clear: both;
 }
 .fl-title .fl-title-small a,
 .fl-title-desc a {
