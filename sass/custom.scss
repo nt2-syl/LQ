@@ -749,6 +749,17 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   width: 90%;
 }
 
+
+/* Accueil - Positionnement temporaire */
+.block-views-blockaccueil-edito-block-1 {
+  width: 50%;
+  padding-right: 2em;
+}
+.block-views-blockaccueil-publications-block-1 {
+  width: 50%;
+  padding-left: 2em;
+}
+
 /* Responsive @media */
 /* mobile */
 @media (max-width: 460px) {}
