@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* LQ - Styles Custom  */
 /*fonts*/
 @font-face {
@@ -22,30 +21,25 @@
   font-weight: normal;
   font-style: normal;
 }
+
 /*styles*/
-/* line 27, ../sass/custom.scss */
+
 body {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0,0,0,0.5);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7em;
   font-family: "pb-regular";
 }
-
-/* line 34, ../sass/custom.scss */
 .gray-desc {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0,0,0,0.5);
   font-weight: 400;
   line-height: 1.7em;
   font-family: "pb-regular";
 }
-
-/* line 40, ../sass/custom.scss */
 .view-header {
-  line-height: 1;
+	line-height: 1;
 }
-
-/* line 43, ../sass/custom.scss */
 h1
 h2,
 h3,
@@ -54,25 +48,17 @@ h5,
 h6 {
   font-family: "pb-bold";
 }
-
-/* line 51, ../sass/custom.scss */
 h1 {
-  font-family: "Playfair Display",serif;
+    font-family: "Playfair Display",serif;
 }
-
-/* line 54, ../sass/custom.scss */
 a {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0,0,0,0.8);
   text-decoration: none;
 }
-
-/* line 58, ../sass/custom.scss */
 a:hover, a:focus {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0,0,0,0.5);
   text-decoration: underline;
 }
-
-/* line 62, ../sass/custom.scss */
 .views-field-title,
 .title-bold-white {
   color: #fff;
@@ -80,11 +66,9 @@ a:hover, a:focus {
   font-weight: 700;
   font-size: 1.875em;
 }
-
-/* line 69, ../sass/custom.scss */
 .block h2,
 .fl-title .fl-title-small {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0,0,0,0.5);
   letter-spacing: 9px;
   display: block;
   position: relative;
@@ -92,42 +76,33 @@ a:hover, a:focus {
   z-index: 120;
   font-family: "pb-bold";
   font-size: 16px;
-  overflow-x: hidden !important;
+  overflow-x: hidden!important;
 }
-
-/* line 81, ../sass/custom.scss */
 .fl-title .fl-title-small a,
 .fl-title-desc a {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0,0,0,0.5);
 }
 
-/* line 86, ../sass/custom.scss */
 .field--name-field-couverture {
   width: 100%;
 }
 
 /*accueil - cacher logos */
-/* line 92, ../sass/custom.scss */
+
 #block-md-filmmaker-footer #logo,
 #block-md-filmmaker-account-menu #logo,
 #block-md-filmmaker-main-menu #logo {
-  display: none;
+	display: none;
 }
-
-/* line 97, ../sass/custom.scss */
 #primary_nav_wrap li {
-  display: inline-block;
+	display: inline-block;
 }
-
 /* style.css */
 /* Menus */
-/* line 102, ../sass/custom.scss */
 ul.active-menu-default {
   float: right;
   padding-right: 25px;
 }
-
-/* line 106, ../sass/custom.scss */
 ul.active-menu-default > li {
   display: inline-block;
   position: relative;
@@ -135,15 +110,11 @@ ul.active-menu-default > li {
   padding: 15px 12px;
   list-style: none;
 }
-
-/* line 113, ../sass/custom.scss */
-.menu-item a,
-ul.active-menu-default li a,
+.menu-item a, 
+ul.active-menu-default li a, 
 ul.active-menu-default > li a {
   color: #a7a7a7;
 }
-
-/* line 118, ../sass/custom.scss */
 ul.active-menu-default > li a {
   padding: 5px 15px;
   border-left: 2px solid transparent;
@@ -158,44 +129,37 @@ ul.active-menu-default > li a {
   transition: all 300ms linear 0ms;
 }
 
-/* line 132, ../sass/custom.scss */
 .views-field-path,
 .more {
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   font-family: "pb-bold";
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0,0,0,0.6);
   letter-spacing: 2px;
   text-transform: uppercase;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0,0,0,0.1);
   font-size: 10px;
   /*extra*/
   display: inline-block;
   margin-bottom: 1em;
 }
-
-/* line 147, ../sass/custom.scss */
 .views-field-path a,
 .more a {
   height: 40px;
   line-height: 40px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0,0,0,0.6);
   /**/
   padding-left: 1em;
   padding-right: 1em;
 }
-
 /* todo inverser couleur */
 /* à venir */
-/* line 158, ../sass/custom.scss */
 .views-field-path i,
 .more i {
   padding-left: 10px;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0,0,0,0.4);
 }
-
-/* line 163, ../sass/custom.scss */
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -204,34 +168,30 @@ ul.active-menu-default > li a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* line 171, ../sass/custom.scss */
 .fa-long-arrow-right:before {
-  content: "\f178";
+    content: "\f178";
 }
 
 /* articles web */
+
 /* auteurs*/
-/* line 178, ../sass/custom.scss */
 .film-box > li .film-item .list-film-cat,
 .view-liste-article-web .views-field-field-auteur,
-.view-liste-article-web .views-field-created {
-  margin-top: 20px;
+.view-liste-article-web .views-field-created, {
+    margin-top: 20px;
 }
 
-/* line 184, ../sass/custom.scss */
 .views-field-field-auteur,
 .views-field-created,
 .list-film-cat {
   font-family: "pb-bold";
   font-size: 0.75em;
   letter-spacing: 5px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0,0,0, 0.5);
   text-transform: uppercase;
 }
 
 /* titres listes */
-/* line 195, ../sass/custom.scss */
 .fl-title-big {
   color: #000;
   font-family: "Playfair Display",serif;
@@ -239,21 +199,16 @@ ul.active-menu-default > li a {
   font-size: 5.625em;
   display: block;
 }
-
-/* line 202, ../sass/custom.scss */
 .fl-title .fl-title-big {
   margin-bottom: -50px;
   margin-top: -15px;
 }
 
 /* ARTICLE WEB - Node */
-/* line 208, ../sass/custom.scss */
 .article_web_content {
   margin-top: 5em;
   /* margin-top:250px;*/
 }
-
-/* line 212, ../sass/custom.scss */
 .fl-detail-item .fl-detail-box {
   position: absolute;
   /*bottom: -285px;*/
@@ -264,49 +219,33 @@ ul.active-menu-default > li a {
   margin-right: auto;
   z-index: 2;
 }
-
-/* line 222, ../sass/custom.scss */
 .fl-detail-item .fl-detail-box .list-social li {
   color: rgba(255, 255, 255, 0.3);
   list-style: none;
   font-family: "pb-regular";
 }
-
-/* line 227, ../sass/custom.scss */
 .fl-detail-item .fl-detail-box .list-social li a {
   color: rgba(255, 255, 255, 0.3);
   padding: 0 5px;
 }
-
-/* line 231, ../sass/custom.scss */
 .fl-detail-item .fl-detail-box .list-social li:hover a {
   color: rgba(255, 255, 255, 0.7);
 }
-
-/* line 234, ../sass/custom.scss */
 .fl-detail-item {
   min-height: 900px;
   position: relative;
 }
-
-/* line 238, ../sass/custom.scss */
 .fl-detail-item .fl-detail-box {
-  /*position: absolute;
-  bottom: -285px;*/
-  color: rgba(0, 0, 0, 0.7);
+/*position: absolute;
+bottom: -285px;*/
+  color: rgba(0,0,0,0.7);
 }
-
-/* line 243, ../sass/custom.scss */
 .fl-detail-box .fl-title {
   margin-top: 50px;
 }
-
-/* line 246, ../sass/custom.scss */
 .fl-detail-box .tabs {
-  min-height: inherit;
+  min-height: inherit; 
 }
-
-/* line 249, ../sass/custom.scss */
 .fl-title .fl-title-medium {
   color: #000;
   font-family: "Playfair Display",serif;
@@ -314,40 +253,27 @@ ul.active-menu-default > li a {
   font-weight: 700;
   display: block;
 }
-
-/* line 256, ../sass/custom.scss */
 .fl-title {
   position: relative;
   text-align: center;
   z-index: 120;
 }
-
-/* line 261, ../sass/custom.scss */
 .fl-title.light .fl-title-small, .fl-title.light .fl-title-small a {
   color: rgba(255, 255, 255, 0.5);
 }
-
-/* line 264, ../sass/custom.scss */
 .fl-title .fl-title-small {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0,0,0,0.5);
   letter-spacing: 9px;
   display: block;
 }
-
-/* line 269, ../sass/custom.scss */
 .uppercase {
   text-transform: uppercase;
 }
-
-/* line 272, ../sass/custom.scss */
 .fl-title.light .fl-title-big, .fl-title.light .fl-title-medium {
   color: #ddd;
 }
-
-/* line 275, ../sass/custom.scss */
 .fl-detail-item {
-  background-color: #999;
-  /**/
+  background-color: #999; /**/
   /* background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(../../images/image-catoon.jpg);*/
   background-size: cover;
   -moz-background-size: cover;
@@ -355,20 +281,16 @@ ul.active-menu-default > li a {
   -webkit-background-size: cover;
   position: relative;
 }
-
 /* Custom */
-/* line 285, ../sass/custom.scss */
 .template_article_web .fl-title .fl-title-medium {
   line-height: 2;
 }
 
+
 /* ARTICLES REVUE - Node */
-/* line 291, ../sass/custom.scss */
 .fl-title span div {
   display: inline;
 }
-
-/* line 294, ../sass/custom.scss */
 .node--type-article-revue .fl-title .fl-title-big {
   margin-bottom: 0;
   margin-top: 0;
@@ -376,18 +298,14 @@ ul.active-menu-default > li a {
   clear: both;
   line-height: 1.5;
 }
-
-/* line 301, ../sass/custom.scss */
 .left-desc {
   text-transform: uppercase;
   font-size: 1.25em;
   color: #000;
   line-height: 1.7em;
-  font-family: "pb-bold";
+	font-family: "pb-bold";
   text-align: left;
 }
-
-/* line 309, ../sass/custom.scss */
 .fl-mg-top {
   text-align: right;
 }
@@ -397,97 +315,74 @@ ul.active-menu-default > li a {
   padding-top: 4em;
   padding-bottom: 4em;
 }*/
+
 /* ajouter .node-balado .field-chapeau */
+
 /*CAHIER*/
-/* line 322, ../sass/custom.scss */
 .node--type-cahier .fl-title {
   line-height: 1.75;
 }
-
 /*
 .node--type-cahier .field--name-field-type-cahier {
   text-transform: uppercase;
 }*/
-/* line 329, ../sass/custom.scss */
 .field-numero-referent {
   padding-bottom: 2em;
   display: block;
 }
-
-/* line 333, ../sass/custom.scss */
 .node--type-galerie .fl-title-desc {
   padding-bottom: 2em;
 }
-
 /* CAHIER - VUE EVA */
-/* line 339, ../sass/custom.scss */
+
+
 .content-blog-item a {
   color: #000;
 }
-
 /* min 1170*/
-/* line 343, ../sass/custom.scss */
 .content-blog-item .title-blog {
   padding: 10px 50px 10px 70px;
   font-size: 30px;
 }
-
-/* line 347, ../sass/custom.scss */
 .content-blog-item .title-blog {
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0,0,0,0.8);
 }
-
-/* line 352, ../sass/custom.scss */
 .content-blog-item .new-date {
   line-height: 25px;
   text-align: center;
   position: relative;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0,0,0,0.4);
   font-weight: 700;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
-
 /*min 1170*/
-/* line 362, ../sass/custom.scss */
 .content-blog-item .new-date {
   -webkit-transform: translateX(-50%) translateY(30%);
   -ms-transform: translateX(-50%) translateY(30%);
   transform: translateX(-50%) translateY(30%);
 }
-
-/* line 367, ../sass/custom.scss */
 .content-blog-item {
   padding: 40px 0;
 }
-
-/* line 370, ../sass/custom.scss */
 .content-blog-item {
   font-family: "Playfair Display",serif;
   position: relative;
 }
-
-/* line 374, ../sass/custom.scss */
 .view-blog {
   margin-top: 0;
 }
-
 /* cahier: info sous le titre*/
-/* line 378, ../sass/custom.scss */
 .content-blog-item .view-point {
   padding-top: 10px;
   font-size: 14px;
 }
-
-/* line 382, ../sass/custom.scss */
 .content-blog-item .view-point .fa-eye {
   opacity: 0.4;
   padding: 0 10px 0 0;
 }
-
-/* line 386, ../sass/custom.scss */
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -496,59 +391,45 @@ ul.active-menu-default > li a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* line 394, ../sass/custom.scss */
 .content-blog-item .view-point b {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0,0,0,0.8);
   padding: 0 5px;
   font-family: "pb-bold";
 }
-
-/* line 399, ../sass/custom.scss */
 .content-blog-item .view-point .fa-comment-o {
   opacity: 0.4;
   padding: 0 0px 0 20px;
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: 1px solid rgba(0,0,0,0.3);
 }
-
-/* line 404, ../sass/custom.scss */
 b, strong {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 /* MOUSEOVER*/
 /*1170*/
-/* line 410, ../sass/custom.scss */
 .content-blog-item:hover .title-blog, .content-blog-item:active .title-blog, .content-blog-item:focus .title-blog {
   padding: 10px 80px 10px 40px;
   border-left: 5px solid #000;
 }
-
-/* line 414, ../sass/custom.scss */
 .content-blog-item:hover .title-blog, .content-blog-item:active .title-blog, .content-blog-item:focus .title-blog {
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   color: #000;
 }
-
-/* line 419, ../sass/custom.scss */
 .content-blog-item a:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 
+
 /* titre sur image */
-/* line 425, ../sass/custom.scss */
 .view-cahier-vs-publication {
   margin-top: 50px;
 }
 
 /* cahier*/
-/* line 430, ../sass/custom.scss */
 .film-style-odd {
   width: 100%;
 }
-
-/* line 433, ../sass/custom.scss */
 [class^="film-"], [class*=" film-"] {
   font-family: 'fontfilm';
   font-style: normal;
@@ -556,37 +437,25 @@ b, strong {
   line-height: 1em;
   /* font-size: 120%; */
 }
-
-/* line 440, ../sass/custom.scss */
 .film-style-odd li {
   display: table;
   width: 100%;
 }
-
-/* line 444, ../sass/custom.scss */
 .film-style-odd li:nth-child(2n+1) .film-odd-img {
   float: right;
 }
-
-/* line 447, ../sass/custom.scss */
 .film-style-odd li:nth-child(2n) .film-odd-img {
   float: left;
 }
-
-/* line 450, ../sass/custom.scss */
-.film-style-odd li .film-odd-content,
+.film-style-odd li .film-odd-content, 
 .film-style-odd li .film-odd-img {
   width: 50%;
 }
-
-/* line 454, ../sass/custom.scss */
 .film-style-odd li .film-odd-img {
   position: relative;
   overflow: hidden;
   background: #000;
 }
-
-/* line 459, ../sass/custom.scss */
 .film-style-odd li .film-odd-img img {
   opacity: 0.5;
   transition: all 0.5s ease-in-out;
@@ -595,15 +464,12 @@ b, strong {
   height: auto;
 }
 
-/* line 467, ../sass/custom.scss */
 .ac_page-wrapper img {
   max-width: 100%;
   height: auto;
   border: 0;
   vertical-align: middle;
 }
-
-/* line 473, ../sass/custom.scss */
 .film-odd-view {
   position: absolute;
   left: 50%;
@@ -624,16 +490,12 @@ b, strong {
   -webkit-transition: all 0.5s ease-in-out;
   top: 60%;
 }
-
-/* line 493, ../sass/custom.scss */
 .film-style-odd li:nth-child(2n+1) .film-odd-content {
   float: left;
   text-align: right;
   padding-right: 40px;
   padding-left: 20%;
 }
-
-/* line 499, ../sass/custom.scss */
 .film-style-odd li:nth-child(2n) .film-odd-content {
   float: right;
   text-align: left;
@@ -641,61 +503,44 @@ b, strong {
   padding-right: 20%;
 }
 
-/* line 506, ../sass/custom.scss */
 .film-style-odd li .film-odd-content, .film-style-odd li .film-odd-img {
-  width: 50%;
-  min-height: 400px;
-  /* image manquante */
+    width: 50%;
+    min-height: 400px; /* image manquante */
 }
-
 @media only screen and (min-width: 1170px) {
-  /* line 511, ../sass/custom.scss */
   .film-odd-content {
     padding-top: 100px;
   }
 }
-/* line 515, ../sass/custom.scss */
 .film-odd-content .p-category {
   font-size: 0.75em;
   text-transform: uppercase;
   font-family: "pb-bold";
 }
-
-/* line 520, ../sass/custom.scss */
 .film-odd-content .p-name {
   padding: 12px 0 10px 0;
   font-size: 1.875em;
   line-height: 30px;
 }
-
-/* line 525, ../sass/custom.scss */
 .film-odd-content .p-name a {
   font-family: "Playfair Display",serif;
   font-weight: 700;
   color: #000;
 }
-
-/* line 530, ../sass/custom.scss */
 .film-odd-content .p-desc {
   font-family: "pb-regular";
   margin-top: -4px;
   line-height: 1.5em;
 }
-
 /* BALADO */
-/* line 536, ../sass/custom.scss */
 .node--type-balados .fieldset-wrapper > div {
   display: inline-block;
   margin-right: 20px;
 }
-
-/* line 540, ../sass/custom.scss */
 .field--name-field-balado {
   text-align: center;
   margin: 1em 0;
 }
-
-/* line 544, ../sass/custom.scss */
 .field--name-field-balado audio {
   width: 100%;
 }
@@ -705,6 +550,8 @@ b, strong {
   text-align:center;
 }
 */
+
+
 /*
 balado DETAILS : GRID 
 insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-6 ac_col-12
@@ -716,79 +563,60 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 <div class="counter-title">COMPLETED PROJECTS</div>
 </div>
 */
-/* line 567, ../sass/custom.scss */
+
 .counter-content, .ac-counter {
   font-size: 16px;
   text-align: center;
 }
-
-/* line 571, ../sass/custom.scss */
 .ac-counter {
   text-align: center;
 }
-
 /*1170*/
-/* line 575, ../sass/custom.scss */
 .counter-content .counter-digit, .counter-value {
   font-size: 50px;
 }
-
-/* line 578, ../sass/custom.scss */
 .counter-content .counter-digit, .counter-value {
   color: #000;
 }
-
-/* line 581, ../sass/custom.scss */
 .counter-value {
   font-size: 40px;
   line-height: 40px;
   margin: 10px 0;
 }
-
-/* line 586, ../sass/custom.scss */
 .counter-content .counter-desc, .counter-title {
   font-size: 0.75em;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0,0,0,0.5);
   margin-top: 5px;
   font-weight: 700;
 }
-
-/* line 594, ../sass/custom.scss */
 .counter-title, .counter-description {
   min-height: 0;
   margin-bottom: 10px;
 }
 
 /*galerie*/
-/* line 601, ../sass/custom.scss */
+
 .node--type-galerie .fl-title {
   clear: both;
-  min-height: 100px;
-  /*temp*/
+  min-height: 100px; /*temp*/
 }
-
-/* line 605, ../sass/custom.scss */
 .fl-title-desc {
   text-align: center;
   clear: both;
-}
 
-/* line 610, ../sass/custom.scss */
+}
 .fl-title-desc {
   margin-top: 70px;
   font-family: "Playfair Display", serif;
   margin-top: 20px;
   font-size: 18px;
 }
-
-/* line 616, ../sass/custom.scss */
 .field-resume-galerie {
   text-align: center;
 }
 
-/* line 620, ../sass/custom.scss */
 .fl-title .fl-title-big {
   color: #000;
   font-family: "Playfair Display",serif;
@@ -800,21 +628,16 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 
 /* collaborateur */
-/* line 631, ../sass/custom.scss */
 .team-avatar {
   margin-top: 30px;
   padding-right: 15px;
   display: inline-block;
 }
-
-/* line 636, ../sass/custom.scss */
 .team-avatar .thumb-team {
   width: 100%;
   max-height: 600px;
   overflow: hidden;
 }
-
-/* line 641, ../sass/custom.scss */
 .team-avatar .thumb-team img {
   width: 100%;
   height: 100%;
@@ -822,25 +645,17 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   max-width: 100%;
   height: auto;
 }
-
-/* line 648, ../sass/custom.scss */
 .info-team {
   margin-top: 30px;
 }
-
-/* line 651, ../sass/custom.scss */
 .info-team .title-member {
   margin-bottom: 20px;
 }
-
-/* line 654, ../sass/custom.scss */
 .info-team .title-member .jobs {
   text-transform: lowercase;
   font-style: italic;
   font-family: "pb-bold";
 }
-
-/* line 659, ../sass/custom.scss */
 .info-team .title-member h3 {
   margin-top: 50px;
   text-transform: uppercase;
@@ -853,29 +668,21 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 
 /* ouvrage critiqué */
-/* line 671, ../sass/custom.scss */
 .direct-container {
   padding-top: 120px;
 }
-
-/* line 674, ../sass/custom.scss */
 .view-article-vs-ouvrage-critique {
   clear: both;
-  padding-top: 200px;
-  /*temp*/
+  padding-top: 200px; /*temp*/
 }
 
 /* eva editorial sur publication */
 /* custom */
-/* line 681, ../sass/custom.scss */
 .editorial_sur_publication {
-  padding-top: 5em;
-  /*temp*/
-  padding-bottom: 5em;
-  /*temp*/
+  padding-top:5em;/*temp*/
+    padding-bottom:5em;/*temp*/
 }
 
-/* line 686, ../sass/custom.scss */
 .node--type-article-revue .section-c125 {
   margin-top: 4em;
   margin-bottom: 4em;
@@ -883,7 +690,6 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 
 /* champs imprimés dans les templates - fermer les originaux */
-/* line 693, ../sass/custom.scss */
 .article_web_content .field--name-field-auteur,
 .article_web_content .field--name-field-image-couverture-paysage,
 .article_web_content .field--name-field-sous-titre,
@@ -911,41 +717,33 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 
 /*.node--type-collaborateur .node__content .field--name-field-liens-externes*/
+
 /*#block-md-filmmaker-page-title .field--name-title {
   display: none;
 }*/
-/* line 725, ../sass/custom.scss */
+
 .node--type-article-web .field-sous-titre,
 .node--type-article-web .field-auteur {
   display: block;
 }
-
 /* ouvrage critiqué*/
 /* infos */
 /* supprimer si les classes sont ajoutes sur les champs d'ouvrage critique*/
-/* line 732, ../sass/custom.scss */
 .crew-desc > div {
   display: block;
 }
 
 /* header */
-/* line 737, ../sass/custom.scss */
 .site-name {
   display: none;
 }
-
-/* line 740, ../sass/custom.scss */
 .site-logo img {
   max-width: 90px;
   height: auto;
 }
-
-/* line 744, ../sass/custom.scss */
 #block-md-filmmaker-branding {
   float: left;
 }
-
-/* line 747, ../sass/custom.scss */
 #block-md-filmmaker-main-menu {
   float: right;
   width: 90%;
@@ -953,8 +751,14 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 
 /* Responsive @media */
 /* mobile */
+@media (max-width: 460px) {}
 /* col-xs // 0-768 */
+@media (max-width: 768px) {}
 /* col-sm // 768-992 */
+@media (min-width: 768px) and (max-width: 992px) {}
 /* col-md // 992-1200 */
+@media (max-width: 1200px) {}
 /* col-lg 1200+ */
+@media (min-width: 1200px) {}
 /* écrans larges */
+@media all and (min-width: 1200px) and (max-width: 9999px) {}
