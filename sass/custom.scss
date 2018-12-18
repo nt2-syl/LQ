@@ -717,9 +717,13 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .node--type-galerie .node__content .field--name-field-sous-titre,
 .node--type-galerie .node__content .field--name-field-auteur,
 .node--type-galerie .node__content .field--name-field-resume,
-.node--type-galerie .node__content .field--name-field-numero-referent {
+.node--type-galerie .node__content .field--name-field-numero-referent,
+.node--type-publication .field--name-field-resume,
+.node--type-publication .field--name-field-periode-publication,
+.node--type-publication .field--name-field-date-publication {
   display: none;
 }
+
 
 /*.node--type-collaborateur .node__content .field--name-field-liens-externes*/
 
@@ -770,6 +774,27 @@ div.region.region-footer,
 div.region.region-footer ul.menu {
   text-align: center;
 }
+/* positionner au dessus du header */
+#block-reseauxsociauxlq p {
+  display: inline;
+}
+#block-reseauxsociauxlq,
+#block-formulairederecherche {
+  float: right;
+}
+/* positionner footer*/
+.region-footer ul.menu li a {
+  display: inline-block;
+}
+#block-md-filmmaker-footer {
+  float: left;
+  width: 30%;
+}
+#block-logosfooter {
+  float: right;
+  width: 70%;
+}
+
 
 /* Responsive @media */
 /* mobile */

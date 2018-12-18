@@ -913,7 +913,10 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .node--type-galerie .node__content .field--name-field-sous-titre,
 .node--type-galerie .node__content .field--name-field-auteur,
 .node--type-galerie .node__content .field--name-field-resume,
-.node--type-galerie .node__content .field--name-field-numero-referent {
+.node--type-galerie .node__content .field--name-field-numero-referent,
+.node--type-publication .field--name-field-resume,
+.node--type-publication .field--name-field-periode-publication,
+.node--type-publication .field--name-field-date-publication {
   display: none;
 }
 
@@ -921,7 +924,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 /*#block-md-filmmaker-page-title .field--name-title {
   display: none;
 }*/
-/* line 730, ../sass/custom.scss */
+/* line 734, ../sass/custom.scss */
 .node--type-article-web .field-sous-titre,
 .node--type-article-web .field-auteur {
   display: block;
@@ -930,53 +933,83 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 /* ouvrage critiqué*/
 /* infos */
 /* supprimer si les classes sont ajoutes sur les champs d'ouvrage critique*/
-/* line 737, ../sass/custom.scss */
+/* line 741, ../sass/custom.scss */
 .crew-desc > div {
   display: block;
 }
 
 /* header */
-/* line 742, ../sass/custom.scss */
+/* line 746, ../sass/custom.scss */
 .site-name {
   display: none;
 }
 
-/* line 745, ../sass/custom.scss */
+/* line 749, ../sass/custom.scss */
 .site-logo img {
   max-width: 90px;
   height: auto;
 }
 
-/* line 749, ../sass/custom.scss */
+/* line 753, ../sass/custom.scss */
 #block-md-filmmaker-branding {
   float: left;
 }
 
-/* line 752, ../sass/custom.scss */
+/* line 756, ../sass/custom.scss */
 #block-md-filmmaker-main-menu {
   float: right;
   width: 90%;
 }
 
 /* Accueil - Positionnement temporaire */
-/* line 759, ../sass/custom.scss */
+/* line 763, ../sass/custom.scss */
 .block-views-blockaccueil-edito-block-1 {
   width: 50%;
   padding-right: 2em;
   float: left;
 }
 
-/* line 764, ../sass/custom.scss */
+/* line 768, ../sass/custom.scss */
 .block-views-blockaccueil-publications-block-1 {
   width: 50%;
   padding-left: 2em;
   float: right;
 }
 
-/* line 769, ../sass/custom.scss */
+/* line 773, ../sass/custom.scss */
 div.region.region-footer,
 div.region.region-footer ul.menu {
   text-align: center;
+}
+
+/* positionner au dessus du header */
+/* line 778, ../sass/custom.scss */
+#block-reseauxsociauxlq p {
+  display: inline;
+}
+
+/* line 781, ../sass/custom.scss */
+#block-reseauxsociauxlq,
+#block-formulairederecherche {
+  float: right;
+}
+
+/* positionner footer*/
+/* line 786, ../sass/custom.scss */
+.region-footer ul.menu li a {
+  display: inline-block;
+}
+
+/* line 789, ../sass/custom.scss */
+#block-md-filmmaker-footer {
+  float: left;
+  width: 30%;
+}
+
+/* line 793, ../sass/custom.scss */
+#block-logosfooter {
+  float: right;
+  width: 70%;
 }
 
 /* Responsive @media */
