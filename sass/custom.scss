@@ -59,6 +59,11 @@ a:hover, a:focus {
   color: rgba(0,0,0,0.5);
   text-decoration: underline;
 }
+/* Images Responsive par défaut, traiter les exceptions */
+img {
+  max-width: 100%;
+  height: auto;
+}
 .views-field-title,
 .title-bold-white {
   color: #fff;
