@@ -1017,6 +1017,129 @@ div.region.region-footer ul.menu {
   clear: both;
 }
 
+@media only screen and (min-width: 1170px) {
+  /*.ac_page-wrapper img,
+  .timeline-box img {
+      max-width: 100%;
+      height: auto;
+      border: 0;
+      vertical-align: middle;
+  }*/
+  /* line 811, ../sass/custom.scss */
+  .timeline-box {
+    position: relative;
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  /* line 816, ../sass/custom.scss */
+  .timeline-box li {
+    display: table;
+    position: relative;
+    width: 100%;
+    padding-bottom: 140px;
+  }
+
+  /* line 822, ../sass/custom.scss */
+  .timeline-box .d-even {
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+  }
+
+  /* line 837, ../sass/custom.scss */
+  .timeline-box .d-content,
+  .timeline-box .d-even,
+  .timeline-box .d-img {
+    margin-top: 20px;
+  }
+
+  /* line 842, ../sass/custom.scss */
+  .timeline-box li:nth-child(odd) .d-img {
+    float: right;
+    padding-left: 50px;
+    text-align: left;
+  }
+
+  /* line 847, ../sass/custom.scss */
+  .timeline-box li:nth-child(even) .d-img {
+    float: left;
+    padding-right: 50px;
+    text-align: right;
+  }
+
+  /*.timeline-box li:nth-child(even) .d-img img {
+      width: 100%;
+  }*/
+  /* line 855, ../sass/custom.scss */
+  .timeline-box li .d-content, .timeline-box li .d-img {
+    width: 50%;
+  }
+
+  /* line 858, ../sass/custom.scss */
+  .timeline-box .d-content, .timeline-box .d-even, .timeline-box .d-img {
+    margin-top: 20px;
+  }
+
+  /*.timeline-box li .d-img img {
+      width: 100%;
+      height: auto;
+  }*/
+  /*.ac_page-wrapper img {
+      max-width: 100%;
+      height: auto;
+      border: 0;
+      vertical-align: middle;
+  }*/
+  /* line 871, ../sass/custom.scss */
+  .timeline-box li:nth-child(odd) .d-content {
+    float: left;
+    text-align: right;
+    padding-right: 50px;
+  }
+
+  /* line 876, ../sass/custom.scss */
+  .timeline-box li:nth-child(even) .d-content {
+    float: right;
+    text-align: left;
+    padding-left: 50px;
+  }
+
+  /* line 881, ../sass/custom.scss */
+  .title-gray {
+    letter-spacing: 9px;
+  }
+
+  /* line 884, ../sass/custom.scss */
+  .title-gray {
+    color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    font-family: "pb-bold";
+  }
+
+  /* line 889, ../sass/custom.scss */
+  .title-time {
+    font-size: 50px;
+  }
+
+  /* line 892, ../sass/custom.scss */
+  .title-time {
+    padding: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: #000;
+  }
+}
 /* Responsive @media */
 /* mobile */
 /* col-xs // 0-768 */
