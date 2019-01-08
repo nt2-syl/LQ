@@ -917,6 +917,13 @@ div.region.region-footer ul.menu {
     letter-spacing: 6px;
     text-transform: uppercase;
 }
+
+.test {
+	.test {
+	  color: #f00;
+	}
+}
+
 /* Responsive @media */
 /* mobile */
 @media (max-width: 460px) {}
