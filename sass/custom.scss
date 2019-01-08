@@ -924,6 +924,30 @@ div.region.region-footer ul.menu {
 	}
 }
 
+
+.node--type-galerie {
+	.fl-title .fl-title-big {
+    margin-top: 35px;
+    margin-bottom: 0;
+    line-height: 0.9;
+  }
+}
+
+/* todo: add body class for article-web
+#block-md-filmmaker-page-title,
+#block-md-filmmaker-breadcrumbs {
+	display: none;
+}
+*/
+
+/* Temp */
+#edit-search-api-fulltext  {
+	line-height: 1; 
+}
+#edit-submit-environnement-recherche-general {
+	display:none;
+}
+
 /* Responsive @media */
 /* mobile */
 @media (max-width: 460px) {}
