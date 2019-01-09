@@ -295,6 +295,12 @@ bottom: -285px;*/
 .template_article_web .fl-title .fl-title-medium {
   line-height: 2;
 }
+/* todo autres médias */
+.article_web_content .entete_gauche,
+.article_web_content .entete_droite,
+.article_web_content .field--name-field-ref-audio {
+	padding-bottom: 50px; /*temp*/
+}
 
 
 /* ARTICLES REVUE - Node */
@@ -715,6 +721,9 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 
 /* champs imprimés dans les templates - fermer les originaux */
 .article_web_content .field--name-field-auteur,
+.article_web_content .field--name-field-resume,
+.article_web_content .field--name-field-thematique,
+.article_web_content .field--name-field-genre,
 .article_web_content .field--name-field-image-couverture-paysage,
 .article_web_content .field--name-field-sous-titre,
 .article_web_content .field--name-field-type-article,
@@ -742,7 +751,11 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .node--type-publication .field--name-field-date-publication {
   display: none;
 }
-
+.article_web_content .entete_gauche .field--name-field-resume,
+.article_web_content .entete_droite .field--name-field-thematique,
+.article_web_content .entete_droite .field--name-field-genre {
+	display: block;
+}
 
 /*.node--type-collaborateur .node__content .field--name-field-liens-externes*/
 

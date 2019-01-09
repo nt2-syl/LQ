@@ -56,6 +56,29 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="col-sm-8 col-xs-12 entete_gauche">
+            {% if content.field_resume %}
+            <div class="field-resume left-desc ac-text">
+              {{ content.field_resume }}
+            </div>
+          {% endif %}
+          </div>
+              <div class="col-sm-4 col-xs-12  entete_droite">
+           {% if content.field_thematique %}
+            <div class="field-thematique">
+              {{ content.field_thematique }}
+            </div>
+          {% endif %}
+
+           {% if content.field_genre %}
+            <div class="field-genre">
+              {{ content.field_genre }}
+            </div>
+          {% endif %}
+
+            </div>
+
+              </div>
         {{content}}
       </div>
     </div>
