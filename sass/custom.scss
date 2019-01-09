@@ -545,7 +545,10 @@ b, strong {
 /* BALADO */
 .node--type-balados .fieldset-wrapper > div {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: -2px;
+  width: 20%;
+  text-align: center;
+  margin-left: -2px;
 }
 .field--name-field-balado {
   text-align: center;
@@ -588,12 +591,23 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .counter-content .counter-digit, .counter-value {
   color: #000;
 }
-.counter-value {
+.counter-value,
+ .groupe-details .field__label {
   font-size: 40px;
   line-height: 40px;
   margin: 10px 0;
 }
-.counter-content .counter-desc, .counter-title {
+@media only screen and (min-width: 1170px) {
+  .counter-content .counter-digit,
+  .counter-value,
+  .groupe-details .field__label {
+    font-size: 20px;
+  }
+}
+
+  .groupe-details  .field__items {}
+.counter-content .counter-desc, 
+.counter-title {
   font-size: 0.75em;
   text-transform: uppercase;
   letter-spacing: 2px;
