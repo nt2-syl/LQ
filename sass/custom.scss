@@ -21,15 +21,17 @@
   font-weight: normal;
   font-style: normal;
 }
-/*test*/
-/*styles*/
 
+/*Styles*/
 body {
   color: rgba(0,0,0,0.5);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7em;
   font-family: "pb-regular";
+}
+.text-center {
+  text-align: center;
 }
 .gray-desc {
   color: rgba(0,0,0,0.5);
@@ -184,12 +186,124 @@ ul.active-menu-default > li a {
 
 /* articles web */
 
-/* auteurs*/
+
+/* Liste Balados */
+[class^="film-"], [class*=" film-"] {
+    font-family: 'fontfilm';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1em;
+}
+.film-box {
+    width: 100%;
+    display: table;
+    list-style: none;
+}
+.ac_page-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    vertical-align: middle;
+}
+.list-film-name {
+    font-size: 1.875em;
+    font-weight: 700;
+    margin: 5px 0 10px 0;
+    line-height: 45px;
+}
+.list-film-name a {
+    color: #000;
+    font-family: "Playfair Display", serif;
+}
+.list-film-desc {
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    font-family: "pb-regular";
+    font-size: 0.875em;
+    color: rgba(255, 255, 255, 0.7);
+}
+.film-box > li .fl-mg-top {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.film-box > li {
+    float: left;
+    padding-right: 20px;
+    padding-left: 0;
+}
+.film-box > li:nth-child(2n+1) {
+    clear: both;
+}
+
+@media only screen and (min-width: 768px) {
+  .film-box > li {
+      width: 50%;
+  }
+  .film-item {
+      background: #000;
+      position: relative;
+      height: 0;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+  }
+  .film-box > li .film-item {
+      padding-bottom: 0;
+      height: auto;
+      background: none;
+  }
+
+}
+
+
+@media only screen and (min-width: 1025px) {
+  .film-box > li .film-item {
+      float: right;
+  }
+
+  .film-box > li .list-film-cat {
+      font-size: 0.75em;
+      letter-spacing: 5px;
+  }
+
+  .film-box > li .list-film-desc {
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 14px;
+  }
+
+}
+@media only screen and (min-width: 1170px) {
+  .film-box > li .film-item {
+      width: 65%;
+  }
+  .film-box > li .film-item img {
+      width: 100%;
+      height: auto;
+  }
+
+  .film-box > li .film-item .list-film-cat {
+      margin-top: 20px;
+  }
+
+  .film-box > li .film-item .list-film-desc {
+      color: rgba(0, 0, 0, 0.5);
+      padding: 0 70px;
+  }
+
+}
+
+li.text-center {
+  list-style: none;
+  margin: 0;
+}
+
+/* auteurs */
 .film-box > li .film-item .list-film-cat,
 .view-liste-article-web .views-field-field-auteur,
 .view-liste-article-web .views-field-created, {
     margin-top: 20px;
 }
+
+
 
 .views-field-field-auteur,
 .views-field-created,
@@ -991,6 +1105,9 @@ div.region.region-footer ul.menu {
     }
 }
 
+
+
+
 /* Responsive @media */
 /* mobile */
 @media (max-width: 460px) {}
@@ -1004,3 +1121,9 @@ div.region.region-footer ul.menu {
 @media (min-width: 1200px) {}
 /* écrans larges */
 @media all and (min-width: 1200px) and (max-width: 9999px) {}
+
+
+/*responsive grid*/
+.responsive-grid {
+  
+}
