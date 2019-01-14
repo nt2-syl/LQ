@@ -562,8 +562,11 @@ b, strong {
 }
 .field--name-field-balado audio {
   width: 100%;
+    text-align:center;
 }
-
+.field--name-field-ref-audio audio {
+	  width: 100%;
+}
 /*
 .node--type-balados .field-audio {
   text-align:center;
