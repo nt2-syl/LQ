@@ -184,7 +184,9 @@ ul.active-menu-default > li a {
     content: "\f178";
 }
 
-/* articles web */
+/**
+* Articles Web 
+*/
 
 
 /* Liste Balados */
@@ -296,10 +298,163 @@ li.text-center {
   margin: 0;
 }
 
-/* auteurs */
+
+/**
+* LISTE ARTICLE WEB 
+* (SIMILAIRE À BALADO, mais utilisation de la classe .big pour texte sur photos)
+*/
+@media only screen and (min-width: 1170px) {
+.film-box > li .film-item.big {
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+.film-box > li .film-item.big {
+    margin-top: 100px;
+}
+
+  .film-box.big .list-film-content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      bottom: auto;
+      right: auto;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -o-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+  }
+  /* pas d'encart sur articles web (vs balado) */
+  .film-box.big > li .film-item .list-film-desc {
+      padding: 0 0px;
+  }
+
+
+}
+/* inverser texte sur photo */
+.big .list-film-content,
+.big .list-film-cat,
+.big .list-film-name a,
+.big .list-film-desc p {
+  color: #fff;
+}
+.big .list-film-cat,
+.big .list-film-desc {
+  opacity: 0.8;
+}
+
+/* fix articles web (vs balado) */
+.film-box > li .film-item img {
+    width: 100%;
+    height: auto;
+}
+.film-box > li .film-item {
+    width: 100%;
+    padding: 10px;
+    float: left;
+}
+
+/**
+* LISTE GALERIES
+*/
+/* todo: remplacer par cols? */
+.ac_col-xs, .ac_col-xs-1, .ac_col-xs-2, .ac_col-xs-3, .ac_col-xs-4, .ac_col-xs-5, .ac_col-xs-6, .ac_col-xs-7, .ac_col-xs-8, .ac_col-xs-9, .ac_col-xs-10, .ac_col-xs-11, .ac_col-xs-12, .ac_col-sm, .ac_col-sm-1, .ac_col-sm-2, .ac_col-sm-3, .ac_col-sm-4, .ac_col-sm-5, .ac_col-sm-6, .ac_col-sm-7, .ac_col-sm-8, .ac_col-sm-9, .ac_col-sm-10, .ac_col-sm-11, .ac_col-sm-12, .ac_col-md, .ac_col-md-1, .ac_col-md-2, .ac_col-md-3, .ac_col-md-4, .ac_col-md-5, .ac_col-md-6, .ac_col-md-7, .ac_col-md-8, .ac_col-md-9, .ac_col-md-10, .ac_col-md-11, .ac_col-md-12, .ac_col-lg, .ac_col-lg-1, .ac_col-lg-2, .ac_col-lg-3, .ac_col-lg-4, .ac_col-lg-5, .ac_col-lg-6, .ac_col-lg-7, .ac_col-lg-8, .ac_col-lg-9, .ac_col-lg-10, .ac_col-lg-11, .ac_col-lg-12, .ac_col-xl, .ac_col-xl-1, .ac_col-xl-2, .ac_col-xl-3, .ac_col-xl-4, .ac_col-xl-5, .ac_col-xl-6, .ac_col-xl-7, .ac_col-xl-8, .ac_col-xl-9, .ac_col-xl-10, .ac_col-xl-11, .ac_col-xl-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.z10 {
+    z-index: 10;
+}
+
+
+
+@media (min-width: 576px) {
+.ac_container {
+    width: 540px;
+    max-width: 100%;
+}
+ }
+@media (min-width: 768px){
+.ac_container {
+    width: 720px;
+    max-width: 100%;
+}
+}
+@media (min-width: 992px){
+.ac_container {
+    width: 960px;
+    max-width: 100%;
+}
+}
+@media (min-width: 1200px){
+.ac_container {
+    width: 1140px;
+    max-width: 100%;
+}
+}
+.ac_row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.ac_col-xl-6 {
+    float: left;
+    width: 50%;
+}
+/*TODO: remplacer par cols */
+@media (min-width: 576px) {
+.ac_col-sm-12 {
+    float: left;
+   /* width: 100%;*/
+}
+}
+
+.ac_element {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+}
+.ac-image {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.ac_page-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    vertical-align: middle;
+}
+
+.ac-wrapper-page-9 .el-text-c491 .ac-text {
+    font-size: 19px;
+    line-height: 34px;
+    color: #000000;
+    padding-top: 120px;
+}
+/* Fixs */
+.column-c514 {
+  padding-top: 100px;
+}
+/* full width == center */
+.column-c457  {
+  width: 100%;
+}
+.column-c457 .fl-title-big {
+  line-height: 1;
+}
+
+
+
+/**
+* Auteurs / Bottin
+*/
 .film-box > li .film-item .list-film-cat,
 .view-liste-article-web .views-field-field-auteur,
-.view-liste-article-web .views-field-created, {
+.view-liste-article-web .views-field-created {
     margin-top: 20px;
 }
 
@@ -437,7 +592,7 @@ bottom: -285px;*/
   text-align: left;
 }
 .fl-mg-top {
-  text-align: right;
+  text-align: center;
 }
 
 /* custom */
@@ -448,7 +603,7 @@ bottom: -285px;*/
 
 /* ajouter .node-balado .field-chapeau */
 
-/*CAHIER*/
+/*CAHIER */
 .node--type-cahier .fl-title {
   line-height: 1.75;
 }
