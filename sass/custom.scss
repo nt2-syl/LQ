@@ -1424,11 +1424,20 @@ div.region.region-footer ul.menu {
     }
 }
 
-/* Fermer sections */
+/* Fermer sections - tout sauf page statique
+ */
 .page-node-type-article-web,
 .page-node-type-article-revue,
 .page-node-type-galerie,
-.path-galeries {
+.page-node-type-publication,
+.page-node-type-collaborateur,
+.page-node-type-cahier,
+.page-node-type-ouvrage-critique,
+.path-publications,
+.path-articles-web,
+.path-balados,
+.path-galeries,
+.path-bottin {
   #block-md-filmmaker-page-title,
   #block-md-filmmaker-breadcrumbs {
     display: none;
