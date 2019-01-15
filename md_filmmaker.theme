@@ -182,6 +182,27 @@ function md_filmmaker_preprocess_node(&$vars) {
 
 		$vars['more_director'] = views_embed_view('director', 'more_director');
 	}
+
+	  //$node = $vars['node'];
+	  if ($node) {
+	    $node_type  = $node->getType();
+	    $nid = $node->id();
+	    if (in_array($node_type, array('publication', 'collaborateur', 'ouvrage_critique'))) {
+	      $field_map = array(
+	        'collaborateur' => 'field_portrait', # couverture_image_paysage
+	        'publication'   => ' field_image_couverture_paysage',#couverture_publication_paysage
+	        'ouvrage_critique'   => ' field_couverture_ouvrage', #couverture_ouvrage_critique_portrait
+	      );
+	      $style_map = array(
+	        'collaborateur' => 'collaborateur_portrait',
+	        'publication'   => 'couverture_publication_paysage',
+	        'ouvrage_critique'   => 'couverture_ouvrage_critique_portrait',
+	      );
+	      $vars['image_bandeau'] = _node_image_url($node, $field_map[$node_type], $style_map[$node_type]);
+	    }
+	  }
+
+
 }
 function md_filmmaker_preprocess_comment(&$vars) {
 	$vars['base_path'] = base_path();
@@ -213,12 +234,18 @@ function md_filmmaker_preprocess_page(&$vars) {
   if ($node) {
     $node_type  = $node->getType();
     $nid = $node->id();
-    if (in_array($node_type, array('publication'))) {
+    if (in_array($node_type, array('publication', 'collaborateur', 'ouvrage_critique'))) {
       $field_map = array(
-        'collaborateur' => 'field_portait', # couverture_image_paysage
-        'publication'   => 'field_image_couverture_paysage',
+        'collaborateur' => 'field_portrait', # couverture_image_paysage
+        'publication'   => ' field_image_couverture_paysage',#couverture_publication_paysage
+        'ouvrage_critique'   => ' field_couverture_ouvrage', #couverture_ouvrage_critique_portrait
       );
-      $vars['image_bandeau'] = _node_image_url($node, $field_map[$node_type], 'couverture_publication_paysage');
+      $style_map = array(
+        'collaborateur' => 'collaborateur_portrait',
+        'publication'   => 'couverture_publication_paysage',
+        'ouvrage_critique'   => 'couverture_ouvrage_critique_portrait',
+      );
+      $vars['image_bandeau'] = _node_image_url($node, $field_map[$node_type], $style_map[$node_type]);
     }
   }
 }
