@@ -1425,9 +1425,28 @@ div.region.region-footer ul.menu {
 }
 
 /* Fermer sections */
-.page-node-type-article-web #block-md-filmmaker-page-title {
-  display: none;
+.page-node-type-article-web,
+.page-node-type-article-revue,
+.page-node-type-galerie,
+.path-galeries {
+  #block-md-filmmaker-page-title,
+  #block-md-filmmaker-breadcrumbs {
+    display: none;
+  }
 }
+
+/* Flotter TABS sur contenu avec image vedette */
+.page-node-type-article-web {
+  .region-content {
+    position: relative;
+  }
+  nav.tabs {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+
 
 /* Responsive @media */
 /* mobile */
