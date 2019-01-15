@@ -1455,8 +1455,10 @@ div.region.region-footer ul.menu {
   }
 }
 
-
-
+/* ouvrage critiqué - 5 étoiles - icone seulement  */
+.taxonomy-term h2 {
+  display: none;
+}
 /* Responsive @media */
 /* mobile */
 @media (max-width: 460px) {}
