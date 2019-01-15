@@ -1424,8 +1424,10 @@ div.region.region-footer ul.menu {
     }
 }
 
-
-
+/* Fermer sections */
+.page-node-type-article-web #block-md-filmmaker-page-title {
+  display: none;
+}
 
 /* Responsive @media */
 /* mobile */
