@@ -9,7 +9,7 @@
 
 				<div class="bandeau_periode_publication">{% if node.field_periode_publication %}{{ node.field_periode_publication.value }}{% endif %}</div>
 				<div class="bandeau_date_publication">{% if node.field_date_publication %}{{ node.field_date_publication.value }}{% endif %}</div>
-				<div class="bandeau_image_couverture_paysage"></div>	
+				<div class="bandeau_image_couverture_paysage"><img src="{{ image_bandeau }}"/></div>
 
 					{% if page.bandeau %}
 					  {{ page.bandeau }}

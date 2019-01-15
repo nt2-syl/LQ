@@ -7,14 +7,14 @@
 
 function md_filmmaker_preprocess_html(&$vars) {
 	$css = "";
-	
+
 	//Get & Set background-color
 	if (theme_get_setting('background_color')) {
 		$bg_color = hsvToRgb(theme_get_setting('background_color'));
 		$bg_color_rgb = fGetRGB($bg_color['0'], $bg_color['1'], $bg_color['2']);
 
 		if(isset($bg_color[3])) {
-			$bg_color = "rgba(" . $bg_color_rgb . "," . $bg_color[3] . ")";	
+			$bg_color = "rgba(" . $bg_color_rgb . "," . $bg_color[3] . ")";
 		} else {
 			$bg_color = "rgb(" . $bg_color_rgb . ")";
 		}
@@ -54,7 +54,7 @@ function md_filmmaker_preprocess_html(&$vars) {
 			$color = hsvToRgb(theme_get_setting('h'.$item.'-color'));
 			$family = str_replace("'", "", theme_get_setting('h'.$item.'-webfont'));
 			$family = str_replace('"', '', $family);
-			
+
 			$css .= 'h'.$item.' { font-family: '.$family.'; }'."\n";
 			$css .= 'h'.$item.' { font-size: '.theme_get_setting('h'.$item.'-fontsize').'px; }'."\n";
 			$css .= 'h'.$item.' { color: rgb(' . fGetRGB($color[0], $color[1], $color[2]) . '); }'."\n";
@@ -86,7 +86,7 @@ function md_filmmaker_preprocess_html(&$vars) {
 		$color = hsvToRgb(theme_get_setting('base_color'));
 		$family = str_replace("'", "", theme_get_setting('base_webfont'));
 		$family = str_replace('"', '', $family);
-		
+
 		$css .= 'body { font-family: '.$family.'; }'."\n";
 		$css .= 'body { font-size: '.theme_get_setting('base_fontsize').'px; }'."\n";
 		$css .= 'body { color: rgb(' . fGetRGB($color[0], $color[1], $color[2]) . '); }'."\n";
@@ -103,6 +103,7 @@ function md_filmmaker_preprocess_html(&$vars) {
 		$vars['custom_css'] = theme_get_setting('code_css');
 	}
 }
+
 function md_filmmaker_preprocess_node(&$vars) {
 	$vars['base_path'] = base_path();
 
@@ -185,9 +186,43 @@ function md_filmmaker_preprocess_node(&$vars) {
 function md_filmmaker_preprocess_comment(&$vars) {
 	$vars['base_path'] = base_path();
 }
-function md_filmmaker_preprocess_page(&$vars) {
-	/*\Drupal::routeMatch()->getRouteObject()->getOptions();*/
+
+// @see https://drupal.stackexchange.com/questions/185532/get-an-image-with-style-url-from-an-uri-in-twig/223612#223612
+function _node_image_url($node, $field, $style_name = '') {
+  if ($node) {
+    $fields = $node->getFields();
+    $image = $fields[$field]->getValue();
+
+    if (!empty($image[0]['target_id'])) {
+      $file = \Drupal\file\Entity\File::load($image[0]['target_id']);
+      $uri = $file->getFileUri();
+
+     if(!empty($style_name)) {
+        $url = \Drupal\image\Entity\ImageStyle::load($style_name)->buildUrl($uri);
+        return $url; //the styled URL
+     } else {
+        return file_create_url($uri); //original
+     }
+   }
+ }
+ return false;
 }
+
+function md_filmmaker_preprocess_page(&$vars) {
+  $node = $vars['node'];
+  if ($node) {
+    $node_type  = $node->getType();
+    $nid = $node->id();
+    if (in_array($node_type, array('publication'))) {
+      $field_map = array(
+        'collaborateur' => 'field_portait', # couverture_image_paysage
+        'publication'   => 'field_image_couverture_paysage',
+      );
+      $vars['image_bandeau'] = _node_image_url($node, $field_map[$node_type], 'couverture_publication_paysage');
+    }
+  }
+}
+
 function md_filmmaker_preprocess_block(&$vars) {
 	$vars['base_path'] = base_path();
 	$vars['default_logo'] = theme_get_setting('logo.use_default');
