@@ -191,7 +191,7 @@ function md_filmmaker_preprocess_node(&$vars) {
 	      $field_map = array(
 	        'collaborateur' => 'field_portrait', # couverture_image_paysage
 	        'publication'   => ' field_image_couverture_paysage',#couverture_publication_paysage
-	        'ouvrage_critique'   => ' field_couverture_ouvrage', #couverture_ouvrage_critique_portrait
+	        'ouvrage_critique'   => 'field_couverture_ouvrage', #couverture_ouvrage_critique_portrait
 	      );
 	      $style_map = array(
 	        'collaborateur' => 'collaborateur_portrait',
