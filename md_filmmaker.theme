@@ -212,6 +212,9 @@ function md_filmmaker_preprocess_comment(&$vars) {
 function _node_image_url($node, $field, $style_name = '') {
   if ($node) {
     $fields = $node->getFields();
+    if (!$fields || !$fields[$field]) {
+      return false;
+    }
     $image = $fields[$field]->getValue();
 
     if (!empty($image[0]['target_id'])) {
