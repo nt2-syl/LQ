@@ -240,7 +240,7 @@ function md_filmmaker_preprocess_page(&$vars) {
     if (in_array($node_type, array('publication', 'collaborateur', 'ouvrage_critique'))) {
       $field_map = array(
         'collaborateur' => 'field_portrait', # couverture_image_paysage
-        'publication'   => ' field_image_couverture_paysage',#couverture_publication_paysage
+        'publication'   => 'field_image_couverture_paysage',#couverture_publication_paysage
         'ouvrage_critique'   => ' field_couverture_ouvrage', #couverture_ouvrage_critique_portrait
       );
       $style_map = array(
