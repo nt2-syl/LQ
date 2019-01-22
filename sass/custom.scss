@@ -1154,6 +1154,49 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   display: inline-block;
 }
 
+/* collaborateurs -eva */
+
+.page-node-type-collaborateur .views-element-container {
+	padding: 2em 0;
+}
+
+/* collabos social icons */
+
+.field--name-field-liens-externes a {
+    display: block;
+    float: left;
+    height: 43px;
+    text-indent: -9999px;
+    width: 41px;
+    padding: 0 12px 0 0;
+}
+.field--name-field-liens-externes .field__label,
+.field--name-field-liens-externes .field .field__label {
+	display: none;
+}
+
+
+.paragraph--type--liens-externes a {
+    background: url("http://entrelapageetlecran.nt2.ca/sites/application.nt2.ca/themes/STARTER/images/logo_blog.png") no-repeat scroll 0 0;
+}
+.field-name-field-instagram a {
+    background: url("http://entrelapageetlecran.nt2.ca/sites/application.nt2.ca/themes/STARTER/images/logo_blogger.png") no-repeat scroll 0 0;
+}
+.field-name-field-twitter a {
+    background: url("http://entrelapageetlecran.nt2.ca/sites/application.nt2.ca/themes/STARTER/images/logo_twitter.png") no-repeat scroll 0 0;
+}
+.field-name-field-facebook a {
+    background: url("http://entrelapageetlecran.nt2.ca/sites/application.nt2.ca/themes/STARTER/images/logo_fb.png") no-repeat scroll 0 0;
+}
+
+.field--name-field-url-leslibraires {
+	clear: both;
+}
+/* temp */
+.flexslider .slides > li {
+	display: block;
+}
+
 /* champs imprimés dans les templates - fermer les originaux */
 .article_web_content .field--name-field-auteur,
 .article_web_content .field--name-field-resume,
