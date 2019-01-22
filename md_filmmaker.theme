@@ -268,9 +268,17 @@ function md_filmmaker_preprocess_views_view_fields(&$vars) {
     'home_blog',
     'more_video',
   );
-  if(in_array($vars['view']->element['#display_id'], $displays)) {
+  $views = array(
+    'cahier_vs_publication',
+  );
+  if(in_array($vars['view']->element['#display_id'], $displays)
+    || in_array($vars['view']->id(), $views)) {
     $node = node_load($vars['row']->nid);
     $vars['node'] = $node;
+    if ($node->getType() == 'cahier') {
+      $vars['image_couverture'] = _node_image_url($node, 'field_image_couverture_paysage',
+                                  'couverture_cahier_sur_publication');
+    }
   }
 }
 
