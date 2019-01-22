@@ -1749,6 +1749,25 @@ div.region.region-footer ul.menu {
 .taxonomy-term h2 {
   display: none;
 }
+
+.path-frontpage h1.page-title {
+  display: none;
+}
+.block-views-blockaccueil-edito-block-1 h2,
+.block-views-blockaccueil-publications-block-1 h2,
+.block-views-blockaccueil-balados-block-1 h2 {
+  text-tranform: uppercase;
+}
+
+
+/* accueil - sections */
+.accueil_publications,
+.accueil_balados,
+.accueil_articles_web {
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
 /* Responsive @media */
 /* mobile */
 @media (max-width: 460px) {}
