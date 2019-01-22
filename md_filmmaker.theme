@@ -258,12 +258,22 @@ function md_filmmaker_preprocess_block(&$vars) {
 	$vars['default_logo'] = theme_get_setting('logo.use_default');
 	$vars['logo_path'] = theme_get_setting('logo.path');
 }
+
 function md_filmmaker_preprocess_views_view_fields(&$vars) {
-	if($vars['view']->element['#display_id'] == "more_video" || $vars['view']->element['#display_id'] == "home_blog" || $vars['view']->element['#display_id'] == "blog_video_1" || $vars['view']->element['#display_id'] == "blog_video_2" || $vars['view']->element['#display_id'] == "blog_full" || $vars['view']->element['#display_id'] == "blog_sidebar") {
-		$node = node_load($vars['row']->nid);
-		$vars['node'] = $node;
-	}
+  $displays = array(
+    'blog_full',
+    'blog_sidebar',
+    'blog_video_1',
+    'blog_video_2',
+    'home_blog',
+    'more_video',
+  );
+  if(in_array($vars['view']->element['#display_id'], $displays)) {
+    $node = node_load($vars['row']->nid);
+    $vars['node'] = $node;
+  }
 }
+
 function md_filmmaker_preprocess_views_view_unformatted(&$vars) {
 	if($vars['view']->element['#display_id'] == "blog_video_2" || $vars['view']->element['#display_id'] == "blog_video_3") {
 		$terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree("blog_categories");
