@@ -1139,7 +1139,6 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 .view-article-vs-ouvrage-critique {
   clear: both;
-  padding-top: 200px; /*temp*/
 }
 
 /* eva editorial sur publication */
@@ -1178,13 +1177,15 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .node--type-collaborateur .node__content .field--name-field-statut-collaborateur,
 .node--type-collaborateur .node__content .field--name-body,
 .node--type-ouvrage-critique .field--name-field-couverture-ouvrage,
+.node--type-ouvrage-critique .crew-desc .view-article-vs-ouvrage-critique,
 .node--type-galerie .node__content .field--name-field-sous-titre,
 .node--type-galerie .node__content .field--name-field-auteur,
 .node--type-galerie .node__content .field--name-field-resume,
 .node--type-galerie .node__content .field--name-field-numero-referent,
 .node--type-publication .field--name-field-resume,
 .node--type-publication .field--name-field-periode-publication,
-.node--type-publication .field--name-field-date-publication {
+.node--type-publication .field--name-field-date-publication,
+.node--type-publication .node__content .field--name-field-image-couverture-paysage {
   display: none;
 }
 .article_web_content .entete_gauche .field--name-field-resume,
