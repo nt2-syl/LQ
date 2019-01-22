@@ -39,11 +39,11 @@
             </div>
           {% endif %}
 
-          <div class="col-sm-12 content_bottom">
-            {% if page.content_bottom %}
+          {% if page.content_bottom %}
+            <div class="col-sm-12 content_bottom">
               {{ page.content_bottom }}
-          </div>
-        {% endif %}
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>
