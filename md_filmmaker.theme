@@ -294,6 +294,20 @@ function md_filmmaker_preprocess_views_view_unformatted(&$vars) {
 		$vars['terms'] = $term_list;
 	}
 }
+
+function md_filmmaker_preprocess_views_view_list(&$vars) {
+  if ($vars['view']->id() == 'accueil_publications') {
+    $view = $vars['view'];
+    $rows = $vars['rows'];
+    $list_hrefs = array();
+    foreach ($vars['rows'] as $row_id => $row) {
+      $list_hrefs[$row_id] = $row['content']['#view']->field['nothing']->getValue($vars['view']->result[$row_id]);
+    }
+    #$vars['list_hrefs'] = $list_hrefs;
+  }
+
+}
+
 function md_filmmaker_theme_suggestions_page_alter(array &$suggestions, array $variables) {
  if ($node = \Drupal::routeMatch()->getParameter('node')) {
     $content_type = $node->bundle();
