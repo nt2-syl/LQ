@@ -39,17 +39,15 @@
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if title %}
-    {{ title }}
-  {% endif %}
-  {{ title_suffix }}
-  {% if rows %}
-    {{ rows }}
-  {% elseif empty %}
-    <div class="view-empty">
-      {{ empty }}
-    </div>
-  {% endif %}
-</div>
+{{ title_prefix }}
+{% if title %}
+  {{ title }}
+{% endif %}
+{{ title_suffix }}
+{% if rows %}
+  {{ rows }}
+{% elseif empty %}
+  <div class="view-empty">
+    {{ empty }}
+  </div>
+{% endif %}
