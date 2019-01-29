@@ -1844,6 +1844,113 @@ footer {
     margin-top: 18px;
 }
 
+/**
+* accueil publications
+*/
+@media only screen and (min-width: 768px) {
+.timeline {
+    height: 610px;
+}
+.timeline:before {
+    position: absolute;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    content: "";
+    width: 1px;
+    left: 7px;
+}
+}
+.timeline {
+    overflow: hidden;
+    width: 100%;
+    padding: 5px 0;
+    position: relative;
+}
+#dates {
+    width: 10%;
+    height: 600px;
+    float: left;
+}
+#dates li {
+    list-style: none;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    font-size: 0.75em;
+    padding-left: 10px;
+}
+#dates .selected {
+    color: #000;
+}
+#dates a {
+    font-family: "pb-bold";
+    color: rgba(0,0,0,0.2);
+    position: relative;
+    letter-spacing: 3px;
+    padding-left: 10px;
+}
+#issues {
+    width: 90%;
+    float: left;
+    padding: 70px 0;
+}
+#issues li {
+    list-style: none;
+}
+.timeline-box {
+    position: relative;
+    width: 100%;
+    padding: 0 50px;
+}
+#issues li.selected img {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+#issues li img {
+    zoom: 1;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    -ms-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+    -webkit-transform: scale(0.8,0.8);
+    -moz-transform: scale(0.8,0.8);
+    -o-transform: scale(0.8,0.8);
+    -ms-transform: scale(0.8,0.8);
+    transform: scale(0.8,0.8);
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+#issues li .date-group {
+    top: -45px;
+    position: relative;
+}
+}
+#issues li .date-group {
+    color: #000;
+    font-size: 3.75em;
+    text-align: center;
+    font-family: "Playfair Display",serif;
+    font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+#issues li .sl-time-desc {
+    margin: -30px 20px 20px 20px;
+}
+}
+#issues li .sl-time-desc {
+    font-family: "pb-regular";
+    text-align: center;
+    color: rgba(0,0,0,0.5);
+    line-height: 1.6em;
+}
 
 
 
