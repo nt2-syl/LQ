@@ -283,6 +283,7 @@ function md_filmmaker_preprocess_views_view_fields(&$vars) {
 }
 
 function md_filmmaker_preprocess_views_view_unformatted(&$vars) {
+  static $eva_counter = 0;
   if($vars['view']->element['#display_id'] == "blog_video_2" || $vars['view']->element['#display_id'] == "blog_video_3") {
     $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree("blog_categories");
     $term_list = array();
@@ -290,6 +291,15 @@ function md_filmmaker_preprocess_views_view_unformatted(&$vars) {
       array_push($term_list, $terms[$i]->name);
     }
     $vars['terms'] = $term_list;
+  }
+
+  $eva_views = array(
+    'contenu_vs_collaborateur',
+  );
+  $vars['eva_counter'] = $eva_counter;
+  if (in_array($vars['view']->id(), $eva_views)) {
+    // Increment the eva_counter
+    $eva_counter += sizeof($vars['rows']);
   }
 }
 
