@@ -22,7 +22,7 @@
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
-<div id="timeline">
+<div id="timeline" class="timeline">
   {% for row in rows %}
     {{ row.content }}
   {% endfor %}
