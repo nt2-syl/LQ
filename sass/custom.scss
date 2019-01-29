@@ -1873,9 +1873,9 @@ footer {
 }
 #dates li {
     list-style: none;
-    width: 100px;
+    width: 150px;
     height: 100px;
-    line-height: 100px;
+    line-height: 100px;/* line-height: 1 si plusieurs lignes */
     position: relative;
     font-size: 0.75em;
     padding-left: 10px;
@@ -1891,8 +1891,10 @@ footer {
     padding-left: 10px;
 }
 #issues {
-    width: 90%;
-    float: left;
+   /* width: 90%; */
+   width: 80%; 
+   /* float: left; */
+   float: right;
     padding: 70px 0;
 }
 #issues li {
