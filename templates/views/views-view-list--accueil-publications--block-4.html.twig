@@ -18,7 +18,6 @@
 #}
 <{{ list.type }} id="issues" {{ list.attributes }}>
   {% for row in rows %}
-    {{ kint(row|keys) }}
     <li href="{{row.content['#row']._entity.field_nothing[0].value}}" {{ row.attributes }}>
       {{- row.content -}}
     </li>
