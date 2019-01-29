@@ -21,7 +21,6 @@ global-styling:
     js/front/masterslider.min.js: {}
     js/front/modernizr-2.7.1.min.js: {}
     js/front/swiper.min.js: {}
-    js/front/waypoints.min.js: {}
     js/front/wow.min.js: {}
     js/front/script.js: {}
 
