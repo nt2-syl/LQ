@@ -2022,3 +2022,13 @@ footer {
 .responsive-grid {
   
 }
+.node--type-collaborateur{ 
+  .views-row-even {
+    float: left;
+    clear: both;
+  }
+  .views-row-odd {
+    float: right;
+    clear: both;
+  }
+}
