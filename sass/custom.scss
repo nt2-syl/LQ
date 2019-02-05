@@ -211,12 +211,16 @@ ul.active-menu-default > li a,
   padding-left: 1em;
   padding-right: 1em;
 }
+
 .views-field-path:hover,
 .more:hover {
+/* inclus la flèche */
+  color: #fff;
   background: #000;
 }
 .views-field-path:hover a,
 .more:hover a {
+/* inclus le lien */
   color: #fff;
 }
 
@@ -2032,6 +2036,16 @@ footer {
     line-height: 1.6em;
 }
 
+/* Accueil FB */
+#block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
+  clear:both;
+}
+.juicer-feed h1.referral {
+  display:none;
+}
+
+
+
 
 
 /* Responsive @media */
@@ -2063,3 +2077,4 @@ footer {
     clear: both;
   }
 }
+
