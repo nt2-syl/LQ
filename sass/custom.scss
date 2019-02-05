@@ -844,15 +844,9 @@ bottom: -285px;*/
 .view-blog {
   margin-top: 0;
 }
-/* cahier: info sous le titre*/
-.content-blog-item .view-point {
-  padding-top: 10px;
-  font-size: 14px;
-}
-.content-blog-item .view-point .fa-eye {
-  opacity: 0.4;
-  padding: 0 10px 0 0;
-}
+/* cahier: info sous le titre
+
+*/
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -860,16 +854,6 @@ bottom: -285px;*/
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.content-blog-item .view-point b {
-  color: rgba(0,0,0,0.8);
-  padding: 0 5px;
-  font-family: "pb-bold";
-}
-.content-blog-item .view-point .fa-comment-o {
-  opacity: 0.4;
-  padding: 0 0px 0 20px;
-  border-left: 1px solid rgba(0,0,0,0.3);
 }
 b, strong {
     font-weight: 700;
