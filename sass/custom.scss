@@ -96,7 +96,7 @@ img {
   color: #fff;
   font-family: "Playfair Display",serif;
   font-weight: 700;
-  font-size: 1.875em;
+  font-size: 20px;
 }
 
 
@@ -313,7 +313,7 @@ ul.active-menu-default > li a,
 
   .film-box > li .list-film-desc {
       color: rgba(0, 0, 0, 0.7);
-      font-size: 14px;
+      font-size: 16px;
   }
 
 }
@@ -386,7 +386,7 @@ li.text-center {
 }
 .big .list-film-cat,
 .big .list-film-desc {
-  opacity: 0.8;
+  color: rgba(255,255,255,0.5);
 }
 
 /* fix articles web (vs balado) */
@@ -1412,6 +1412,8 @@ div.region.region-footer ul.menu {
 .publication_titre {
   text-align: center;
   letter-spacing: 6px;
+  padding-bottom: 80px;
+  font-family: pb-bold;
   text-transform: uppercase;
 }
 
@@ -1444,12 +1446,10 @@ div.region.region-footer ul.menu {
 #edit-submit-environnement-recherche-general {
 	display:none;
 }
-.publication_titre {
-  padding-bottom: 30px;
-}
+
 .view-liste-publications {
-    margin-top: 150px;
-    margin-bottom: 30px;
+    margin-top: 80px;
+    margin-bottom: 0;
 
     .view-header {
       font-weight: bold;
