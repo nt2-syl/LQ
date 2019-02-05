@@ -66,6 +66,13 @@ img {
   max-width: 100%;
   height: auto;
 }
+/**
+* Classes générales
+*/
+.shadow {
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
 /* */
 .views-field-field-auteur,
 .views-field-created,
@@ -431,7 +438,7 @@ li.text-center {
 }
 .big .list-film-cat,
 .big .list-film-desc {
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.9);
 }
 
 /* fix articles web (vs balado) */
@@ -1778,9 +1785,20 @@ div.region.region-footer ul.menu {
 .list-film-cat-date {
   font-size:12px;
 }
-.shadow {
-  text-shadow: 0.1em 0.1em 0.2em black;
+
+.page-node-type-article-web {
+  .field--name-field-auteur {
+    font-size:16px;
+    padding-bottom: 1em;
+  }
+  .field-image-couverture-paysage {
+    margin-top: 1em;
+  }
+  .field-sous-titre {
+    margin-bottom: 1em;
+  }
 }
+
 
 /* Fermer sections - tout sauf page statique
  à venir: .path-collaborateurs
