@@ -213,8 +213,11 @@ ul.active-menu-default > li a,
 }
 .views-field-path:hover,
 .more:hover {
-  color: #fff;
   background: #000;
+}
+.views-field-path:hover a,
+.more:hover a {
+  color: #fff;
 }
 
 .views-field-path i,
@@ -256,10 +259,10 @@ ul.active-menu-default > li a,
     vertical-align: middle;
 }
 .list-film-name {
-    font-size: 1.875em;
+    font-size: 30px;
     font-weight: 700;
     margin: 5px 0 10px 0;
-    line-height: 45px;
+    line-height: 1;
 }
 .list-film-name a {
     color: #000;
@@ -1758,10 +1761,7 @@ div.region.region-footer ul.menu {
   }
 }
 
-
-
-
-/**/
+/* Distinguer auteurs et dates dans les surtitres */
 .list-film-cat-auteur {
   font-size:16px;
   padding-bottom: 0.5em;
@@ -1769,7 +1769,9 @@ div.region.region-footer ul.menu {
 .list-film-cat-date {
   font-size:12px;
 }
-
+.shadow {
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
 
 /* Fermer sections - tout sauf page statique
  à venir: .path-collaborateurs
