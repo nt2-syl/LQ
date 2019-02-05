@@ -524,22 +524,19 @@ li.text-center {
 .column-c457  {
   width: 100%;
 }
-.column-c457 .fl-title-big {
+/* Gros titres: éviter chevauchements */
+.fl-title-big {
   line-height: 1;
 }
-
-
 
 /**
 * Auteurs / Bottin
 */
-
 .film-box > li .film-item .list-film-cat,
 .view-liste-article-web .views-field-field-auteur,
 .view-liste-article-web .views-field-created {
     margin-top: 20px;
 }
-
 .ac_element {
     margin-top: 5px;
     margin-bottom: 20px;
@@ -575,8 +572,6 @@ li.text-center {
 .crew-container .fl-olay {
     background: rgba(0, 0, 0, 0.9);
 }
-
-
 
 @media only screen and (min-width: 1025px) {
   .crew-container .fl-olay {
@@ -1131,7 +1126,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   color: #000;
   font-family: "Playfair Display",serif;
   font-weight: 700;
-  font-size: 5.625em;
+  font-size: 55px;
   margin-bottom: -50px;
   margin-top: -15px;
   display: block;
@@ -1763,9 +1758,17 @@ div.region.region-footer ul.menu {
   }
 }
 
+
+
+
 /**/
-
-
+.list-film-cat-auteur {
+  font-size:16px;
+  padding-bottom: 0.5em;
+}
+.list-film-cat-date {
+  font-size:12px;
+}
 
 
 /* Fermer sections - tout sauf page statique
