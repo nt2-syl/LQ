@@ -285,7 +285,7 @@ ul.active-menu-default > li a,
 }
 .film-box > li {
     float: left;
-    padding-right: 20px;
+    padding-right: 0;
     padding-left: 0;
 }
 .film-box > li:nth-child(2n+1) {
@@ -397,11 +397,10 @@ li.text-center {
 @media only screen and (min-width: 1170px) {
 .film-box > li .film-item.big {
     width: 100%;
-    margin-bottom: 150px;
+    margin-bottom: 0;
 }
 
 .film-box > li .film-item.big {
-    margin-top: 100px;
 }
 
   .film-box.big .list-film-content {
@@ -1341,6 +1340,12 @@ div.region.region-footer ul.menu {
   float: right;
 }
 
+
+.item-list ul.timeline-box,
+.item-list ul.timeline-box li {
+    margin: 0;
+    padding: 0;
+}
 @media only screen and (min-width: 1170px) {
   /*.ac_page-wrapper img,
   .timeline-box img {

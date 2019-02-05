@@ -1,0 +1,58 @@
+<div class="site page-articles-web-view">
+  {% if page.bandeau %}
+    <div class="fullscreen">
+      <div class="row">
+        <div class="col-sm-12 bandeau">
+          {{ page.bandeau }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if page.header %}
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 header">
+          {{ page.header }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  <div id="main">
+    <div class="section">
+      <div class="container_full_width">
+        <div class="row">
+          <div class="col-sm-12 content_top">
+            {% if page.content_top %}
+              {{ page.content_top }}
+            {% endif %}
+          </div>
+          {% if page.sidebar %}
+            <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12 page_content_with_sidebar">
+              {{ page.content }}
+            </div>
+            <div class="archive-sidebar side-bar col-lg-4 col-md-3 hidden-sm hidden-xs">
+              {{ page.sidebar}}
+            </div>
+          {% else %}
+            <div class="col-sm-12 page_content fullwidth">
+              {{ page.content }}
+            </div>
+          {% endif %}
+
+          {% if page.content_bottom %}
+            <div class="col-sm-12 content_bottom">
+              {{ page.content_bottom }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if page.footer %}
+    <footer>
+      <div class="footer-landing f-home1">
+        {{ page.footer }}
+      </div>
+    </footer>
+  {% endif %}
+</div>
