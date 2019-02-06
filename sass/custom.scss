@@ -2289,3 +2289,21 @@ team-content .team-job {
     clear: both;
   }
 }
+
+/**
+* header transparent
+*/
+.header-transparent,
+.path-frontpage .header,
+.page-node-type-publication .header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+
+.region-header {
+    position: relative;
+    z-index: 10;
+}
