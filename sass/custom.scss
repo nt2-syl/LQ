@@ -194,20 +194,70 @@ ul.active-menu-default > li a:active {
     background: none;
 }
 
-/* positionner footer*/
+/**
+* Header 
+*/
+.site-name {
+  display: none;
+}
+.site-logo img {
+  max-width: 90px;
+  height: auto;
+}
+#block-md-filmmaker-branding {
+  float: left;
+  padding-top:10px;
+}
+#block-md-filmmaker-main-menu {
+  float: right;
+  width: 90%;
+}
+/* Accueil */
+.block-views-blockaccueil-edito-block-1 {
+  width: 50%;
+  padding-right: 2em;
+  float: left;
+}
+.block-views-blockaccueil-publications-block-1 {
+  width: 50%;
+  padding-left: 2em;
+  float: right;
+}
+
+/* positionner au dessus du header */
+#block-reseauxsociauxlq p {
+  display: inline;
+}
+#block-reseauxsociauxlq,
+.block-views-exposed-filter-blockenvironnement-recherche-general-page-1 {
+  float: right;
+}
+
+/**
+* Footer 
+*/
+div.region.region-footer,
+div.region.region-footer ul.menu {
+  text-align: center;
+}
 .region-footer ul.menu li a {
   display: inline-block;
 }
 #block-md-filmmaker-footer {
   float: left;
-  width: 30%;
+  width: 50%;
 }
 #block-logosfooter {
   float: right;
-  width: 70%;
+  width: 50%;
+  margin-bottom: 50px;
 }
 #block-copyright {
   clear: both;
+}
+/* Marge principale entre footer et contenu */
+footer {
+  margin-top: 50px;
 }
 
 
@@ -1319,49 +1369,11 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   display: block;
 }
 
-/* header */
-.site-name {
-  display: none;
-}
-.site-logo img {
-  max-width: 90px;
-  height: auto;
-}
-#block-md-filmmaker-branding {
-  float: left;
-  padding-top:10px;
-}
-#block-md-filmmaker-main-menu {
-  float: right;
-  width: 90%;
-}
 
 
-/* Accueil - Positionnement temporaire */
-.block-views-blockaccueil-edito-block-1 {
-  width: 50%;
-  padding-right: 2em;
-  float: left;
-}
-.block-views-blockaccueil-publications-block-1 {
-  width: 50%;
-  padding-left: 2em;
-  float: right;
-}
-div.region.region-footer,
-div.region.region-footer ul.menu {
-  text-align: center;
-}
-/* positionner au dessus du header */
-#block-reseauxsociauxlq p {
-  display: inline;
-}
-#block-reseauxsociauxlq,
-.block-views-exposed-filter-blockenvironnement-recherche-general-page-1 {
-  float: right;
-}
 
 
+/* accueil timeline box - publications */
 .item-list ul.timeline-box,
 .item-list ul.timeline-box li {
     margin: 0;
@@ -1870,9 +1882,6 @@ div.region.region-footer ul.menu {
 }
 .block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa7 {
   clear: both; 
-}
-footer {
-  margin-top: 150px;
 }
 
 
