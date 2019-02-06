@@ -1210,6 +1210,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   margin-bottom: -50px;
   margin-top: -15px;
   display: block;
+  text-shadow: -1px 1px 0 white;
 }
 
 /* collaborateur */
@@ -2205,6 +2206,8 @@ team-content .team-job {
   text-align: center;
 }
 
+
+
 /**
 * Masonry
 * 3 classes: .grid-item.high, .grid-item.large, .grid-item
@@ -2334,4 +2337,36 @@ team-content .team-job {
 .region-header {
     position: relative;
     z-index: 10;
+}
+
+/**
+* Header - Icones
+*/
+ul.list-social li {
+    display: inline;
+    padding: 0 10px;
+    list-style: none;
+}
+ul.list-social li a {
+    color: rgba(0,0,0,0.5);
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-facebook-f:before, .fa-facebook:before {
+    content: "\f09a";
+}
+.fa-twitter:before {
+    content: "\f099";
+}
+.fa-youtube:before {
+    content: "\f167";
+}
+.fa-instagram:before {
+    content: "\f16d";
 }
