@@ -2389,6 +2389,10 @@ ul.list-social li a {
 .view-auteur-vs-cahier {
   clear: both;
 }
+
+/**
+* balado _details
+*/
 .groupe_details {
 
 }
@@ -2399,4 +2403,44 @@ ul.list-social li a {
 .groupe_details_droite {
   float: right;
   width: 50%; 
+}
+
+
+/**
+* Module Embed
+*/
+/* Inspiré de QF */
+.embedded-entity {
+  .media--view-mode-image-embed-demi-largeur,
+  .media--view-mode-image-embed-pleine-largeur {
+    border-bottom: 4px solid #e3e0db;
+    border-top: 4px solid #e3e0db;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 2em;
+  }
+  .media--view-mode-image-embed-demi-largeur {
+    max-width: 50%;
+    margin-left: 20px;
+    float: right;
+  }
+  .media--view-mode-image-embed-pleine-largeur {
+    max-width: 100%;
+  }
+  .field--name-field-media-image,
+  .field--name-field-legende {
+    display: inline-block;
+    /* float: right; dégager la légende des bordures */
+  }
+  .field--name-field-media-image {
+    margin-bottom: 0.5em;
+  }
+  .field--name-field-legende {
+    line-height: 1.25;
+    font-size: 10px;
+    display: inline;
+    float: none;
+    margin-bottom: 0;
+  }
+  .img-responsive {}
 }
