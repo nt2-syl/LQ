@@ -2426,6 +2426,7 @@ ul.list-social li a {
   }
   .media--view-mode-image-embed-pleine-largeur {
     max-width: 100%;
+    clear: both;
   }
   .field--name-field-media-image,
   .field--name-field-legende {
@@ -2435,12 +2436,14 @@ ul.list-social li a {
   .field--name-field-media-image {
     margin-bottom: 0.5em;
   }
-  .field--name-field-legende {
+  .field--name-field-legende,
+  #cboxTitle p {
     line-height: 1.25;
-    font-size: 10px;
+    font-size: 12px;
     display: inline;
     float: none;
     margin-bottom: 0;
   }
   .img-responsive {}
+
 }
