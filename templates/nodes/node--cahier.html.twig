@@ -83,20 +83,21 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
   {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
+  <h2{{ title_attributes }}>
+    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+  </h2>
   {% endif %}
   <div class="fl-title">
-  <span class="fl-title-small uppercase"><p style="display: inline;">{% if content.field_type_cahier %}
-            <div class="field-type-cahier">
-              {{ content.field_type_cahier }}
-            </div>{% endif %}</p></span>
-  <span class="fl-title-big uppercase"><p style="display: inline;">{{ node.title.entity.getTitle() }}</p></span>
-</div>
-  {{ title_suffix }}
+    <div class="fl-title-small uppercase">
+    {% if content.field_type_cahier %}
+      <div class="field-type-cahier">
+        {{ content.field_type_cahier }}
+      </div>
+      {% endif %}
+    </div>
+    <div class="fl-title-big uppercase"><p style="display: inline;">{{ node.title.entity.getTitle() }}</p></div>
+  </div>
 
   {% if display_submitted %}
     <footer class="node__meta">
