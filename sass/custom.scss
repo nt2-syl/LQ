@@ -1101,13 +1101,14 @@ b, strong {
   line-height: 1.5em;
 }
 /* BALADO */
-.node--type-balados .fieldset-wrapper > div {
+/*.node--type-balados .fieldset-wrapper > div {
   display: inline-block;
   margin-right: -2px;
   width: 20%;
   text-align: center;
   margin-left: -2px;
-}
+}*/
+
 .field--name-field-balado {
   text-align: center;
   margin: 1em 0;
@@ -2370,8 +2371,15 @@ ul.list-social li a {
 .fa-instagram:before {
     content: "\f16d";
 }
-
+/**
+* CART
+*/
 .cart-block--summary__icon img {
   background-color:#000;
-  margin-right: 20px;
+  margin-right: 10px;
+}
+#block-cart {
+  float: right;
+  padding-right: 20px;
+  padding-left: 10px;
 }
