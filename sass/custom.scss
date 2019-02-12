@@ -1283,6 +1283,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   display: inline-block;
 }
 
+
 /* Collaborateurs : Réseaux Sociaux (icônes) */
 
 .page-node-type-collaborateur .views-element-container {
@@ -2578,4 +2579,8 @@ ul.active-menu-default {
 /* Interférence entre menu mobile overlay et titre */
 .fl-title {
   z-index: 9;
+}
+/* Interférence entre vues EVA et contenu sur Cahier */
+.page-node-type-cahier .views-element-container {
+  clear:both;
 }
