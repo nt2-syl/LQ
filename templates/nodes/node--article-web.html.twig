@@ -18,6 +18,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
             {{ title_prefix }}
             <div class="fl-title light">
               <span class="fl-title-small uppercase date">
+                {{ node.createdtime|format_date('date_article_web') }}
                 {% if content.field_type_article %}
                   <span class="field-type-article">
                     | {{ content.field_type_article }}
