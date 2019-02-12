@@ -2179,7 +2179,9 @@ ms-slide {
 .master-slider img, .ms-slide-bgvideocont video {
 /*    max-width: none; */
 }
-
+.ms-grabbing-cursor {
+    cursor: url(/sites/lq2.aegir8.uqam.ca/themes/LQ/images/grabbing.png),move;
+}
 .team-content {
   position: absolute;
   color: #fff;
