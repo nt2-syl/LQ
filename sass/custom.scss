@@ -1284,7 +1284,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 
 /* collabos social icons */
-
+/* V1 : requiert reecriture du template paragraph custom
 .field--name-field-liens-externes a {
     display: block;
     float: left;
@@ -1297,8 +1297,6 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .field--name-field-liens-externes .field .field__label {
 	display: none;
 }
-
-
 .paragraph--type--liens-externes a {
     background: url("http://entrelapageetlecran.nt2.ca/sites/application.nt2.ca/themes/STARTER/images/logo_blog.png") no-repeat scroll 0 0;
 }
@@ -1310,8 +1308,28 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 .field-name-field-facebook a {
     background: url("http://entrelapageetlecran.nt2.ca/sites/application.nt2.ca/themes/STARTER/images/logo_fb.png") no-repeat scroll 0 0;
+}*/
+/* V2 : CSS */
+.paragraph--type--liens-externes a::before {
+    content: "\f121";
+    padding-right: 1em;
+}
+.paragraph--type--liens-externes a[href*="instagram.com"]::before {
+    content: "\f16d";
+    padding-right: 1em;
+}
+.paragraph--type--liens-externes a[href*="facebook.com"]::before {
+    content: "\f09a";
+    padding-right: 1em;
+}
+.paragraph--type--liens-externes a[href*="twitter.com"]::before {
+    content: "\f099";
+    padding-right: 1em;
 }
 
+.field--name-field-liens-externes a {
+
+}
 .field--name-field-url-leslibraires {
 	clear: both;
 }
