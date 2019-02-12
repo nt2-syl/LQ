@@ -1319,6 +1319,9 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .field--name-field-url-leslibraires {
 	clear: both;
 }
+.field--name-field-liens-externes .field--item {
+  display: inline-block;
+}
 
 /* champs imprimés dans les templates - fermer les originaux */
 .article_web_content .field--name-field-auteur,

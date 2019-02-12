@@ -61,7 +61,7 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field--item') }}>
+      <div{{ attributes.addClass(classes, 'field--item fa') }}>
         <a target="_blank" href="{{item.content['#url']}}"></a>
       </div>
     {% endfor %}
