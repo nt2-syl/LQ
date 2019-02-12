@@ -20,4 +20,19 @@ jQuery(document).ready(function($) {
 			});
 		});
 	});
+
+  $('.masonry-grid-galerie').each(function() {
+    var $this = $(this);
+    $this.imagesLoaded(function() {
+      $this.isotope({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        masonry: {
+          gutterWidth: '.gutter-sizer',
+          columnWidth: '.grid-sizer'
+        }
+      });
+    });
+  });
+
 });

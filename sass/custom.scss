@@ -133,7 +133,7 @@ img {
 }
 
 /**
-* Accueil - cacher logos 
+* Accueil - cacher logos
 */
 #block-md-filmmaker-footer #logo,
 #block-md-filmmaker-account-menu #logo,
@@ -145,7 +145,7 @@ img {
 }
 
 /**
-* Menus 
+* Menus
 */
 
 
@@ -159,8 +159,8 @@ ul.active-menu-default > li {
   padding: 15px 12px;
   list-style: none;
 }
-.menu-item a, 
-ul.active-menu-default li a, 
+.menu-item a,
+ul.active-menu-default li a,
 ul.active-menu-default > li a {
   color: #a7a7a7;
   font-family: pb-bold;
@@ -179,15 +179,15 @@ ul.active-menu-default > li a,
   -o-transition: all 300ms linear 0ms;
   transition: all 300ms linear 0ms;
 }
-.menu-item a:hover, 
-ul.active-menu-default li a:hover, 
+.menu-item a:hover,
+ul.active-menu-default li a:hover,
 ul.active-menu-default > li a:hover {
   color: #a7a7a7;
   font-family: pb-bold;
   text-decoration: none;
 }
-ul.active-menu-default > li:hover a, 
-ul.active-menu-default > li a:focus, 
+ul.active-menu-default > li:hover a,
+ul.active-menu-default > li a:focus,
 ul.active-menu-default > li a:active {
     border-left: 2px solid #fff;
     border-right: 2px solid #fff;
@@ -195,7 +195,7 @@ ul.active-menu-default > li a:active {
 }
 
 /**
-* Header 
+* Header
 */
 .site-name {
   display: none;
@@ -234,7 +234,7 @@ ul.active-menu-default > li a:active {
 }
 
 /**
-* Footer 
+* Footer
 */
 div.region.region-footer,
 div.region.region-footer ul.menu {
@@ -317,7 +317,7 @@ footer {
 
 
 /**
-* Liste Balados 
+* Liste Balados
 */
 [class^="film-"], [class*=" film-"] {
     font-family: 'fontfilm';
@@ -464,7 +464,7 @@ li.text-center {
 }
 
 /**
-* LISTE ARTICLE WEB 
+* LISTE ARTICLE WEB
 * (SIMILAIRE À BALADO, mais utilisation de la classe .big pour texte sur photos)
 */
 
@@ -780,7 +780,7 @@ li.text-center {
 
 
 /**
-* ARTICLE WEB - Node 
+* ARTICLE WEB - Node
 */
 
 .article_web_content {
@@ -822,7 +822,7 @@ bottom: -285px;*/
   margin-top: 50px;
 }
 .fl-detail-box .tabs {
-  min-height: inherit; 
+  min-height: inherit;
 }
 .fl-title .fl-title-medium {
   color: #000;
@@ -1015,7 +1015,7 @@ b, strong {
 .film-style-odd li:nth-child(2n) .film-odd-img {
   float: left;
 }
-.film-style-odd li .film-odd-content, 
+.film-style-odd li .film-odd-content,
 .film-style-odd li .film-odd-img {
   width: 50%;
 }
@@ -1130,7 +1130,7 @@ b, strong {
 
 
 /*
-balado DETAILS : GRID 
+balado DETAILS : GRID
 insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-6 ac_col-12
 
 <div class="ac-counter">
@@ -1170,7 +1170,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 
   .groupe-details  .field__items {}
-.counter-content .counter-desc, 
+.counter-content .counter-desc,
 .counter-title {
   font-size: 0.75em;
   text-transform: uppercase;
@@ -1521,7 +1521,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 
 /* Temp */
 #edit-search-api-fulltext  {
-	line-height: 1; 
+	line-height: 1;
 }
 #edit-submit-environnement-recherche-general {
 	display:none;
@@ -1678,7 +1678,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 
 
 /**
-* SMALL SLIDES 
+* SMALL SLIDES
 */
 .list-film img {
     opacity: 0.5;
@@ -1761,7 +1761,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .list-film .film-item .fl-viewmore {
     padding-top: 10px;
 }
-.cus-item-small .white-desc, 
+.cus-item-small .white-desc,
 .cus-item-small .fl-viewmore {
     display: none;
 }
@@ -1882,7 +1882,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   padding-bottom: 50px;
 }
 .block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa7 {
-  clear: both; 
+  clear: both;
 }
 
 
@@ -2035,7 +2035,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 #issues {
    /* width: 90%; */
-   width: 80%; 
+   width: 80%;
    /* float: left; */
    float: right;
     padding: 70px 0;
@@ -2113,7 +2113,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 
 
 /**
-* Thème initial - Carousel Auteurs sur Cahier 
+* Thème initial - Carousel Auteurs sur Cahier
 */
 .team-film-item {
   width: 100%;
@@ -2213,6 +2213,17 @@ team-content .team-job {
 * 3 classes: .grid-item.high, .grid-item.large, .grid-item
 * TODO: appliquer (min-width: 1200px) seulement. Sur les écrans plus petits, toutes les images sont 100% de largeur.
 */
+
+.masonry-grid-galerie {
+  .gutter-sizer {
+    width: 1%;
+  }
+
+  .grid-sizer, .grid-item {
+    width: 24%;
+  }
+}
+
 .ac_container.ac_container-fluid {
   max-width: inherit;
 }
@@ -2308,9 +2319,9 @@ team-content .team-job {
 
 /*responsive grid*/
 .responsive-grid {
-  
+
 }
-.node--type-collaborateur { 
+.node--type-collaborateur {
   .views-row-even {
     float: left;
     clear: both;
@@ -2395,11 +2406,11 @@ ul.list-social li a {
 }
 .groupe_details_gauche {
   float: left;
-  width: 50%; 
+  width: 50%;
 }
 .groupe_details_droite {
   float: right;
-  width: 50%; 
+  width: 50%;
 }
 
 
