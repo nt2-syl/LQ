@@ -278,6 +278,7 @@ function md_filmmaker_preprocess_views_view_fields(&$vars) {
     if ($node->getType() == 'cahier') {
       $vars['image_couverture'] = _node_image_url($node, 'field_image_couverture_paysage',
                                   'couverture_cahier_sur_publication');
+      $vars['image_couverture_link'] = $node->toUrl()->toString();
     }
   }
 }
