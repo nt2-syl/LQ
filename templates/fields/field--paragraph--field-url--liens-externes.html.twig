@@ -61,7 +61,9 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field--item without-label fa socialicon') }}>{{ item.content }}</div>
+      <div{{ attributes.addClass(classes, 'field--item') }}>
+        <a target="_blank" href="{{item.content['#url']}}"></a>
+      </div>
     {% endfor %}
   {% endif %}
 {% else %}
@@ -71,8 +73,8 @@
       <div class="field__items">
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes.addClass('field--item multiple label') }} {{ content.field_type_lien[0]['#title'] }}>
-        {{ item.content }}
+      <div{{ item.attributes.addClass('field--item') }}>
+        <a target="_blank" href="{{item.content['#url']}}"></a>
       </div>
     {% endfor %}
     {% if multiple %}
