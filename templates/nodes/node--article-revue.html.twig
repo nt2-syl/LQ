@@ -97,11 +97,9 @@
             </em></strong>
           </div>
         {% endif %}
-        {% if content.field_auteur_article_papier.entity.field_individu.value %}
           <div class="field-auteur">
-            {{ content.field_auteur_article_papier.entity.field_individu.value }}
+            {{ content.field_auteur_article_papier.entity.field_individu.entity.title.value }}*
           </div>
-        {% endif %}
       <div>
 
 <section id="section-c125" class="ac_section section-c125">
