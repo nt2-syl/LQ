@@ -97,9 +97,9 @@
             </em></strong>
           </div>
         {% endif %}
-        {% if content.field_individu %}
+        {% if content.auteur_revue_papier.entity.field_individu %}
           <div class="field-auteur">
-            {{ content.field_individu }}
+            {{ content.auteur_revue_papier.entity.field_individu.value }}
           </div>
         {% endif %}
       <div>
