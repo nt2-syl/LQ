@@ -1491,8 +1491,13 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 
 @media only screen and (min-width: 768px) {
+
+/*
+Ligne centrale sur publications avec point flottant
+(modèle: History)
+*/
   .timeline-page-box:before {
-    left: 52.1%;/* temp */
+    left: 50%;
     content: "";
     position: absolute;
     width: 1px;
