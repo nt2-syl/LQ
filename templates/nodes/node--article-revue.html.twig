@@ -86,7 +86,15 @@
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="fl-title">
       <div class="fl-title-small uppercase">
-      {% if content.field_cahier_referent %}<span class="node-cahier-referent">{{ content.field_cahier_referent }}</span>{% endif %}{% if content.field_type_article %} | <span class="field_type_article">{{ content.field_type_article }}</span>{% endif %}
+        {% if content.field_cahier_referent %}
+          {# Only show this for editorials, term id 42. @see https://redmine.koumbit.net/issues/29171 #}
+          {% if node.field_cahier_referent.entity.field_type_cahier.value.0.target_id == "42" %}
+            <span class="node-cahier-referent">{{ content.field_cahier_referent }}</span> |
+          {% endif %}
+        {% endif %}
+        {% if content.field_type_article %}
+          <span class="field_type_article">{{ content.field_type_article }}</span>
+        {% endif %}
       </div>
 
       <span class="fl-title-big">{{ node.title.entity.getTitle() }}</span>
