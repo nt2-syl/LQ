@@ -1154,7 +1154,7 @@ b, strong {
   float: left;
   text-align: right;
   padding-right: 40px;
-  padding-left: 20%;
+  padding-left: 0%;
 }
 .film-style-odd li:nth-child(2n) .film-odd-content {
   float: right;
@@ -1165,7 +1165,6 @@ b, strong {
 
 .film-style-odd li .film-odd-content, .film-style-odd li .film-odd-img {
     width: 50%;
-    min-height: 400px; /* image manquante */
 }
 @media only screen and (min-width: 1170px) {
   .film-odd-content {
@@ -1372,7 +1371,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 
 /* Collaborateurs : Réseaux Sociaux (icônes) */
 
-.page-node-type-collaborateur .views-element-container {
+.page-node-type-collaborateur .view-eva {
 	padding: 2em 0;
 }
 /* collabos social icons - CSS */
@@ -2706,4 +2705,19 @@ ul.active-menu-default {
 /* Interférence entre vues EVA et contenu sur Cahier */
 .page-node-type-cahier .views-element-container {
   clear:both;
+}
+
+/**/
+.page-node-type-collaborateur {
+  .view-eva {
+/*droite*/
+    .views-row-odd { float:right;text-align:left;    width: 50%;}
+    /*gauche*/
+    .views-row-even { float: left;text-align:right;    width: 50%;}
+  }
+}
+
+/* publications */
+.timeline-box li {
+    padding-bottom: 70px;
 }

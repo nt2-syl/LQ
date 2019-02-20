@@ -98,76 +98,52 @@
           </div>
         {% endif %}
           <div class="field-auteur">
-            {% for item in node.field_auteur_article_papier %}
-              {% set target_id = item.entity.field_individu.0.target_id %}
-              <a href="{{ drupal_url('node/' ~ target_id) }}">
-                {{ drupal_field('title', 'node', target_id) }}
-              </a>
-              <br>
-            {% endfor %}
+            {{ content.field_auteur_article_papier.entity.field_individu.entity.title.value }}*
           </div>
       <div>
 
-<section id="section-c125" class="ac_section section-c125">
-            <div class="ac_container">
-            <div class="js-ac-row ac_row js-sort-column">
-
-                <div id="column-c91" class="ac-column column-c91 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-            <div class="ac_elements-wrapper">
-            <div id="" class="el-text-c80 ac_element left-desc">
-<div class="ac-text">{% if content.field_resume %}
-            <div class="field-resume">
-              {{ content.field_resume }}
+      <section id="section-c125" class="ac_section section-c125">
+        <div class="ac_container">
+          <div class="js-ac-row ac_row js-sort-column">
+            <div id="column-c91" class="ac-column column-c91 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+              <div class="ac_elements-wrapper">
+                <div id="" class="el-text-c80 ac_element left-desc">
+                  <div class="ac-text">
+                  {% if content.field_resume %}
+                    <div class="field-resume">
+                      {{ content.field_resume }}
+                    </div>
+                  {% endif %}
+                  </div>
+                </div>
+              </div>
             </div>
-          {% endif %}</div></div>
-        </div>
-    </div>
-
-
-    <div id="column-c114" class="ac-column column-c114 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-            <div class="ac_elements-wrapper">
-            <div id="" class="el-text-c97 ac_element gray-desc">
-<div class="ac-text">{{ field_resume }}</div>
-</div>
-<div id="" class="el-html-c103 ac_element"><div class="ac-html"><div class="fl-mg-top" style="margin-bottom: 10px;">
-          {% if content.field_genre %}
-            <div class="field-genre">
-              {{ content.field_genre }}
-            </div>
-          {% endif %}
-
+            <div id="column-c114" class="ac-column column-c114 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+              <div class="ac_elements-wrapper">
+                <div id="" class="el-text-c97 ac_element gray-desc">
+                  <div class="ac-text">{{ field_resume }}</div>
+                </div>
+                <div class="el-html-c103 ac_element">
+                  <div class="ac-html">
+                    <div class="fl-mg-top" style="margin-bottom: 10px;">
                     {% if content.field_thematique %}
-            <div class="field-thematique">
-              {{ content.field_thematique }}
+                      <div class="field-thematique">
+                        {{ content.field_thematique }}
+                      </div>
+                    {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          {% endif %}
-</div>
-</div>
-</div>
-
+          </div>
         </div>
-    </div>
-
-            </div>
-        </div>
-</section>
-
-
-
-
-
-
-
-
-
-
+      </section>
     </div>
   </div>
-
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content }}
   </div>
-
   {% if display_submitted %}
     <footer class="node__meta">
       {{ author_picture }}
@@ -177,5 +153,4 @@
       </div>
     </footer>
   {% endif %}
-
 </article>
