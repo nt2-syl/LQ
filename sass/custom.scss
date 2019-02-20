@@ -218,6 +218,9 @@ ul.active-menu-default > li a:active {
     margin-top: 0;
     margin-bottom: 0;
   }
+  .form--inline .form-item {
+    margin-right: 0;
+  }
 }
 
 /**
@@ -243,9 +246,25 @@ ul.active-menu-default > li a:active {
   float: right;
 }
 
+
+
+/**
+* Pagers
+*/
+.pager__items {
+  margin-bottom: 0;
+}
+.pager {
+  margin: 80px 0 0;
+}
+
 /**
 * Footer
 */
+/* Marge principale entre footer et contenu */
+footer {
+  margin-top: 80px;
+}
 div.region.region-footer,
 div.region.region-footer ul.menu {
   text-align: center;
@@ -265,10 +284,7 @@ div.region.region-footer ul.menu {
 #block-copyright {
   clear: both;
 }
-/* Marge principale entre footer et contenu */
-footer {
-  margin-top: 50px;
-}
+
 
 
 .views-field-path,
@@ -369,8 +385,13 @@ footer {
 }
 .film-box > li {
     float: left;
-    padding-right: 0;
+    padding-right: 20px;
     padding-left: 0;
+}
+.film-box > li:nth-child(2n) {
+    float: right;
+    padding-left: 20px;
+    padding-right: 0;
 }
 .film-box > li:nth-child(2n+1) {
     clear: both;
@@ -388,9 +409,12 @@ footer {
       overflow: hidden;
   }
   .film-box > li .film-item {
-      padding-bottom: 0;
+      padding-bottom: 40px;
       height: auto;
       background: none;
+      &:last-child {
+        padding-bottom: 0;
+      }
   }
 
 }
@@ -526,15 +550,21 @@ li.text-center {
 
 /* fix articles web (vs balado) */
 .film-box > li .film-item img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 .film-box > li .film-item {
-    width: 100%;
-    padding: 10px;
-    float: left;
+  width: 100%;
+  padding: 0px;
+  float: left;
 }
-
+.view-liste-article-web .view-content {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
 /**
 * LISTE GALERIES
 */
@@ -795,6 +825,15 @@ li.text-center {
 
 .archive-sidebar {
   padding-top: 80px;
+  .edit-actions {
+    margin: 0;
+    position: absolute;
+    right: 0;
+  }
+  .form-item, .form-actions {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 /**
@@ -1564,14 +1603,27 @@ Ligne centrale sur publications avec point flottant
 #edit-search-api-fulltext  {
 	line-height: 1;
 }
-#edit-submit-environnement-recherche-general {
-	display:none;
+#edit-submit-environnement-recherche-general,
+#edit-submit-environnement-recherche-bottin {
+  width: 23px;
+  height: 23px;
+  border-radius: 0;
+  border: none;
+  background: #ccc;
+  float: right;
+  vertical-align: top;
+  position: absolute;
+  top: 2px;
+  right: 0px;
+}
+#edit-submit-environnement-recherche-bottin {
+  right: 82px;
 }
 
 .view-liste-publications {
-    .view-header {
-      font-weight: bold;
-    }
+  .view-header {
+    font-weight: bold;
+  }
 }
 
 /**
