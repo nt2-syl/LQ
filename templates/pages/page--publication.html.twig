@@ -6,8 +6,20 @@
         <div class="bandeau_image_couverture_paysage"><img src="{{ image_bandeau }}"/></div>
         <div class="bandeau_titre">{{ node.label }}</div>
         <div class="bandeau_resume">{% if node.field_resume %}{{ node.field_resume.value }}{% endif %}</div>
-        <div class="bandeau_periode_publication">{% if node.field_periode_publication %}{{ node.field_periode_publication.value }}{% endif %}</div>
-        <div class="bandeau_date_publication">{% if node.field_date_publication %}{{ node.field_date_publication.value }}{% endif %}</div>
+        <div class="bandeau_periode_publication">
+          {% for item in node.field_date_publication_numero %}
+            {% if item.entity.field_type_date.value == "collection" %}
+              {{ item.entity.field_saison_publication.value }}
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="bandeau_date_publication">
+                    {% for item in node.field_date_publication_numero %}
+            {% if item.entity.field_type_date.value == "collection" %}
+              {{ item.entity.field_date.value }}
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
