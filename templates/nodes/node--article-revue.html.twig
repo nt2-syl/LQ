@@ -98,7 +98,13 @@
           </div>
         {% endif %}
           <div class="field-auteur">
-            {{ content.field_auteur_article_papier.entity.field_individu.entity.title.value }}*
+            {% for item in node.field_auteur_article_papier %}
+              {% set target_id = item.entity.field_individu.0.target_id %}
+              <a href="{{ drupal_url('node/' ~ target_id) }}">
+                {{ drupal_field('title', 'node', target_id) }}
+              </a>
+              <br>
+            {% endfor %}
           </div>
       <div>
 
