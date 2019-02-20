@@ -965,16 +965,36 @@ bottom: -285px;*/
 /*CAHIER */
 .node--type-cahier {
   .fl-title {
-  line-height: 1.75;
+    line-height: 1.75;
   }
-  .fl-title-small {}
-  .fl-title-big {}
   .field-type-cahier {
     padding-bottom: 20px;
   }
   .node__content {
     margin-top:30px;
   }
+}
+
+/* Reporter */
+.page-node-type-balados .page-title {
+  display:none;
+}
+
+.node--type-balados {
+  .fl-title {
+  line-height: 1.75;
+  }
+  .fl-title span div {
+    display: block;
+  }
+  .field-sur-titre {
+    padding-bottom: 20px;
+    padding-top: 80px;
+  }
+  .node__content {
+    margin-top:30px;
+  }
+
 }
 
 
