@@ -960,9 +960,21 @@ bottom: -285px;*/
 /* ajouter .node-balado .field-chapeau */
 
 /*CAHIER */
-.node--type-cahier .fl-title {
+.node--type-cahier {
+  .fl-title {
   line-height: 1.75;
+  }
+  .fl-title-small {}
+  .fl-title-big {}
+  .field-type-cahier {
+    padding-bottom: 20px;
+  }
+  .node__content {
+    margin-top:30px;
+  }
 }
+
+
 /*
 .node--type-cahier .field--name-field-type-cahier {
   text-transform: uppercase;
