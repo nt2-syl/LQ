@@ -16,7 +16,7 @@
         <div class="bandeau_date_publication">
                     {% for item in node.field_date_publication_numero %}
             {% if item.entity.field_type_date.value == "collection" %}
-              {{ item.entity.field_date.value }}
+              {{ item.entity.field_date.value|date("Y") }}
             {% endif %}
           {% endfor %}
         </div>
