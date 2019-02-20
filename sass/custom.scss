@@ -213,7 +213,16 @@ ul.active-menu-default > li a:active {
   float: right;
   width: 90%;
 }
-/* Accueil */
+.region-header {
+  .form-item, .form-actions {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/**
+* Accueil 
+*/
 .block-views-blockaccueil-edito-block-1 {
   width: 50%;
   padding-right: 2em;
@@ -784,7 +793,9 @@ li.text-center {
 .md-google {
 }
 
-
+.archive-sidebar {
+  padding-top: 80px;
+}
 
 /**
 * ARTICLE WEB - Node
@@ -1509,8 +1520,22 @@ Ligne centrale sur publications avec point flottant
   text-align: center;
   letter-spacing: 6px;
   padding-bottom: 80px;
+  padding-top: 80px;
   font-family: pb-bold;
   text-transform: uppercase;
+}
+
+#block-md-filmmaker-page-title .page-title {
+  text-align: center;
+  letter-spacing: 6px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  font-family: pb-bold;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top:0;
+  margin-bottom:0;
 }
 
 .test {
@@ -1544,9 +1569,6 @@ Ligne centrale sur publications avec point flottant
 }
 
 .view-liste-publications {
-    margin-top: 80px;
-    margin-bottom: 0;
-
     .view-header {
       font-weight: bold;
     }
@@ -2395,6 +2417,7 @@ team-content .team-job {
 .region-header {
     position: relative;
     z-index: 10;
+    padding-top: 10px;
 }
 
 /**
@@ -2511,7 +2534,7 @@ Toggle JS actifs:
 .close-menu +- .show
 */
 header .menu-default #primary_nav_wrap {
-  margin-top: 35px;
+  margin-top: 0px;
 }
 .menu-default #primary_nav_wrap {
   float: right;
@@ -2566,6 +2589,7 @@ header .menu-default #primary_nav_wrap {
 ul.active-menu-default {
   float: right;
   padding-right: 25px;
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 1024px) {
