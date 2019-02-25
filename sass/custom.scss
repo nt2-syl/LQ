@@ -2026,7 +2026,8 @@ Ligne centrale sur publications avec point flottant
   position:relative;
 }
 /* flexslider carousel - header */
-.view-slider-accueil  .flex-active-slide .flex-caption {
+.view-slider-accueil  .flex-active-slide .flex-caption,
+.bandeau_infos {
   font-family: pb-bold;
   font-size: 80px;
   line-height: 1.25;
@@ -2034,8 +2035,9 @@ Ligne centrale sur publications avec point flottant
   position: absolute;
   top: 40%;
   left: 40%;
-  overflow:hidden;
+  overflow: hidden;
 }
+
 /**
 * appliquer PUBLICATIONS
 */
@@ -2043,42 +2045,19 @@ Ligne centrale sur publications avec point flottant
   position:relative;
 }
 /* flexslider carousel - header - V1 */
-.bandeau_titre {
-  font-family: pb-bold;
-  font-size: 80px;
-  line-height: 1.25;
-  margin: 0 auto;
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  overflow:hidden;
+.bandeau_infos {
   color: #fff;
 }
-.bandeau_resume,
-.bandeau_periode_publication,
-.bandeau_date_publication {
-  font-family: pb-bold;
+.bandeau_titre {
+}
+.bandeau_publication {
   font-size: 20px;
-  line-height: 1.25;
-  margin: 0 auto;
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  overflow:hidden;
-  color: #fff;
-}
-.bandeau_titre {
-  top: 20%;
-}
-.bandeau_resume {
-  top: 40%;
 }
 .bandeau_periode_publication {
-  top: 60%;
 }
 .bandeau_date_publication {
-  top: 70%;
 }
+
 /* Image plein écran */
 /*.image-style-flexslider-full {
   height: 100vh !important;

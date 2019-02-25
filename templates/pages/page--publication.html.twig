@@ -4,21 +4,24 @@
       <div class="col-sm-12 bandeau">
         {# alternative: block reecrit avec 4 champs supplementaires dans region bandeau #}
         <div class="bandeau_image_couverture_paysage"><img src="{{ image_bandeau }}"/></div>
-        <div class="bandeau_titre">{{ node.label }}</div>
-        <div class="bandeau_resume">{% if node.field_resume %}{{ node.field_resume.value }}{% endif %}</div>
-        <div class="bandeau_periode_publication">
-          {% for item in node.field_date_publication_numero %}
-            {% if item.entity.field_type_date.value == "collection" %}
-              {{ item.entity.field_saison_publication.value }}
-            {% endif %}
-          {% endfor %}
-        </div>
-        <div class="bandeau_date_publication">
-                    {% for item in node.field_date_publication_numero %}
-            {% if item.entity.field_type_date.value == "collection" %}
-              {{ item.entity.field_date.value|date("Y") }}
-            {% endif %}
-          {% endfor %}
+        <div class="bandeau_infos">
+          <div class="bandeau_titre">{{ node.label }}</div>
+          <div class="bandeau_publication">
+            <span class="bandeau_periode_publication">
+              {% for item in node.field_date_publication_numero %}
+                {% if item.entity.field_type_date.value == "collection" %}
+                  {{ item.entity.field_saison_publication.value }}
+                {% endif %}
+              {% endfor %}
+            </span>
+            <span class="bandeau_date_publication">
+              {% for item in node.field_date_publication_numero %}
+                {% if item.entity.field_type_date.value == "collection" %}
+                  {{ item.entity.field_date.value|date("Y") }}
+                {% endif %}
+              {% endfor %}
+            </span>
+          </div>
         </div>
       </div>
     </div>
