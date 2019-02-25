@@ -329,6 +329,10 @@ div.region.region-footer ul.menu {
   padding-left: 10px;
   color: rgba(0,0,0,0.4);
 }
+.views-field-path:hover i,
+.more:hover i {
+  color: rgba(255,255,255,0.9);
+}
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -1181,13 +1185,13 @@ b, strong {
     padding: 12px 0 10px 0;
     font-size: 1.875em;
     line-height: 30px;
-  a {
-    font-family: "Playfair Display",serif;
-    font-weight: 700;
-    color: #000;
-    }
+    a {
+      font-family: "Playfair Display",serif;
+      font-weight: 700;
+      color: #000;
+      }
   }
-  .film-odd-content .p-desc {
+  .p-desc {
     font-family: "pb-regular";
     margin-top: -4px;
     line-height: 1.5em;
