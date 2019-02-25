@@ -1081,14 +1081,15 @@ b, strong {
 }
 
 
-/* titre sur image */
+/* Titre sur image */
 .view-cahier-vs-publication {
   margin-top: 50px;
 }
 
-/* cahier*/
+/* Cahier */
 .film-style-odd {
   width: 100%;
+  clear: both;
 }
 [class^="film-"], [class*=" film-"] {
   font-family: 'fontfilm';
@@ -1123,7 +1124,6 @@ b, strong {
   width: 100%;
   height: auto;
 }
-
 .ac_page-wrapper img {
   max-width: 100%;
   height: auto;
@@ -1162,10 +1162,10 @@ b, strong {
   padding-left: 40px;
   padding-right: 20%;
 }
-
 .film-style-odd li .film-odd-content, .film-style-odd li .film-odd-img {
-    width: 50%;
+  width: 50%;
 }
+
 @media only screen and (min-width: 1170px) {
   .film-odd-content {
     padding-top: 100px;
@@ -1191,17 +1191,13 @@ b, strong {
   margin-top: -4px;
   line-height: 1.5em;
 }
-/* BALADO */
-/*.node--type-balados .fieldset-wrapper > div {
-  display: inline-block;
-  margin-right: -2px;
-  width: 20%;
-  text-align: center;
-  margin-left: -2px;
+.page-node-type-publication .more {
+  padding-bottom: 80px;
 }
 
+/**
+* BALADO 
 */
-
 .field--name-field-balado {
   text-align: center;
   margin: 1em 0;
@@ -2703,3 +2699,8 @@ ul.active-menu-default {
     padding-bottom: 70px;
 }
 
+.view-editorial-vs-publication {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: pb-bold;
+}
