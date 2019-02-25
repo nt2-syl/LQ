@@ -971,7 +971,9 @@ bottom: -285px;*/
 
 /* ajouter .node-balado .field-chapeau */
 
-/*CAHIER */
+/**
+* CAHIER 
+*/
 .node--type-cahier {
   .fl-title {
     line-height: 1.75;
@@ -985,6 +987,8 @@ bottom: -285px;*/
 }
 
 /* Reporter */
+
+
 .page-node-type-balados .page-title {
   display:none;
 }
@@ -1015,12 +1019,8 @@ bottom: -285px;*/
   padding-bottom: 2em;
   display: block;
 }
-.node--type-galerie .fl-title-desc {
-  padding-bottom: 2em;
-}
+
 /* CAHIER - VUE EVA */
-
-
 .content-blog-item a {
   color: #000;
 }
@@ -1290,8 +1290,12 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   margin-bottom: 10px;
 }
 
-/*galerie*/
-
+/**
+* Noeud Galerie
+*/
+.node--type-galerie .fl-title-desc {
+  padding-bottom: 2em;
+}
 .node--type-galerie .fl-title {
   clear: both;
   min-height: 100px; /*temp*/
@@ -1299,10 +1303,6 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .fl-title-desc {
   text-align: center;
   clear: both;
-
-}
-.fl-title-desc {
-  margin-top: 70px;
   font-family: "Playfair Display", serif;
   margin-top: 20px;
   font-size: 18px;
@@ -1310,7 +1310,6 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .field-resume-galerie {
   text-align: center;
 }
-
 .fl-title .fl-title-big {
   color: #000;
   font-family: "Playfair Display",serif;
@@ -1321,8 +1320,20 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   display: block;
   text-shadow: -1px 1px 0 white;
 }
+.node--type-galerie {
+  .fl-title .fl-title-big {
+    margin-top: 35px;
+    margin-bottom: 0;
+    line-height: 0.9;
+  }
+  .field--name-body {
+    padding-bottom: 80px;
+  }
+}
 
-/* collaborateur */
+/**
+* Noeud Collaborateur 
+*/
 .team-avatar {
   margin-top: 30px;
   padding-right: 15px;
@@ -1626,21 +1637,6 @@ Ligne centrale sur publications avec point flottant
   font-size: 16px;
   margin-top:0;
   margin-bottom:0;
-}
-
-.test {
-	.test {
-	  color: #00f;
-	}
-}
-
-
-.node--type-galerie {
-	.fl-title .fl-title-big {
-    margin-top: 35px;
-    margin-bottom: 0;
-    line-height: 0.9;
-  }
 }
 
 /* todo: add body class for article-web
