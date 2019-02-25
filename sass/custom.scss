@@ -1954,18 +1954,6 @@ Ligne centrale sur publications avec point flottant
   font-size:12px;
 }
 
-.page-node-type-article-web {
-  .field--name-field-auteur {
-    font-size:16px;
-    padding-bottom: 1em;
-  }
-  .field-image-couverture-paysage {
-    margin-top: 1em;
-  }
-  .field-sous-titre {
-    margin-bottom: 1em;
-  }
-}
 
 
 /* Fermer sections - tout sauf page statique
@@ -1991,8 +1979,12 @@ Ligne centrale sur publications avec point flottant
   }
 }
 
-/* Flotter TABS sur contenu avec image vedette */
+
+/**
+* NOEUD ARTICLE WEB
+*/
 .page-node-type-article-web {
+/* Flotter TABS sur contenu avec image vedette */
   .region-content {
     position: relative;
   }
@@ -2000,6 +1992,19 @@ Ligne centrale sur publications avec point flottant
     position: absolute;
     z-index: 1;
   }
+  .field--name-field-auteur {
+    font-size:16px;
+    padding-bottom: 1em;
+  }
+  .field-image-couverture-paysage {
+    margin-top: 1em;
+  }
+  .field-sous-titre {
+    margin-bottom: 1em;
+  }
+}
+.field--name-field-thematique {
+  text-align: right;
 }
 
 /* ouvrage critiqué - 5 étoiles - icone seulement  */
