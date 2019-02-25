@@ -72,6 +72,9 @@ img {
 .shadow {
   text-shadow: 0.1em 0.1em 0.2em black;
 }
+.text-shadow {
+  text-shadow: -1px 1px 0 white;
+}
 
 /* */
 .views-field-field-auteur,
@@ -939,30 +942,32 @@ bottom: -285px;*/
 .fl-title span div {
   display: inline;
 }
-.node--type-article-revue .fl-title .fl-title-big {
-  margin-bottom: 0;
-  margin-top: 0;
-  display: block;
-  clear: both;
-  line-height: 1.5;
-}
 .left-desc {
   text-transform: uppercase;
   font-size: 1.25em;
   color: #000;
   line-height: 1.7em;
-	font-family: "pb-bold";
+  font-family: "pb-bold";
   text-align: left;
 }
-.fl-mg-top {
-  text-align: center;
+
+.node--type-article-revue {
+   .fl-title .fl-title-big {
+    margin-bottom: 0;
+    margin-top: 0;
+    display: block;
+    clear: both;
+    line-height: 1.5;
+  }
+  .fl-mg-top {
+    text-align: right;
+    /*center*/
+  }
+  .field--name-body {
+    text-align: left;
+  }
 }
 
-/* custom */
-/*.node--type-article-revue .field--name-field-resume {
-  padding-top: 4em;
-  padding-bottom: 4em;
-}*/
 
 /* ajouter .node-balado .field-chapeau */
 
@@ -1433,6 +1438,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .node--type-article-revue .node__content .field--name-field-cahier-referent,
 .node--type-article-revue .node__content .field--name-field-genre,
 .node--type-article-revue .node__content .field--name-field-thematique,
+.node--type-article-revue .node__content .field--name-field-auteur-article-papier,
 .node--type-cahier .node__content .field--name-field-type-cahier,
 .node--type-balados .node__content .field--name-field-sous-titre,
 .node--type-collaborateur .node__content .field--name-field-portrait,
