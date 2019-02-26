@@ -1499,11 +1499,17 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .direct-container {
   padding-top: 120px;
 }
+.page-node-type-article-revue {
+  .direct-container {
+  padding-top: 0;
+}
+}
 .node--view-mode-ouvrage-critique-article-revue {
   .node__content {
     clear: both;
   }
 }
+
 .view-article-vs-ouvrage-critique {
   clear: both;
 }
@@ -1529,6 +1535,12 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   font-family: pb-bold;
   padding-top: 80px;
 }
+/* colonne de gauche, avec image à droite*/
+.team-member-detail-2 > div:first-child {
+  text-align: right;
+  padding-bottom: 80px;
+}
+
 
 
 /* accueil timeline box - publications */
@@ -2777,3 +2789,10 @@ ul.active-menu-default {
     padding-bottom: 70px;
 }
 
+.field--name-field-ouvrage-critique .field__label {
+  display: none;
+}
+/* Conserver le style d'image mais réduire l'affichage si l'ouvrage est un champ eva sur un article-revue */
+.page-node-type-article-revue .team-member-detail-2 img {
+  width: 50%;
+}
