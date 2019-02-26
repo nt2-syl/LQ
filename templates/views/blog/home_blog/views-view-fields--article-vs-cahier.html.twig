@@ -1,7 +1,7 @@
 {# views/blog/home_blog/views-view-fields--blog--home-blog.html.twig #}
 <div class="content-blog-item col-lg-9 col-lg-offset-3 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 	<div class="title-blog col-lg-10 col-md-10 col-sm-10  col-xs-9">
-	  <a href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content }}</a>
+	  <div class="article-cahier-titre"><a href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content }}</a></div>
       {% for auteur in auteurs %}
         {% set individu = drupal_entity('node', auteur.field_individu.0.target_id) %}
         <div class="article-cahier-auteur">{{ drupal_link(individu['#node'].label, 'node/' ~ individu['#node'].id) }}</div>
