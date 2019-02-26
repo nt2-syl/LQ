@@ -87,8 +87,8 @@
     <div class="fl-title">
       <div class="fl-title-small uppercase">
         {% if content.field_cahier_referent %}
-          {# Only show this for editorials, term id 42. @see https://redmine.koumbit.net/issues/29171 #}
-          {% if node.field_cahier_referent.entity.field_type_cahier.value.0.target_id != "42" %}
+          {# Hide for editorials, term id 42. @see https://redmine.koumbit.net/issues/29171 #}
+          {% if node.field_type_article.value.0.target_id != "15" %}
             <span class="node-cahier-referent">{{ content.field_cahier_referent }}</span>
           {% endif %}
         {% endif %}
