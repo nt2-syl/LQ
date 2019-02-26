@@ -1509,8 +1509,14 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   text-align: center;
   text-transform: uppercase;
   font-family: pb-bold;
+  margin-top: 80px;
 }
-
+.view-article-vs-ouvrage-critique .views-row {
+  text-align: left;
+  text-transform: initial;
+  font-family: pb-bold;
+  padding-top: 80px;
+}
 
 
 /* accueil timeline box - publications */
