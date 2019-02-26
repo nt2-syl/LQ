@@ -162,6 +162,11 @@ img {
   width: 100%;
 }
 
+/* Marge au-dessus du premier contenu */
+.view-editorial-vs-publication,
+.node--type-cahier {
+  padding-top: 80px;
+}
 /**
 * Accueil - cacher logos
 */
@@ -388,6 +393,8 @@ div.region.region-footer ul.menu {
     width: 100%;
     display: table;
     list-style: none;
+    /* Compenser la dernière rangée, dont la marge est déclarée sur li.text-center */
+    margin-bottom: -40px;
 }
 .ac_page-wrapper img {
     max-width: 100%;
@@ -601,6 +608,11 @@ li.text-center {
   padding-right: 15px;
   width: 100%;
 }
+/* Compenser marge de la dernière rangée déclarée par li.text-center */
+.film-box.big {
+  margin-bottom: -40px;
+}
+
 /**
 * LISTE GALERIES
 */
@@ -704,7 +716,7 @@ li.text-center {
 .crew-container {
     overflow: hidden;
     position: relative;
-    margin: 0 0 30px 0;
+    margin: 0;
 }
 .crew-container img {
     width: 100%;
@@ -984,8 +996,12 @@ bottom: -285px;*/
 * CAHIER 
 */
 .node--type-cahier {
-  .fl-title {
-    line-height: 1.75;
+  /* Indenter titre sur image */
+  .fl-title .fl-title-big {
+    margin-bottom: -50px;
+    margin-top: -15px;
+    padding-top:0;
+    padding-bottom:0;
   }
   .field-type-cahier {
     padding-bottom: 20px;
@@ -1373,10 +1389,8 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 
 /* eva editorial sur publication */
-/* custom */
 .editorial_sur_publication {
-  padding-top:5em;/*temp*/
-    padding-bottom:5em;/*temp*/
+
 }
 
 .node--type-article-revue .section-c125 {
@@ -1503,7 +1517,6 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   display: none;
 }
 /* Titre des vues EVA sous le contenu */
-.view-editorial-vs-publication,
 .view-article-vs-ouvrage-critique {
   text-align: center;
   text-transform: uppercase;
@@ -1696,19 +1709,25 @@ Ligne centrale sur publications avec point flottant
   right: 82px;
 }
 
-.view-liste-publications {
-  .view-header {
-    font-weight: bold;
-  }
-}
-
 /**
 * RECHERCHE
 **/
-.view-environnement-recherche-general .views-row {
-  padding-bottom: 2em;
+.view-environnement-recherche-general {
+  .views-row {
+    padding-bottom: 2em;
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
 }
-
+.view-environnement-recherche-bottin {
+   .views-row {
+    padding-bottom: 30px;
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+}
 
 /**
 * Accueil Articles web (1+3)
