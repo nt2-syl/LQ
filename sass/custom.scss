@@ -1373,14 +1373,6 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   font-family: "pb-bold";
 }
 
-/* ouvrage critiqué */
-.direct-container {
-  padding-top: 120px;
-}
-.view-article-vs-ouvrage-critique {
-  clear: both;
-}
-
 /* eva editorial sur publication */
 /* custom */
 .editorial_sur_publication {
@@ -1486,14 +1478,38 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .node--type-article-web .field-auteur {
   display: block;
 }
-/* ouvrage critiqué*/
+
+/**
+* ouvrage critiqué 
+* Comparer Ouvrage sur Article Papier VS Ouvrage standalone
+*/
+.direct-container {
+  padding-top: 120px;
+}
+.node--view-mode-ouvrage-critique-article-revue {
+  .node__content {
+    clear: both;
+  }
+}
+.view-article-vs-ouvrage-critique {
+  clear: both;
+}
 /* infos */
 /* supprimer si les classes sont ajoutes sur les champs d'ouvrage critique*/
 .crew-desc > div {
   display: block;
 }
-
-
+/* ouvrage critiqué - 5 étoiles - icone seulement  */
+.taxonomy-term h2 {
+  display: none;
+}
+/* Titre des vues EVA sous le contenu */
+.view-editorial-vs-publication,
+.view-article-vs-ouvrage-critique {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: pb-bold;
+}
 
 
 
@@ -2011,10 +2027,7 @@ Ligne centrale sur publications avec point flottant
   text-align: right;
 }
 
-/* ouvrage critiqué - 5 étoiles - icone seulement  */
-.taxonomy-term h2 {
-  display: none;
-}
+
 
 /* ACCUEIL - TITRES */
 .path-frontpage h1.page-title {
@@ -2716,15 +2729,22 @@ ul.active-menu-default {
 /**/
 .page-node-type-collaborateur {
   .view-eva {
-
-/*droite*/
-    .views-row-odd { float:right;text-align:left;    width: 50%;padding-left: 20px;
-
-border-left: 1px solid black;}
-    /*gauche*/
-    .views-row-even { float: left;text-align:right;    width: 50%;padding-right: 20px;
-
-border-right: 1px solid black;}
+    /* contenu à droite */
+    .views-row-odd { 
+      float:right;
+      text-align:left;
+      width: 50%;
+      padding-left: 20px;
+      border-left: 1px solid black;
+    }
+    /* contenu à gauche */
+    .views-row-even {
+      float: left;
+      text-align:right;
+      width: 50%;
+      padding-right: 20px;
+      border-right: 1px solid black;
+    }
   }
 }
 
@@ -2733,8 +2753,3 @@ border-right: 1px solid black;}
     padding-bottom: 70px;
 }
 
-.view-editorial-vs-publication {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: pb-bold;
-}

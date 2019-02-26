@@ -82,30 +82,29 @@
   ]
 %}
 {{ attach_library('classy/node') }}
+
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
-<div class="fl-title">
-  <span class="fl-title-big"><div class="ac_bg__overlay"></div>{{ node.title.entity.getTitle() }}</span>
-</div>
+  <div class="fl-title">
+    <span class="fl-title-big"><div class="ac_bg__overlay"></div>{{ node.title.entity.getTitle() }}</span>
+  </div>
   {{ title_suffix }}
 
-<div class="team-member style-2">
-  <div class="team-member-detail-2">
-    <div class="col-md-8 col-sm-7 col-xs-12" style="padding-left: 0;">
-            <img class="fullwidth" src="{{ image_bandeau }}"/>
-
-
-    </div>
-    <div class="col-md-4 col-sm-5 col-xs-12" style="padding: 0;">
-      <div class="direct-container d-padding">
-        <div class="crew-desc">
-          {{ content }}
+  <div class="team-member style-2">
+    <div class="team-member-detail-2">
+      <div class="col-sm-6 col-xs-12">
+        <img class="fullwidth" src="{{ image_bandeau }}"/>
+      </div>
+      <div class="col-sm-6 col-xs-12">
+        <div class="direct-container d-padding">
+          <div class="crew-desc">
+            {{ content }}
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
   {% if display_submitted %}
     <footer class="node__meta">
@@ -117,6 +116,8 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes.addClass('node__content') }}>{{ content.article_vs_ouvrage_critique_entity_view_1 }}</div>
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content.article_vs_ouvrage_critique_entity_view_1 }}
+  </div>
 
 </article>
