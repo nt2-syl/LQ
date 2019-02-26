@@ -2803,3 +2803,12 @@ ul.active-menu-default {
     font-size: 18px;
   }
 }
+
+.view-galeries {
+  .views-row {
+    padding-bottom: 80px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
