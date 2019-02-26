@@ -1718,7 +1718,7 @@ Ligne centrale sur publications avec point flottant
   right: 0px;
 }
 #edit-submit-environnement-recherche-bottin {
-  right: 82px;
+  right: 0;
 }
 
 /**
@@ -1739,6 +1739,13 @@ Ligne centrale sur publications avec point flottant
       padding-bottom: 0;
     }
   }
+}
+
+.form-item-search-api-fulltext {
+  width: 100%;
+  input {
+    width: 100%;
+  } 
 }
 
 /**
@@ -2793,4 +2800,22 @@ ul.active-menu-default {
 /* Conserver le style d'image mais réduire l'affichage si l'ouvrage est un champ eva sur un article-revue */
 .page-node-type-article-revue .team-member-detail-2 img {
   width: 50%;
+}
+
+.view-article-vs-cahier {
+  .views-field-field-sous-titre {
+    font-size: 18px;
+  }
+  .views-field-field-type-article {
+    font-size: 18px;
+  }
+}
+
+.view-galeries {
+  .views-row {
+    padding-bottom: 80px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
 }
