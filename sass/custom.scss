@@ -1246,11 +1246,16 @@ b, strong {
 .page-node-type-publication {
   .more {
     margin-bottom: 80px;
+    a {
+      position: relative;
+      z-index: 1;
+    }
   }
   .left-desc {
     font-family: "Playfair Display",serif;
     font-weight: 700;
     color: #000;
+    text-align: right;
   } 
 }
 
