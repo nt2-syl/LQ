@@ -1718,7 +1718,7 @@ Ligne centrale sur publications avec point flottant
   right: 0px;
 }
 #edit-submit-environnement-recherche-bottin {
-  right: 82px;
+  right: 0;
 }
 
 /**
@@ -1739,6 +1739,13 @@ Ligne centrale sur publications avec point flottant
       padding-bottom: 0;
     }
   }
+}
+
+.form-item-search-api-fulltext {
+  width: 100%;
+  input {
+    width: 100%;
+  } 
 }
 
 /**
