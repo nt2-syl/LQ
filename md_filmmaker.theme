@@ -281,6 +281,9 @@ function md_filmmaker_preprocess_views_view_fields(&$vars) {
       $vars['image_couverture_link'] = $node->toUrl()->toString();
     }
   }
+  if ($vars['view']->id() == 'article_vs_cahier') {
+    $vars['auteurs'] = node_load($vars['row']->nid)->get('field_auteur_article_papier')->referencedEntities();
+  }
 }
 
 function md_filmmaker_preprocess_views_view_unformatted(&$vars) {
