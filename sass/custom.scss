@@ -1004,6 +1004,9 @@ bottom: -285px;*/
   .field--name-body {
     text-align: left;
   }
+  .fl-title {
+    padding-top: 80px;
+  }
 }
 
 
@@ -1381,6 +1384,9 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
     text-transform: uppercase;
     font-family: pb-bold;
   }
+  .fl-title-big {
+    padding-top: 80px;
+  }
 }
 
 
@@ -1579,6 +1585,10 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   padding-bottom: 80px;
 }
 .field--name-field-ouvrage-critique .field__label {
+  text-align: center;
+  font-family: pb-bold;
+  text-transform: uppercase;
+  padding-bottom: 1em;
 }
 
 
