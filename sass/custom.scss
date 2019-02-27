@@ -1084,10 +1084,13 @@ bottom: -285px;*/
   padding-bottom: 0.5em
 }
 .article-cahier-auteur {
-  text-transform: uppercase;
-  font-weight: bold;
+  /*text-transform: uppercase;
+  font-weight: bold;*/
 }
-.article-cahier-soustitre {}
+.article-cahier-soustitre {
+  font-weight: bold;
+  font-size: 24px;
+}
 .article-cahier-categorie {}
 
 .content-blog-item .title-blog {
