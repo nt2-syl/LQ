@@ -1014,6 +1014,12 @@ bottom: -285px;*/
   }
 }
 
+.entete_gauche {
+
+    margin-left: -15px;
+
+}
+
 
 /* ajouter .node-balado .field-chapeau */
 
@@ -2728,6 +2734,9 @@ ul.list-social li a {
     display: inline-block;
     margin-right: -4px;
     text-align: center;
+  }
+  .field__label {
+    font-size: 12px;
   }
 }
 
