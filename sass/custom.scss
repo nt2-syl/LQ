@@ -1568,8 +1568,12 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .item-list ul.timeline-box,
 .item-list ul.timeline-box li {
     margin: 0;
-    padding: 0;
+    padding: 0 0 80px;
+    &:last-child {
+      padding-bottom: 0;
+    }
 }
+
 @media only screen and (min-width: 1170px) {
   /*.ac_page-wrapper img,
   .timeline-box img {
@@ -1656,12 +1660,6 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
     text-align: left;
     padding-left: 50px;
   }
-  .timeline-box li {
-    padding-bottom: 70px;
-    &:last-child {
-      padding-bottom: 0;
-    }
-  }
 
 
   .title-gray {
@@ -1680,6 +1678,14 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
     color: #000;
     }
 }
+
+.timeline-box li {
+  padding-bottom: 70px;
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
 
 .title-time {
   line-height: 1.4; /* contexte: liste publications */
