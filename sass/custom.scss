@@ -2216,7 +2216,7 @@ Ligne centrale sur publications avec point flottant
 .bandeau_titre {
 }
 .bandeau_publication {
-  font-size: 80px;
+  font-size: 60px;
 }
 .bandeau_periode_publication {
 }
@@ -2948,4 +2948,7 @@ ul.active-menu-default {
   }
 }
 /**/
-
+ul.film-style-odd {
+  margin-left: 0;
+  padding-left: 0;
+}
