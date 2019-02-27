@@ -96,7 +96,7 @@ img {
   color: #000;
   font-family: "Playfair Display",serif;
   font-weight: 700;
-  font-size: 5.625em;
+  font-size: 48px;
   display: block;
 }
 /* Gros titres: éviter chevauchements */
@@ -143,6 +143,7 @@ img {
 }
 .view-editorial-vs-publication header .fl-title-small {
   text-transform: uppercase;
+  padding-bottom: 40px;
 }
 .fl-title.light .fl-title-small, 
 .fl-title.light .fl-title-small a {
@@ -1146,9 +1147,12 @@ b, strong {
 }
 
 
-/* Titre sur image */
+/* Cahier sur publication  */
 .view-cahier-vs-publication {
   margin-top: 50px;
+  .film-odd-view {
+    display: none;
+  }
 }
 
 /* Cahier */
@@ -1592,7 +1596,9 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 
 
-/* accueil timeline box - publications */
+/**
+* Accueil timeline box - publications 
+*/
 .item-list ul.timeline-box,
 .item-list ul.timeline-box li {
     margin: 0;
@@ -1815,7 +1821,7 @@ Ligne centrale sur publications avec point flottant
   } 
 }
 
-/**
+/**************
 * Accueil Articles web (1+3)
 */
  .cus-item-big {
@@ -2145,7 +2151,8 @@ Ligne centrale sur publications avec point flottant
 }
 .block-views-blockaccueil-edito-block-1 h2,
 .block-views-blockaccueil-publications-block-1 h2,
-.block-views-blockaccueil-balados-block-1 h2 {
+.block-views-blockaccueil-balados-block-1 h2,
+.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
   text-transform: uppercase;
 }
 /* accueil - sections */
@@ -2154,9 +2161,15 @@ Ligne centrale sur publications avec point flottant
   padding-top: 150px;
   padding-bottom: 50px;
 }
-.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa7 {
+.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa {
   clear: both;
 }
+.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
+  text-transform: uppercase;
+  padding-top: 80px;
+}
+
+
 
 
 /**
@@ -2238,6 +2251,14 @@ Ligne centrale sur publications avec point flottant
     padding-bottom: 30px;
     margin-top: 18px;
 }
+
+/**
+* ACCUEIL ÉDITORIAL
+*/
+.view-accueil-edito .views-field-title {
+  padding-top: 80px;
+}
+
 
 /**
 * accueil publications
