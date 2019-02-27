@@ -1774,6 +1774,10 @@ Ligne centrale sur publications avec point flottant
       padding-bottom: 0;
     }
   }
+  .views-view-grid {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 
 .form-item-search-api-fulltext {
@@ -2852,4 +2856,6 @@ ul.active-menu-default {
 #flexslider-1 .flex-caption {
   display: none;
 }
-
+.paragraph--type--liens-externes a {
+  font-size: 22px;
+}
