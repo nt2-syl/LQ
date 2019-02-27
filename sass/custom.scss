@@ -195,7 +195,7 @@ ul.active-menu-default > li {
   display: inline-block;
   position: relative;
   margin: 0;
-  padding: 15px 12px;
+  padding: 15px 12px 0;
   list-style: none;
 }
 .menu-item a,
@@ -283,7 +283,11 @@ ul.active-menu-default > li a:active {
 .block-views-exposed-filter-blockenvironnement-recherche-general-page-1 {
   float: right;
 }
-
+#block-reseauxsociauxlq,
+.block-views-exposed-filter-blockenvironnement-recherche-general-page-1,
+#block-cart {
+  padding-top: 21px;
+}
 
 
 /**
@@ -681,6 +685,12 @@ li.text-center {
   display: inline-block;
   margin-bottom: 20px;
 }
+.view-liste-equipe {
+  .ac-image {
+    margin-bottom: 0px;
+  }
+}
+
 .ac_page-wrapper img {
   max-width: 100%;
   height: auto;
@@ -2859,3 +2869,40 @@ ul.active-menu-default {
 .paragraph--type--liens-externes a {
   font-size: 22px;
 }
+
+/**
+* Commerce
+*/
+.view-catalogue-des-numeros {
+  .views-row {
+    padding-bottom: 40px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  } 
+}
+.cart-block--summary__count {
+  color: #a7a7a7;
+}
+#block-formulaireexposeenvironnement-recherche-generalpage-1 {
+  margin-left: 20px;
+}
+
+/**
+* Equipe
+*/
+.view-liste-equipe {
+  margin-top: -40px;
+  .views-row {
+    padding-bottom: 40px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  .fl-title-big {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+/**/
+
