@@ -1051,12 +1051,15 @@ bottom: -285px;*/
     display: block;
   }
   .field-sur-titre {
-    padding-bottom: 20px;
-    padding-top: 80px;
+    padding-bottom: 0px;
+    padding-top: 20px;
   }
   .node__content {
     margin-top:30px;
   }
+.fl-title .fl-title-big {
+  padding-top: 80px;
+}
 
 }
 
