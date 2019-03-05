@@ -98,7 +98,11 @@
 
       </div>
       <div class="thumb-team-node">
-        <img src="{{ image_bandeau }}"/>
+        {% if image_bandeau %}
+          <img src="{{ image_bandeau }}"/>
+        {% else %}
+          {{ drupal_field('field_portrait', 'node', node.id()) }}
+        {% endif %}
       </div>
     </div>
     <div class="col-md-6 col-sm-6 col-xs-12 info-team">
