@@ -150,7 +150,7 @@ img {
   text-transform: uppercase;
   padding-bottom: 40px;
 }
-.fl-title.light .fl-title-small, 
+.fl-title.light .fl-title-small,
 .fl-title.light .fl-title-small a {
   color: rgba(255, 255, 255, 0.5);
 }
@@ -268,7 +268,7 @@ ul.active-menu-default > li a:active {
 }
 
 /**
-* Accueil 
+* Accueil
 */
 .block-views-blockaccueil-edito-block-1 {
   width: 50%;
@@ -957,7 +957,7 @@ bottom: -285px;*/
   text-align: center;
   z-index: 120;
 }
-.fl-title.light .fl-title-big, 
+.fl-title.light .fl-title-big,
 .fl-title.light .fl-title-medium {
   color: #ddd;
 }
@@ -1025,7 +1025,7 @@ bottom: -285px;*/
 /* ajouter .node-balado .field-chapeau */
 
 /**
-* CAHIER 
+* CAHIER
 */
 .node--type-cahier {
   /* Indenter titre sur image */
@@ -1299,7 +1299,7 @@ b, strong {
 }
 
 /**
-* BALADO 
+* BALADO
 */
 .field--name-field-balado {
   text-align: center;
@@ -1414,7 +1414,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 
 
 /**
-* Noeud Collaborateur 
+* Noeud Collaborateur
 */
 .team-avatar {
   margin-top: 30px;
@@ -1560,7 +1560,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 
 /**
-* ouvrage critiqué 
+* ouvrage critiqué
 * Comparer Ouvrage sur Article Papier VS Ouvrage standalone
 */
 .direct-container {
@@ -1616,7 +1616,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 
 
 /**
-* Accueil timeline box - publications 
+* Accueil timeline box - publications
 */
 .item-list ul.timeline-box,
 .item-list ul.timeline-box li {
@@ -1837,7 +1837,7 @@ Ligne centrale sur publications avec point flottant
   width: 100%;
   input {
     width: 100%;
-  } 
+  }
 }
 
 /**************
@@ -2708,6 +2708,7 @@ ul.list-social li a {
 .fa-instagram:before {
     content: "\f16d";
 }
+
 /**
 * CART
 */
@@ -2884,7 +2885,7 @@ ul.active-menu-default {
 .page-node-type-collaborateur {
   .view-eva {
     /* contenu à droite */
-    .views-row-odd { 
+    .views-row-odd {
       float:right;
       text-align:left;
       width: 50%;
@@ -2943,7 +2944,7 @@ ul.active-menu-default {
     &:last-child {
       padding-bottom: 0;
     }
-  } 
+  }
 }
 .cart-block--summary__count {
   color: #a7a7a7;
@@ -2972,4 +2973,65 @@ ul.active-menu-default {
 ul.film-style-odd {
   margin-left: 0;
   padding-left: 0;
+}
+
+/**
+ * Search bars
+ */
+/*
+ * Search form for header.
+ * @see https://redmine.koumbit.net/issues/26050
+ * @see https://bootsnipp.com/snippets/featured/expanding-search-button-in-css
+ */
+.search-form .form-group {
+  margin-left:auto;
+  transition: all 0.35s, border-radius 0s;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  /*border-radius: 25px;*/
+  border-radius: 0;
+  border: 1px solid #eee;
+  input.form-control {
+    border: 0 none;
+    background: transparent;
+    box-shadow: none;
+    display:block;
+    &::-webkit-input-placeholder {
+      display: none;
+      color: transparent;
+    }
+    &:-moz-placheholder {
+      /* Firefox 18- */
+      display: none;
+      color: transparent;
+    }
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      display: none;
+      color: transparent;
+    }
+    &:-ms-input-placeholder {
+      display: none;
+      color: transparent;
+    }
+    &::placeholder {
+      display: none;
+      color: transparent;
+    }
+  }
+  &.hover, &:hover {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .form-control-feedback button {
+    background: none;
+    border: none;
+    outline: none;
+    pointer-events: all;
+    position: relative;
+    right: -2px;
+  }
 }
