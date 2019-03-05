@@ -3034,3 +3034,44 @@ ul.film-style-odd {
     right: -2px;
   }
 }
+
+/* Force the front page slider to set images to 100% height of the view */
+.block-views-blockslider-accueil-block-1 {
+  .flexslider-container,
+  .flexslider .slides,
+  .flex-viewport {
+    heightight: 100%;
+  }
+  .flexslider {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    overflow: hidden;
+    ul.slides {
+      margin: 0;
+      padding: 0;
+      li {
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        display: none;
+        -webkit-backface-visibility: hidden;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        img {
+          height: 100vh;
+          width: 100vw;
+          max-height: 100vh;
+          max-width: 100vw;
+          resize: both;
+          object-fit: cover;
+
+        }
+      }
+    }
+  }
+}
