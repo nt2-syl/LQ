@@ -324,18 +324,18 @@ div.region.region-footer ul.menu {
   display: inline-block;
 }
 #block-md-filmmaker-footer {
-  float: left;
-  width: 50%;
-}
-#block-logosfooter {
-  float: right;
-  width: 50%;
+  width: 100%;
   margin-bottom: 50px;
 }
+#block-logosfooter {
+  width: 100%;
+  margin-bottom: 50px;
+}
+#block-md-filmmaker-footer,
+#block-logosfooter,
 #block-copyright {
   clear: both;
 }
-
 
 
 .views-field-path,
@@ -2796,7 +2796,7 @@ header .menu-default #primary_nav_wrap {
   margin-top: 0px;
 }
 .menu-default #primary_nav_wrap {
-  float: right;
+
 }
 .fa-navicon:before, .fa-reorder:before, .fa-bars:before {
   content: "\f0c9";
