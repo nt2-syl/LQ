@@ -1,0 +1,22 @@
+{%
+set classes = [
+'block',
+'block-' ~ configuration.provider|clean_class,
+'block-' ~ plugin_id|clean_class,
+content.field_extra_class|render|striptags|replace({"\n":""})|lower,
+'clearfix',
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <form action="/bottin" class="search-form">
+    <div class="form-group has-feedback">
+      <label for="search" class="sr-only">Search</label>
+      <input type="text" class="form-control" name="search_api_fulltext" id="search_api_fulltext" placeholder="{% trans %}Search{% endtrans %}">
+        <div class="search-button-wrapper form-control-feedback">
+          <button type="submit" class="submit-with-icon">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+    </div>
+  </form>
+</div>
