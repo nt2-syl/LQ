@@ -1547,6 +1547,10 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 	display: block;
 }
 
+.node__content {
+  clear: both;
+}
+
 /*.node--type-collaborateur .node__content .field--name-field-liens-externes*/
 
 /*#block-md-filmmaker-page-title .field--name-title {
