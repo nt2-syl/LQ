@@ -110,6 +110,12 @@
         {{ node.body.value | raw }}
         <div class="clearfix"></div>
       </div>
+      <div class="liens-externes">
+        {{ drupal_field('field_liens_externes', 'node', nide.id()) }}
+      </div>
+      <div class="leslibraries">
+        {{ drupal_field('field_url_leslibraires', 'node', node.id()) }}
+      </div>
     </div>
   </div>
 </div>
@@ -125,7 +131,7 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+    {{ content|without('field_url_leslibraires', 'field_liens_externes') }}
   </div>
 
 </article>
