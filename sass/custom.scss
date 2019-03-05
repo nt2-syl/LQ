@@ -3035,6 +3035,13 @@ ul.film-style-odd {
   }
 }
 
+.block-views-exposed-filter-blockenvironnement-recherche-bottin-page-1,
+.block-views-exposed-filter-blockenvironnement-recherche-general-page-1 {
+  .search-form .form-group {
+    width: 100%;
+  }
+}
+
 /* Force the front page slider to set images to 100% height of the view */
 .block-views-blockslider-accueil-block-1 {
   .flexslider-container,
