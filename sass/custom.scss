@@ -3095,4 +3095,9 @@ ul.film-style-odd {
   resize: both;
   object-fit: cover;
 }
-
+.crew-desc .field {
+  clear: both;
+}
+.crew-desc .field .field__label {
+  display: none;
+}
