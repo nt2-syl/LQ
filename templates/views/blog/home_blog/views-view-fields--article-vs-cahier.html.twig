@@ -5,7 +5,7 @@
 	  <div class="article-cahier-soustitre">{{ fields.field_sous_titre.content }}</div>
       {% for auteur in auteurs %}
         {% set individu = drupal_entity('node', auteur.field_individu.0.target_id) %}
-        <div class="article-cahier-auteur">{{ drupal_link(individu['#node'].label, 'node/' ~ individu['#node'].id) }}</div>
+        <div class="article-cahier-auteur">{{ individu['#node'].label }}</div>
       {% endfor %}
 	</div>
 </div>
