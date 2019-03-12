@@ -271,13 +271,16 @@ ul.active-menu-default > li a:active {
 /**
 * Accueil
 */
-.block-views-blockaccueil-edito-block-1 {
+.block-views-blockaccueil-edito-block-1,
+.block-views-blockaccueil-publications-block-1  {
   width: 50%;
+  padding-top: 80px;
+}
+.block-views-blockaccueil-edito-block-1 {
   padding-right: 2em;
   float: left;
 }
 .block-views-blockaccueil-publications-block-1 {
-  width: 50%;
   padding-left: 2em;
   float: right;
 }
@@ -2190,6 +2193,7 @@ Ligne centrale sur publications avec point flottant
 .block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
   text-transform: uppercase;
   padding-top: 80px;
+  margin: 0;
 }
 
 
@@ -2302,10 +2306,13 @@ Ligne centrale sur publications avec point flottant
     line-height: 30px;
     font-weight: 700;
 }
-
 .relation-film-content {
     text-align: center;
     padding-bottom: 30px;
+    margin-top: 18px;
+}
+.home .relation-film-content {
+    padding-bottom: 0px;
     margin-top: 18px;
 }
 
