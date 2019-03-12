@@ -1296,6 +1296,7 @@ b, strong {
     text-align: right;
     font-size: 1.875em;
     text-transform: initial;
+    padding-top: 14px; /* alignement vertical custom */
   }
 }
 
@@ -2281,6 +2282,13 @@ Ligne centrale sur publications avec point flottant
   overflow:hidden;
 }*/
 
+/* Ne pas montrer le titre + date en doublons */ 
+.view-slider-accueil  .flex-caption {
+  display: none;
+}
+.view-slider-accueil  .flex-active-slide .flex-caption {
+  display: block;
+}
 
 
 /**
@@ -2307,13 +2315,18 @@ Ligne centrale sur publications avec point flottant
 /**
 * ACCUEIL ÉDITORIAL
 */
-.view-accueil-edito .views-field-title {
-  padding-top: 80px;
+.view-accueil-edito {
+  .views-field-title {
+    padding-top: 150px; /* Alignement vertical custom */
+    font-size: 1.875em; /* gros titre */
+  }
+  .views-field-field-individu {
+    margin-bottom: 1em;
+  }
 }
 
-
 /**
-* accueil publications
+* Accueil publications
 */
 @media only screen and (min-width: 768px) {
 .timeline {
@@ -2711,20 +2724,21 @@ team-content .team-job {
 * Header - Icones
 */
 ul.list-social li {
-    display: inline;
-    padding: 0 10px;
-    list-style: none;
+  display: inline;
+  padding: 0 10px;
+  list-style: none;
 }
 ul.list-social li a {
-    color: rgba(0,0,0,0.5);
+color: rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 0 white;
 }
 .fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .fa-facebook-f:before, .fa-facebook:before {
     content: "\f09a";
@@ -3131,4 +3145,7 @@ ul.film-style-odd {
 .crew-desc .field.field--name-field-thematique {
   text-align: left;
 }
-
+/* Accueil - bloc facebook - fermer pub */
+.juicer-feed h1.referral {
+  display: none;
+}
