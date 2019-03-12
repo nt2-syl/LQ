@@ -2211,10 +2211,10 @@ Ligne centrale sur publications avec point flottant
 }
 /* flexslider carousel - header */
 .view-slider-accueil  .flex-active-slide .flex-caption,
-.bandeau_infos {
+.bandeau_infos{
   font-family: pb-bold;
   font-size: 80px;
-  line-height: 1.25;
+  line-height: 1;
   margin: 0 auto;
   position: absolute;
   top: 40%;
@@ -2223,7 +2223,33 @@ Ligne centrale sur publications avec point flottant
   font-family: "Playfair Display",serif;
   font-weight: bold;
   text-shadow: -1px 1px 0 white;
+  z-index: 9999;
 }
+.accueil_carousel_titre,
+.bandeau_titre {
+  font-family: pb-bold;
+  font-size: 60px;
+  line-height: 1;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: "Playfair Display",serif;
+  font-weight: bold;
+  text-shadow: -1px 1px 0 white;
+  z-index: 9999;
+}
+.accueil_carousel_soustitre,
+.bandeau_publication {
+    font-family: pb-bold;
+  font-size: 30px !important;
+  line-height: 1.25;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: "Playfair Display",serif;
+  font-weight: bold;
+  text-shadow: -1px 1px 0 white;
+    z-index: 9999;
+}
+
 
 /**
 * appliquer PUBLICATIONS
@@ -3106,4 +3132,3 @@ ul.film-style-odd {
   text-align: left;
 }
 
-/**/
