@@ -2490,6 +2490,10 @@ Ligne centrale sur publications avec point flottant
 .carousel_vertical_date {
   clear: both;
 }
+.selected a {
+  clear: both;
+  display: block;
+}
 
 /**
 * Accueil FB 
