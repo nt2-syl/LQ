@@ -2400,7 +2400,7 @@ Ligne centrale sur publications avec point flottant
   list-style: none;
   width: 100px;
   height: 100px;
-  line-height: 100px;/* line-height: 1 si plusieurs lignes */
+  line-height: 1; /* pour lignes multiples. Sinon utiliser 100px;*/
   position: relative;
   font-size: 0.75em;
   padding-left: 5px;
