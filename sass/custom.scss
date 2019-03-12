@@ -188,6 +188,7 @@ img {
 }
 #primary_nav_wrap li {
 	display: inline-block;
+  texzt-shadow: 1px 1px black;
 }
 
 /**
@@ -2374,88 +2375,93 @@ Ligne centrale sur publications avec point flottant
 */
 @media only screen and (min-width: 768px) {
 .timeline {
-    height: 610px;
+  height: 610px;
 }
 .timeline:before {
-    position: absolute;
-    height: 100%;
-    background: rgba(0,0,0,0.2);
-    content: "";
-    width: 1px;
-    left: 7px;
+  position: absolute;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  content: "";
+  width: 1px;
+  left: 7px;
 }
 }
 .timeline {
-    overflow: hidden;
-    width: 100%;
-    padding: 5px 0;
-    position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 5px 0;
+  position: relative;
 }
 #dates {
-    width: 10%;
-    height: 600px;
-    float: left;
+  width: 10%;
+  height: 600px;
+  float: left;
 }
 #dates li {
-    list-style: none;
-    width: 150px;
-    height: 100px;
-    line-height: 100px;/* line-height: 1 si plusieurs lignes */
-    position: relative;
-    font-size: 0.75em;
-    padding-left: 10px;
+  list-style: none;
+  width: 100px;
+  height: 100px;
+  line-height: 1; /* pour lignes multiples. Sinon utiliser 100px;*/
+  position: relative;
+  font-size: 0.75em;
+  padding-left: 5px;
+  margin-left: -33px;
 }
 #dates .selected {
-    color: #000;
+  color: #000;
+  text-shadow: 1px 1px white;
+  font-size: 12px;
 }
 #dates a {
-    font-family: "pb-bold";
-    color: rgba(0,0,0,0.2);
-    position: relative;
-    letter-spacing: 3px;
-    padding-left: 10px;
+  font-family: "pb-bold";
+  color: rgba(0,0,0,0.2);
+  position: relative;
+  letter-spacing: 3px;
+  padding-left: 0px;
 }
 #issues {
-   /* width: 90%; */
-   width: 80%;
-   /* float: left; */
-   float: right;
-    padding: 70px 0;
-    /**/
-    height: 400px !important;
+ /* width: 90%; */
+ width: 80%;
+ /* float: left; */
+ float: right;
+  padding: 70px 0;
+  /**/
+  height: 400px !important;
 }
 #issues li {
-    list-style: none;
+  list-style: none;
 }
 .timeline-box {
-    position: relative;
-    width: 100%;
-    padding: 0 50px;
+  position: relative;
+  width: 100%;
+  padding: 0 50px;
 }
 #issues li.selected img {
 /*    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);*/
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);*/
 }
 
 #issues li img {
-  /*  zoom: 1;
-    -webkit-transition: all 1.5s ease-in-out;
-    -moz-transition: all 1.5s ease-in-out;
-    -o-transition: all 1.5s ease-in-out;
-    -ms-transition: all 1.5s ease-in-out;
-    transition: all 1.5s ease-in-out;
-    -webkit-transform: scale(0.8,0.8);
-    -moz-transform: scale(0.8,0.8);
-    -o-transform: scale(0.8,0.8);
-    -ms-transform: scale(0.8,0.8);
-    transform: scale(0.8,0.8);
-    width: 100%;
-    height: auto;*/
-    clear: both;
+/*  zoom: 1;
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+  -webkit-transform: scale(0.8,0.8);
+  -moz-transform: scale(0.8,0.8);
+  -o-transform: scale(0.8,0.8);
+  -ms-transform: scale(0.8,0.8);
+  transform: scale(0.8,0.8);
+  width: 100%;
+  height: auto; */
+
+  clear: both;
 }
+
 
 @media only screen and (min-width: 768px) {
 #issues li .date-group {
@@ -2481,8 +2487,18 @@ Ligne centrale sur publications avec point flottant
     color: rgba(0,0,0,0.5);
     line-height: 1.6em;
 }
+/* Dates du numéro affiché */
+.carousel_vertical_date {
+  clear: both;
+}
+.selected a {
+  clear: both;
+  display: block;
+}
 
-/* Accueil FB */
+/**
+* Accueil FB 
+*/
 .block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa,
 .block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
   clear:both;
