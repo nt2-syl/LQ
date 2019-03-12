@@ -174,7 +174,8 @@ img {
 
 /* Marge au-dessus du premier contenu */
 .view-editorial-vs-publication,
-.node--type-cahier {
+.node--type-cahier,
+.node--type-ouvrage-critique {
   padding-top: 80px;
 }
 /**
@@ -3104,3 +3105,5 @@ ul.film-style-odd {
 .crew-desc .field.field--name-field-thematique {
   text-align: left;
 }
+
+/**/
