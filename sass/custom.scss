@@ -2182,8 +2182,7 @@ Ligne centrale sur publications avec point flottant
 /* accueil - sections */
 .accueil_balados,
 .accueil_articles_web {
-  padding-top: 150px;
-  padding-bottom: 50px;
+/* marges sur les titres */
 }
 .block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa {
   clear: both;
@@ -2192,8 +2191,6 @@ Ligne centrale sur publications avec point flottant
   text-transform: uppercase;
   padding-top: 80px;
 }
-
-
 
 
 /**
@@ -2322,6 +2319,7 @@ Ligne centrale sur publications avec point flottant
   }
   .views-field-field-individu {
     margin-bottom: 1em;
+    margin-top: 1em;
   }
 }
 
