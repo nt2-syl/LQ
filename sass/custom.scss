@@ -2441,12 +2441,12 @@ Ligne centrale sur publications avec point flottant
 .block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
   clear:both;
 }
+/* Accueil - bloc facebook - fermer pub */
 .juicer-feed h1.referral,
 .juicer-feed h1.referral a {
-  display:none;
+  display:none !important;
   margin:0;
 }
-
 
 /**
 * Thème initial - Carousel Auteurs sur Cahier
@@ -3143,7 +3143,4 @@ ul.film-style-odd {
 .crew-desc .field.field--name-field-thematique {
   text-align: left;
 }
-/* Accueil - bloc facebook - fermer pub */
-.juicer-feed h1.referral {
-  display: none;
-}
+
