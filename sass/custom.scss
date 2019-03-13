@@ -2871,15 +2871,17 @@ ul.list-social li a {
 */
 /* Inspiré de QF */
 .embedded-entity {
-  .media--view-mode-image-embed-demi-largeur,
-  .media--view-mode-image-embed-pleine-largeur {
     border-bottom: 4px solid #e3e0db;
     border-top: 4px solid #e3e0db;
     padding-bottom: 0px;
     padding-top: 10px;
     margin-bottom: 2em;
+  .media--view-mode-image-embed-demi-largeur,
+  .media--view-mode-image-embed-pleine-largeur {
   }
-  .media--view-mode-image-embed-demi-largeur {
+  .media--view-mode-image-embed-demi-largeur,
+  .media--view-mode-video-embed,
+  .media--view-mode-audio-embed {
     max-width: 50%;
     margin-left: 20px;
     float: right;
@@ -2908,9 +2910,6 @@ ul.list-social li a {
   .field--name-field-media-video video {
     width: 100%;
     height: auto;
-  }
-  .media--view-mode-video-embed  {
-    width: 50%;
   }
 }
 .image-style-image-embed-demi-largeur,
