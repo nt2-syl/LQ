@@ -2916,12 +2916,23 @@ ul.list-social li a {
 .image-style-image-embed-pleine-largeur {
   padding-bottom: 10px;
 }
-/* appliquer cadre sur audio video 570x320 
+/* 
+
+TODO: 
+appliquer cadre sur audio video 570x320 
 50% audio 
 50% video
 sur tous les types
-
 */
+
+.field--name-field-ref-galerie {
+  .fl-title,
+  .field--name-body,
+  .addtoany_list {
+    display: none;
+  }
+  
+}
 
 /**
 * Media en vedette sur Article Web
