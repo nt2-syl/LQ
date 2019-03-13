@@ -21,6 +21,14 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+    font-family: 'poland';
+    src: url('../fonts/poland/polancanintobigwritingsit-webfont.woff2') format('woff2'),
+         url('../fonts/poland/polancanintobigwritingsit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 /*Styles*/
 body {
@@ -187,10 +195,11 @@ img {
 	display: none;
 }
 #primary_nav_wrap li {
-	display: inline-block;
+  display: inline-block;
+}
+#block-md-filmmaker-main-menu #primary_nav_wrap li {
   text-shadow: 1px 1px black;
 }
-
 /**
 * Menus
 */
@@ -2272,10 +2281,12 @@ Ligne centrale sur publications avec point flottant
   line-height: 1;
   margin: 0 auto;
   overflow: hidden;
-  font-family: "Playfair Display",serif;
   font-weight: bold;
   text-shadow: -1px 1px 0 white;
   z-index: 9999;
+  text-transform: uppercase;
+  /*font-family: "Playfair Display",serif;*/
+  font-family: poland;
 }
 .accueil_carousel_soustitre,
 .bandeau_publication {
@@ -2863,7 +2874,7 @@ ul.list-social li a {
   .media--view-mode-image-embed-pleine-largeur {
     border-bottom: 4px solid #e3e0db;
     border-top: 4px solid #e3e0db;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     padding-top: 10px;
     margin-bottom: 2em;
   }
@@ -2887,14 +2898,54 @@ ul.list-social li a {
   .field--name-field-legende,
   #cboxTitle p {
     line-height: 1.25;
-    font-size: 12px;
+    font-size: 14px;
     display: inline;
     float: none;
     margin-bottom: 0;
   }
   .img-responsive {}
-
+  .field--name-field-media-video video {
+    width: 100%;
+    height: auto;
+  }
+  .media--view-mode-video-embed  {
+    width: 50%;
+  }
 }
+.image-style-image-embed-demi-largeur,
+.image-style-image-embed-pleine-largeur {
+  padding-bottom: 10px;
+}
+/* appliquer cadre sur audio video 570x320 
+50% audio 
+50% video
+sur tous les types
+
+*/
+
+/**
+* Media en vedette sur Article Web
+*/
+
+.field--name-field-ref-galerie,
+.field--name-field-ref-video,
+.field--name-field-ref-audio {
+  padding-bottom: 50px;
+}
+/* Fichiers videos - pleine largeur */
+.field--name-field-ref-video video {
+  width: 100%;
+  height: auto;
+}
+/* Videos tels Youtube */
+.field--name-field-video-embed p {
+  text-align: center;
+}
+.media--view-mode-audio-embed,
+.media--view-mode-video-embed {}
+
+
+/
 
 /*
 Navigation mobile
