@@ -188,14 +188,12 @@ img {
 }
 #primary_nav_wrap li {
 	display: inline-block;
-  texzt-shadow: 1px 1px black;
+  text-shadow: 1px 1px black;
 }
 
 /**
 * Menus
 */
-
-
 ul.active-menu-default {
   float: right;
 }
@@ -2762,16 +2760,25 @@ team-content .team-job {
 }
 
 /**
-* header transparent
+* Header transparent
 */
 .header-transparent,
 .path-frontpage .header,
 .page-node-type-publication .header {
     position: absolute;
-    width: 100%;
+    width: 1170px; 
     top: 0;
-    left: 0;
     z-index: 11;
+}
+
+/* Écrans plus petits */
+@media (max-width: 768px) {
+  .header-transparent,
+  .path-frontpage .header,
+  .page-node-type-publication .header {
+      width: 100%;
+      max-width: 750px;
+  }
 }
 
 .region-header {
@@ -3187,6 +3194,7 @@ ul.film-style-odd {
     }
   }
 }
+
 /* Appliquer le 100% à Publication également */
 .bandeau_image_couverture_paysage img {
   height: 100vh;
@@ -3206,3 +3214,4 @@ ul.film-style-odd {
   text-align: left;
 }
 
+/**/

@@ -1,4 +1,14 @@
 <div class="site">
+  {% if page.header %}
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 header">
+          {{ page.header }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if page.bandeau %}
   <div class="fullscreen">
     <div class="row">
       <div class="col-sm-12 bandeau">
@@ -26,17 +36,6 @@
       </div>
     </div>
   </div>
-
-  {% if page.header %}
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 header">
-          {{ page.header }}
-        </div>
-      </div>
-    </div>
-  {% endif %}
-
   <div id="main">
     <div class="section">
       <div class="container">
