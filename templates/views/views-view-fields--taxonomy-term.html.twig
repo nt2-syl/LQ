@@ -29,10 +29,6 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-{#
-{{ kint(fields|keys) }}
-{{ kint(row) }}
-#}
 {% if fields['type'] %}
   {{ fields['type'].separator }}
   {%- if fields['type'].wrapper_element -%}
@@ -76,30 +72,17 @@
   {%- endif %}
 {% endif %}
 {% if row.lq_custom_authors and fields['field_individu'] %}
+  {% set fields = fields|without('field_individu') %}
   {% for author_id in row.lq_custom_authors %}
-    {{ fields['field_individu'].separator }}
-    {%- if fields['field_individu'].wrapper_element -%}
-      <{{ fields['field_individu'].wrapper_element }}{{ fields['field_individu'].wrapper_attributes }}>
-    {%- endif %}
-    {%- if fields['field_individu'].label -%}
-      {%- if fields['field_individu'].label_element -%}
-        <{{ fields['field_individu'].label_element }}{{ fields['field_individu'].label_attributes }}>{{ fields['field_individu'].label }}{{ fields['field_individu'].label_suffix }}</{{ fields['field_individu'].label_element }}>
-      {%- else -%}
-        {{ fields['field_individu'].label }}{{ fields['field_individu'].label_suffix }}
-      {%- endif %}
-    {%- endif %}
-    {%- if fields['field_individu'].element_type -%}
-      <{{ fields['field_individu'].element_type }}{{ fields['field_individu'].element_attributes }}>{{ fields['field_individu'].content }}</{{ fields['field_individu'].element_type }}>
-    {%- else -%}
-      {% set author = drupal_entity('node', author_id) %}
-      {{ drupal_link(author.title, 'node/' ~ author_id) }}
-    {%- endif %}
-    {%- if fields['field_individu'].wrapper_element -%}
-      </{{ fields['field_individu'].wrapper_element }}>
-    {%- endif %}
+    <div class="views-field views-field-field-auteur">
+      <div class="field-content">
+        {% set author = drupal_entity('node', author_id) %}
+        {{ author['#node'].label }}
+      </div>
+    </div>
   {% endfor %}
 {% endif %}
-{% for field in fields|without('type', 'title', 'field_individu') -%}
+{% for field in fields|without('type', 'title') -%}
   {{ field.separator }}
   {%- if field.wrapper_element -%}
     <{{ field.wrapper_element }}{{ field.wrapper_attributes }}>
