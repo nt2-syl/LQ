@@ -183,12 +183,30 @@ img {
   width: 100%;
 }
 
+/* sous-titre*/
+.fl-title-desc,
+.field-sous-titre {
+  text-align: center;
+  clear: both;
+  font-family: "Playfair Display", serif;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  font-style:italic;
+  letter-spacing: 0;
+}
+
+
 /* Marge au-dessus du premier contenu */
 .view-editorial-vs-publication,
 .node--type-cahier,
 .node--type-ouvrage-critique {
   padding-top: 80px;
 }
+
+
+
+
 /**
 * Accueil - cacher logos
 */
@@ -1077,11 +1095,11 @@ bottom: -285px;*/
     padding-top: 20px;
   }
   .node__content {
-    margin-top:30px;
+    margin-top: 40px;
   }
-.fl-title .fl-title-big {
-  padding-top: 80px;
-}
+  .fl-title .fl-title-big {
+    padding-top: 80px;
+  }
 
 }
 
@@ -1390,23 +1408,22 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   margin-bottom: 10px;
 }
 
+
+
 /**
 * Noeud Galerie
 */
-.node--type-galerie .fl-title-desc {
-  padding-bottom: 2em;
+.node--type-galerie {
+  .fl-title-desc {
+    padding-bottom: 2em;
+  }
+  .fl-title {
+    clear: both;
+    min-height: 100px; /*temp*/
+  }
 }
-.node--type-galerie .fl-title {
-  clear: both;
-  min-height: 100px; /*temp*/
-}
-.fl-title-desc {
-  text-align: center;
-  clear: both;
-  font-family: "Playfair Display", serif;
-  margin-top: 20px;
-  font-size: 18px;
-}
+
+
 .field-resume-galerie {
   text-align: center;
 }
@@ -1667,7 +1684,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   }
   .timeline-box .d-even,
   .page-node-type-collaborateur .views-row-odd::before,
-   .page-node-type-collaborateur .views-row-even::before {
+  .page-node-type-collaborateur .views-row-even::before {
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
@@ -1682,11 +1699,11 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
     background: #000;
     position: absolute;
   }
-    .page-node-type-collaborateur .views-row-odd::before,
-   .page-node-type-collaborateur .views-row-even::before  {
-     content: "";
-     /*margin-top: 20px;*/
-   }
+  .page-node-type-collaborateur .views-row-odd::before,
+  .page-node-type-collaborateur .views-row-even::before  {
+    content: "";
+    /*margin-top: 20px;*/
+  }
 
   .timeline-box .d-content,
   .timeline-box .d-even,
@@ -2852,6 +2869,8 @@ ul.list-social li a {
 */
 .groupe_details {
   padding-bottom: 80px;
+  margin-bottom: 0;
+  margin-top: 0;
   .field {
     width: 16.67%;
     display: inline-block;
@@ -3066,6 +3085,11 @@ ul.active-menu-default {
       width: 50%;
       padding-left: 20px;
       border-left: 1px solid black;
+
+      box-sizing: unset;
+      .views-field {
+        padding-left: 20px;
+      }
     }
     /* contenu à gauche */
     .views-row-even {
