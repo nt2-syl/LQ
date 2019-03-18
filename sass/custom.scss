@@ -1057,6 +1057,11 @@ bottom: -285px;*/
   text-align: left;
 }
 
+
+.entete_gauche {
+  margin-left: -15px;
+}
+
 .node--type-article-revue {
    .fl-title .fl-title-big {
  /*   margin-bottom: 0;
@@ -1075,13 +1080,15 @@ bottom: -285px;*/
   .fl-title {
     padding-top: 80px;
   }
+  .entete_gauche {
+    margin-left: -30px;
+  }
+  .entete_droite {
+    margin-left: 30px;
+  }
 }
 
-.entete_gauche {
 
-    margin-left: -15px;
-
-}
 
 
 /* ajouter .node-balado .field-chapeau */
@@ -2933,7 +2940,7 @@ ul.list-social li a {
     vertical-align: top;
   }
   .field__label {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
