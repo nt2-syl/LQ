@@ -1095,13 +1095,15 @@ bottom: -285px;*/
   display: block;
 }
 
-/* CAHIER - VUE EVA */
+/**
+* CAHIER - VUE EVA 
+*/
 .content-blog-item a {
   color: #000;
 }
 /* min 1170*/
 .content-blog-item .title-blog {
-  padding: 10px 50px 10px 70px;
+  padding: 0 50px 0 70px;
 /*  font-size: 30px;*/
 }
 .article-cahier-titre {
@@ -1139,9 +1141,7 @@ bottom: -285px;*/
   transform: translateX(-50%) translateY(30%);
 }
 .content-blog-item {
-  padding: 40px 0;
-}
-.content-blog-item {
+  padding: 0 0 40px;
   font-family: "Playfair Display",serif;
   position: relative;
 }
@@ -2531,11 +2531,7 @@ Ligne centrale sur publications avec point flottant
   width: 100%;
 }
 .ms-staff-carousel {
-  margin: 25px auto;
-  position: relative;
-}
-.ms-staff-carousel {
-  margin: 25px auto;
+  margin: 0 auto;
   position: relative;
 }
 .master-slider {
@@ -3154,6 +3150,7 @@ ul.active-menu-default {
 ul.film-style-odd {
   margin-left: 0;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 /**
