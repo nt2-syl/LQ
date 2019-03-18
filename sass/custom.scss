@@ -30,25 +30,15 @@
 
 }
 
-/*Styles*/
+/**
+* Styles
+*/
 body {
   color: rgba(0,0,0,0.5);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.7em;
   font-family: "pb-regular";
-}
-.text-center {
-  text-align: center;
-}
-.gray-desc {
-  color: rgba(0,0,0,0.5);
-  font-weight: 400;
-  line-height: 1.7em;
-  font-family: "pb-regular";
-}
-.view-header {
-	line-height: 1;
 }
 h1
 h2,
@@ -74,9 +64,16 @@ img {
   max-width: 100%;
   height: auto;
 }
+p:last-child {
+  margin-bottom: 0;
+}
+
 /**
 * Classes générales
 */
+.text-center {
+  text-align: center;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -86,8 +83,17 @@ img {
 .text-shadow {
   text-shadow: -1px 1px 0 white;
 }
+.gray-desc {
+  color: rgba(0,0,0,0.5);
+  font-weight: 400;
+  line-height: 1.7em;
+  font-family: "pb-regular";
+}
+.view-header {
+  line-height: 1;
+}
 
-/* */
+/* Titres: Auteurs dans les titres */
 .views-field-field-auteur,
 .views-field-field-individu,
 .views-field-created,
@@ -102,7 +108,7 @@ img {
   text-transform: none;
 }
 
-/* titres listes */
+/* Titres des listes */
 .fl-title-big {
   color: #000;
   font-family: "Playfair Display",serif;
@@ -110,7 +116,8 @@ img {
   font-size: 48px;
   display: block;
 }
-/* Gros titres: éviter chevauchements */
+
+/* Titres: Gros titres: éviter chevauchements */
 .fl-title-big {
   line-height: 1;
 }
@@ -143,6 +150,7 @@ img {
   color: #000;
 }
 
+/* Titres des blocs */
 .block h2,
 .fl-title .fl-title-small,
 .view-editorial-vs-publication header .fl-title-small {
@@ -157,6 +165,8 @@ img {
   line-height: 1;
   /*overflow-x: hidden !important*/
 }
+
+/* Titres: petits titres */
 .view-editorial-vs-publication header .fl-title-small {
   text-transform: uppercase;
   padding-bottom: 40px;
