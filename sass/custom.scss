@@ -194,6 +194,7 @@ img {
   font-weight: 700;
   font-style:italic;
   letter-spacing: 0;
+  text-transform: none;
 }
 
 
@@ -286,7 +287,7 @@ ul.active-menu-default > li a:active {
 #block-md-filmmaker-main-menu {
   float: right;
   width: 90%;
-  margin-top: 50px;
+  margin-top: -50px;
 }
 .region-header {
   .form-item, .form-actions {
@@ -1596,16 +1597,24 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 
 /**
-* ouvrage critiqué
+* OUVRAGE CRITIQUÉ
 * Comparer Ouvrage sur Article Papier VS Ouvrage standalone
 */
+.page-node-type-ouvrage-critique {
+  .team-member {
+    padding-top: 80px;
+  }
+  .field--name-field-auteur {
+   // style auteur
+  }
+}
 .direct-container {
   padding-top: 120px;
 }
 .page-node-type-article-revue {
   .direct-container {
-  padding-top: 0;
-}
+    padding-top: 0;
+  }
 }
 .node--view-mode-ouvrage-critique-article-revue {
   .node__content {
@@ -2201,8 +2210,7 @@ Ligne centrale sur publications avec point flottant
 .path-balados,
 .path-galeries,
 .path-bottin,
-.path-equipe,
- {
+.path-equipe {
   #block-md-filmmaker-page-title,
   #block-md-filmmaker-breadcrumbs {
     display: none;
