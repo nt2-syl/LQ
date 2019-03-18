@@ -289,7 +289,7 @@ ul.active-menu-default > li a:active {
   float: left;
 }
 .block-views-blockaccueil-publications-block-1 {
-  padding-left: 2em;
+  padding-left: 0em;
   float: right;
 }
 
@@ -2405,6 +2405,7 @@ Ligne centrale sur publications avec point flottant
   width: 10%;
   height: 600px;
   float: left;
+  padding-left: 0;
 }
 #dates li {
   list-style: none;
@@ -2413,8 +2414,8 @@ Ligne centrale sur publications avec point flottant
   line-height: 1; /* pour lignes multiples. Sinon utiliser 100px;*/
   position: relative;
   font-size: 0.75em;
-  padding-left: 5px;
-  margin-left: -33px;
+  padding-left: 0px;
+  margin-left: 0;
 }
 #dates .selected {
   color: #000;
@@ -2426,15 +2427,13 @@ Ligne centrale sur publications avec point flottant
   color: rgba(0,0,0,0.2);
   position: relative;
   letter-spacing: 3px;
-  padding-left: 0px;
+  padding-left: 12px;
+  display: block;
 }
 #issues {
- /* width: 90%; */
- width: 80%;
- /* float: left; */
- float: right;
+  width: 80%;
+  float: right;
   padding: 70px 0;
-  /**/
   height: 400px !important;
 }
 #issues li {
@@ -2444,6 +2443,9 @@ Ligne centrale sur publications avec point flottant
   position: relative;
   width: 100%;
   padding: 0 50px;
+}
+.timeline::before {
+  left: 0px;
 }
 #issues li.selected img {
 /*    -webkit-transform: scale(1);
