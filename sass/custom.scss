@@ -268,6 +268,7 @@ ul.active-menu-default > li a:active {
 #block-md-filmmaker-main-menu {
   float: right;
   width: 90%;
+  margin-top: 50px;
 }
 .region-header {
   .form-item, .form-actions {
@@ -920,8 +921,7 @@ li.text-center {
 */
 
 .article_web_content {
-  margin-top: 5em;
-  /* margin-top:250px;*/
+  margin-top: 80px;
 }
 .fl-detail-item .fl-detail-box {
   position: absolute;
@@ -2626,26 +2626,25 @@ team-content .team-job {
   text-align: center;
 }
 .team-content .team-social span {
-    height: 1.563em;
-    width: 1.6em;
-    display: inline-block;
-    background: #4d4d4d;
-    border-radius: 50%;
-    margin-right: 5px;
+  height: 1.563em;
+  width: 1.6em;
+  display: inline-block;
+  background: #4d4d4d;
+  border-radius: 50%;
+  margin-right: 5px;
 }
 /* carousel Hover */
 .master-slider a, .master-slider a:hover {
-    -webkit-transition: none;
-    transition: none;
+  -webkit-transition: none;
+  transition: none;
 }
 .team-film-item .team-film-container:hover .team-content {
-    opacity: 1;
-    top: 50%;
+  opacity: 1;
+  top: 50%;
 }
 .team-film-item .ms-slide:hover img {
-    opacity: 0.5;
+  opacity: 0.5;
 }
-
 
 /**
 * Masonry
@@ -2657,7 +2656,6 @@ team-content .team-job {
   .gutter-sizer {
     width: 1%;
   }
-
   .grid-sizer, .grid-item {
     width: 33.3%;
   }
