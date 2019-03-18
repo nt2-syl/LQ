@@ -135,8 +135,21 @@ p:last-child {
  /* margin-bottom: -50px;
   margin-top: -15px;*/
   display: block;
-  text-shadow: -1px 1px 0 white;
+ text-shadow: -1px 1px 0 white;
 }
+.page-node-type-article-web,
+.page-node-type-article-revue {
+  .fl-title .fl-title-big {
+    text-shadow: none;
+  }
+}
+.page-node-type-article-web {
+  .fl-title .fl-title-big {
+    line-height: 1.5;
+  }
+}
+
+
 /* Titre médias - overwrite */
 
 #block-md-filmmaker-page-title .page-title .field--name-name {
@@ -225,6 +238,16 @@ p:last-child {
   text-transform: none;
 }
 
+.page-node-type-article-web  .field--name-field-auteur {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0;
+  text-transform: none;
+/* attention, position: bottom sur l'image*/
+}
 
 /* Marge au-dessus du premier contenu */
 .view-editorial-vs-publication,
@@ -1367,7 +1390,12 @@ b, strong {
     font-size: 1.875em;
     text-transform: initial;
     padding-top: 14px; /* alignement vertical custom */
+    padding-right: 25px;
   }
+}
+/* forcer l'alignement de l'item Bootstrap avec les photos plus bas */
+#column-c114 {
+  padding-left: 0;
 }
 
 /**
@@ -2266,11 +2294,6 @@ Ligne centrale sur publications avec point flottant
   nav.tabs {
     position: absolute;
     z-index: 1;
-  }
-  .field--name-field-auteur {
-    font-size:16px;
-   /* padding-bottom: 40px;
-    display: block; */
   }
   .field-image-couverture-paysage {
     margin-top: 1em;
