@@ -137,6 +137,25 @@ p:last-child {
   display: block;
   text-shadow: -1px 1px 0 white;
 }
+/* Titre médias - overwrite */
+
+#block-md-filmmaker-page-title .page-title .field--name-name {
+  color: #000;
+  font-family: "Playfair Display",serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: -50px;
+  margin-top: -15px;
+  display: block;
+  text-shadow: -1px 1px 0 white;
+  /* rem block style */
+  letter-spacing: 0;
+  padding: 0;
+  text-transform: none;
+}
+/* Titres pages statiques - conserver format Titre de section */
+/*#block-md-filmmaker-page-title .page-title .field--name-title*/
+
 .views-field-title,
 .title-bold-white,
 .view-environnement-recherche-general .views-field-name-2,
@@ -188,7 +207,6 @@ p:last-child {
 .accueil_balados {
   clear: both;
 }
-
 .field--name-field-couverture {
   width: 100%;
 }
@@ -199,7 +217,7 @@ p:last-child {
   text-align: center;
   clear: both;
   font-family: "Playfair Display", serif;
-  margin-top: 20px;
+  margin-top: 0;
   font-size: 18px;
   font-weight: 700;
   font-style:italic;
@@ -1016,7 +1034,7 @@ bottom: -285px;*/
 }
 /* Custom */
 .template_article_web .fl-title .fl-title-medium {
-  line-height: 2;
+  line-height: 1;
 }
 /* todo autres médias */
 .article_web_content .entete_gauche,
@@ -2242,13 +2260,14 @@ Ligne centrale sur publications avec point flottant
   }
   .field--name-field-auteur {
     font-size:16px;
-    padding-bottom: 1em;
+   /* padding-bottom: 40px;
+    display: block; */
   }
   .field-image-couverture-paysage {
     margin-top: 1em;
   }
   .field-sous-titre {
-    margin-bottom: 1em;
+    margin-bottom: 0; /* marge plutot sur auteur */
   }
 }
 .field--name-field-thematique {
@@ -2256,6 +2275,23 @@ Ligne centrale sur publications avec point flottant
 }
 
 
+.field--name-field-sous-titre,
+.field-sous-titre {
+  font-size: 32px;
+  margin-bottom: 0px;/* Utiliser plutot auteur pour la marge */
+}
+.page-node-type-article-revue,
+.page-node-type-article-web {
+  .field-auteur {
+    margin-top: 40px;
+  }
+}
+/* Pas d'auteur à ce niveau dans balado */
+.page-node-type-balados {
+  .field--name-field-sous-titre {
+    margin-top: 20px;
+  }
+}
 
 /* ACCUEIL - TITRES */
 .path-frontpage h1.page-title {
