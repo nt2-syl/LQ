@@ -1080,11 +1080,13 @@ bottom: -285px;*/
   .fl-title {
     padding-top: 80px;
   }
+  /* Retirer marges bootstrap, forcer l'alignement à gauche et à droite */
   .entete_gauche {
-    margin-left: -30px;
+    margin-left: -15px;
   }
   .entete_droite {
-    margin-left: 30px;
+    margin-left: 15px;
+    padding-right: 0;
   }
 }
 
@@ -1529,8 +1531,8 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 
 .node--type-article-revue .section-c125 {
-  margin-top: 4em;
-  margin-bottom: 4em;
+  margin-top: 80px;
+  margin-bottom: 80px;
   display: inline-block;
 }
 
