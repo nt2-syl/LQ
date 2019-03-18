@@ -3188,8 +3188,13 @@ ul.active-menu-default {
     }
   }
 }
-
-
+.liens-externes {
+  padding-top: 10px;
+  /* inclut marge du dernier paragraphe de 10px */
+}
+.leslibraries {
+  padding-top: 20px;
+}
 
 /* Conserver le style d'image mais réduire l'affichage si l'ouvrage est un champ eva sur un article-revue */
 .page-node-type-article-revue .team-member-detail-2 img {
