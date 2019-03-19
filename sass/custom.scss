@@ -441,6 +441,11 @@ div.region.region-footer ul.menu {
   display: inline-block;
   margin-bottom: 1em;
 }
+.path-frontpage {
+  .views-field-path {
+    padding-top: 20px;
+  }
+}
 .views-field-path a,
 .more a {
   height: 40px;
@@ -1217,12 +1222,14 @@ bottom: -285px;*/
   font-family: "Playfair Display",serif;
   position: relative;
 }
+.view-article-vs-cahier .views-row:last-child .content-blog-item {
+  padding: 0;
+}
 .view-blog {
   margin-top: 0;
 }
-/* cahier: info sous le titre
 
-*/
+/* cahier: info sous le titre */
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -1558,11 +1565,17 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .editorial_sur_publication {
 
 }
-
+/*
 .node--type-article-revue .section-c125 {
   margin-top: 80px;
   margin-bottom: 80px;
   display: inline-block;
+}*/
+
+.page-node-type-publication {
+  .fl-mg-top {
+    padding-top: 20px;
+  }
 }
 
 
@@ -2011,8 +2024,6 @@ Ligne centrale sur publications avec point flottant
 }
 
 /* TITRES */
-
-
 .title-bold-white {
     color: #fff;
     font-family: "Playfair Display",serif;
@@ -2632,7 +2643,7 @@ Ligne centrale sur publications avec point flottant
 }
 
 /**
-* Thème initial - Carousel Auteurs sur Cahier
+* Carousel Auteurs sur Cahier
 */
 .team-film-item {
   width: 100%;
@@ -2750,8 +2761,16 @@ team-content .team-job {
   top: 50%;
 }
 .team-film-item .ms-slide:hover img {
-  opacity: 0.5;
+  opacity: 1;
 }
+.team-film-item .ms-slide:hover img::before {
+/*background: rgba(0, 0, 0, 0.9);
+width: 100%;
+height: auto;
+z-index: 9999;
+position:relative;*/
+}
+
 
 /**
 * Masonry
