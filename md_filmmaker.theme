@@ -247,7 +247,7 @@ function md_filmmaker_preprocess_page(&$vars) {
       $style_map = array(
         'collaborateur' => 'collaborateur_portrait',
         'publication'   => 'couverture_publication_paysage',
-        'ouvrage_critique'   => 'couverture_ouvrage_critique_portrait',
+        'ouvrage_critique'   => 'collaborateur_portrait',
       );
       $vars['image_bandeau'] = _node_image_url($node, $field_map[$node_type], $style_map[$node_type]);
     }
