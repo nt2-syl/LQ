@@ -495,9 +495,13 @@ div.region.region-footer ul.menu {
 
 /* Espacement entre Chapeau et corps */
 .page-node-type-collaborateur,
-.page-node-type-article-revue,
-.page-node-type-article-web {
+.page-node-type-article-revue {
   .node__content {
+    padding-top: 40px;
+  }
+}
+.page-node-type-article-web {
+  .field--name-body {
     padding-top: 40px;
   }
 }
