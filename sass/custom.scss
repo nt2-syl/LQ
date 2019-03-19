@@ -235,9 +235,12 @@ p:last-child {
   margin-top: 0;
   font-size: 18px;
   font-weight: 700;
-  font-style:italic;
+  font-style: normal;
   letter-spacing: 0;
   text-transform: none;
+}
+.field-sous-titre {
+  
 }
 
 .page-node-type-article-web  .field--name-field-auteur {
@@ -443,7 +446,7 @@ div.region.region-footer ul.menu {
 }
 .path-frontpage {
   .views-field-path {
-    padding-top: 20px;
+    margin-top: 20px;
   }
 }
 .views-field-path a,
@@ -2331,6 +2334,7 @@ Ligne centrale sur publications avec point flottant
 .page-node-type-article-web {
   .field-auteur {
     margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 /* Pas d'auteur à ce niveau dans balado */
