@@ -1017,8 +1017,8 @@ li.text-center {
 .fl-detail-item .fl-detail-box .list-social li:hover a {
   color: rgba(255, 255, 255, 0.7);
 }
-.fl-detail-item {
-  min-height: 900px;
+.template_article_web {
+  min-height: 940px;
   position: relative;
 }
 .fl-detail-item .fl-detail-box {
@@ -2302,7 +2302,7 @@ Ligne centrale sur publications avec point flottant
     z-index: 1;
   }
   .field-image-couverture-paysage {
-    margin-top: 1em;
+    margin-top: 40px;
   }
   .field-sous-titre {
     margin-bottom: 0; /* marge plutot sur auteur */
@@ -3169,6 +3169,9 @@ ul.active-menu-default {
 
 /**/
 .page-node-type-collaborateur {
+  .node__content {
+    padding-top: 40px;
+  }
   .view-eva {
     /* contenu à droite */
     .views-row-odd {
