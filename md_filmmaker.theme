@@ -201,7 +201,8 @@ function md_filmmaker_preprocess_node(&$vars) {
 	      $vars['image_bandeau'] = _node_image_url($node, $field_map[$node_type], $style_map[$node_type]);
 	    }
 	  }
-
+	// Print Ouvrage View on Article, Article Web
+	$vars['view_ouvrage_article'] = views_embed_view('ouvrage_critique_vs_article_revue', 'block_1');
 
 }
 function md_filmmaker_preprocess_comment(&$vars) {
