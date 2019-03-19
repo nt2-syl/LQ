@@ -97,13 +97,15 @@ p:last-child {
 .views-field-field-auteur,
 .views-field-field-individu,
 .views-field-created,
-.list-film-cat {
+.list-film-cat,
+.page-node-type-ouvrage-critique .field--name-field-auteur {
   font-family: "pb-bold";
   font-size: 0.75em;
   letter-spacing: 5px;
   color: rgba(0,0,0, 0.5);
   text-transform: uppercase;
 }
+
 .views-field-field-num-dossier .list-film-cat {
   text-transform: none;
 }
@@ -1675,7 +1677,10 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   }
 }
 .direct-container {
-  padding-top: 120px;
+  padding-top: 0px;
+  .fl-title {
+    padding-bottom: 40px;
+  }
 }
 .page-node-type-article-revue {
   .direct-container {

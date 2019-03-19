@@ -83,13 +83,7 @@
 {{ attach_library('classy/node') }}
 
 <article{{ attributes.addClass(classes) }}>
-
-  {{ title_prefix }}
-  <div class="fl-title">
-    <span class="fl-title-big"><div class="ac_bg__overlay"></div>{{ node.title.entity.getTitle() }}</span>
-  </div>
-  {{ title_suffix }}
-
+{# Title is moved to the right column #}
   <div class="team-member style-2">
     <div class="team-member-detail-2">
       <div class="col-sm-6 col-xs-12">
@@ -98,6 +92,11 @@
       <div class="col-sm-6 col-xs-12">
         <div class="direct-container d-padding">
           <div class="crew-desc">
+            {{ title_prefix }}
+              <div class="fl-title">
+                <span class="fl-title-big"><div class="ac_bg__overlay"></div>{{ node.title.entity.getTitle() }}</span>
+              </div>
+            {{ title_suffix }}
             {{ content }}
           </div>
         </div>
