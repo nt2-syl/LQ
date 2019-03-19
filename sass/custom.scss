@@ -1075,6 +1075,11 @@ bottom: -285px;*/
 .article_web_content .field--name-field-ref-audio {
 	padding-bottom: 50px; /*temp*/
 }
+.addtoany_list {
+    margin-top: 20px;
+    display: block;
+}
+
 
 
 /* ARTICLES REVUE - Node */
@@ -1527,7 +1532,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 * Noeud Collaborateur
 */
 .team-avatar {
-  margin-top: 30px;
+  margin-top: 80px;
   padding-right: 15px;
   display: inline-block;
 }
@@ -1554,7 +1559,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   font-family: "pb-bold";
 }
 .info-team .title-member h3 {
-  margin-top: 50px;
+  margin-top: 100px;
   text-transform: uppercase;
   color: #000;
   margin-bottom: 5px;
@@ -1684,7 +1689,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 */
 .page-node-type-ouvrage-critique {
   .team-member {
-    padding-top: 80px;
+  /* marge sur contenant article */
   }
   .field--name-field-auteur {
    // style auteur
