@@ -1139,9 +1139,7 @@ bottom: -285px;*/
   }
 }
 
-/* Reporter */
-
-
+/* */
 .page-node-type-balados .page-title {
   display:none;
 }
@@ -1166,11 +1164,6 @@ bottom: -285px;*/
 
 }
 
-
-/*
-.node--type-cahier .field--name-field-type-cahier {
-  text-transform: uppercase;
-}*/
 .field-numero-referent {
   padding-bottom: 2em;
   display: block;
@@ -1190,17 +1183,15 @@ bottom: -285px;*/
 .article-cahier-titre {
   font-size: 30px;
 }
-.article-cahier-auteur {
-  /*text-transform: uppercase;
-  font-weight: bold;*/
-}
+.article-cahier-auteur {}
 .article-cahier-soustitre {
   font-weight: bold;
   font-size: 24px;
-    padding-bottom: 0.5em
+  padding-bottom: 0.5em
 }
-.article-cahier-categorie {}
-
+.article-cahier-categorie {
+  text-align: center;
+}
 .content-blog-item .title-blog {
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
@@ -1246,6 +1237,13 @@ b, strong {
 
 /* MOUSEOVER*/
 /*1170*/
+.content-blog-item .title-blog {
+  border-left: 2px solid #000;
+}
+.new-date {
+  padding-left: 0;
+}
+
 .content-blog-item:hover .title-blog, .content-blog-item:active .title-blog, .content-blog-item:focus .title-blog {
   padding: 10px 80px 10px 40px;
   border-left: 5px solid #000;

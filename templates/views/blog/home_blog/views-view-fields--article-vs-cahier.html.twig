@@ -1,11 +1,16 @@
 {# views/blog/home_blog/views-view-fields--blog--home-blog.html.twig #}
-<div class="content-blog-item col-lg-9 col-sm-12">
-	<div class="title-blog">
-	  <div class="article-cahier-titre"><a href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content }}</a></div>
-	  <div class="article-cahier-soustitre">{{ fields.field_sous_titre.content }}</div>
-      {% for auteur in auteurs %}
-        {% set individu = drupal_entity('node', auteur.field_individu.0.target_id) %}
-        <div class="article-cahier-auteur">{{ individu['#node'].label }}</div>
-      {% endfor %}
+<div class="article_sur_cahier_wrapper">
+	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 new-date">
+		<p class="my article-cahier-categorie">{{ fields.field_type_article.content }}</p>
+	</div>
+	<div class="content-blog-item col-lg-10 col-sm-10">
+		<div class="title-blog">
+	  		<div class="article-cahier-titre"><a href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content }}</a></div>
+	  		<div class="article-cahier-soustitre">{{ fields.field_sous_titre.content }}</div>
+      		{% for auteur in auteurs %}
+        		{% set individu = drupal_entity('node', auteur.field_individu.0.target_id) %}
+        		<div class="article-cahier-auteur">{{ individu['#node'].label }}</div>
+      		{% endfor %}
+		</div>
 	</div>
 </div>
