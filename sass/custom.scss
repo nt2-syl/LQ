@@ -493,6 +493,15 @@ div.region.region-footer ul.menu {
 }
 
 
+/* Espacement entre Chapeau et corps */
+.page-node-type-collaborateur,
+.page-node-type-article-revue,
+.page-node-type-article-web {
+  .node__content {
+    padding-top: 40px;
+  }
+}
+
 /**
 * Liste Balados
 */
@@ -1754,9 +1763,15 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 /**
 * Ouvrage sur Article
 */
-.view-ouvrage-critique-vs-article-revue .views-field-field-couverture-ouvrage {
-  float: left;
-  padding-right: 20px;
+
+.view-ouvrage-critique-vs-article-revue {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 40px;
+  .views-field-field-couverture-ouvrage {
+    float: left;
+    padding-right: 20px;
+  }
 }
 
 /**
@@ -3202,11 +3217,9 @@ ul.active-menu-default {
   clear:both;
 }
 
+
 /**/
 .page-node-type-collaborateur {
-  .node__content {
-    padding-top: 40px;
-  }
   .view-eva {
     /* contenu à droite */
     .views-row-odd {
