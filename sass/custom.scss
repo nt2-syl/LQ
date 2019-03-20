@@ -416,11 +416,11 @@ div.region.region-footer ul.menu {
 }
 #block-md-filmmaker-footer {
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 #block-logosfooter {
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 #block-md-filmmaker-footer,
 #block-logosfooter,
@@ -1088,13 +1088,12 @@ bottom: -285px;*/
 .article_web_content .entete_gauche,
 .article_web_content .entete_droite,
 .article_web_content .field--name-field-ref-audio {
-	padding-bottom: 50px; /*temp*/
+	padding-bottom: 40px; /*temp*/
 }
 .addtoany_list {
     margin-top: 20px;
     display: block;
 }
-
 
 
 /* ARTICLES REVUE - Node */
@@ -3316,6 +3315,7 @@ ul.active-menu-default {
 .view-liste-equipe {
   margin-top: -40px;
   .views-row {
+    clear: both;
     padding-bottom: 40px;
     &:last-child {
       padding-bottom: 0;
