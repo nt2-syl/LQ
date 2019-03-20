@@ -3548,9 +3548,38 @@ toolbar-vertical*/
   padding-top: 0;
 }
 
+.view-taxonomy-term .views-row {
+  margin-bottom: 40px;
+}
+
 /**
 * Commerce
 */
+.cart {
+  td, th {
+    padding: 0 20px 0 0;
+  }
+}
+.cart-form {}
+#commerce-checkout-flow-multistep-default {
+  .form-item label {
+    min-width: 100px;
+  }
+}
+#edit-sidebar-coupon-redemption-form-code {
+  max-width: 100%;
+}
+.view-commerce-checkout-order-summary .views-row {
+  margin-bottom: 40px;
+}
+#edit-payment-information-billing-information-field-informations-livraison-0 a {
+  font-size: 21px;
+  line-height: inherit;
+  color: #333;
+}
+#edit-actions input {
+  padding-right: 20px;
+}
 
 /**
 * Règles Responsive
