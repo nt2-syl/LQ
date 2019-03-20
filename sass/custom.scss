@@ -3498,3 +3498,7 @@ toolbar-vertical*/
     padding-top: 79px;
   }
 }
+/* Correctif bug */
+.page-node-type-article-web #block-marquedusiteinversee .field--name-body {
+  padding-top: 0px;
+}
