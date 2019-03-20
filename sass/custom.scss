@@ -2449,7 +2449,8 @@ Ligne centrale sur publications avec point flottant
   z-index: 9999;
   text-transform: uppercase;
   /*font-family: "Playfair Display",serif;*/
-  font-family: poland;
+  font-family: poland; /* Font temporaire, remplacer par achat */
+
 }
 .accueil_carousel_soustitre,
 .bandeau_publication {
@@ -2463,7 +2464,11 @@ Ligne centrale sur publications avec point flottant
   text-shadow: -1px 1px 0 white;
     z-index: 9999;
 }
-
+.accueil_carousel_soustitre,
+.bandeau_titre,
+.bandeau_publication {
+  color: rgba(0, 0, 0, 0.5);
+}
 
 /**
 * appliquer PUBLICATIONS
@@ -3317,7 +3322,9 @@ ul.active-menu-default {
   .views-row {
     clear: both;
     &:last-child {
-      padding-bottom: 0;
+      img {
+        padding-bottom: 0;
+      }
     }
   }
   .fl-title-big {
