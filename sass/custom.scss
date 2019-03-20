@@ -3000,9 +3000,18 @@ ul.list-social li {
   list-style: none;
 }
 ul.list-social li a {
-  color: rgb(0, 0, 0);
+  color: #787878;
+  /*  color: #333;*/
   text-shadow: 1px 1px white;
 }
+.page-node-type-publication,
+.path-frontpage {
+  ul.list-social li a {
+    color: #ccc;
+    text-shadow: 1px 1px black;
+  }
+}
+
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -3357,6 +3366,9 @@ ul.active-menu-default {
   img {
     padding-bottom: 40px;
   }
+  .fl-title-big a {
+    text-align: left;
+  }
 }
 /**/
 ul.film-style-odd {
@@ -3518,6 +3530,9 @@ toolbar-vertical*/
     padding-top: 79px;
   }
 }
+
+
+
 /* Correctif bug */
 .page-node-type-article-web .region-header .field--name-body {
   padding-top: 0px;
