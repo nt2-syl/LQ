@@ -3316,7 +3316,6 @@ ul.active-menu-default {
   margin-top: -40px;
   .views-row {
     clear: both;
-    padding-bottom: 40px;
     &:last-child {
       padding-bottom: 0;
     }
@@ -3324,6 +3323,9 @@ ul.active-menu-default {
   .fl-title-big {
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+  img {
+    padding-bottom: 40px;
   }
 }
 /**/
