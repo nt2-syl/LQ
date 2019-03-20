@@ -427,7 +427,9 @@ div.region.region-footer ul.menu {
 #block-copyright {
   clear: both;
 }
-
+#block-copyright {
+  margin-bottom: 40px;
+}
 
 .views-field-path,
 .more {
@@ -1789,6 +1791,12 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
       padding-bottom: 0;
     }
 }
+
+.view-accueil-balados  ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+} 
 
 @media only screen and (min-width: 1170px) {
   /*.ac_page-wrapper img,
