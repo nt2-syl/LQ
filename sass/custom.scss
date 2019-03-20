@@ -343,7 +343,8 @@ ul.active-menu-default > li a:active {
 #block-md-filmmaker-main-menu {
   float: right;
   width: 90%;
-  margin-top: -50px;
+  /*margin-top: -50px;*/
+  margin-top: -20px;
 }
 .region-header {
   .form-item, .form-actions {
@@ -388,7 +389,9 @@ ul.active-menu-default > li a:active {
 #edit-submit-environnement-recherche-general {
   top: 24px;
 }
-
+#block-marquedusiteinversee {
+  float: left;
+}
 
 /**
 * Pagers
@@ -3470,4 +3473,28 @@ ul.film-style-odd {
   text-align: left;
 }
 
-/**/
+/**
+* ADMIN
+*/
+/*toolbar-tray-open toolbar-horizontal toolbar-fixed 79px*/
+/*toolbar-tray-open toolbar-vertical toolbar-fixed 39px */
+/*path-publications path-frontpage == carousel */
+/* page-node-type-article-web == bandeaunoir */
+
+.page-node-type-article-web .tabs > li {
+  background: #f5f5f5;
+}
+/*col-sm-12 header VS region-header
+toolbar-vertical*/
+.toolbar-vertical.page-node-type-publication,
+.toolbar-vertical.path-frontpage {
+  .header {
+    padding-top: 39px;
+  }
+}
+.toolbar-horizontal.page-node-type-publication,
+.toolbar-horizontal.path-frontpage {
+  .header {
+    padding-top: 79px;
+  }
+}
