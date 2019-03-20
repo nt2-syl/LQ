@@ -284,11 +284,12 @@ p:last-child {
 ul.active-menu-default {
   float: right;
 }
+/* Items aligné à droite. Marge nécessaire pour le mouseover sur fond sombre */
 ul.active-menu-default > li {
   display: inline-block;
   position: relative;
   margin: 0;
-  padding: 15px 12px 0;
+  padding: 15px 0 0 12px;
   list-style: none;
 }
 .menu-item a,
@@ -356,7 +357,7 @@ ul.active-menu-default > li a:active {
   float: right;
   width: 90%;
   /*margin-top: -50px;*/
-  margin-top: -20px;
+  margin-top: -7px;
 }
 
 .page-node-type-article-web  #block-md-filmmaker-main-menu {
@@ -3217,7 +3218,7 @@ header .menu-default #primary_nav_wrap {
 
 ul.active-menu-default {
   float: right;
-  padding-right: 25px;
+  padding-right: 0;
   margin-bottom: 0;
 }
 
