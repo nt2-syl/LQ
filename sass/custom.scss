@@ -80,6 +80,9 @@ p:last-child {
 .shadow {
   text-shadow: 0.1em 0.1em 0.2em black;
 }
+.text-shadow-black {
+  text-shadow: 1px 1px black;
+}
 .text-shadow {
   text-shadow: -1px 1px 0 white;
 }
@@ -2761,14 +2764,14 @@ Ligne centrale sur publications avec point flottant
   overflow: visible;
   background-color: transparent;
 }
-team-film-item .ms-slide {
+.team-film-item .ms-slide {
   background: #000;
 }
 .ms-wk .ms-slide {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-ms-slide {
+.ms-slide {
   position: absolute;
   height: 100%;
   -webkit-transform: translateZ(0px);
@@ -2820,8 +2823,9 @@ ms-slide {
   font-family: "Playfair Display",serif;
   font-size: 1.875em;
   line-height: 38px;
+  text-shadow: 1px 1px black;
 }
-team-content .team-job {
+.team-content .team-job {
   font-family: "pb-bold";
   font-size: 0.75em;
   letter-spacing: 1.5px;
