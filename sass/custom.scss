@@ -3656,6 +3656,18 @@ toolbar-vertical*/
     display: none;
   } 
 }
+.quicktabs-wrapper {
+  padding: 40px 0 0;
+}
+.quicktabs-tabs {
+    padding: 0 0 40px;
+}
+ul.quicktabs-tabs li.active a {
+  border: 1px solid #222 !important;
+  padding: 6px 20px 5px;
+  border-radius: 20px;
+}
+
 
 
 /**
