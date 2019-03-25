@@ -3548,9 +3548,21 @@ toolbar-vertical*/
   padding-top: 0;
 }
 
-.view-taxonomy-term .views-row {
-  margin-bottom: 40px;
+.view-taxonomy-term {
+  .views-row {
+    margin-bottom: 40px;
+  }
+  /* Temp 
+  .views-view-grid {
+    .col-1 {
+      padding-right: 20px;
+    }
+    .col-2 {
+      padding-left: 20px;
+    }
+  }*/
 }
+
 
 /**
 * Commerce
@@ -3581,6 +3593,40 @@ toolbar-vertical*/
   padding-right: 20px;
 }
 
-/**
-* Règles Responsive
+/*
+.path-product {
+  .field--name-field-image-couverture {
+    float: left;
+    padding-right: 80px;
+  }
+  .field--name-body.clearfix {
+  }
+  .field--name-price {
+  }
+}
 */
+/**
+* Règles Responsive 
+*/
+
+/* Supprimer colonnes bootstrap sur les grilles responsive */
+@media (min-width: 768px) {
+  .row-no-padding {
+    [class*="col-"] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    /* réinsérer marge centrale sur les champs */
+    .views-row:nth-of-type(odd) {
+      .views-field {
+        padding-right: 20px;
+      }
+    }
+    .views-row:nth-of-type(even) {
+      .views-field {
+        padding-left: 20px;
+      }
+    }
+
+  }
+}
