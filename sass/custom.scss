@@ -1112,11 +1112,19 @@ bottom: -285px;*/
   line-height: 1;
 }
 /* todo autres médias */
-.article_web_content .entete_gauche,
-.article_web_content .entete_droite,
 .article_web_content .field--name-field-ref-audio {
 	padding-bottom: 40px; /*temp*/
 }
+
+.article_web_content,
+.node--type-article-web,
+.node--type-article-revue {
+  .entete_gauche,
+  .entete_droite {
+    padding-bottom: 40px; /*temp*/
+  }
+}
+
 .addtoany_list {
     margin-top: 20px;
     display: block;
@@ -1808,12 +1816,12 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .view-ouvrage-critique-vs-article-revue {
   width: 50%;
   margin: 0 auto;
-  padding-top: 40px;
   .views-field-field-couverture-ouvrage {
     float: left;
     padding-right: 20px;
   }
 }
+
 
 /**
 * Accueil timeline box - publications
