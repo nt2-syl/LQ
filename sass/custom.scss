@@ -3640,20 +3640,24 @@ toolbar-vertical*/
 #edit-actions input {
   padding-right: 20px;
 }
-
-
-/*
-.path-product {
-  .field--name-field-image-couverture {
-    float: left;
-    padding-right: 80px;
-  }
-  .field--name-body.clearfix {
-  }
-  .field--name-price {
-  }
+.view-catalogue-des-numeros .views-view-grid .views-col {
+  text-align: center;
 }
-*/
+
+/* Page Product (boutique numéro) */
+.path-product {}
+.product_image {
+  float: left;
+}
+.product_main {
+  float: left;
+  padding-left: 20px;
+  .field--name-field-image-couverture {
+    display: none;
+  } 
+}
+
+
 /**
 * Règles Responsive 
 */
