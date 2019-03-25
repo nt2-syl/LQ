@@ -1021,9 +1021,9 @@ li.text-center {
 }
 .md-google {
 }
-
+/* Sur collaborateurs */
 .archive-sidebar {
-  padding-top: 80px;
+  padding-top: 182px;
   .edit-actions {
     margin: 0;
     position: absolute;
@@ -1625,6 +1625,15 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 }
 
 
+
+/* Collaborateurs */
+.path-bottin {
+  .region-sidebar {
+    padding-top: 79px;
+  }
+}
+
+
 /* Collaborateurs : Réseaux Sociaux (icônes) */
 
 .page-node-type-collaborateur .view-eva {
@@ -2014,10 +2023,11 @@ Ligne centrale sur publications avec point flottant
     }
   }
 }
+
 .view-environnement-recherche-bottin {
    .views-row {
     padding-bottom: 30px;
-    &:last-child{
+    &:last-child {
       padding-bottom: 0;
     }
   }
@@ -2034,67 +2044,73 @@ Ligne centrale sur publications avec point flottant
   }
 }
 
+/* Exception Recherche Sidebar */
+.region-sidebar .block-views-exposed-filter-blockenvironnement-recherche-general-page-1 {
+  float: none; /* remet à 100%;*/
+  padding-top: 105px;
+}
+
 /**************
 * Accueil Articles web (1+3)
 */
  .cus-item-big {
-    padding-bottom: 56.4%;
-    height: 0;
+  padding-bottom: 56.4%;
+  height: 0;
 }
 
 /*
 * LARGE SLIDE
 */
+
  @media only screen and (min-width: 768px) {
   .cus-item-4 {
-      overflow: hidden;
+    overflow: hidden;
   }
-
   .film-item {
-      background: #000;
-      position: relative;
-      height: 0;
-      padding-bottom: 56.25%;
-      overflow: hidden;
+    background: #000;
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
   }
   .center {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      bottom: auto;
-      right: auto;
-      -webkit-transform: translateX(-50%) translateY(-50%);
-      -moz-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-      -o-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
   }
 }
 
 .title-white {
-    color: rgba(255,255,255,0.5);
-    text-transform: uppercase;
-    font-family: "pb-bold";
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  font-family: "pb-bold";
 }
 .centertxt {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 
 [class^="film-"], [class*=" film-"] {
-    font-family: 'fontfilm';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1em;
-    /* font-size: 120%; */
+  font-family: 'fontfilm';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1em;
+  /* font-size: 120%; */
 }
 
 /* TITRES */
 .title-bold-white {
-    color: #fff;
-    font-family: "Playfair Display",serif;
-    font-weight: 700;
+  color: #fff;
+  font-family: "Playfair Display",serif;
+  font-weight: 700;
 }
 
 @media only screen and (min-width: 1170px) {
@@ -2630,6 +2646,7 @@ Ligne centrale sur publications avec point flottant
 }
 #issues li {
   list-style: none;
+  padding-bottom: 27px;
 }
 .timeline-box {
   position: relative;
@@ -3592,6 +3609,7 @@ toolbar-vertical*/
 #edit-actions input {
   padding-right: 20px;
 }
+
 
 /*
 .path-product {
