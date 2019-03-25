@@ -3464,16 +3464,18 @@ ul.film-style-odd {
 /* Champ Recherche sur fond image */
 .path-frontpage,
 .page-node-type-publication {
-  .search-form .form-group {
-    border: none;
-    &:hover {
-      background: #fff;
-      border: 1px solid #eee;
-    }
-  }
   .fa-search {
     text-shadow: 1px 1px black;
     color: #a7a7a7;
+  }
+}
+.search-form .form-group {
+  border: none;
+  box-shadow: none;
+  &:hover {
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
   }
 }
 
