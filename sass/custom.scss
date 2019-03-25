@@ -2646,7 +2646,7 @@ Ligne centrale sur publications avec point flottant
 }
 #issues li {
   list-style: none;
-  padding-bottom: 27px;
+  padding-bottom: 7px;
 }
 .timeline-box {
   position: relative;
@@ -3414,9 +3414,8 @@ ul.film-style-odd {
   transition: all 0.35s, border-radius 0s;
   width: 32px;
   height: 32px;
-  background-color: #fff;
+  background-color: transparent;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-  /*border-radius: 25px;*/
   border-radius: 0;
   border: 1px solid #eee;
   input.form-control {
@@ -3459,6 +3458,22 @@ ul.film-style-odd {
     pointer-events: all;
     position: relative;
     right: -2px;
+  }
+}
+
+/* Champ Recherche sur fond image */
+.path-frontpage,
+.page-node-type-publication {
+  .search-form .form-group {
+    border: none;
+    &:hover {
+      background: #fff;
+      border: 1px solid #eee;
+    }
+  }
+  .fa-search {
+    text-shadow: 1px 1px black;
+    color: #a7a7a7;
   }
 }
 
