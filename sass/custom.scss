@@ -3176,16 +3176,15 @@ position:relative;*/
 /**
 * Module Embed
 */
-/* Inspiré de QF */
+/* Inspiré de QuartierF.org */
 .embedded-entity {
-
   .media--view-mode-image-embed-demi-largeur,
   .media--view-mode-image-embed-pleine-largeur,
   .media--view-mode-video-embed,
   .media--view-mode-audio-embed  {
       border-bottom: 4px solid #e3e0db;
     border-top: 4px solid #e3e0db;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
     padding-top: 10px;
     margin-bottom: 2em;
   }
@@ -3223,6 +3222,7 @@ position:relative;*/
     height: auto;
   }
 }
+
 .image-style-image-embed-demi-largeur,
 .image-style-image-embed-pleine-largeur {
   padding-bottom: 10px;
