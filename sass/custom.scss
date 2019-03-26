@@ -293,13 +293,13 @@ ul.active-menu-default > li {
   padding: 15px 0 0 12px;
   list-style: none;
 }
+/* Menu en gris par défaut, sur fond blanc */
 .menu-item a,
 ul.active-menu-default li a,
 ul.active-menu-default > li a {
-  color: #fff;
+  color: #a7a7a7;
   font-family: pb-bold;
 }
-
 
 ul.active-menu-default > li a,
 .region-footer ul.menu li a {
@@ -316,11 +316,16 @@ ul.active-menu-default > li a,
   transition: all 300ms linear 0ms;
 }
 
-.region-footer ul.menu li a {
-    color: #a7a7a7;
-font-size: 13px;
+/* Exceptions */
+.path-frontpage,
+.page-node-type-publication {
+  ul.active-menu-default > li a {
+    color: #fff;
+  }
 }
-
+.region-footer ul.menu li a {
+  font-size: 13px;
+}
 
 .menu-item a:hover,
 ul.active-menu-default li a:hover,
