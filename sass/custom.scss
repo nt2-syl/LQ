@@ -3105,6 +3105,16 @@ position:relative;*/
 .view-auteur-vs-cahier {
   clear: both;
 }
+.cart-block--summary__icon {
+  margin-right: 14px;
+  color: #a7a7a7;
+}
+.path-frontpage,
+.page-node-type-publication {
+  .cart-block--summary__icon {
+    color: #fff;
+  }
+}
 
 /**
 * balado _details
