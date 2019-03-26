@@ -488,6 +488,36 @@ ul.list-social li a {
 
 }
 
+/* ACCUEIL - TITRES */
+.path-frontpage h1.page-title {
+  display: none;
+}
+.block-views-blockaccueil-edito-block-1 h2,
+.block-views-blockaccueil-publications-block-1 h2,
+.block-views-blockaccueil-balados-block-1 h2,
+.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
+  text-transform: uppercase;
+}
+
+
+/* accueil - sections */
+.accueil_balados,
+.accueil_articles_web {
+/* marges sur les titres */
+}
+.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa {
+  clear: both;
+}
+.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
+  text-transform: uppercase;
+  padding-top: 80px;
+  margin: 0;
+}
+
+.block-views-blockaccueil-publications-block-1 h2 {
+  margin-left: 200px; /* Dépend de la taille du bloc #issues*/
+}
+
 /**
 * Pagers
 */
@@ -2510,29 +2540,6 @@ Ligne centrale sur publications avec point flottant
   }
 }
 
-/* ACCUEIL - TITRES */
-.path-frontpage h1.page-title {
-  display: none;
-}
-.block-views-blockaccueil-edito-block-1 h2,
-.block-views-blockaccueil-publications-block-1 h2,
-.block-views-blockaccueil-balados-block-1 h2,
-.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
-  text-transform: uppercase;
-}
-/* accueil - sections */
-.accueil_balados,
-.accueil_articles_web {
-/* marges sur les titres */
-}
-.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa {
-  clear: both;
-}
-.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
-  text-transform: uppercase;
-  padding-top: 80px;
-  margin: 0;
-}
 
 
 /**
