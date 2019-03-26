@@ -293,13 +293,13 @@ ul.active-menu-default > li {
   padding: 15px 0 0 12px;
   list-style: none;
 }
+/* Menu en gris par défaut, sur fond blanc */
 .menu-item a,
 ul.active-menu-default li a,
 ul.active-menu-default > li a {
-  color: #fff;
+  color: #a7a7a7;
   font-family: pb-bold;
 }
-
 
 ul.active-menu-default > li a,
 .region-footer ul.menu li a {
@@ -316,11 +316,16 @@ ul.active-menu-default > li a,
   transition: all 300ms linear 0ms;
 }
 
-.region-footer ul.menu li a {
-    color: #a7a7a7;
-font-size: 13px;
+/* Exceptions */
+.path-frontpage,
+.page-node-type-publication {
+  ul.active-menu-default > li a {
+    color: #fff;
+  }
 }
-
+.region-footer ul.menu li a {
+  font-size: 13px;
+}
 
 .menu-item a:hover,
 ul.active-menu-default li a:hover,
@@ -389,6 +394,48 @@ ul.active-menu-default > li a:active {
     margin-right: 0;
   }
 }
+
+/**
+* Header - Icones social
+*/
+ul.list-social li {
+  display: inline;
+  padding: 0 10px;
+  list-style: none;
+}
+ul.list-social li a {
+  color: rgba(0,0,0,0.5);
+  text-shadow: 1px 1px white;
+}
+.page-node-type-publication,
+.path-frontpage {
+  ul.list-social li a {
+    color: #fff;
+    text-shadow: 1px 1px black;
+  }
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-facebook-f:before, .fa-facebook:before {
+    content: "\f09a";
+}
+.fa-twitter:before {
+    content: "\f099";
+}
+.fa-youtube:before {
+    content: "\f167";
+}
+.fa-instagram:before {
+    content: "\f16d";
+}
+
 
 /**
 * Accueil
@@ -3041,46 +3088,6 @@ position:relative;*/
     padding-top: 10px;
 }
 
-/**
-* Header - Icones
-*/
-ul.list-social li {
-  display: inline;
-  padding: 0 10px;
-  list-style: none;
-}
-ul.list-social li a {
-  color: rgba(0,0,0,0.5);
-  text-shadow: 1px 1px white;
-}
-.page-node-type-publication,
-.path-frontpage {
-  ul.list-social li a {
-    color: #ccc;
-    text-shadow: 1px 1px black;
-  }
-}
-
-.fa {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.fa-facebook-f:before, .fa-facebook:before {
-    content: "\f09a";
-}
-.fa-twitter:before {
-    content: "\f099";
-}
-.fa-youtube:before {
-    content: "\f167";
-}
-.fa-instagram:before {
-    content: "\f16d";
-}
 
 /**
 * CART
