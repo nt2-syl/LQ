@@ -243,7 +243,7 @@ p:last-child {
   text-transform: none;
 }
 .field-sous-titre {
-  
+
 }
 
 .page-node-type-article-web  .field--name-field-auteur {
@@ -359,7 +359,7 @@ ul.active-menu-default > li a:active {
   }
 }
 
-/* Logo Responsive 
+/* Logo Responsive
 .site-logo img {
   max-width: 90px;
   height: auto;
@@ -471,7 +471,7 @@ ul.list-social li a {
   top: 24px;
 }
 .bandeau {
-  
+
 }
 
 /**
@@ -1293,7 +1293,7 @@ bottom: -285px;*/
 }
 
 /**
-* CAHIER - VUE EVA 
+* CAHIER - VUE EVA
 */
 .content-blog-item a {
   color: #000;
@@ -1902,7 +1902,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   margin: 0;
   padding: 0;
   list-style: none;
-} 
+}
 
 @media only screen and (min-width: 1170px) {
   /*.ac_page-wrapper img,
@@ -2614,7 +2614,7 @@ Ligne centrale sur publications avec point flottant
   overflow:hidden;
 }*/
 
-/* Ne pas montrer le titre + date en doublons */ 
+/* Ne pas montrer le titre + date en doublons */
 .view-slider-accueil  .flex-caption {
   display: none;
 }
@@ -2793,7 +2793,7 @@ Ligne centrale sur publications avec point flottant
 }
 
 /**
-* Accueil FB 
+* Accueil FB
 */
 .block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa,
 .block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
@@ -3067,7 +3067,7 @@ position:relative;*/
 .path-frontpage .header,
 .page-node-type-publication .header {
     position: absolute;
-    width: 1170px; 
+    width: 1170px;
     top: 0;
     z-index: 11;
 }
@@ -3180,11 +3180,35 @@ position:relative;*/
 .image-style-image-embed-pleine-largeur {
   padding-bottom: 10px;
 }
-/* 
 
-TODO: 
-appliquer cadre sur audio video 570x320 
-50% audio 
+/* @see https://www.drupal.org/project/video_embed_field/issues/1907866#comment-10924145 */
+.video-embed-field-responsive-video, /* default example field name */
+.field--name-field-video-embed.field--type-text-long /* video embeds from youtube */
+{
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 56.25%;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+/*
+
+TODO:
+appliquer cadre sur audio video 570x320
+50% audio
 50% video
 sur tous les types
 */
@@ -3195,7 +3219,7 @@ sur tous les types
   .addtoany_list {
     display: none;
   }
-  
+
 }
 
 /**
@@ -3626,7 +3650,7 @@ toolbar-vertical*/
   .views-row {
     margin-bottom: 40px;
   }
-  /* Temp 
+  /* Temp
   .views-view-grid {
     .col-1 {
       padding-right: 20px;
@@ -3680,7 +3704,7 @@ toolbar-vertical*/
   padding-left: 20px;
   .field--name-field-image-couverture {
     display: none;
-  } 
+  }
 }
 .quicktabs-wrapper {
   padding: 40px 0 0;
@@ -3697,7 +3721,7 @@ ul.quicktabs-tabs li.active a {
 
 
 /**
-* Règles Responsive 
+* Règles Responsive
 */
 
 /* Supprimer colonnes bootstrap sur les grilles responsive */
