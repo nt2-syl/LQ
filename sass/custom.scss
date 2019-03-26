@@ -1664,7 +1664,20 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
     clear: both;
     min-height: 100px; /*temp*/
   }
+
 }
+
+.page-node-type-article-web {
+  .node--type-galerie {
+    .field-auteur {
+      margin: 0;
+    }
+    .fl-title-desc {
+      padding: 0;
+    }
+  }
+}
+
 
 
 .field-resume-galerie {
@@ -1934,7 +1947,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   }
 }
 .views-field-field-notation-ouvrage {
-  padding-top: 50px;
+  /*padding-top: 50px; */
 }
 
 /**
