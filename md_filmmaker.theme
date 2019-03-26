@@ -234,7 +234,10 @@ function _node_image_url($node, $field, $style_name = '') {
 }
 
 function md_filmmaker_preprocess_page(&$vars) {
-  $node = $vars['node'];
+  $node = NULL;
+  if (isset($vars['node'])) {
+    $node = $vars['node'];
+  }
   if ($node) {
     $node_type  = $node->getType();
     $nid = $node->id();
