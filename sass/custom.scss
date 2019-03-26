@@ -251,7 +251,7 @@ p:last-child {
   font-family: "Playfair Display", serif;
   font-size: 18px;
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
   letter-spacing: 0;
   text-transform: none;
 /* attention, position: bottom sur l'image*/
@@ -2545,6 +2545,7 @@ Ligne centrale sur publications avec point flottant
 .field-sous-titre {
   font-size: 32px;
   margin-bottom: 0px;/* Utiliser plutot auteur pour la marge */
+  font-style: italic;
 }
 .page-node-type-article-revue,
 .page-node-type-article-web {
