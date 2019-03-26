@@ -499,7 +499,6 @@ ul.list-social li a {
   text-transform: uppercase;
 }
 
-
 /* accueil - sections */
 .accueil_balados,
 .accueil_articles_web {
@@ -3728,11 +3727,30 @@ toolbar-vertical*/
     display: none;
   }
 }
+.view-liste-abonnements {
+  .view-header {
+    margin-bottom: 40px;
+  }
+  /* Version non responsive */
+  .views-row {
+    padding-bottom: 40px;
+  }
+  .views-field-field-image-couverture {
+    text-align: center;
+    padding-bottom: 1em;
+  }
+}
+
+/* Tous les quicktabs 
+Actuellement, seulement dans Boutique
+*/
 .quicktabs-wrapper {
   padding: 40px 0 0;
 }
-.quicktabs-tabs {
-    padding: 0 0 40px;
+ul.quicktabs-tabs {
+  margin: 0;
+  padding: 0 0 40px;
+  text-align: center;
 }
 ul.quicktabs-tabs li.active a {
   border: 1px solid #222 !important;
