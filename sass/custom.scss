@@ -304,12 +304,11 @@ ul.active-menu-default > li a {
     color: #a7a7a7;
 font-size: 13px;
 }
-ul.active-menu-default > li a,
-.region-footer ul.menu li a {
+ul.active-menu-default > li a{
   padding: 5px 15px;
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
-  font-size: 13px;
+  font-size: 15px;
   text-transform: uppercase;
   -webkit-transition: all 300ms linear 0ms;
   -khtml-transition: all 300ms linear 0ms;
