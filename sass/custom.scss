@@ -335,20 +335,22 @@ ul.active-menu-default > li a:active {
   display: none;
 }
 .site-logo img {
-  max-width: 90px;
-  height: auto;
+  width: 90px;
+  height: 113px;
 }
 .path-frontpage,
 .page-node-type-publication {
-  .site-logo img {
-    max-width: 90px;
-    height: auto;
-  }
   #block-md-filmmaker-main-menu #primary_nav_wrap li {
     text-shadow: 1px 1px black;
   }
 }
 
+/* Logo Responsive 
+.site-logo img {
+  max-width: 90px;
+  height: auto;
+}
+*/
 
 
 #block-marquedusiteinversee {
