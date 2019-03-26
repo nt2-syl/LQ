@@ -300,11 +300,9 @@ ul.active-menu-default > li a {
   font-family: pb-bold;
 }
 
+
+ul.active-menu-default > li a,
 .region-footer ul.menu li a {
-    color: #a7a7a7;
-font-size: 13px;
-}
-ul.active-menu-default > li a{
   padding: 5px 15px;
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
@@ -317,6 +315,13 @@ ul.active-menu-default > li a{
   -o-transition: all 300ms linear 0ms;
   transition: all 300ms linear 0ms;
 }
+
+.region-footer ul.menu li a {
+    color: #a7a7a7;
+font-size: 13px;
+}
+
+
 .menu-item a:hover,
 ul.active-menu-default li a:hover,
 ul.active-menu-default > li a:hover {
