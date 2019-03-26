@@ -1765,7 +1765,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 /* Collaborateurs */
 .path-bottin {
   .region-sidebar {
-    padding-top: 79px;
+
   }
 }
 
@@ -2185,7 +2185,6 @@ Ligne centrale sur publications avec point flottant
 /* Exception Recherche Sidebar */
 .region-sidebar .block-views-exposed-filter-blockenvironnement-recherche-general-page-1 {
   float: none; /* remet à 100%;*/
-  padding-top: 105px;
 }
 
 /**************
@@ -3571,6 +3570,14 @@ ul.film-style-odd {
     right: -2px;
   }
 }
+/* Toujours ouvrir le bloc sur Recherche générale */
+.region-sidebar .search-form .form-group input.form-control {
+  background-color: transparent;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-radius: 0;
+  border: 1px solid #eee;
+}
+
 
 /* Champ Recherche sur fond image */
 .path-frontpage,
