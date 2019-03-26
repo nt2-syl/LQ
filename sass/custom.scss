@@ -380,9 +380,9 @@ ul.active-menu-default > li a:active {
   width: 90%;
   margin-top: 17px;
 }
-
+/* Article Web: Distance entre menu blanc et fond de page noir */
 .page-node-type-article-web  #block-md-filmmaker-main-menu {
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 
 .region-header {
@@ -486,6 +486,35 @@ ul.list-social li a {
 }
 .bandeau {
 
+}
+
+/* ACCUEIL - TITRES */
+.path-frontpage h1.page-title {
+  display: none;
+}
+.block-views-blockaccueil-edito-block-1 h2,
+.block-views-blockaccueil-publications-block-1 h2,
+.block-views-blockaccueil-balados-block-1 h2,
+.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
+  text-transform: uppercase;
+}
+
+/* accueil - sections */
+.accueil_balados,
+.accueil_articles_web {
+/* marges sur les titres */
+}
+.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa {
+  clear: both;
+}
+.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
+  text-transform: uppercase;
+  padding-top: 80px;
+  margin: 0;
+}
+
+.block-views-blockaccueil-publications-block-1 h2 {
+  margin-left: 120px; /* Dépend de la taille du bloc #issues*/
 }
 
 /**
@@ -1279,7 +1308,7 @@ bottom: -285px;*/
 
 .node--type-balados {
   .fl-title {
-  line-height: 1.75;
+    line-height: 1.75;
   }
   .fl-title span div {
     display: block;
@@ -1294,9 +1323,17 @@ bottom: -285px;*/
   .fl-title .fl-title-big {
     padding-top: 80px;
   }
+  /* Résumé : utiliser le style left-desc */
   .field--name-field-resume {
     text-transform: uppercase;
-    /**/
+    font-size: 1.25em;
+    color: #000;
+    line-height: 1.7em;
+    font-family: "pb-bold";
+    text-align: left;
+    /* Utiliser deux-tiers de l'espace pour émuler les autres noeuds */
+    width: 67%;
+    margin-bottom: 40px;
   }
 
 }
@@ -1627,7 +1664,20 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
     clear: both;
     min-height: 100px; /*temp*/
   }
+
 }
+
+.page-node-type-article-web {
+  .node--type-galerie {
+    .field-auteur {
+      margin: 0;
+    }
+    .fl-title-desc {
+      padding: 0;
+    }
+  }
+}
+
 
 
 .field-resume-galerie {
@@ -1897,7 +1947,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   }
 }
 .views-field-field-notation-ouvrage {
-  padding-top: 50px;
+  /*padding-top: 50px; */
 }
 
 /**
@@ -2510,29 +2560,6 @@ Ligne centrale sur publications avec point flottant
   }
 }
 
-/* ACCUEIL - TITRES */
-.path-frontpage h1.page-title {
-  display: none;
-}
-.block-views-blockaccueil-edito-block-1 h2,
-.block-views-blockaccueil-publications-block-1 h2,
-.block-views-blockaccueil-balados-block-1 h2,
-.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
-  text-transform: uppercase;
-}
-/* accueil - sections */
-.accueil_balados,
-.accueil_articles_web {
-/* marges sur les titres */
-}
-.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa {
-  clear: both;
-}
-.block-block-contentf2e0f443-1339-4609-94ca-7117de06d7aa h2 {
-  text-transform: uppercase;
-  padding-top: 80px;
-  margin: 0;
-}
 
 
 /**
@@ -2705,7 +2732,7 @@ Ligne centrale sur publications avec point flottant
 }
 #dates li {
   list-style: none;
-  width: 100px;
+  width: 150px;
   height: 100px;
   line-height: 1; /* pour lignes multiples. Sinon utiliser 100px;*/
   position: relative;
@@ -2727,16 +2754,21 @@ Ligne centrale sur publications avec point flottant
   display: block;
 }
 #issues {
-  width: 80%;
+  width: 75%;
   float: right;
   padding: 70px 0;
   /*  height: 525px !important;*/
   height: 552px !important;
+  text-align: center;
 }
 #issues li {
   list-style: none;
   /*  padding-bottom: 27px;*/
   padding-bottom: 0;
+}
+/* Ne pas montrer les liens en inline */
+#issues li a {
+  display: block;
 }
 .timeline-box {
   position: relative;
@@ -3144,16 +3176,15 @@ position:relative;*/
 /**
 * Module Embed
 */
-/* Inspiré de QF */
+/* Inspiré de QuartierF.org */
 .embedded-entity {
-
   .media--view-mode-image-embed-demi-largeur,
   .media--view-mode-image-embed-pleine-largeur,
   .media--view-mode-video-embed,
   .media--view-mode-audio-embed  {
       border-bottom: 4px solid #e3e0db;
     border-top: 4px solid #e3e0db;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
     padding-top: 10px;
     margin-bottom: 2em;
   }
@@ -3191,6 +3222,7 @@ position:relative;*/
     height: auto;
   }
 }
+
 .image-style-image-embed-demi-largeur,
 .image-style-image-embed-pleine-largeur {
   padding-bottom: 10px;
@@ -3721,11 +3753,30 @@ toolbar-vertical*/
     display: none;
   }
 }
+.view-liste-abonnements {
+  .view-header {
+    margin-bottom: 40px;
+  }
+  /* Version non responsive */
+  .views-row {
+    padding-bottom: 40px;
+  }
+  .views-field-field-image-couverture {
+    text-align: center;
+    padding-bottom: 1em;
+  }
+}
+
+/* Tous les quicktabs 
+Actuellement, seulement dans Boutique
+*/
 .quicktabs-wrapper {
   padding: 40px 0 0;
 }
-.quicktabs-tabs {
-    padding: 0 0 40px;
+ul.quicktabs-tabs {
+  margin: 0;
+  padding: 0 0 40px;
+  text-align: center;
 }
 ul.quicktabs-tabs li.active a {
   border: 1px solid #222 !important;
