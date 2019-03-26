@@ -2655,11 +2655,13 @@ Ligne centrale sur publications avec point flottant
   width: 80%;
   float: right;
   padding: 70px 0;
-  height: 520px !important;
+/*  height: 525px !important;*/
+ height: 552px !important;
 }
 #issues li {
   list-style: none;
-  padding-bottom: 7px;
+/*  padding-bottom: 27px;*/
+padding-bottom: 0;
 }
 .timeline-box {
   position: relative;
