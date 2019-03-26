@@ -514,7 +514,7 @@ ul.list-social li a {
 }
 
 .block-views-blockaccueil-publications-block-1 h2 {
-  margin-left: 200px; /* Dépend de la taille du bloc #issues*/
+  margin-left: 120px; /* Dépend de la taille du bloc #issues*/
 }
 
 /**
@@ -2732,7 +2732,7 @@ Ligne centrale sur publications avec point flottant
 }
 #dates li {
   list-style: none;
-  width: 100px;
+  width: 150px;
   height: 100px;
   line-height: 1; /* pour lignes multiples. Sinon utiliser 100px;*/
   position: relative;
@@ -2754,7 +2754,7 @@ Ligne centrale sur publications avec point flottant
   display: block;
 }
 #issues {
-  width: 80%;
+  width: 75%;
   float: right;
   padding: 70px 0;
   /*  height: 525px !important;*/
