@@ -2759,11 +2759,16 @@ Ligne centrale sur publications avec point flottant
   padding: 70px 0;
   /*  height: 525px !important;*/
   height: 552px !important;
+  text-align: center;
 }
 #issues li {
   list-style: none;
   /*  padding-bottom: 27px;*/
   padding-bottom: 0;
+}
+/* Ne pas montrer les liens en inline */
+#issues li a {
+  display: block;
 }
 .timeline-box {
   position: relative;
