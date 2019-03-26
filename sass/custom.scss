@@ -3473,6 +3473,13 @@ ul.active-menu-default {
 .cart-block--summary__count {
   color: #a7a7a7;
 }
+.path-frontpage,
+.page-node-type-publication {
+  .cart-block--summary__count {
+    color: #fff;
+  }
+}
+
 #block-formulaireexposeenvironnement-recherche-generalpage-1 {
   margin-left: 20px;
   /* Encart */
@@ -3561,6 +3568,9 @@ ul.film-style-odd {
   &.hover, &:hover {
     width: 100%;
     border-radius: 0;
+    .fa-search {
+      color: #a7a7a7 !important;
+    }
   }
 
   .form-control-feedback button {
@@ -3586,7 +3596,7 @@ ul.film-style-odd {
 .page-node-type-publication {
   .fa-search {
     text-shadow: 1px 1px black;
-    color: #a7a7a7;
+    color: #fff;
   }
 }
 .search-form .form-group {
