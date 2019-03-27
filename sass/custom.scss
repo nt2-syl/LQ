@@ -1011,10 +1011,20 @@ li.text-center {
   color: #000000;
   padding-top: 120px;
 }
-/* Fixs */
+/* Equipe */
 .column-c514 {
   padding-top: 100px;
 }
+/* Equipe responsive */
+@media (max-width: 992px) {
+   .column-c514 {
+    padding-top: 0px;
+  }
+  .info-team .title-member h3 {
+    margin-top : 0 !important
+  }
+}
+
 /* full width == center */
 .column-c457  {
   width: 100%;
@@ -3931,10 +3941,10 @@ ul.quicktabs-tabs li.active a {
 }
 
 @media (max-width: 992px) {
-.view-accueil-balados {
+  .view-accueil-balados {
   /* bootstrap clearfix */
     .col-sm-6:nth-child(2n+1){
-    clear: left;
+      clear: left;
+    }
   }
-}
 }
