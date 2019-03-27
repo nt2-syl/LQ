@@ -3785,7 +3785,9 @@ toolbar-vertical*/
     display: none;
   }
 }
-.view-liste-abonnements {
+
+.view-liste-abonnements,
+.view-catalogue-des-numeros {
   .view-header {
     margin-bottom: 40px;
   }
@@ -3797,7 +3799,11 @@ toolbar-vertical*/
     text-align: center;
     padding-bottom: 1em;
   }
+  .views-field-title {
+    text-align: center;
+  }
 }
+
 
 /* Tous les quicktabs 
 Actuellement, seulement dans Boutique
