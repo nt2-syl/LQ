@@ -342,6 +342,27 @@ ul.active-menu-default > li a:active {
     background: none;
 }
 
+/** 
+* Menu Responsive
+*/
+@media only screen and (max-width: 1024px) {
+/* Pousser vers le bas pour dégager de la toolbar */
+  ul.active-menu-default {
+    top: 60px;
+  }
+  /* Faire suivre le bouton Fermer lorsque le menu est ouvert */
+  .toggle-nav {
+    right: 225px;
+    z-index: 10;
+    line-height: 1;  /* 60px*/
+
+  }
+  /* marge fantôme*/
+  #block-md-filmmaker-main-menu {
+    margin-top: 0;
+  }
+}
+
 /**
 * Header
 */
@@ -699,24 +720,49 @@ div.region.region-footer ul.menu {
   .film-box > li {
       width: 50%;
   }
-  .film-item {
-      background: #000;
-      position: relative;
-      height: 0;
-      padding-bottom: 56.25%;
-      overflow: hidden;
+.film-item {
+    background: #000;
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+.film-box > li .film-item {
+    padding-bottom: 40px;
+    height: auto;
+    background: none;
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
-  .film-box > li .film-item {
-      padding-bottom: 40px;
-      height: auto;
-      background: none;
-      &:last-child {
-        padding-bottom: 0;
-      }
-  }
-
 }
 
+/* Article web, faire passer texte dessous, inverser couleur */
+@media only screen and (max-width: 1024px) {
+  .big .list-film-cat, .big .list-film-desc {
+    color: #000;
+    text-shadow: none;
+  }
+  .big .list-film-content, .big .list-film-cat, .big .list-film-name a, .big .list-film-desc p {
+    color: #000 !important;
+    text-shadow: none;
+  }
+  .list-film-content .shadow {
+    text-shadow: none;
+  }
+  [class^="film-"], [class*=" film-"] {
+    color: #000;
+  }
+  /* ne pas montrer le bouton en popup sur appareil mobile (pas de mouseover) */
+  .film-box > li .film-item.big:hover .fl-mg-top {
+    opacity: 1;
+    top: 0;
+    display: none;
+  }
+}
+@media only screen and (max-widthj: 1024px) {
+
+}
 
 @media only screen and (min-width: 1025px) {
   .film-box > li .film-item {
@@ -3715,6 +3761,12 @@ toolbar-vertical*/
   }
 }
 
+
+/*1024+
+*/
+#primary_nav_wrap {
+  
+}
 
 
 /* Correctif bug */
