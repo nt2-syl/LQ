@@ -2542,6 +2542,17 @@ Ligne centrale sur publications avec point flottant
   margin-bottom: -33%;
 }
 
+/* Accueil - Article web sur mobile - 1 colonne au lieu de 1+3 colonnes */
+@media only screen and (max-width: 768px) { 
+  .cus-item-4 .views-field-field-image-couverture-paysage {
+    margin-bottom: 0px;
+  }
+  .cus-item-4.cus-item-big .views-field-field-image-couverture-paysage {
+    margin-bottom: -33%;
+  }
+}
+
+
 .cus-item-big {
   .views-field-title {
     font-size: 33px;
@@ -3891,7 +3902,10 @@ ul.quicktabs-tabs li.active a {
 
 
 /**
-* Règles Responsive
+* Règles Responsive Boostrap
+* md-4 : < 1024. - plus de 1024
+* sm-6 : < 992px - entre 992 et 1024 (alt: entre 768 et 1024)
+* xs-12 : <768 - entre 768 et 992
 */
 
 /* Supprimer colonnes bootstrap sur les grilles responsive */
@@ -3914,4 +3928,13 @@ ul.quicktabs-tabs li.active a {
     }
 
   }
+}
+
+@media (max-width: 992px) {
+.view-accueil-balados {
+  /* bootstrap clearfix */
+    .col-sm-6:nth-child(2n+1){
+    clear: left;
+  }
+}
 }
