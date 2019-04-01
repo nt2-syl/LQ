@@ -549,7 +549,12 @@ ul.list-social li a {
 }
 
 .block-views-blockaccueil-publications-block-1 h2 {
-  margin-left: 120px; /* Dépend de la taille du bloc #issues*/
+  margin-left: 148px; /* Dépend de la taille du bloc #issues*/
+}
+@media only screen and (min-width: 768px) {
+  .block-views-blockaccueil-publications-block-1 h2 {
+    margin-left: 0; 
+  }
 }
 
 /**
@@ -2899,10 +2904,10 @@ Ligne centrale sur publications avec point flottant
 
 
 @media only screen and (min-width: 768px) {
-#issues li .date-group {
+  #issues li .date-group {
     top: -45px;
     position: relative;
-}
+  }
 }
 #issues li .date-group {
     color: #000;
@@ -2930,6 +2935,14 @@ Ligne centrale sur publications avec point flottant
   clear: both;
   display: block;
 }
+
+/* ne pas montrer la barre séparatrice sur tablette et mobile */
+@media only screen and (min-width: 1170px) {
+  .timeline::before {
+    width: 0px;
+  }
+}
+
 
 /**
 * Accueil FB
