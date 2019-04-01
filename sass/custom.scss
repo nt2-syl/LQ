@@ -1085,7 +1085,7 @@ li.text-center {
     background: rgba(0, 0, 0, 0.9);
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 768px) {
   .crew-container .fl-olay {
       opacity: 0;
       transition: all 0.3s ease-in-out;
@@ -1093,7 +1093,7 @@ li.text-center {
   }
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 768px) {
   .crew-container:hover .fl-olay {
       opacity: 1;
   }
@@ -1107,7 +1107,7 @@ li.text-center {
     z-index: 2;
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 768px) {
   .crew-container .crew-content {
       position: absolute;
       top: 50%;
@@ -1125,7 +1125,7 @@ li.text-center {
   }
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 768px) {
   .crew-container:hover .crew-content {
       top: 50%;
       opacity: 1;
@@ -1136,7 +1136,7 @@ li.text-center {
 .crew-container .crew-content .crew-name {
     font-size: 1.875em;
 }
-@media only screen and (max-width: 1170px) {
+@media only screen and (min-width: 768px) {
   .crew-container .crew-content .crew-name {
     font-size: 1.2em;
   }
@@ -1162,7 +1162,7 @@ li.text-center {
     font-size: 0.75em;
     letter-spacing: 1px;
 }
-@media only screen and (max-width: 1170px) {
+@media only screen and (min-width: 768px) {
   .crew-active {
     font-size: 0.66em;
   }
