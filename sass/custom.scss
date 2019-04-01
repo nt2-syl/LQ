@@ -1136,11 +1136,15 @@ li.text-center {
 .crew-container .crew-content .crew-name {
     font-size: 1.875em;
 }
+@media only screen and (max-width: 1170px) {
+  .crew-container .crew-content .crew-name {
+    font-size: 1.2em;
+  }
+}
 
 .crew-name {
     font-family: "Playfair Display", serif;
     font-weight: 700;
-
 }
 .crew-name a {
       /*extra*/
@@ -1158,6 +1162,12 @@ li.text-center {
     font-size: 0.75em;
     letter-spacing: 1px;
 }
+@media only screen and (max-width: 1170px) {
+  .crew-active {
+    font-size: 0.66em;
+  }
+}
+
 .crew-container .crew-content .crew-desc {
     color: rgba(255, 255, 255, 0.7);
 }
@@ -1247,10 +1257,34 @@ li.text-center {
 .fl-detail-item .fl-detail-box .list-social li:hover a {
   color: rgba(255, 255, 255, 0.7);
 }
+
+/* Espace arbitraire pour le fond noir incluant titres, soustitres, image 
+Note: L'image est attaché en bas de ce carré noir
+*/
+
 .template_article_web {
   min-height: 920px;
   position: relative;
 }
+
+/* Versions responsive, suivant le redimensionnement de l'image principale */
+@media only screen and (max-width: 1200px) {
+  .template_article_web {
+    min-height: 820px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .template_article_web {
+    min-height: 760px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .template_article_web {
+    min-height: 700px;
+  }
+}
+
+
 .fl-detail-item .fl-detail-box {
 /*position: absolute;
 bottom: -285px;*/
