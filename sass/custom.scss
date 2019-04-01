@@ -841,6 +841,11 @@ li.text-center {
 .film-box > li .film-item.big:hover .list-film-desc {
     opacity: 0;
 }
+/* version responsive ne pas cacher le lien ni montrer le bouton */
+@media only screen and (max-width: 1170px) {
+    opacity: 1;
+}
+
 .film-box > li .film-item.big:hover .fl-mg-top {
     opacity: 1;
     top: 80%;
@@ -2261,6 +2266,12 @@ Ligne centrale sur publications avec point flottant
     margin-right: -15px;
   }
 }
+/* Contenir la vue et incorporer avec la sidebar facette */
+@media only screen and (min-width: 1170px) {
+  .view-environnement-recherche-bottin.responsive {
+    width: 100%;
+  }
+}
 
 .form-item-search-api-fulltext {
   width: 100%;
@@ -2917,9 +2928,9 @@ Ligne centrale sur publications avec point flottant
     font-weight: 700;
 }
 @media only screen and (min-width: 768px) {
-#issues li .sl-time-desc {
+  #issues li .sl-time-desc {
     margin: -30px 20px 20px 20px;
-}
+  }
 }
 #issues li .sl-time-desc {
     font-family: "pb-regular";
