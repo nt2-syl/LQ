@@ -2055,7 +2055,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
   list-style: none;
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 768px) {
   /*.ac_page-wrapper img,
   .timeline-box img {
     max-width: 100%;
@@ -2804,17 +2804,17 @@ Ligne centrale sur publications avec point flottant
 * Accueil publications
 */
 @media only screen and (min-width: 768px) {
-.timeline {
-  height: 610px;
-}
-.timeline:before {
-  position: absolute;
-  height: 100%;
-  background: rgba(0,0,0,0.2);
-  content: "";
-  width: 1px;
-  left: 7px;
-}
+  .timeline {
+    height: 610px;
+  }
+  .timeline:before {
+    position: absolute;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    content: "";
+    width: 1px;
+    left: 7px;
+  }
 }
 .timeline {
   overflow: hidden;
