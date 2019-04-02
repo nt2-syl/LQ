@@ -1345,6 +1345,14 @@ bottom: -285px;*/
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .node--type-article-revue .entete_droite {
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 
 .addtoany_list {
     margin-top: 20px;
@@ -1952,6 +1960,7 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
 .node--type-article-revue .node__content .field--name-field-genre,
 .node--type-article-revue .node__content .field--name-field-thematique,
 .node--type-article-revue .node__content .field--name-field-auteur-article-papier,
+.node--type-article-revue .node__content .field--name-field-numero-referent,
 .node--type-cahier .node__content .field--name-field-type-cahier,
 .node--type-balados .node__content .field--name-field-sous-titre,
 .node--type-collaborateur .node__content .field--name-field-portrait,
@@ -2710,6 +2719,11 @@ Ligne centrale sur publications avec point flottant
 }
 .field--name-field-thematique {
   text-align: right;
+}
+@media only screen and (max-width: 768px) {
+  .field--name-field-thematique {
+    text-align: left;
+  }
 }
 
 
