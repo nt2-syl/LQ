@@ -551,7 +551,7 @@ ul.list-social li a {
 .block-views-blockaccueil-publications-block-1 h2 {
   margin-left: 148px; /* Dépend de la taille du bloc #issues*/
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .block-views-blockaccueil-publications-block-1 h2 {
     margin-left: 0; 
   }
