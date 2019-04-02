@@ -3327,6 +3327,18 @@ position:relative;*/
     font-size: 14px;
   }
 }
+@media only screen and (max-width: 992px) {
+  .groupe_details .field {
+    width: 33%;
+    margin-bottom: 2em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .groupe_details .field {
+    width: 50%;
+    margin-bottom: 2em;
+  }
+}
 
 
 /**
@@ -3976,9 +3988,13 @@ ul.quicktabs-tabs li.active a {
 
 /**
 * Règles Responsive Boostrap
-* md-4 : < 1024. - plus de 1024
-* sm-6 : < 992px - entre 992 et 1024 (alt: entre 768 et 1024)
-* xs-12 : <768 - entre 768 et 992
+* xs-12 <576px
+* sm-12 576px <> 768px
+* md-6 768px <> 992px
+* lg-4 992px <> 1200px
+* xl-4 > 1200px
+*
+* IPad: 768px;
 */
 
 /* Supprimer colonnes bootstrap sur les grilles responsive */
