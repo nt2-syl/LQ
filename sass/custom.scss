@@ -1456,7 +1456,12 @@ bottom: -285px;*/
     width: 67%;
     margin-bottom: 40px;
   }
+}
 
+@media only screen and (max-width: 768px) {
+  .node--type-balados .field--name-field-resume {
+    width: 100%;
+  }
 }
 
 .field-numero-referent {
