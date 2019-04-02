@@ -1345,14 +1345,14 @@ bottom: -285px;*/
   }
 }
 
+/* Les deux entetes sont pleine largeur sur petits écrans, annuler marges */
 @media only screen and (max-width: 768px) {
   .node--type-article-revue .entete_droite {
-    margin-left: 0;
+    margin-left: 0 !important;
     padding-right: 0;
-    padding-left: 0;
+    padding-left: 0 !important;
   }
 }
-
 
 .addtoany_list {
     margin-top: 20px;
@@ -2903,6 +2903,18 @@ Ligne centrale sur publications avec point flottant
     left: 7px;
   }
 }
+/* ne pas montrer la barre séparatrice sur tablette et mobile */
+@media only screen and (max-width: 768px) {
+  .timeline:before {
+    position: absolute;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    content: "";
+    width: 1px;
+    left: 7px;
+    width: 0px;
+  }
+}
 
 .timeline {
   height: 610px;
@@ -3027,12 +3039,6 @@ Ligne centrale sur publications avec point flottant
   display: block;
 }
 
-/* ne pas montrer la barre séparatrice sur tablette et mobile */
-@media only screen and (min-width: 1170px) {
-  .timeline::before {
-    width: 0px;
-  }
-}
 
 
 /**
