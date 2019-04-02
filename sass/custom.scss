@@ -2613,9 +2613,9 @@ Ligne centrale sur publications avec point flottant
 }
 
 /* Accueil - Article web sur mobile - 1 colonne au lieu de 1+3 colonnes */
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 767px) { 
   .cus-item-4 .views-field-field-image-couverture-paysage {
-    margin-bottom: 0px;
+    margin-bottom: -60px;
   }
   .cus-item-4.cus-item-big .views-field-field-image-couverture-paysage {
     margin-bottom: -33%;
@@ -2633,6 +2633,14 @@ Ligne centrale sur publications avec point flottant
   .views-field-title {
     font-size: 20px; /* réduction arbitraire */
   }
+}
+@media only screen and (max-width: 767px) { 
+  .cus-item-small {
+    .views-field-title {
+      font-size: 18px;
+      line-height: 1;
+    }
+  } 
 }
 
 /* Distinguer auteurs et dates dans les surtitres */
