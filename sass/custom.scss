@@ -1229,6 +1229,13 @@ li.text-center {
 .crew-name a {
   color: #fff;
 }
+@media only screen and (min-width: 768px) {
+  .crew-name a {
+    color: #000;
+    margin-top: 40px;
+    display: block;
+  }
+}
 
 .crew-container .crew-content .crew-active {
   font-size: 0.75em;
@@ -1294,6 +1301,7 @@ li.text-center {
 }
 
 /* Sur Collaborateurs */
+/* Sur Recherche */
 .archive-sidebar {
   padding-top: 182px;
   .edit-actions {
@@ -1304,6 +1312,17 @@ li.text-center {
   .form-item, .form-actions {
     margin-top: 0;
     margin-bottom: 0;
+  }
+}
+/* Responsive: faire apparaitre la sidebar avant le contenu. Flotter à gauche
+Dépend des templates page-bottin, page-recherche
+ */
+@media only screen and (max-width: 1200px) {
+  .archive-sidebar {
+      padding-top: 0;
+  }
+  .archive-sidebar.pull-right {
+    float: left !important;
   }
 }
 
