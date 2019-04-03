@@ -393,7 +393,7 @@ header .menu-default #primary_nav_wrap {
     position: absolute;
     right: 0px;
     top:0;
-    line-height: 70px;
+    line-height: 75px;
   }
 }
 
@@ -3707,6 +3707,13 @@ sur tous les types
   /* Encart */
   padding-right: 15px;
 }
+@media only screen and (max-width: 1024px) {
+  #block-formulaireexposeenvironnement-recherche-generalpage-1 {
+    padding-right: 25px;
+  }
+}
+
+
 
 /**
 * Equipe
