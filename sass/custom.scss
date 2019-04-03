@@ -369,6 +369,106 @@ ul.active-menu-default > li a:active {
   }
 }
 
+
+/*
+Navigation mobile
+
+Toggle JS actifs:
+.menu-olay +- .show
+.close-menu +- .show
+*/
+header .menu-default #primary_nav_wrap {
+  margin-top: 0px;
+}
+.menu-default #primary_nav_wrap {
+
+}
+.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+  content: "\f0c9";
+}
+@media only screen and (max-width: 1024px) {
+  .toggle-nav {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    line-height: 60px;
+    color: rgba(0,0,0,0.5);
+  }
+}
+
+.menu-default .close-menu {
+  display: none;
+  position: fixed;
+  z-index: 15;
+  top: 40px;
+  right: -100%;
+  text-align: center;
+  color: rgba(255,255,255,0.5);
+  font-size: 20px;
+  cursor: pointer;
+}
+.menu-default .close-menu.show {
+  display: block;
+  right: 230px;
+}
+
+
+.show {
+  display: block!important;
+}
+.menu-olay {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.menu-olay.show {
+  display: block;
+}
+
+ul.active-menu-default {
+  float: right;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  ul.active-menu-default {
+    right: -100%;
+    top: 0;
+    width: 220px;
+    background: #fff;
+    height: 100vh;
+    z-index: 12;
+    position: fixed;
+    text-align: left;
+    padding: 20px 20px 30px 20px;
+    overflow-x: hidden;
+    transition: right 0.5s;
+    -webkit-transition: right 0.5s;
+    -moz-transition: right 0.5s;
+  }
+  ul.active-menu-default.show {
+    right: 0;
+  }
+}
+
+/* Interférence entre menu mobile overlay et titre */
+.fl-title {
+  z-index: 9;
+}
+/* Interférence entre vues EVA et contenu sur Cahier */
+.page-node-type-cahier .views-element-container {
+  clear:both;
+}
+
+
+
+
 /**
 * Header
 */
@@ -3508,103 +3608,6 @@ sur tous les types
 .media--view-mode-audio-embed,
 .media--view-mode-video-embed {}
 
-
-
-/*
-Navigation mobile
-
-Toggle JS actifs:
-.menu-olay +- .show
-.close-menu +- .show
-*/
-header .menu-default #primary_nav_wrap {
-  margin-top: 0px;
-}
-.menu-default #primary_nav_wrap {
-
-}
-.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
-  content: "\f0c9";
-}
-@media only screen and (max-width: 1024px) {
-  .toggle-nav {
-    display: inline-block;
-    position: absolute;
-    right: 5px;
-    line-height: 60px;
-    color: rgba(0,0,0,0.5);
-  }
-}
-
-.menu-default .close-menu {
-  display: none;
-  position: fixed;
-  z-index: 15;
-  top: 40px;
-  right: -100%;
-  text-align: center;
-  color: rgba(255,255,255,0.5);
-  font-size: 20px;
-  cursor: pointer;
-}
-.menu-default .close-menu.show {
-  display: block;
-  right: 230px;
-}
-
-
-.show {
-  display: block!important;
-}
-.menu-olay {
-  display: none;
-  width: 100%;
-  height: 100vh;
-  z-index: 0;
-  background: rgba(0,0,0,0.7);
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-.menu-olay.show {
-  display: block;
-}
-
-ul.active-menu-default {
-  float: right;
-  padding-right: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (max-width: 1024px) {
-  ul.active-menu-default {
-    right: -100%;
-    top: 0;
-    width: 220px;
-    background: #fff;
-    height: 100vh;
-    z-index: 12;
-    position: fixed;
-    text-align: left;
-    padding: 20px 20px 30px 20px;
-    overflow-x: hidden;
-    transition: right 0.5s;
-    -webkit-transition: right 0.5s;
-    -moz-transition: right 0.5s;
-  }
-  ul.active-menu-default.show {
-    right: 0;
-  }
-}
-
-/* Interférence entre menu mobile overlay et titre */
-.fl-title {
-  z-index: 9;
-}
-/* Interférence entre vues EVA et contenu sur Cahier */
-.page-node-type-cahier .views-element-container {
-  clear:both;
-}
 
 
 /**/
