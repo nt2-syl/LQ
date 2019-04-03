@@ -2357,6 +2357,10 @@ Ligne centrale sur publications avec point flottant
   text-transform: uppercase;
   clear: both;
 }
+/* Noeud Numéro */
+.page-node-type-publication .publication_titre {
+  padding-top: 0px;
+}
 
 #block-md-filmmaker-page-title .page-title {
   text-align: center;
