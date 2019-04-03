@@ -91,6 +91,9 @@
           {% if node.field_type_article.value.0.target_id != "15" %}
             <span class="node-cahier-referent">{{ content.field_cahier_referent }}</span> | 
           {% endif %}
+          {% if content.field_numero_referent %}
+            <span class="node-numero-referent">{{ content.field_numero_referent }}</span> | 
+          {% endif %}
         {% endif %}
         {% if content.field_type_article %}
           <span class="field_type_article">{{ content.field_type_article }}</span>
@@ -149,7 +152,7 @@
 
   </div>
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+    {{ content|without('field_numero_referent') }}
   </div>
   {% if display_submitted %}
     <footer class="node__meta">
