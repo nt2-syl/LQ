@@ -2082,6 +2082,8 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
     padding-right: 20px;
   }
 }
+
+/* Appliquer marge sur élément interne pour éviter marge fantôme */
 .view-ouvrage-critique-vs-article-revue .views-field-field-notation-ouvrage .field--name-field-icone {
   padding-top: 50px;
 }
@@ -2090,8 +2092,8 @@ insert into ac-column column-c464 ac_col-xl-3 ac_col-lg-3 ac_col-md-3 ac_col-sm-
     padding-top: 0;
   }
 }
-
-.page-node-type-article-web .view-ouvrage-critique-vs-article-revue .views-field-field-couverture-ouvrage {
+/* Appliquer marge sur élément interne pour éviter marge fantôme */
+.page-node-type-article-web .view-ouvrage-critique-vs-article-revue .views-field-field-couverture-ouvrage img {
   padding-bottom: 80px;
 }
 
@@ -2252,6 +2254,7 @@ Ligne centrale sur publications avec point flottant
   padding-top: 80px;
   font-family: pb-bold;
   text-transform: uppercase;
+  clear: both;
 }
 
 #block-md-filmmaker-page-title .page-title {
@@ -4040,7 +4043,12 @@ ul.quicktabs-tabs li.active a {
 * md-6 768px <> 992px
 * lg-4 992px <> 1200px
 * xl-4 > 1200px
-*
+* 
+* xs=***
+* sm=768+
+* md=992+
+* lg=1200+
+* 
 * IPad: 768px;
 */
 
