@@ -1325,23 +1325,23 @@ bottom: -285px;*/
 .template_article_web .fl-title .fl-title-medium {
   line-height: 1;
 }
-/* todo autres médias */
+/* Autres médias */
 .article_web_content .field--name-field-ref-audio {
-	padding-bottom: 40px; /*temp*/
+	padding-bottom: 80px;
 }
 
 .article_web_content,
 .node--type-article-revue {
   .entete_gauche,
   .entete_droite {
-    padding-bottom: 40px; /*temp*/
+    padding-bottom: 40px;
   }
 }
 
 .node--type-article-web {
   .entete_gauche,
   .entete_droite {
-    padding-bottom: 80px; /*temp*/
+    padding-bottom: 80px;
   }
 }
 
@@ -4081,4 +4081,8 @@ ul.quicktabs-tabs li.active a {
       clear: left;
     }
   }
+}
+
+.feed-icons {
+  clear: both;
 }
