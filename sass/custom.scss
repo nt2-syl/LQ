@@ -1318,7 +1318,7 @@ li.text-center {
 /* Responsive: faire apparaitre la sidebar avant le contenu. Flotter à gauche
 Dépend des templates page-bottin, page-recherche
  */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .archive-sidebar {
       padding-top: 0;
   }
