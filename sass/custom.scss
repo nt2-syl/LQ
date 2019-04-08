@@ -1184,12 +1184,13 @@ li.text-center {
     width: 100%;
     padding: 0 45px;
     z-index: 2;
+    color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
   .crew-container .crew-content {
     position: absolute;
-    top: 50%;
+    top: 40%;
     bottom: auto;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -1227,11 +1228,11 @@ li.text-center {
   font-weight: 700;
 }
 .crew-name a {
-  color: #fff;
+  color: #ccc;
 }
 @media only screen and (max-width: 768px) {
   .crew-name a {
-    color: #000;
+    color: #333;
     margin-top: 40px;
     display: block;
   }
