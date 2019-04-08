@@ -1216,7 +1216,7 @@ li.text-center {
   font-size: 1.875em;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .crew-container .crew-content .crew-name {
     font-size: 1.2em;
   }
@@ -1229,7 +1229,7 @@ li.text-center {
 .crew-name a {
   color: #fff;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .crew-name a {
     color: #000;
     margin-top: 40px;
