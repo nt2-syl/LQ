@@ -2777,17 +2777,21 @@ b, strong {
 /* Flexslider carousel - header */
 .view-slider-accueil  .flex-active-slide .flex-caption,
 .bandeau_infos {
+  /* centré horizontalement, centré verticalement */
   font-family: pb-bold;
   font-size: 80px;
   line-height: 1;
   margin: 0 auto;
-  position: absolute;
-  top: 40%;
-  left: 25%;
+  position: relative;
   overflow: hidden;
   font-family: "Playfair Display",serif;
   font-weight: bold;
   text-shadow: -1px 1px 0 white;
+  margin-top: -50vh;
+  margin-bottom: 50vh;
+  width: 100%;
+  max-width: 768px;
+  text-align: center;
 }
 .accueil_carousel_titre,
 .bandeau_titre {
@@ -2846,6 +2850,11 @@ b, strong {
 .view-slider-accueil  .flex-active-slide .flex-caption {
   display: block;
 }
+
+
+
+
+
 
 /**
 * Accueil Balados
@@ -3926,3 +3935,4 @@ ul.quicktabs-tabs li.active a {
 #edit-actions-next {
   margin-right: 20px;
 }
+
