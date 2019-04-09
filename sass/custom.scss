@@ -337,6 +337,13 @@ ul.active-menu-default > li a:active {
   background: none;
 }
 
+/* appliquer marge, puis marge responsive en override */
+#block-md-filmmaker-main-menu {
+  float: right;
+  width: 90%;
+  margin-top: 17px;
+}
+
 /** 
 * Menu Responsive
 */
@@ -491,11 +498,7 @@ ul.active-menu-default {
   float: left;
   padding-top:10px;
 }
-#block-md-filmmaker-main-menu {
-  float: right;
-  width: 90%;
-  margin-top: 17px;
-}
+
 /* Article Web: Distance entre menu blanc et fond de page noir */
 .page-node-type-article-web  #block-md-filmmaker-main-menu {
   padding-bottom: 80px;
@@ -1335,7 +1338,8 @@ Dépend des templates page-bottin, page-recherche
   margin-top: 80px;
 }
 .fl-detail-item .fl-detail-box {
-  position: absolute;
+  /*position: absolute;*/
+  position: relative;
   /*bottom: -285px;*/
   bottom: 0;
   left: 0;
@@ -1362,11 +1366,11 @@ Note: L'image est attaché en bas de ce carré noir
 */
 
 .template_article_web {
-  min-height: 920px;
+  /*min-height: 920px;*/
   position: relative;
 }
 
-/* Versions responsive, suivant le redimensionnement de l'image principale */
+/* Versions responsive, suivant le redimensionnement de l'image principale 
 @media only screen and (max-width: 1200px) {
   .template_article_web {
     min-height: 820px;
@@ -1382,6 +1386,7 @@ Note: L'image est attaché en bas de ce carré noir
     min-height: 700px;
   }
 }
+*/
 
 .fl-detail-item .fl-detail-box {
   /*position: absolute;
