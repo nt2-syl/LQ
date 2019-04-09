@@ -4061,6 +4061,7 @@ ul.quicktabs-tabs li.active a {
   margin-right: 20px;
 }
 /* Compenser le nouveau carousel */
-.path-frontpage .page_content {
+.path-frontpage .page_content,
+.page-node-type-publication .page_content {
   margin-top: -120px;
 }
