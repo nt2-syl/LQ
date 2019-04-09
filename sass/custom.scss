@@ -203,6 +203,9 @@ p:last-child {
   line-height: 1;
   /*overflow-x: hidden !important*/
 }
+.page-node-type-article-revue .fl-title-small {
+  line-height: 1.5;
+}
 
 /* Titres: petits titres */
 .view-editorial-vs-publication header .fl-title-small {
@@ -3315,18 +3318,35 @@ b, strong {
 .path-frontpage .header,
 .page-node-type-publication .header {
   position: absolute;
-  width: 1170px;
   top: 0;
   z-index: 11;
 }
 
-/* Écrans plus petits */
+/* Grands écrans: limiter taille du contenant */
+@media (min-width: 1200px) {
+  .header-transparent,
+  .path-frontpage .header,
+  .page-node-type-publication .header {
+    width: 1170px;
+  }
+}
+
+
+/* Écrans plus petits - l'entête est fluide */
+@media (max-width: 1200px) {
+  .header-transparent,
+  .path-frontpage .header,
+  .page-node-type-publication .header {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .header-transparent,
   .path-frontpage .header,
   .page-node-type-publication .header {
     width: 100%;
-    max-width: 750px;
+    /*max-width: 750px;*/
   }
 }
 
