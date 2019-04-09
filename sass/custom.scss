@@ -2977,6 +2977,7 @@ b, strong {
 #issues li {
   list-style: none;
   padding-bottom: 0;
+  min-height: 508px;
 }
 /* Ne pas montrer les liens en inline */
 #issues li a {
