@@ -2974,10 +2974,15 @@ b, strong {
   height: 552px !important;
   text-align: center;
 }
+#issues li p {
+  margin-bottom: 0;
+}
 #issues li {
   list-style: none;
   padding-bottom: 0;
-  min-height: 508px;
+  /* Fixer hauteur */
+  height: 508px;
+  overflow: hidden;
 }
 /* Ne pas montrer les liens en inline */
 #issues li a {
