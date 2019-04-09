@@ -295,6 +295,11 @@ ul.active-menu-default > li a {
   color: #a7a7a7;
   font-family: pb-bold;
 }
+/* Le texte du Menu mobile ouvert ne doit pas être blanc comme les icônes */
+.path-frontpage ul.active-menu-default.show li a {
+  color: #a7a7a7 !important;
+  text-shadow: none !important;
+}
 
 ul.active-menu-default > li a,
 .region-footer ul.menu li a {
