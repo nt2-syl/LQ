@@ -2798,7 +2798,7 @@ b, strong {
 .bandeau_titre {
   font-family: pb-bold;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 2;
   margin: 0 auto;
   overflow: hidden;
   font-weight: bold;
@@ -3897,6 +3897,7 @@ ul.quicktabs-tabs li.active a {
 * lg=1200+
 * 
 * IPad: 768px;
+* Chrome min-width: 488px;
 */
 
 
