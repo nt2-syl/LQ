@@ -2263,7 +2263,8 @@ b, strong {
   line-height: 1.4; /* contexte: liste publications */
 }
 
-@media only screen and (min-width: 768px) {
+/* ne pas faire apparaitre sur tablette, et plus petit */
+@media only screen and (min-width: 769px) {
 
   /*
   Ligne centrale sur publications avec point flottant
@@ -3513,7 +3514,7 @@ b, strong {
       text-align:left;
       width: 50%;
       padding-left: 0px;
-      border-left: 1px solid black;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
       box-sizing: unset;
       padding-bottom: 20px;
       .views-field {
@@ -3526,7 +3527,7 @@ b, strong {
       text-align:right;
       width: 50%;
       padding-right: 20px;
-      border-right: 1px solid black;
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
       padding-bottom: 20px
     }
     .views-field-type {
