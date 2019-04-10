@@ -21,15 +21,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* rem */
-@font-face {
-    font-family: 'poland';
-    src: url('../fonts/poland/polancanintobigwritingsit-webfont.woff2') format('woff2'),
-         url('../fonts/poland/polancanintobigwritingsit-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
+/* TODO: Ajouter les achats de fonts */
 
 /**
 * Styles
@@ -2810,6 +2802,7 @@ b, strong {
 .accueil_carousel_titre,
 .bandeau_titre {
   font-family: pb-bold;
+  /* Font temporaire, remplacer par achat */
   font-size: 20px;
   line-height: 2;
   margin: 0 auto;
@@ -2818,8 +2811,6 @@ b, strong {
   text-shadow: -1px 1px 0 white;
   /*z-index: 9999;*/
   text-transform: uppercase;
-  /*font-family: "Playfair Display",serif;*/
-  font-family: poland; /* Font temporaire, remplacer par achat */
 }
 .accueil_carousel_soustitre,
 .bandeau_publication {
