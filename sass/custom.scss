@@ -1109,11 +1109,19 @@ li.text-center {
 }
 /* Equipe responsive */
 @media (max-width: 992px) {
-   .column-c514 {
+  .path-equipe .column-c514 {
     padding-top: 0px;
+    padding-bottom: 40px;
   }
-  .info-team .title-member h3 {
+  .path-equipe .info-team .title-member h3 {
     margin-top : 0 !important
+  }
+}
+
+/* Collaborateur Responsive */
+@media (max-width: 768px) {
+  .page-node-type-collaborateur .info-team .title-member h3 {
+    margin-top : 100px;
   }
 }
 
@@ -2169,6 +2177,12 @@ b, strong {
   list-style: none;
 }
 
+
+@media only screen and (max-width: 768px) {
+  .timeline-box li {
+    list-style: none;
+  }
+}
 @media only screen and (min-width: 768px) {
   .timeline-box {
     position: relative;
@@ -2263,9 +2277,7 @@ b, strong {
   line-height: 1.4; /* contexte: liste publications */
 }
 
-/* ne pas faire apparaitre sur tablette, et plus petit */
-@media only screen and (min-width: 769px) {
-
+@media only screen and (min-width: 768px) {
   /*
   Ligne centrale sur publications avec point flottant
   (modèle: History)
