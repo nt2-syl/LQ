@@ -813,9 +813,9 @@ div.region.region-footer ul.menu {
   padding-right: 20px;
   padding-left: 0;
 }
-/*.film-box > li.text-center {
-margin-bottom: 40px;
-}*/
+
+
+
 .film-box > li:nth-child(2n) {
   float: right;
   padding-left: 20px;
@@ -824,6 +824,24 @@ margin-bottom: 40px;
 .film-box > li:nth-child(2n+1) {
   clear: both;
 }
+
+/* Supprimer marges sur 1 colonne 
+Visible sur Articles web sous 768px
+Visible sur Balado sous 768px
+*/
+@media only screen and (max-width: 767px) {
+  .film-box > li {
+    float: none;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .film-box > li:nth-child(2n) {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 
 @media only screen and (min-width: 768px) {
   .film-box > li {
@@ -2172,9 +2190,7 @@ b, strong {
     width: 100%;
     padding-bottom: 140px;
   }
-  .timeline-box .d-even,
-  .page-node-type-collaborateur .views-row-odd::before,
-  .page-node-type-collaborateur .views-row-even::before {
+  .timeline-box .d-even {
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
@@ -2189,10 +2205,7 @@ b, strong {
     background: #000;
     position: absolute;
   }
-  .page-node-type-collaborateur .views-row-odd::before,
-  .page-node-type-collaborateur .views-row-even::before  {
-    content: "";
-  }
+  /* Notes: Article sur collaborateurs - ne pas limiter à 768px, appliquer toutes les tailles */
 
   .timeline-box .d-content,
   .timeline-box .d-even,
@@ -2242,6 +2255,7 @@ b, strong {
   }
 }
 
+
 .timeline-box li {
   padding-bottom: 70px;
   &:last-child {
@@ -2249,7 +2263,29 @@ b, strong {
   }
 }
 
+/* Articles sur Collaborateur - montrer aussi les points sur petits écrans*/
+  .page-node-type-collaborateur .views-row-odd::before,
+  .page-node-type-collaborateur .views-row-even::before {
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+  }
+  .page-node-type-collaborateur .views-row-odd::before,
+  .page-node-type-collaborateur .views-row-even::before  {
+    content: "";
+  }
 
+/* Timeline - suite */
 .title-time {
   line-height: 1.4; /* contexte: liste publications */
 }
