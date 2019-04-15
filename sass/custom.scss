@@ -1077,6 +1077,10 @@ li.text-center {
     max-width: 100%;
   }
 }
+
+/* Note: Éditorial sur Numéro utilise .ac_container
+voir .page-node-type-publication .ac_container en responsive sous 768px */
+
 .ac_row {
   margin-right: -15px;
   margin-left: -15px;
@@ -1804,10 +1808,29 @@ b, strong {
   }
 }
 
-/* Forcer l'alignement de l'item Bootstrap avec les photos plus bas */
+
+
+/* Editorial sur numéro : forcer l'alignement de l'item Bootstrap avec les photos plus bas */
 #column-c114 {
   padding-left: 0;
 }
+
+@media only screen and (max-width: 767px) {
+  #column-c114 {
+    padding-left: 15px;
+  }
+  #column-c91 {
+    padding-bottom: 40px;
+  }
+  .page-node-type-publication .ac_container {
+    width: 100%;
+  }
+  .page-node-type-publication .left-desc {
+    text-align: center;
+    padding-top: 0;
+  }
+}
+
 
 /**
 * BALADO
