@@ -2561,6 +2561,13 @@ b, strong {
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
+/* Ne pas montrer la semi-opacité sur mobiles */
+@media only screen and (max-width: 767px) {
+  .list-film img {
+    opacity: 1;
+  }
+}
+
 .film-item img {
   width: 100%;
   height: auto;
@@ -2589,6 +2596,18 @@ b, strong {
   }
 }
 
+/* 
+Fonts plus petites, relativement, entre 768 et 1200
+
+1 colonne (< -768)
+supprimer semi-opacité
+ne pas réduire cust-item-small, meme taille que cust-item-big
+*/
+.cus-item-small {
+	
+}
+
+
 .cus-item-small .title-bold-white {
   margin-top: 10px;
 }
@@ -2602,6 +2621,8 @@ b, strong {
     font-size: 1.875em;
   }
 }
+
+
 
 .list-film .film-item .white-desc {
   opacity: 1;
@@ -2659,6 +2680,7 @@ b, strong {
     z-index: 0;
   }
   .views-field-field-image-couverture-paysage {}
+
   .views-field-title,
   .views-field-field-auteur {
     padding-left: 10%;
@@ -2670,16 +2692,6 @@ b, strong {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .cus-item-4 .views-field-field-auteur {
-    font-size: 10px !important;
-    line-height: 1;
-  }
-  .cus-item-small .views-field-title {
-    font-size: 14px !important;
-    line-height: 1;
-  }
-}
 
 /* Grandes tuiles */
 .cus-item-4.cus-item-big {
@@ -2725,23 +2737,31 @@ b, strong {
 
 .cus-item-big {
   .views-field-title {
-    font-size: 33px;
-    line-height: 50px;
+    font-size: 1.833em; /*33px*/
+    line-height: 2.777; /*50px*/
   }
 }
 .cus-item-small {
   .views-field-title {
-    font-size: 20px; /* réduction arbitraire */
+    font-size: 1.11em; /*20px*/
   }
 }
 
+
+/* Sur 1 colonne, pas de petite images, tous les textes ont la même taille */
 @media only screen and (max-width: 767px) { 
   .cus-item-small {
     .views-field-title {
-      font-size: 18px;
-      line-height: 1;
+      font-size: 1.833em; /*33px*/
+      line-height: 1; /* ne pas dépasser la case à 100% width */
     }
-  } 
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .cus-item-4 .views-field-field-auteur {
+
+  }
 }
 
 /* Distinguer auteurs et dates dans les surtitres */
@@ -3966,6 +3986,10 @@ ul.quicktabs-tabs li.active a {
   border: 1px solid #222 !important;
   padding: 6px 20px 5px;
   border-radius: 20px;
+}
+/* Cacher la légende "Informations paiement" sur Informations sur la commande */
+#edit-payment-information legend {
+  display: none;
 }
 
 /**
