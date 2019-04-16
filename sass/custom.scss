@@ -882,9 +882,9 @@ Visible sur Balado sous 768px
   }
   /* ne pas montrer le bouton en popup sur appareil mobile (pas de mouseover) */
   .film-box > li .film-item.big:hover .fl-mg-top {
-    opacity: 1;
+/*    opacity: 1;
     top: 0;
-    display: none;
+    display: none;*/
   }
 }
 
@@ -909,6 +909,7 @@ Visible sur Balado sous 768px
     }
   }
 }
+
 
 @media only screen and (min-width: 1170px) {
   .film-box > li .film-item {
@@ -942,21 +943,28 @@ li.text-center {
 .film-box > li .film-item.big .fl-mg-top .more {
   background-color: #fff;
 }
+
+
 .film-box > li .film-item.big:hover .list-film-desc {
   opacity: 0;
 }
 /* version responsive ne pas cacher le lien ni montrer le bouton */
 @media only screen and (max-width: 1170px) {
-  opacity: 1;
+  .film-box > li .film-item.big:hover .list-film-desc {
+    opacity: 1;
+  } 
 }
 
 .film-box > li .film-item.big:hover .fl-mg-top {
   opacity: 1;
   top: 80%;
 }
-.film-box > li .film-item.big:hover .fl-mg-top {
-  opacity: 1;
-  top: 80%;
+@media only screen and (max-width: 1170px) {
+  .film-box > li .film-item.big:hover .fl-mg-top {
+    opacity: 1;
+    top: 40px;
+    position: relative;
+  }
 }
 .film-box > li .film-item.big .fl-mg-top {
   position: absolute;
