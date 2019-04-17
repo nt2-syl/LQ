@@ -596,6 +596,7 @@ ul.list-social li a {
   float: right;
 }
 
+/* Entête: Bloc Réseaux Sociaux + Bloc Recherche */
 /* positionner au dessus du header */
 #block-reseauxsociauxlq p {
   display: inline;
@@ -611,6 +612,25 @@ ul.list-social li a {
 }
 #edit-submit-environnement-recherche-general {
   top: 24px;
+}
+
+/* Menus réseaux sociaux Responsive - Footer - noir sur blanc */
+.list-social {}
+.list-social-responsive {}
+ul.list-social-responsive li a {
+  color: #000 !important;
+  text-shadow: none;
+}
+/* Switch entre bloc mobile et bloc écran pour les réseaux sociaux */
+@media only screen and (max-width: 767px) {
+  #block-reseauxsociauxlq {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+#block-reseauxsociauxlqmobile {
+    display: none;
+  }
 }
 
 /* ACCUEIL - TITRES */
