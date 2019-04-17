@@ -685,9 +685,9 @@ ul.list-social-responsive li a {
   padding-top: 80px;
   margin: 0;
 }
-
+/* Aligner le titre avec l'image couverture dans le bloc qui suit */
 .block-views-blockaccueil-publications-block-1 h2 {
-  margin-left: 148px; /* Dépend de la taille du bloc #issues*/
+  margin-left: 25%; /* Dépend de la taille du bloc #issues*/
 }
 @media only screen and (max-width: 768px) {
   .block-views-blockaccueil-publications-block-1 h2 {
@@ -4222,8 +4222,8 @@ ul.quicktabs-tabs li.active a {
 #edit-actions-next {
   margin-right: 20px;
 }
-/* Compenser le nouveau carousel */
+/* Compenser le nouveau carousel - hauteur arbitraire */
 .path-frontpage .page_content,
 .page-node-type-publication .page_content {
-  margin-top: -120px;
+  margin-top: -60px;
 }
