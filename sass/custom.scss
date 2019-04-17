@@ -1510,7 +1510,8 @@ Note: L'image est attaché en bas de ce carré noir */
 .fl-title {
   position: relative;
   text-align: center;
-  z-index: 120;
+  z-index: 9;
+ /* z-index: 120; */
 }
 .fl-title.light .fl-title-big,
 .fl-title.light .fl-title-medium {
@@ -2956,44 +2957,46 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
   font-family: "Playfair Display",serif;
   font-weight: bold;
   text-shadow: -1px 1px 0 white;
-  margin-top: -50vh;
+  margin-top: -65vh;
   margin-bottom: 50vh;
   width: 100%;
-  max-width: 768px;
+  max-width: 992px;
   text-align: center;
 }
 .accueil_carousel_titre,
 .bandeau_titre {
   font-family: Baro;
-  font-size: 36px;
-  line-height: 2;
+  font-size: 60px;
+  line-height: 1.5;
   margin: 0 auto;
   overflow: hidden;
   font-weight: bold;
-  text-shadow: -1px 1px 0 white;
-  /*z-index: 9999;*/
+  text-shadow: none;
   text-transform: uppercase;
 }
 .accueil_carousel_soustitre,
 .bandeau_publication {
   font-family: Baro;
-  font-size: 24px !important;
+  font-size: 36px !important;
   line-height: 1.25;
   margin: 0 auto;
   overflow: hidden;
   font-weight: bold;
-  text-shadow: -1px 1px 0 white;
+  text-shadow: none;
   z-index: 9999;
 }
 .accueil_carousel_soustitre,
 .bandeau_titre,
-.bandeau_publication {
-  color: rgba(0, 0, 0, 0.85);
+.bandeau_publication,
+.bandeau_titre a,
+.accueil_carousel_titre a {
+  color: rgba(255,255,255,1);
 }
+.accueil_carousel_titre:hover,
 .accueil_carousel_soustitre:hover,
 .bandeau_titre:hover,
 .bandeau_publication:hover {
-  color: rgba(0, 0, 0, 0.80);
+  color: rgba(255,255,255,1);
   text-decoration : underline;
 }
 
