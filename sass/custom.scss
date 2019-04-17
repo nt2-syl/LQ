@@ -616,15 +616,22 @@ ul.list-social li a {
 
 /* Menus réseaux sociaux Responsive - Footer - noir sur blanc */
 .list-social {}
-.list-social-responsive {}
+.list-social-responsive {
+  padding: 0;
+  margin-bottom: 40px;
+}
 ul.list-social-responsive li a {
   color: #000 !important;
-  text-shadow: none;
+  text-shadow: none !important;
 }
+
 /* Switch entre bloc mobile et bloc écran pour les réseaux sociaux */
 @media only screen and (max-width: 767px) {
   #block-reseauxsociauxlq {
     display: none;
+  }
+  #block-cart {
+    display: none;    
   }
 }
 @media only screen and (min-width: 768px) {
