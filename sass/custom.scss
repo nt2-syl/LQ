@@ -1715,6 +1715,13 @@ Note: L'image est attaché en bas de ce carré noir */
   -webkit-transition: all 0.5s ease-in-out;
 }
 
+/* Cacher le type sur mobile */
+@media only screen and (max-width: 767px) {
+  .article_sur_cahier_wrapper .news-date {
+    display: none;
+  }
+}
+
 /*Responsive: todo: min 1170 */
 .content-blog-item .new-date {
   -webkit-transform: translateX(-50%) translateY(30%);
@@ -1881,6 +1888,13 @@ b, strong {
     font-family: "pb-regular";
     margin-top: -4px;
     line-height: 1.5em;
+  }
+}
+/* Numero - Sommaire du numéro - réduire les titres */
+@media only screen and (max-width: 767px) {
+  .film-odd-content .p-name {
+    font-size: 1.33em;
+    line-height: 0.8;
   }
 }
 
@@ -2966,20 +2980,21 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
 .view-slider-accueil  .flex-active-slide .flex-caption,
 .bandeau_infos {
   /* centré horizontalement, centré verticalement */
-  font-family: pb-bold;
+  /* font-family: pb-bold;
   font-size: 80px;
-  line-height: 1;
+  line-height: 1; */
+  /* font-family: "Playfair Display",serif;
+  font-weight: bold; 
+  text-shadow: -1px 1px 0 white; */
+
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  font-family: "Playfair Display",serif;
-  font-weight: bold;
-  text-shadow: -1px 1px 0 white;
   margin-top: -65vh;
   margin-bottom: 50vh;
   width: 100%;
   max-width: 992px;
-  text-align: center;
+
 }
 .accueil_carousel_titre,
 .bandeau_titre {
@@ -2991,6 +3006,7 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
   font-weight: bold;
   text-shadow: none;
   text-transform: uppercase;
+  text-align: center;
 }
 .accueil_carousel_soustitre,
 .bandeau_publication {
@@ -3002,6 +3018,7 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
   font-weight: bold;
   text-shadow: none;
   z-index: 9999;
+  text-align: center;
 }
 .accueil_carousel_soustitre,
 .bandeau_titre,
@@ -3017,6 +3034,17 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
 .bandeau_publication:hover {
   color: rgba(255,255,255,1);
   text-decoration : none;
+}
+
+@media only screen and (max-width: 767px) {
+  .accueil_carousel_titre,
+  .bandeau_titre {
+    font-size: 2em; /* 80 -36px */
+  }
+  .accueil_carousel_soustitre,
+  .bandeau_publication {
+    font-size: 1.5em; /* 36 -27px */
+  }
 }
 
 
@@ -4250,7 +4278,6 @@ ul.quicktabs-tabs li.active a {
 .page-node-type-publication .page_content {
   margin-top: -60px;
 }
-
 
 /* Gérer le cart mobile */
 #block-cart-2 {
