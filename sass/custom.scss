@@ -4253,16 +4253,22 @@ ul.quicktabs-tabs li.active a {
 
 
 /* Gérer le cart mobile */
-#cart-2 {
+#block-cart-2 {
   display: none;
 }
 
 @media (max-width: 992px) {
-  #cart {
-    display: none
+  #block-cart-2 {
+    display: none;
   }
-  #cart-2 {
-    display: block
+  #block-cart-2 {
+    display: block;
+  }
+  .path-frontpage .cart-block--summary__count, .page-node-type-publication .cart-block--summary__count,
+  .path-frontpage .cart-block--summary__icon, .page-node-type-publication .cart-block--summary__icon {
+    color: #000;
+    text-shadow: none;
   }
 }
+
 
