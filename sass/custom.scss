@@ -1306,13 +1306,15 @@ voir .page-node-type-publication .ac_container en responsive sous 768px */
 }
 
 /* crew mouseover container */
+/* texte en noir sur mobile, blanc au dessus de 768px car texte hover */
 .crew-container .crew-content {
     text-align: center;
     width: 100%;
     padding: 0 45px;
     z-index: 2;
-    color: #fff;
+    color: #000;
 }
+
 
 @media only screen and (min-width: 768px) {
   .crew-container .crew-content {
@@ -1355,7 +1357,7 @@ voir .page-node-type-publication .ac_container en responsive sous 768px */
   font-weight: 700;
 }
 .crew-name a {
-  color: #ccc;
+  color: #fff;
 }
 @media only screen and (max-width: 768px) {
   .crew-name a {
@@ -2059,6 +2061,12 @@ b, strong {
 .info-team {
   margin-top: 30px;
 }
+@media only screen and (max-width: 768px) {
+  .info-team {
+    margin-top: 0px;
+  }
+}
+
 .info-team .title-member {
   margin-bottom: 20px;
 }
@@ -2076,7 +2084,11 @@ b, strong {
   line-height: 1.1;
   font-family: "pb-bold";
 }
-
+@media only screen and (max-width: 768px) {
+  .info-team .title-member h3 {
+      margin-top: 80px;
+  }
+}
 /* EVA: editorial sur publication */
 .editorial_sur_publication {}
 
@@ -2253,6 +2265,12 @@ b, strong {
     float: left;
     padding-right: 20px;
   }
+}
+
+@media only screen and (max-width: 1170px) {
+  .view-ouvrage-critique-vs-article-revue {
+    width: 60%;
+  } 
 }
 
 /* Appliquer marge sur élément interne pour éviter marge fantôme */
@@ -2992,13 +3010,15 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
 .accueil_carousel_titre a {
   color: rgba(255,255,255,1);
 }
+
 .accueil_carousel_titre:hover,
 .accueil_carousel_soustitre:hover,
 .bandeau_titre:hover,
 .bandeau_publication:hover {
   color: rgba(255,255,255,1);
-  text-decoration : underline;
+  text-decoration : none;
 }
+
 
 /**
 * Appliquer PUBLICATIONS
@@ -4230,3 +4250,19 @@ ul.quicktabs-tabs li.active a {
 .page-node-type-publication .page_content {
   margin-top: -60px;
 }
+
+
+/* Gérer le cart mobile */
+#cart-2 {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  #cart {
+    display: none
+  }
+  #cart-2 {
+    display: block
+  }
+}
+
