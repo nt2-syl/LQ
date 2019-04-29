@@ -4320,4 +4320,23 @@ ul.quicktabs-tabs li.active a {
   text-decoration: none;
 }
 
+/* Orders */
+.view-commerce-user-orders {
+  table {
+    width: 100%;
+  }
+  th {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+  }
+  td {
+    padding: 10px;
+  }
+  .views-field-placed {
+    text-align: center;
+  }
+  td.is-active {
+    background: transparent;
+  }
+}
 
