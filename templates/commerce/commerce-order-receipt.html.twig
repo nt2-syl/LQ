@@ -27,7 +27,12 @@
       <table style="margin-left: auto; margin-right: auto; max-width: 768px; text-align: center;">
         <tbody>
         <tr>
-          <td>***
+          <td>
+            <a href="{{ url('<front>') }}"><img src="/sites/lq2.aegir8.uqam.ca/themes/LQ/images/LQ_logo_Sarcelle_crop.jpg" /></a>
+          </td>
+        </tr>
+        <tr>
+          <td>
             <a href="{{ url('<front>') }}" style="color: #0e69be; text-decoration: none; font-weight: bold; margin-top: 15px;">{{ order_entity.getStore.label }}</a>
           </td>
         </tr>
@@ -73,9 +78,7 @@
                 {% if shipping_information %}
                   <td style="padding-top: 5px; font-weight: bold;">{{ 'Shipping Information'|t }}</td>
                 {% endif %}
-                {% if billing_information %}
-                  <td style="padding-top: 5px; font-weight: bold;">{{ 'Billing Information'|t }}</td>
-                {% endif %}
+                {% if billing_information %}{% endif %}
               </tr>
               <tr>
                 {% if shipping_information %}
@@ -128,7 +131,7 @@
         {% endfor %}
         <tr>
           <td>
-            <p style="font-size: 24px; padding-top: 15px; padding-bottom: 5px;">
+            <p style="font-size: 16px; padding-top: 15px; padding-bottom: 5px;">
               {{ 'Order Total: @total'|t({'@total': order_entity.getTotalPrice|commerce_price_format}) }}
             </p>
           </td>
@@ -136,7 +139,16 @@
         <tr>
           <td>
             {% block additional_information %}
-              {{ 'Thank you for your order!'|t }}
+              {{ '<h1>IMPORTANT</h1>'|t }}
+              {{ 'You need to connected to the site in order to access your digitally purchased content. To log in, click on LOGIN in the main menu, and use the credentials used at the creation of your account.<br />If you are already logged in, You can access your orders and your purchases on your profile page, by clicking on MY ACCOUNT in the main menu.'|t }}
+            {% endblock %}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {% block additional_information_2 %}
+              {{ '<h1>Contactez-nous!</h1>'|t }}
+              {{ '<p>Lettres québécoises<br />C.P. 83577, Succ. Garnier<br />Montréal (Québec) H2J 4E9<br /><br />Téléphone abonnement : 514-397-8670<br />Téléphone rédaction : 514-237-1930 </p>'|t }}
             {% endblock %}
           </td>
         </tr>
