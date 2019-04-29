@@ -10,9 +10,26 @@
  * @ingroup themeable
  */
 #}
-<div class="checkout-complete">**
-  {{ 'Your order number is @number.'|t({'@number': order_entity.getOrderNumber}) }} <br>
-  {{ 'You can view your order on your account page when logged in.'|t }} <br>
+<div class="checkout-complete">
+  {{ 'Thank you for your order.'|t }} <br>
+  {{ 'Your order number is @number.'|t({'@number': order_entity.getOrderNumber}) }} <br />
+
+  <table style="padding-top: 15px; padding-bottom:15px; width: 100%">
+    <tbody style="text-align: left;">
+    {% for order_item in order_entity.getItems %}
+    <tr>
+      <td>
+        {{ order_item.getQuantity|number_format }}
+      </td>
+      <td>
+        <span>{{ order_item.label }}</span>
+      </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+  {{ 'You can now access your orders and your purchases on your profile page, by clicking on MY ACCOUNT in the main menu.'|t }}<br />
 
   {% if payment_instructions %}
     <div class="checkout-complete__payment-instructions">
