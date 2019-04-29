@@ -4321,6 +4321,7 @@ ul.quicktabs-tabs li.active a {
 }
 
 /* Orders */
+/* sur user/xx/orders */
 .view-commerce-user-orders {
   table {
     width: 100%;
@@ -4339,4 +4340,8 @@ ul.quicktabs-tabs li.active a {
     background: transparent;
   }
 }
-
+/* Sommaire de la commnande */
+/* Sur checkout/xx/review */
+.order-total-line-label {
+  padding-right: 1em;
+}
