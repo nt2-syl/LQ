@@ -19,7 +19,7 @@
     {% for order_item in order_entity.getItems %}
     <tr>
       <td>
-        {{ order_item.getQuantity|number_format }}
+        {{ order_item.getQuantity|number_format }} x
       </td>
       <td>
         <span>{{ order_item.label }}</span>
