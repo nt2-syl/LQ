@@ -4342,6 +4342,9 @@ ul.quicktabs-tabs li.active a {
   td.is-active {
     background: transparent;
   }
+  tr:nth-child(even) {
+    background: #ccc;
+  }
 }
 /* Sommaire de la commnande */
 /* Sur checkout/xx/review */
