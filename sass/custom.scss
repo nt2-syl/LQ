@@ -2999,7 +2999,8 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
   position: relative;
   overflow: hidden;
   margin-top: -65vh;
-  margin-bottom: 50vh;
+  /*margin-bottom: 50vh;*/
+  margin-bottom: 0;
   width: 100%;
   max-width: 992px;
 
