@@ -2875,8 +2875,11 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
   }
   .cus-item-small {
     .views-field-title {
-      font-size: 1.833em; /*33px*/
+      font-size: 1.00em;
       line-height: 1; /* ne pas dépasser la case à 100% width */
+    }
+    .views-field-field-auteur {
+      display:none;
     }
   }
 }
