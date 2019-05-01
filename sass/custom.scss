@@ -2721,15 +2721,13 @@ Fonts plus petites, relativement, entre 768 et 1200
 supprimer semi-opacité
 ne pas réduire cust-item-small, meme taille que cust-item-big
 */
-.cus-item-small {
-	
-}
 
 
 .cus-item-small .title-bold-white {
   margin-top: 10px;
 }
 
+/* Accueil Articles web seulement: 
 @media only screen and (min-width: 1170px) {
   .cus-item-small .title-bold-white {
     font-size: 20px;
@@ -2739,7 +2737,7 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
     font-size: 1.875em;
   }
 }
-
+*/
 
 
 .list-film .film-item .white-desc {
@@ -2837,10 +2835,11 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
 
 /* Article Web - repos vs mouseover */
 .cus-item-4 .views-field-field-image-couverture-paysage {
-  margin-bottom: -120px;
+  /*margin-bottom: -120px;*/
+  margin-bottom: -45%;
 }
 .cus-item-4.cus-item-big .views-field-field-image-couverture-paysage {
-  margin-bottom: -33%;
+  margin-bottom: -36%;
 }
 
 /* Accueil - Article web sur mobile - 1 colonne au lieu de 1+3 colonnes */
@@ -2867,7 +2866,13 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
 
 
 /* Sur 1 colonne, pas de petite images, tous les textes ont la même taille */
-@media only screen and (max-width: 767px) { 
+@media only screen and (max-width: 768px) { 
+  .cus-item-big {
+    .views-field-title {
+      font-size: 1.833em; /*33px*/
+      line-height: 1;
+    }
+  }
   .cus-item-small {
     .views-field-title {
       font-size: 1.833em; /*33px*/
