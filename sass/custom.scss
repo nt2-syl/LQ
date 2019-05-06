@@ -2288,7 +2288,11 @@ b, strong {
 @media only screen and (max-width: 1170px) {
   .view-ouvrage-critique-vs-article-revue {
     width: 60%;
-  } 
+    /* mobile seulement - sur 1 colonne, remettre padding dessous */
+    .views-row {
+      padding-bottom: 80px;
+    }
+  }
 }
 
 /* Appliquer marge sur élément interne pour éviter marge fantôme */
