@@ -70,6 +70,10 @@ img {
 p:last-child {
   margin-bottom: 0;
 }
+/* Limiter pour le responsive */
+button, input, select, textarea {
+  max-width: 100%;
+}
 
 /**
 * Classes générales
