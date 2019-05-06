@@ -941,6 +941,10 @@ Visible sur Balado sous 768px
     display: none;*/
   }
 }
+/* Fermer le résumé sur les petits écrans */
+.film-box > li .list-film-desc {
+  display: none;
+}
 
 @media only screen and (min-width: 1025px) {
   .film-box > li .film-item {
@@ -953,6 +957,7 @@ Visible sur Balado sous 768px
   }
 
   .film-box > li .list-film-desc {
+    display: block;
     color: rgba(0, 0, 0, 0.7);
     font-size: 16px;
   }
@@ -1905,6 +1910,9 @@ b, strong {
 }
 
 .page-node-type-publication {
+  .fullscreen {
+    min-height: 100vh;
+  }
   .more {
     margin-bottom: 80px;
     a {
