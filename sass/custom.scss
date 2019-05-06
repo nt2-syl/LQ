@@ -2333,12 +2333,16 @@ b, strong {
   }
 }
 
-.view-accueil-balados  ul {
+.view-accueil-balados ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
+@media only screen and (max-width: 992px) {
+  .view-accueil-balados .col-sm-6 {
+    padding-bottom: 40px;  
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .timeline-box li {
