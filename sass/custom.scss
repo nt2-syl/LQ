@@ -2842,6 +2842,10 @@ ne pas réduire cus-item-small, meme taille que cus-item-big
     z-index: 0;
     line-height: 1;
   }
+  .views-field-title {
+  }
+  .views-field-field-auteur {
+  }
   .views-field-field-image-couverture-paysage {}
 
   .views-field-title,
@@ -2854,7 +2858,7 @@ ne pas réduire cus-item-small, meme taille que cus-item-big
 
   }
   .views-field-field-auteur {
-    padding-top: 1em;
+    padding-top: 0.5em;
   }
 }
 
@@ -2877,7 +2881,7 @@ ne pas réduire cus-item-small, meme taille que cus-item-big
       font-size: 1.1em;
     }
     .views-field-field-auteur {
-      font-size: 0.9em;
+      font-size: 0.75em;
     }  
   }
 }
@@ -2886,7 +2890,7 @@ ne pas réduire cus-item-small, meme taille que cus-item-big
 @media only screen and (min-width: 768px) {
   .cus-item-4.cus-item-big {
     .views-field-title {
-      font-size: 1.33em;
+      font-size: 1.83em;
     }
     .views-field-field-auteur {
       font-size: 0.9em;
@@ -2895,10 +2899,10 @@ ne pas réduire cus-item-small, meme taille que cus-item-big
 
   .cus-item-4.cus-item-small {
     .views-field-title {
-      font-size: 1.1em;
+      font-size: 1em;
     }
     .views-field-field-auteur {
-      font-size: 0.9em;
+      font-size: 0.75em;
     }  
   }
 
