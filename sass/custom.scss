@@ -2823,10 +2823,9 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
   opacity: 1;
 }
 
-/* Petites tuiles */
+/* Toutes les tuiles */
 .cus-item-4 {
   text-align: center;
-  line-height: 1.25;
   position: relative;
   a {
     color: #fff;
@@ -2841,48 +2840,59 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
   .views-field-field-auteur,
   .views-field-title {
     z-index: 0;
+    line-height: 1;
   }
   .views-field-field-image-couverture-paysage {}
 
   .views-field-title,
   .views-field-field-auteur {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     color: #fff;
   }
   .views-field-field-auteur {
-    padding-top: 1em;
+    padding-top: 0.5em;
   }
 }
 
 
 /* Grandes tuiles */
 .cus-item-4.cus-item-big {
+  line-height: 1.25;
   .accueil_article_web_infos {
     top: 50%;
   }
-
-  line-height: 1.25;
-
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-  .views-field-field-auteur,
-  .views-field-title {
-    position: relative;
-    z-index: 0;
-  }
-  .views-field-field-image-couverture-paysage {}
-  .views-field-title,
   .views-field-field-auteur {
-    padding-left: 10%;
-    padding-right: 10%;
-    color: #fff;
+    padding-top: 0.5em;
   }
-  .views-field-field-auteur {
-    padding-top: 1em;
+}
+
+/* Sur une colonne : les 4 tuiles ont les titres gros */
+@media only screen and (max-width: 767px) {
+  .cus-item-4 {
+    .views-field-field-auteur,
+    .views-field-title {
+      font-size: 1.833em; /*33px*/
+    }  
   }
+}
+
+/* En format 1 photo + 3 photos, seulement la grosse photo a un gros titre */
+@media only screen and (min-width: 768px) {
+  .cus-item-4.cust-item-big {
+    .views-field-field-auteur,
+    .views-field-title {
+      font-size: 1.833em; /*33px*/
+    }  
+  }
+
+  .cus-item-4.cust-item-small {
+    .views-field-field-auteur,
+    .views-field-title {
+      font-size: 0.90em;
+    }
+  }
+  
 }
 
 /* Distinguer auteurs et dates dans les surtitres */
