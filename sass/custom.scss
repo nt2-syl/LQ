@@ -2759,7 +2759,7 @@ Fonts plus petites, relativement, entre 768 et 1200
 
 1 colonne (< -768)
 supprimer semi-opacité
-ne pas réduire cust-item-small, meme taille que cust-item-big
+ne pas réduire cus-item-small, meme taille que cus-item-big
 */
 
 
@@ -2873,27 +2873,33 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
 /* Sur une colonne : les 4 tuiles ont les titres gros */
 @media only screen and (max-width: 767px) {
   .cus-item-4 {
-    .views-field-field-auteur,
     .views-field-title {
       font-size: 1.1em;
+    }
+    .views-field-field-auteur {
+      font-size: 0.9em;
     }  
   }
 }
 
 /* En format 1 photo + 3 photos, seulement la grosse photo a un gros titre */
 @media only screen and (min-width: 768px) {
-  .cus-item-4.cust-item-big {
-    .views-field-field-auteur,
+  .cus-item-4.cus-item-big {
     .views-field-title {
-      font-size: 1.1em;
+      font-size: 1.33em;
+    }
+    .views-field-field-auteur {
+      font-size: 0.9em;
     }  
   }
 
-  .cus-item-4.cust-item-small {
-    .views-field-field-auteur,
+  .cus-item-4.cus-item-small {
     .views-field-title {
-      font-size: 0.90em;
+      font-size: 1.1em;
     }
+    .views-field-field-auteur {
+      font-size: 0.9em;
+    }  
   }
 
 }
