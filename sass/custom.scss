@@ -1910,6 +1910,15 @@ b, strong {
   }
 }
 
+.path-frontpage .fullscreen {
+  .row {
+    margin: 0;
+    .bandeau {
+      padding: 0;
+    }
+  }
+}
+
 .page-node-type-publication {
   .fullscreen {
     min-height: 100vh;
