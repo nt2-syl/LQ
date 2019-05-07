@@ -2850,8 +2850,11 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
     padding-right: 5%;
     color: #fff;
   }
+  .views-field-title {
+
+  }
   .views-field-field-auteur {
-    padding-top: 0.5em;
+    padding-top: 1em;
   }
 }
 
@@ -2860,10 +2863,10 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
 .cus-item-4.cus-item-big {
   line-height: 1.25;
   .accueil_article_web_infos {
-    top: 50%;
+    top: 45%;
   }
   .views-field-field-auteur {
-    padding-top: 0.5em;
+    padding-top: 1em;
   }
 }
 
@@ -2872,7 +2875,7 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
   .cus-item-4 {
     .views-field-field-auteur,
     .views-field-title {
-      font-size: 1.833em; /*33px*/
+      font-size: 1.1em;
     }  
   }
 }
@@ -2882,7 +2885,7 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
   .cus-item-4.cust-item-big {
     .views-field-field-auteur,
     .views-field-title {
-      font-size: 1.833em; /*33px*/
+      font-size: 1.1em;
     }  
   }
 
@@ -3595,6 +3598,7 @@ ne pas réduire cust-item-small, meme taille que cust-item-big
 }
 .view-auteur-vs-cahier {
   clear: both;
+  overflow: hidden;
 }
 
 
