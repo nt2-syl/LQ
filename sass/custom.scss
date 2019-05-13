@@ -3071,11 +3071,11 @@ ne pas réduire cus-item-small, meme taille que cus-item-big
 .accueil_carousel_titre,
 .bandeau_titre {
   font-family: Baro;
-  font-size: 60px;
+  font-size: 40px;
   line-height: 1.5;
   margin: 0 auto;
   overflow: hidden;
-  font-weight: bold;
+  font-weight: normal;
   text-shadow: none;
   text-transform: uppercase;
   text-align: center;
@@ -3083,7 +3083,7 @@ ne pas réduire cus-item-small, meme taille que cus-item-big
 .accueil_carousel_soustitre,
 .bandeau_publication {
   font-family: Baro;
-  font-size: 36px !important;
+  font-size: 24px !important;
   line-height: 1.25;
   margin: 0 auto;
   overflow: hidden;
@@ -3111,11 +3111,11 @@ ne pas réduire cus-item-small, meme taille que cus-item-big
 @media only screen and (max-width: 767px) {
   .accueil_carousel_titre,
   .bandeau_titre {
-    font-size: 2em; /* 80 -36px */
+    font-size: 1.75em;
   }
   .accueil_carousel_soustitre,
   .bandeau_publication {
-    font-size: 1.5em; /* 36 -27px */
+    font-size: 1.2em;
   }
 }
 
