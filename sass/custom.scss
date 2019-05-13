@@ -899,25 +899,57 @@ Visible sur Balado sous 768px
 
 
 @media only screen and (min-width: 768px) {
-  .film-box > li {
-      width: 50%;
-  }
-  .film-item {
-    background: #000;
-/*    position: relative;
-    height: 0;
-    padding-bottom: 56.25%;
-    overflow: hidden;*/
-  }
-  .film-box > li .film-item {
-    /*padding-bottom: 40px;
-    height: auto;
-    background: none;
-    &:last-child {
-      padding-bottom: 0;
-    }*/
+  .path-frontpage {
+    .film-box > li {
+        width: 50%;
+    }
+    .film-item {
+      background: #000;
+  /*    position: relative;
+      height: 0;
+      padding-bottom: 56.25%;
+      overflow: hidden;*/
+    }
+    .film-box > li .film-item {
+      /*padding-bottom: 40px;
+      height: auto;
+      background: none;
+      &:last-child {
+        padding-bottom: 0;
+      }*/
+    }
   }
 }
+
+
+/* 
+balado 
+articles web 
+utilisent une autre variante de film-box, film-item 
+*/
+@media only screen and (min-width: 768px) {
+  :not(.path-frontpage) {
+    .film-box > li {
+        width: 50%;
+    }
+    .film-item {
+      background: #000;
+      position: relative;
+      height: 0;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+    }
+    .film-box > li .film-item {
+      padding-bottom: 40px;
+      height: auto;
+      background: none;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }  
+}
+
 
 /* Article web, faire passer texte dessous, inverser couleur */
 @media only screen and (max-width: 1170px) {
