@@ -2975,6 +2975,10 @@ ne pas réduire cus-item-small, meme taille que cus-item-big
   .field--name-field-thematique {
     text-align: left;
   }
+  .node--type-article-revue .entete_droite {
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
 
 .field--name-field-sous-titre,
