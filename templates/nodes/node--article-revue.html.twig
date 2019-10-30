@@ -141,19 +141,18 @@
         </div> 
       </div>
     </section>
-
-    <section id="section-c125" class="ac_section section-c125 row">
-      <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="row">
-          {{ view_ouvrage_article }}
-        </div> 
-      </div>
-    </section>
-
   </div>
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content|without('field_numero_referent') }}
   </div>
+	<section id="section-c125" class="ac_section section-c125 row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="row">
+				{{ view_ouvrage_article }}
+			</div> 
+		</div>
+	</section>
+
   {% if display_submitted %}
     <footer class="node__meta">
       {{ author_picture }}
