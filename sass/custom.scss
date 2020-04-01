@@ -4437,3 +4437,16 @@ ul.quicktabs-tabs li.active a {
   padding-top: 40px;
 }
 
+/* Les ouvrages critiques sont maintenant multiples */
+.view-ouvrage-critique-vs-article-revue .views-row {
+  clear: both;
+}
+/* Add2Any au dessus du corps de texte */
+.addtoany_list {
+  margin-bottom: 2em;
+}
+/* Debug */
+.test {
+  background: #f00;
+}
+
